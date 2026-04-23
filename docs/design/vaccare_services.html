@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Servicios y Paquetes | Vacaré Digital Solutions</title>
+<meta name="description" content="Sistemas digitales para negocios que quieren crecer. Desde web profesional hasta funnels completos con automatizaciones n8n. Precios claros, resultados reales."/>
+<meta name="keywords" content="diseño web profesional precio, sistema digital para negocios, automatizaciones n8n, funnel de ventas, web next.js sin hosting"/>
+<link rel="canonical" href="https://vacaredigitalsolutions.com/es/services"/>
+<meta property="og:title" content="Servicios — Vacaré Digital Solutions"/>
+<meta property="og:description" content="5 paquetes diseñados para cada etapa de tu negocio. Precios claros, sin sorpresas."/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F7F6F2;--dark:#1C1828;--darker:#0E0E12;
+  --muted:rgba(28,24,40,.52);--muted-l:rgba(247,246,242,.52);
+  --mg:#E8417A;--or:#F07030;--am:#F5A623;
+  --grad:linear-gradient(135deg,#E8417A 0%,#F07030 55%,#F5A623 100%);
+  --f:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--cream);color:var(--dark);overflow-x:hidden}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gb{background:var(--grad)}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;height:64px;
+  background:rgba(247,246,242,.92);backdrop-filter:blur(18px);
+  border-bottom:.5px solid rgba(28,24,40,.08);
+}
+.nl{font-size:20px;font-weight:800;color:var(--dark);text-decoration:none;letter-spacing:-.5px}
+.nm{display:flex;gap:28px;list-style:none}
+.nm a{font-size:13px;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s}
+.nm a:hover,.nm a.active{opacity:1}
+.nm a.active{border-bottom:1.5px solid var(--mg);padding-bottom:2px}
+.nb{background:var(--grad);color:#fff;border:none;padding:9px 20px;border-radius:7px;font:700 13px/1 var(--f);cursor:pointer;text-decoration:none}
+.back-link{font-size:13px;color:var(--mg);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:5px}
+
+/* HERO SPLIT */
+#hero{min-height:80vh;display:flex;position:relative;overflow:hidden;padding-top:64px}
+.hero-l{
+  width:54%;display:flex;flex-direction:column;justify-content:center;
+  padding:64px 56px 64px 52px;position:relative;z-index:2;
+}
+.hero-l::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(28,24,40,.065) 1px,transparent 1px);
+  background-size:26px 26px;pointer-events:none;
+}
+.hero-wm{
+  position:absolute;bottom:-20px;left:-8px;
+  font-size:clamp(80px,13vw,170px);font-weight:800;font-style:italic;
+  color:rgba(28,24,40,.03);line-height:1;pointer-events:none;
+  letter-spacing:-5px;white-space:nowrap;z-index:0;
+}
+.hero-l-inner{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:22px}
+.eyebrow i{width:18px;height:1.5px;background:var(--mg);display:block}
+h1{font-size:clamp(40px,4.8vw,64px);font-weight:800;line-height:1.06;letter-spacing:-2px;color:var(--dark);margin-bottom:18px}
+.hero-sub{font-size:16px;line-height:1.75;color:var(--muted);max-width:440px;margin-bottom:32px}
+.hero-anchors{display:flex;flex-direction:column;gap:8px;max-width:440px}
+.ha{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;background:#fff;border:.5px solid rgba(28,24,40,.09);
+  border-radius:12px;text-decoration:none;transition:all .2s;cursor:pointer;
+}
+.ha:hover{border-color:var(--mg);transform:translateX(4px)}
+.ha-left{display:flex;align-items:center;gap:12px}
+.ha-num{
+  width:28px;height:28px;border-radius:7px;background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;color:#fff;flex-shrink:0;
+}
+.ha-name{font-size:14px;font-weight:700;color:var(--dark)}
+.ha-price{font-size:12px;color:var(--muted);margin-top:1px}
+.ha-arrow{font-size:16px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* HERO RIGHT */
+.hero-r{
+  width:46%;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#E8417A 0%,#F07030 48%,#F5A623 100%);
+}
+.hr-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:.45;mix-blend-mode:overlay;pointer-events:none}
+.hr-wm{position:absolute;font-size:clamp(90px,16vw,200px);font-weight:800;font-style:italic;color:rgba(255,255,255,.08);line-height:.9;letter-spacing:-5px;pointer-events:none;z-index:1;bottom:-10px;right:-10px}
+.hr-vtxt{position:absolute;right:18px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);z-index:2}
+.hr-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:80px 48px 60px}
+.split-line{position:absolute;left:54%;top:0;bottom:0;width:2px;z-index:50;background:linear-gradient(to bottom,transparent 0%,rgba(255,255,255,.55) 25%,rgba(255,255,255,.55) 75%,transparent 100%)}
+.hr-geo-row{display:flex;gap:8px;margin-bottom:28px}
+.hg{border-radius:7px}
+.geo-f{position:absolute;border-radius:7px;pointer-events:none}
+
+/* stats on right */
+.r-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rs{
+  background:rgba(255,255,255,.12);backdrop-filter:blur(14px);
+  border:.5px solid rgba(255,255,255,.22);border-radius:14px;
+  padding:18px;
+}
+.rs-num{font-size:clamp(28px,3.5vw,40px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1;display:block;margin-bottom:4px}
+.rs-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.6);line-height:1.4}
+.rs.wide{grid-column:span 2}
+
+/* SECTION BASE */
+section{position:relative;overflow:hidden}
+.si{max-width:1180px;margin:0 auto;padding:0 52px}
+.sp{padding-top:clamp(70px,9vw,110px);padding-bottom:clamp(70px,9vw,110px)}
+.ey{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ey i{width:16px;height:1.5px;display:block}
+.wm{position:absolute;font-weight:800;font-style:italic;line-height:1;pointer-events:none;user-select:none;white-space:nowrap;font-size:clamp(70px,13vw,160px);letter-spacing:-4px;z-index:0}
+
+/* PACKS SECTION */
+#packs{background:var(--cream)}
+.packs-head{max-width:640px;margin-bottom:72px}
+#packs h2{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.08;margin-bottom:12px}
+#packs .ps{font-size:16px;line-height:1.75;color:var(--muted)}
+
+/* PACK BLOCK — full width alternating */
+.pack-block{
+  display:grid;gap:0;margin-bottom:20px;
+  border:.5px solid rgba(28,24,40,.09);border-radius:24px;overflow:hidden;
+  background:#fff;transition:box-shadow .25s;
+}
+.pack-block:hover{box-shadow:0 20px 60px rgba(28,24,40,.08)}
+.pack-block.dark{background:var(--dark);border-color:rgba(247,246,242,.07)}
+.pack-block.featured{border:2px solid transparent;background-clip:padding-box;position:relative}
+.pack-block.featured::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:var(--grad);z-index:-1}
+
+.pack-inner{display:grid;grid-template-columns:1fr 1fr;min-height:320px}
+.pack-inner.reverse{direction:rtl}
+.pack-inner.reverse > *{direction:ltr}
+
+/* pack left info */
+.pi{padding:48px 52px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.pi-wm{position:absolute;bottom:-20px;right:-10px;font-size:120px;font-weight:800;font-style:italic;opacity:.04;pointer-events:none;letter-spacing:-5px;color:var(--dark)}
+.dark .pi-wm{color:var(--cream)}
+.pi-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:18px}
+.badge-def{background:rgba(28,24,40,.06);color:var(--muted)}
+.badge-hot{background:var(--grad);color:#fff}
+.badge-mo{background:rgba(245,166,35,.12);color:#7a5000}
+.badge-dark{background:rgba(247,246,242,.08);color:rgba(247,246,242,.5)}
+.pi h2{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:8px}
+.dark .pi h2{color:var(--cream)}
+.pi-price{font-size:14px;color:var(--muted);margin-bottom:20px}
+.pi-price b{font-size:26px;font-weight:800;color:var(--dark);letter-spacing:-1px}
+.dark .pi-price{color:var(--muted-l)}
+.dark .pi-price b{color:var(--cream)}
+.pi-desc{font-size:15px;line-height:1.72;color:var(--muted);margin-bottom:28px;max-width:400px}
+.dark .pi-desc{color:var(--muted-l)}
+.pi-for{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em;margin-bottom:24px}
+.dark .pi-for{color:rgba(247,246,242,.35)}
+.pi-for span{color:var(--dark);font-weight:700}
+.dark .pi-for span{color:var(--cream)}
+.btn-p{display:inline-block;background:var(--grad);color:#fff;border:none;padding:13px 26px;border-radius:9px;font:700 14px/1 var(--f);cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.btn-p:hover{opacity:.9;transform:translateY(-1px)}
+.btn-outline{display:inline-block;background:transparent;color:var(--dark);border:1.5px solid rgba(28,24,40,.14);padding:12px 24px;border-radius:9px;font:600 14px/1 var(--f);cursor:pointer;text-decoration:none;transition:border-color .2s,color .2s}
+.btn-outline:hover{border-color:var(--mg);color:var(--mg)}
+.btn-outline-light{display:inline-block;background:transparent;color:var(--cream);border:1.5px solid rgba(247,246,242,.2);padding:12px 24px;border-radius:9px;font:600 14px/1 var(--f);cursor:pointer;text-decoration:none;transition:border-color .2s}
+.btn-outline-light:hover{border-color:rgba(247,246,242,.5)}
+
+/* pack right — includes */
+.pr{
+  padding:48px 52px;border-left:.5px solid rgba(28,24,40,.07);
+  display:flex;flex-direction:column;justify-content:center;
+  background:rgba(28,24,40,.02);
+}
+.dark .pr{border-left-color:rgba(247,246,242,.06);background:rgba(247,246,242,.03)}
+.pack-inner.reverse .pr{border-left:none;border-right:.5px solid rgba(28,24,40,.07)}
+.dark.pack-block .pack-inner.reverse .pr{border-right-color:rgba(247,246,242,.06)}
+.pr-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.dark .pr-title{color:rgba(247,246,242,.3)}
+.pr-title i{width:14px;height:1px;background:currentColor;display:block}
+.pr-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.pr-list li{font-size:14px;color:var(--dark);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.dark .pr-list li{color:var(--cream)}
+.pr-list li::before{content:'';width:16px;height:16px;border-radius:50%;background:var(--grad);flex-shrink:0;margin-top:1px}
+.pr-list li.sub{font-size:13px;color:var(--muted);padding-left:26px}
+.dark .pr-list li.sub{color:var(--muted-l)}
+.pr-list li.sub::before{display:none}
+.pr-tag{
+  background:linear-gradient(135deg,rgba(232,65,122,.06),rgba(245,166,35,.04));
+  border-radius:10px;padding:14px 16px;font-size:13px;color:var(--dark);
+  display:flex;gap:8px;align-items:flex-start;border:.5px solid rgba(232,65,122,.1);
+}
+.dark .pr-tag{background:rgba(247,246,242,.04);border-color:rgba(247,246,242,.08);color:var(--cream)}
+.pr-tag::before{content:'→';color:var(--mg);font-weight:800;flex-shrink:0}
+
+/* COMPARISON TABLE */
+#compare{background:var(--dark)}
+#compare h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:52px}
+.ct-wrap{overflow-x:auto}
+.ct{width:100%;border-collapse:collapse;min-width:700px}
+.ct th{padding:16px 20px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,246,242,.35);border-bottom:.5px solid rgba(247,246,242,.07)}
+.ct th:first-child{width:220px}
+.ct th.hot-col{color:var(--mg)}
+.ct td{padding:15px 20px;font-size:13px;color:rgba(247,246,242,.65);border-bottom:.5px solid rgba(247,246,242,.05);vertical-align:middle}
+.ct td:first-child{font-weight:600;color:var(--cream)}
+.ct td.hot-col{background:rgba(232,65,122,.05)}
+.ct tr:last-child td{border-bottom:none}
+.ct tr:hover td{background:rgba(247,246,242,.03)}
+.check{color:#1D9E75;font-weight:800;font-size:16px}
+.cross{color:rgba(247,246,242,.2);font-size:16px}
+.partial{color:var(--am);font-size:12px;font-weight:700}
+.ct-price{font-size:12px;font-weight:800;color:var(--cream)}
+
+/* ADD-ONS */
+#addons{background:var(--cream)}
+#addons h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
+#addons .as{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:48px;max-width:560px}
+.addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.addon{background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:18px;padding:28px;transition:transform .2s,box-shadow .2s}
+.addon:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(28,24,40,.07)}
+.addon-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,rgba(232,65,122,.08),rgba(245,166,35,.06));display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.addon-icon svg{width:20px;height:20px;fill:none;stroke:url(#gi);stroke-width:1.5}
+.addon h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:6px;letter-spacing:-.3px}
+.addon-price{font-size:13px;color:var(--muted);margin-bottom:12px}
+.addon-price b{font-size:18px;font-weight:800;color:var(--dark);letter-spacing:-.5px}
+.addon p{font-size:13px;line-height:1.65;color:var(--muted)}
+
+/* PROCESS */
+#process{background:var(--dark)}
+#process h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:14px}
+#process .ps{font-size:16px;color:var(--muted-l);line-height:1.7;max-width:520px;margin-bottom:56px}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.proc-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:1px;background:linear-gradient(to right,rgba(232,65,122,.3),rgba(245,166,35,.3));pointer-events:none}
+.proc-step{padding:0 20px;position:relative;z-index:1}
+.proc-num{width:56px;height:56px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;margin-bottom:20px;box-shadow:0 8px 24px rgba(232,65,122,.2)}
+.proc-step h3{font-size:15px;font-weight:800;color:var(--cream);margin-bottom:8px;letter-spacing:-.3px}
+.proc-step p{font-size:13px;line-height:1.65;color:var(--muted-l)}
+
+/* GUARANTEE */
+#guarantee{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
+.guarantee-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.guarantee-content h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.guarantee-content p{font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:20px}
+.g-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.g-list li{font-size:14px;color:var(--dark);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.g-list li::before{content:'✓';background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;font-size:16px;flex-shrink:0;line-height:1.2}
+.guarantee-visual{background:var(--dark);border-radius:24px;padding:40px;position:relative;overflow:hidden}
+.guarantee-visual::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.06}
+.gv-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,242,.3);margin-bottom:16px}
+.gv-num{font-size:clamp(56px,8vw,88px);font-weight:800;letter-spacing:-4px;line-height:1;display:block;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.gv-label{font-size:16px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.gv-sub{font-size:13px;color:rgba(247,246,242,.4);line-height:1.65}
+
+/* CTA FINAL */
+#ctaf{background:var(--dark);position:relative}
+#ctaf::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.04;pointer-events:none}
+.ctaf-inner{text-align:center;position:relative;z-index:1}
+#ctaf h2{font-size:clamp(36px,5.5vw,68px);font-weight:800;letter-spacing:-2.5px;line-height:1.04;color:var(--cream);margin-bottom:14px}
+#ctaf .cs{font-size:17px;color:var(--muted-l);max-width:440px;margin:0 auto 44px;line-height:1.7}
+.cta-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;max-width:840px;margin:0 auto 32px}
+.ctac{background:rgba(247,246,242,.05);border:.5px solid rgba(247,246,242,.1);border-radius:16px;padding:24px;text-align:left;transition:background .2s;cursor:pointer;text-decoration:none;display:block}
+.ctac:hover{background:rgba(247,246,242,.08);border-color:rgba(247,246,242,.18)}
+.ctac-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,242,.35);margin-bottom:8px}
+.ctac h4{font-size:15px;font-weight:800;color:var(--cream);margin-bottom:8px;letter-spacing:-.2px}
+.ctac p{font-size:13px;color:var(--muted-l);line-height:1.6;margin-bottom:14px}
+.ctac-arr{font-size:16px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.btn-main{background:var(--grad);color:#fff;border:none;padding:16px 38px;border-radius:13px;font:800 17px/1 var(--f);cursor:pointer;transition:transform .2s,opacity .2s;letter-spacing:-.3px}
+.btn-main:hover{transform:translateY(-2px);opacity:.9}
+.ctaf-dis{font-size:12px;color:rgba(247,246,242,.28);margin-top:14px}
+
+/* FOOTER */
+footer{background:var(--darker);padding:48px 52px 24px}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;max-width:1180px;margin:0 auto 36px}
+.fbrand p{font-size:13px;color:rgba(247,246,242,.3);line-height:1.7;margin-top:10px;max-width:200px}
+.fcol h5{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:12px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fcol a{font-size:13px;color:rgba(247,246,242,.35);text-decoration:none;transition:color .2s}
+.fcol a:hover{color:rgba(247,246,242,.72)}
+.fbot{border-top:.5px solid rgba(247,246,242,.07);padding-top:20px;max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{font-size:11px;color:rgba(247,246,242,.2)}
+.flogo{font-size:18px;font-weight:800;color:rgba(247,246,242,.36);letter-spacing:-.5px}
+
+/* FADE IN */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fi.vis{opacity:1;transform:none}
+.fi.d1{transition-delay:.1s}.fi.d2{transition-delay:.2s}.fi.d3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .pack-inner,.pack-inner.reverse{grid-template-columns:1fr;direction:ltr}
+  .pr{border-left:none;border-top:.5px solid rgba(28,24,40,.07)}
+  .dark .pr{border-top-color:rgba(247,246,242,.06)}
+  .proc-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .proc-grid::before{display:none}
+  .cta-cards{grid-template-columns:1fr}
+  .guarantee-inner{grid-template-columns:1fr}
+  .addon-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  #hero{flex-direction:column}
+  .hero-l{width:100%;padding:24px 24px 40px}
+  .hero-r{width:100%;min-height:320px}
+  .split-line{display:none}
+  nav{padding:0 20px}
+  .nm{display:none}
+  .si{padding:0 24px}
+  .ftop{grid-template-columns:1fr 1fr}
+  .ct th,.ct td{padding:12px 14px;font-size:12px}
+}
+@media(max-width:600px){
+  .addon-grid,.ftop,.r-stats{grid-template-columns:1fr}
+  .rs.wide{grid-column:span 1}
+  .proc-grid{grid-template-columns:1fr}
+  .pi,.pr{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8417A"/>
+      <stop offset="100%" stop-color="#F5A623"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <a class="nl" href="/">Vacaré</a>
+  <ul class="nm">
+    <li><a href="/" >Inicio</a></li>
+    <li><a href="/es/services" class="active">Servicios</a></li>
+    <li><a href="/#case">Casos</a></li>
+    <li><a href="/es/free-audit">Auditoría gratis</a></li>
+  </ul>
+  <a href="#ctaf" class="nb">Agendá una llamada</a>
+</nav>
+
+<!-- ══════ HERO SPLIT ══════ -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="hero-wm">SERVICIOS</div>
+    <div class="hero-l-inner">
+      <a href="/" class="back-link fi">← Volver al inicio</a>
+      <br><br>
+      <div class="eyebrow fi"><i></i>5 paquetes · Precios claros · Sin sorpresas</div>
+      <h1 class="fi">El sistema digital<br>que necesita<br><span class="gt">tu negocio.</span></h1>
+      <p class="hero-sub fi d1">Desde la primera web hasta un funnel completo con automatizaciones. Cada paquete está diseñado para un momento específico de tu negocio — no cobramos lo que no necesitás.</p>
+
+      <div class="hero-anchors fi d2">
+        <a href="#starter" class="ha">
+          <div class="ha-left"><div class="ha-num">01</div><div><div class="ha-name">Starter Presence</div><div class="ha-price">desde $1,500 USD</div></div></div>
+          <span class="ha-arrow">→</span>
+        </a>
+        <a href="#growth" class="ha">
+          <div class="ha-left"><div class="ha-num" style="background:var(--grad)">02</div><div><div class="ha-name">Growth Machine ⭐</div><div class="ha-price">desde $3,000 USD</div></div></div>
+          <span class="ha-arrow">→</span>
+        </a>
+        <a href="#funnel" class="ha">
+          <div class="ha-left"><div class="ha-num">03</div><div><div class="ha-name">Full Funnel 360</div><div class="ha-price">desde $5,000 USD</div></div></div>
+          <span class="ha-arrow">→</span>
+        </a>
+        <a href="#ecommerce" class="ha">
+          <div class="ha-left"><div class="ha-num">04</div><div><div class="ha-name">Ecommerce Pro</div><div class="ha-price">desde $2,500 USD</div></div></div>
+          <span class="ha-arrow">→</span>
+        </a>
+        <a href="#retainer" class="ha">
+          <div class="ha-left"><div class="ha-num">05</div><div><div class="ha-name">Automation Retainer</div><div class="ha-price">desde $500 USD/mes</div></div></div>
+          <span class="ha-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="split-line"></div>
+
+  <div class="hero-r">
+    <div class="hr-noise"></div>
+    <div class="hr-wm">5</div>
+    <div class="hr-vtxt">vacaredigitalsolutions.com/services</div>
+    <div class="hr-inner">
+      <div class="hr-geo-row">
+        <div class="hg" style="width:30px;height:30px;background:rgba(255,255,255,.22);border-radius:7px"></div>
+        <div class="hg" style="width:18px;height:18px;background:rgba(255,255,255,.13);border-radius:5px;margin-top:7px"></div>
+        <div class="hg" style="width:42px;height:42px;background:transparent;border:2px solid rgba(255,255,255,.28);border-radius:10px"></div>
+        <div class="hg" style="width:14px;height:14px;background:rgba(255,255,255,.28);border-radius:3px;margin-top:13px"></div>
+        <div class="hg" style="width:24px;height:24px;background:rgba(255,255,255,.14);border-radius:6px;margin-top:5px"></div>
+      </div>
+      <div class="r-stats">
+        <div class="rs">
+          <span class="rs-num">30%</span>
+          <span class="rs-label">Facturación desde la web — Supertramp Hostels</span>
+        </div>
+        <div class="rs">
+          <span class="rs-num">$0</span>
+          <span class="rs-label">Costo de hosting en la mayoría de proyectos</span>
+        </div>
+        <div class="rs">
+          <span class="rs-num">30d</span>
+          <span class="rs-label">De estrategia a web publicada</span>
+        </div>
+        <div class="rs">
+          <span class="rs-num">5+</span>
+          <span class="rs-label">Automatizaciones n8n por proyecto</span>
+        </div>
+      </div>
+    </div>
+    <div class="geo-f gb" style="width:15px;height:15px;top:68px;left:28px;opacity:.32;border-radius:4px"></div>
+    <div class="geo-f" style="width:10px;height:10px;top:92px;left:52px;opacity:.18;background:rgba(255,255,255,.45);border-radius:3px"></div>
+    <div class="geo-f gb" style="width:20px;height:20px;bottom:90px;left:38px;opacity:.22;border-radius:5px"></div>
+  </div>
+</section>
+
+<!-- ══════ PACKS ══════ -->
+<section id="packs">
+  <div class="si sp">
+    <div class="packs-head fi">
+      <div class="ey"><i style="background:var(--muted)"></i>Los paquetes</div>
+      <h2>Cinco soluciones.<br><span class="gt">Una para cada etapa.</span></h2>
+      <p class="ps">Cada paquete responde a un dolor específico de negocio. Si no sabés cuál es el tuyo, empezá por la <a href="/es/free-audit" style="color:var(--mg);font-weight:700;text-decoration:none">auditoría gratuita</a>.</p>
+    </div>
+
+    <!-- PACK 01 — STARTER -->
+    <div class="pack-block fi" id="starter">
+      <div class="pack-inner">
+        <div class="pi">
+          <div class="pi-wm">01</div>
+          <div class="pi-badge badge-def">Tier 01</div>
+          <h2>Starter Presence</h2>
+          <div class="pi-price">desde <b>$1,500</b> USD</div>
+          <p class="pi-desc">Para negocios que necesitan aparecer en Google, verse profesionales y capturar sus primeros leads de forma organizada. Sin costos de hosting en la mayoría de los casos.</p>
+          <p class="pi-for">Ideal para: <span>negocios locales, profesionales independientes, primeras webs estratégicas, restaurantes, servicios de zona.</span></p>
+          <a href="#ctaf" class="btn-outline">Empezar con Starter →</a>
+        </div>
+        <div class="pr">
+          <div class="pr-title"><i></i>Qué incluye</div>
+          <ul class="pr-list">
+            <li>Web en Next.js — hasta 5 secciones estratégicas</li>
+            <li>Deploy en Cloudflare Pages — sin costo mensual de hosting</li>
+            <li>Diseño orientado a conversión basado en buyer persona</li>
+            <li>SEO técnico completo: estructura, metadatos, velocidad, Core Web Vitals</li>
+            <li>SEO local: configuración y optimización de Google Business Profile</li>
+            <li>Formulario de contacto con notificación interna automática (n8n)</li>
+            <li>Integración de WhatsApp</li>
+            <li>Stack de medición base: GA4 + Search Console + Microsoft Clarity</li>
+            <li>1 automatización básica incluida</li>
+          </ul>
+          <div class="pr-tag">Resultado esperado: aparecer en búsquedas locales en 30-60 días y capturar leads de forma organizada desde el primer mes.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK 02 — GROWTH -->
+    <div class="pack-block featured fi" id="growth">
+      <div class="pack-inner reverse">
+        <div class="pr" style="background:rgba(28,24,40,.02)">
+          <div class="pr-title"><i></i>Qué incluye</div>
+          <ul class="pr-list">
+            <li>Todo lo del Starter, más:</li>
+            <li>Web completa en Next.js — hasta 10 secciones + páginas internas</li>
+            <li>Estrategia de conversión: buyer persona + puntos de dolor + CTAs medibles</li>
+            <li>SEO on-page completo con estructura para LLMs y búsqueda por IA</li>
+            <li>3 a 5 flujos en n8n: captación, nurturing, notificación, agendamiento</li>
+            <li>Integración cal.com o Calendly para reuniones automáticas</li>
+            <li>Lead magnet con secuencia de email de 5 días en n8n</li>
+            <li>Integración de pasarela de pago (Stripe u otro)</li>
+            <li>GTM con eventos de conversión configurados</li>
+            <li>Dashboard básico en Looker Studio</li>
+          </ul>
+          <div class="pr-tag">Resultado esperado: sistema captando y nutriendo leads de forma autónoma desde la semana 1 post-lanzamiento.</div>
+        </div>
+        <div class="pi">
+          <div class="pi-wm">02</div>
+          <div class="pi-badge badge-hot">⭐ Más elegido</div>
+          <h2>Growth Machine</h2>
+          <div class="pi-price">desde <b>$3,000</b> USD</div>
+          <p class="pi-desc">Web estratégica más automatizaciones que capturan y nutren leads de forma autónoma. El paquete que transforma un sitio en un sistema de ventas real que trabaja mientras vos no estás.</p>
+          <p class="pi-for">Ideal para: <span>hostels, agencias, consultoras, coaches de alto ticket, servicios B2B, negocios que quieren escalar sin contratar más personal.</span></p>
+          <a href="#ctaf" class="btn-p">Empezar con Growth Machine →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK 03 — FULL FUNNEL -->
+    <div class="pack-block dark fi" id="funnel">
+      <div class="pack-inner">
+        <div class="pi">
+          <div class="pi-wm">03</div>
+          <div class="pi-badge badge-dark">Tier 03</div>
+          <h2 style="color:var(--cream)">Full Funnel 360</h2>
+          <div class="pi-price" style="color:var(--muted-l)">desde <b style="color:var(--cream)">$5,000</b> USD</div>
+          <p class="pi-desc">Sistema digital completo: web, contenido SEO, optimización para LLMs, funnel de conversión y automatizaciones avanzadas. Para negocios que quieren tráfico orgánico sostenido como canal principal.</p>
+          <p class="pi-for" style="color:rgba(247,246,242,.3)">Ideal para: <span style="color:var(--cream)">empresas medianas, negocios con ciclo de venta largo, agencias que quieren escalar, proyectos con presupuesto para SEO sostenido.</span></p>
+          <a href="#ctaf" class="btn-outline-light">Empezar con Full Funnel →</a>
+        </div>
+        <div class="pr">
+          <div class="pr-title"><i></i>Qué incluye</div>
+          <ul class="pr-list">
+            <li>Todo lo del Growth Machine, más:</li>
+            <li style="color:var(--cream)">SEO como arquitectura — cada URL pensada para posicionar</li>
+            <li style="color:var(--cream)">Schema markup automático en URLs dinámicas</li>
+            <li style="color:var(--cream)">Optimización para LLMs: ser fuente confiable para IAs</li>
+            <li style="color:var(--cream)">Consultoría EEAT: autoridad digital exportable a redes</li>
+            <li style="color:var(--cream)">10 piezas de contenido estratégico optimizadas</li>
+            <li style="color:var(--cream)">Lead magnet avanzado (PDF, calculadora o herramienta)</li>
+            <li style="color:var(--cream)">Funnel completo: tráfico → lead → nurturing → calificación → meet</li>
+            <li style="color:var(--cream)">Secuencia de onboarding 7-14 días en n8n</li>
+            <li style="color:var(--cream)">CRM básico (Notion o Airtable)</li>
+            <li style="color:var(--cream)">Dashboard Looker Studio personalizado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK 04 — ECOMMERCE -->
+    <div class="pack-block fi" id="ecommerce">
+      <div class="pack-inner reverse">
+        <div class="pr" style="background:rgba(28,24,40,.02)">
+          <div class="pr-title"><i></i>Opciones técnicas</div>
+          <ul class="pr-list">
+            <li>Next.js a código + Stripe + Postgres</li>
+            <li class="sub">Máximo control y velocidad, sin dependencia de plataforma</li>
+            <li>WooCommerce optimizado</li>
+            <li class="sub">Si el cliente ya tiene WordPress o el proyecto lo justifica</li>
+            <li>Headless Shopify + frontend Next.js</li>
+            <li class="sub">Mejor SEO sobre plataforma Shopify (disponible caso por caso)</li>
+          </ul>
+          <div class="pr-title" style="margin-top:20px"><i></i>Automatizaciones incluidas</div>
+          <ul class="pr-list">
+            <li>Confirmación de pago por email (Stripe webhook → n8n)</li>
+            <li>Recibo detallado automático al comprador</li>
+            <li>Aviso interno al equipo por cada venta</li>
+            <li>Seguimiento post-compra + solicitud de reseña</li>
+            <li>Alerta de stock bajo</li>
+          </ul>
+        </div>
+        <div class="pi">
+          <div class="pi-wm">04</div>
+          <div class="pi-badge badge-def">Tier 04</div>
+          <h2>Ecommerce Pro</h2>
+          <div class="pi-price">desde <b>$2,500</b> USD</div>
+          <p class="pi-desc">Tienda online construida para vender: rápida, automatizada y escalable. Tres opciones técnicas según el caso. Con todas las automatizaciones de post-compra desde el día uno.</p>
+          <p class="pi-for">Ideal para: <span>marcas de producto, negocios físicos con expansión online, tiendas de suscripción, ecommerces que necesitan rendimiento real.</span></p>
+          <a href="#ctaf" class="btn-outline">Empezar con Ecommerce Pro →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK 05 — RETAINER -->
+    <div class="pack-block dark fi" id="retainer">
+      <div class="pack-inner">
+        <div class="pi">
+          <div class="pi-wm">05</div>
+          <div class="pi-badge badge-mo">Mensual</div>
+          <h2 style="color:var(--cream)">Automation Retainer</h2>
+          <div class="pi-price" style="color:var(--muted-l)">desde <b style="color:var(--cream)">$500</b> USD/mes</div>
+          <p class="pi-desc">Tu sistema sigue mejorando cada mes. Pagás una mensualidad y recibís flujos nuevos, mantenimiento y revisión estratégica mensual — sin contratar un desarrollador de tiempo completo.</p>
+          <p class="pi-for" style="color:rgba(247,246,242,.3)">Ideal para: <span style="color:var(--cream)">cualquier negocio que ya tenga web y quiera seguir eficientizando sus procesos internos mes a mes.</span></p>
+          <a href="#ctaf" class="btn-outline-light">Ver planes →</a>
+        </div>
+        <div class="pr">
+          <div class="pr-title"><i></i>Plan Base — $500/mes</div>
+          <ul class="pr-list">
+            <li style="color:var(--cream)">Hasta 6 horas de desarrollo de automatizaciones por mes</li>
+            <li style="color:var(--cream)">1 a 2 flujos nuevos de complejidad baja o media</li>
+            <li style="color:var(--cream)">Mantenimiento de flujos existentes</li>
+            <li style="color:var(--cream)">Documentación de cada entrega</li>
+          </ul>
+          <div class="pr-title" style="margin-top:20px"><i></i>Plan Pro — $800/mes</div>
+          <ul class="pr-list">
+            <li style="color:var(--cream)">Hasta 12 horas de desarrollo por mes</li>
+            <li style="color:var(--cream)">Flujos complejos + integraciones con APIs externas</li>
+            <li style="color:var(--cream)">Webhooks avanzados y revisión estratégica mensual</li>
+            <li style="color:var(--cream)">Soporte prioritario</li>
+          </ul>
+          <div class="pr-tag" style="background:rgba(247,246,242,.04);border-color:rgba(247,246,242,.08);color:var(--cream)">La unidad de medida es el tiempo estimado de desarrollo, no la cantidad de flujos. La calibración se hace en el onboarding.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="wm" style="color:rgba(28,24,40,.025);bottom:-10px;right:-10px">PACKS</div>
+</section>
+
+<!-- ══════ COMPARISON TABLE ══════ -->
+<section id="compare">
+  <div class="si sp">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>Tabla comparativa</div>
+    <h2 class="fi">Todos los paquetes<br><span class="gt">de un vistazo.</span></h2>
+    <div class="ct-wrap fi d1">
+      <table class="ct">
+        <thead>
+          <tr>
+            <th>Incluye</th>
+            <th>Starter</th>
+            <th class="hot-col">Growth ⭐</th>
+            <th>Full Funnel</th>
+            <th>Ecommerce</th>
+            <th>Retainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Web en Next.js</td><td><span class="check">✓</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Cloudflare / sin hosting</td><td><span class="check">✓</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>SEO técnico</td><td><span class="check">✓</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>SEO local (Google Business)</td><td><span class="check">✓</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>GA4 + Search Console + Clarity</td><td><span class="check">✓</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Flujos n8n (automatizaciones)</td><td><span class="partial">1 básico</span></td><td class="hot-col"><span class="partial">3 a 5</span></td><td><span class="partial">5+</span></td><td><span class="partial">5 post-compra</span></td><td><span class="partial">mensual</span></td></tr>
+          <tr><td>Lead magnet + secuencia email</td><td><span class="cross">—</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Calendario integrado (cal.com)</td><td><span class="cross">—</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Integración de pagos (Stripe)</td><td><span class="cross">—</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>GTM + eventos de conversión</td><td><span class="cross">—</span></td><td class="hot-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Estrategia de contenido SEO</td><td><span class="cross">—</span></td><td class="hot-col"><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Optimización para LLMs</td><td><span class="cross">—</span></td><td class="hot-col"><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Consultoría EEAT</td><td><span class="cross">—</span></td><td class="hot-col"><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Dashboard Looker Studio</td><td><span class="cross">—</span></td><td class="hot-col"><span class="partial">básico</span></td><td><span class="check">✓ personalizado</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Tienda online</td><td><span class="cross">—</span></td><td class="hot-col"><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td></tr>
+          <tr>
+            <td>Precio desde</td>
+            <td><span class="ct-price">$1,500</span></td>
+            <td class="hot-col"><span class="ct-price">$3,000</span></td>
+            <td><span class="ct-price">$5,000</span></td>
+            <td><span class="ct-price">$2,500</span></td>
+            <td><span class="ct-price">$500/mes</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">COMPARE</div>
+</section>
+
+<!-- ══════ ADD-ONS ══════ -->
+<section id="addons">
+  <div class="si sp">
+    <div class="ey fi"><i style="background:var(--muted)"></i>Servicios adicionales</div>
+    <h2 class="fi">Sumale más a<br><span class="gt">cualquier paquete.</span></h2>
+    <p class="as fi d1">Estos servicios se agregan sobre cualquier paquete base. También se pueden contratar de forma independiente si ya tenés web.</p>
+    <div class="addon-grid fi d1">
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>Auditoría SEO completa</h3>
+        <div class="addon-price">desde <b>$300</b> USD</div>
+        <p>Análisis profundo de velocidad, SEO técnico, contenido y backlinks. Con plan de acción priorizado. Ideal como punto de partida antes de invertir en mejoras.</p>
+      </div>
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Chatbot con IA</h3>
+        <div class="addon-price">desde <b>$400</b> USD</div>
+        <p>Chatbot en tu web que responde preguntas frecuentes, califica leads y agenda reuniones — conectado a tu base de conocimiento y a n8n para acciones automáticas.</p>
+      </div>
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Dashboard personalizado</h3>
+        <div class="addon-price">desde <b>$250</b> USD</div>
+        <p>Looker Studio conectado a GA4, Search Console y tus conversiones. Para ver en tiempo real qué está funcionando y tomar decisiones con datos reales.</p>
+      </div>
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h3>Secuencia de email marketing</h3>
+        <div class="addon-price">desde <b>$350</b> USD</div>
+        <p>Diseño y configuración de una secuencia de nurturing automatizada en n8n. Desde la bienvenida hasta el cierre, con lógica de comportamiento por opens y clics.</p>
+      </div>
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>WhatsApp automation</h3>
+        <div class="addon-price">desde <b>$300</b> USD</div>
+        <p>Respuestas automáticas por WhatsApp Business API conectadas a n8n. Confirmaciones, recordatorios y seguimientos sin intervención manual.</p>
+      </div>
+      <div class="addon">
+        <div class="addon-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Migración a Next.js</h3>
+        <div class="addon-price">desde <b>$800</b> USD</div>
+        <p>Migramos tu web existente (WordPress, Wix, Squarespace) a Next.js con deploy en Cloudflare. Sin costo de hosting, carga ultra-rápida y Core Web Vitals al 100.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROCESS ══════ -->
+<section id="process">
+  <div class="si sp">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>Cómo trabajamos</div>
+    <h2 class="fi">De la primera llamada<br><span class="gt">al sistema funcionando.</span></h2>
+    <p class="ps fi d1">Sin procesos interminables. Sin reuniones innecesarias. Un flujo claro de 4 pasos que garantiza que el resultado final es exactamente lo que necesita tu negocio.</p>
+    <div class="proc-grid fi d1">
+      <div class="proc-step">
+        <div class="proc-num">1</div>
+        <h3>Llamada de diagnóstico</h3>
+        <p>30 minutos para entender tu negocio, tus objetivos y el momento en el que estás. Sin presentaciones genéricas. Al final te decimos qué paquete corresponde y por qué.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">2</div>
+        <h3>Estrategia y propuesta</h3>
+        <p>En 48 horas te mandamos una propuesta detallada: qué vamos a construir, por qué, en qué orden y cuánto. Sin sorpresas de precio ni funcionalidades ocultas.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">3</div>
+        <h3>Desarrollo y lanzamiento</h3>
+        <p>Arrancamos. Vas viendo el avance en tiempo real. El promedio de entrega es 30 días para paquetes Starter y Growth, 45-60 para Full Funnel y proyectos complejos.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">4</div>
+        <h3>Entrega y seguimiento</h3>
+        <p>Publicamos, te entregamos accesos, documentamos todo y hacemos un check-in a los 30 días para medir resultados y ajustar lo que sea necesario.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">PROCESO</div>
+</section>
+
+<!-- ══════ GUARANTEE ══════ -->
+<section id="guarantee">
+  <div class="si sp">
+    <div class="guarantee-inner fi">
+      <div class="guarantee-content">
+        <div class="ey"><i style="background:var(--muted)"></i>Nuestra garantía</div>
+        <h2>Precios claros.<br><span class="gt">Sin sorpresas.</span></h2>
+        <p>Antes de empezar, sabés exactamente qué incluye el proyecto, cuánto cuesta y cuándo estará listo. No hay funcionalidades ocultas, no hay costos que aparecen en el medio.</p>
+        <p>Si en el proceso aparece algo que no estaba en el scope original, te lo comunicamos antes de avanzar. Nunca facturamos trabajo extra sin aprobación.</p>
+        <ul class="g-list">
+          <li>Propuesta detallada antes de arrancar</li>
+          <li>Precio fijo acordado — sin incrementos en el medio</li>
+          <li>Cronograma real con fechas de entrega concretas</li>
+          <li>Documentación completa de todo lo entregado</li>
+          <li>Check-in de 30 días post-lanzamiento incluido</li>
+          <li>Facturación en USD — empresa registrada en Delaware</li>
+        </ul>
+      </div>
+      <div class="guarantee-visual fi d1">
+        <div class="gv-tag">Caso real — Supertramp Hostels</div>
+        <span class="gv-num">30%</span>
+        <div class="gv-label">Facturación desde la web propia</div>
+        <div class="gv-sub">En 6 meses. Partiendo de una web que no generaba ninguna reserva directa y dependencia total de Booking.com y plataformas similares que cobraban comisión en cada reserva.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA FINAL ══════ -->
+<section id="ctaf">
+  <div class="si sp">
+    <div class="ctaf-inner fi">
+      <div class="ey" style="justify-content:center;color:var(--muted-l);margin-bottom:18px"><i style="background:rgba(247,246,242,.3)"></i>Siguiente paso</div>
+      <h2>¿Sabés qué paquete<br><span class="gt">necesita tu negocio?</span></h2>
+      <p class="cs">Si no estás seguro, empezá por la auditoría gratuita o el mini-curso. Si ya sabés lo que querés, agendá una llamada de 30 minutos.</p>
+      <div class="cta-cards">
+        <a href="/es/free-audit" class="ctac">
+          <div class="ctac-tag">Tengo web</div>
+          <h4>Auditoría gratuita</h4>
+          <p>Analizamos tu web y recibís un diagnóstico en 2 horas. El punto de partida más concreto.</p>
+          <div class="ctac-arr">→</div>
+        </a>
+        <a href="/es/email-course" class="ctac">
+          <div class="ctac-tag">No tengo web</div>
+          <h4>Mini-curso 5 días</h4>
+          <p>5 emails gratuitos para entender qué necesita tu negocio antes de invertir.</p>
+          <div class="ctac-arr">→</div>
+        </a>
+        <a href="#" class="ctac" onclick="scrollToForm(event)">
+          <div class="ctac-tag">Ya sé lo que quiero</div>
+          <h4>Llamada de 30 min</h4>
+          <p>Hablamos directamente. Sin presentaciones. Solo estrategia y próximos pasos.</p>
+          <div class="ctac-arr">→</div>
+        </a>
+      </div>
+      <button class="btn-main">Agendá una llamada con Noelia →</button>
+      <p class="ctaf-dis">Sin compromiso. 30 minutos de estrategia pura.</p>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-30px;left:50%;transform:translateX(-50%)">EMPEZÁ</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="flogo">Vacaré</div>
+      <p>Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.</p>
+    </div>
+    <div class="fcol">
+      <h5>Paquetes</h5>
+      <ul>
+        <li><a href="#starter">Starter Presence</a></li>
+        <li><a href="#growth">Growth Machine</a></li>
+        <li><a href="#funnel">Full Funnel 360</a></li>
+        <li><a href="#ecommerce">Ecommerce Pro</a></li>
+        <li><a href="#retainer">Automation Retainer</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Gratuito</h5>
+      <ul>
+        <li><a href="/es/free-audit">Auditoría web</a></li>
+        <li><a href="/es/email-course">Mini-curso 5 días</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Empresa</h5>
+      <ul>
+        <li><a href="/#case">Casos de éxito</a></li>
+        <li><a href="/#team">El equipo</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 Vacaré Digital Solutions LLC. Todos los derechos reservados.</p>
+    <p>ES / EN</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+setTimeout(()=>document.querySelectorAll('#hero .fi').forEach(el=>el.classList.add('vis')),80);
+function scrollToForm(e){e.preventDefault();document.getElementById('ctaf').scrollIntoView({behavior:'smooth'})}
+</script>
+</body>
+</html>

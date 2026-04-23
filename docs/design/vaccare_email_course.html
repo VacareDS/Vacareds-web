@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mini-curso gratuito: 5 días para entender qué necesita tu negocio online | Vacaré</title>
+<meta name="description" content="¿No tenés web o no sabés por dónde empezar? Recibí 5 emails con lo que realmente necesita tu negocio para vender online. Gratis, sin compromiso."/>
+<meta name="keywords" content="curso gratuito web negocio, cómo vender online, sistema digital para negocios, email marketing gratis, curso digital emprendedores"/>
+<link rel="canonical" href="https://vacaredigitalsolutions.com/es/email-course"/>
+<meta property="og:title" content="Mini-curso gratuito: 5 días para saber exactamente qué necesita tu negocio online"/>
+<meta property="og:description" content="Sin tecnicismos. Sin ventas forzadas. 5 emails con estrategia real para negocios que quieren crecer online."/>
+<meta property="og:type" content="website"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F7F6F2;--dark:#1C1828;--darker:#0E0E12;
+  --muted:rgba(28,24,40,.52);--muted-l:rgba(247,246,242,.52);
+  --mg:#E8417A;--or:#F07030;--am:#F5A623;
+  --grad:linear-gradient(135deg,#E8417A 0%,#F07030 55%,#F5A623 100%);
+  --f:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--cream);color:var(--dark);overflow-x:hidden}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gb{background:var(--grad)}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;height:64px;
+  background:rgba(247,246,242,.92);backdrop-filter:blur(18px);
+  border-bottom:.5px solid rgba(28,24,40,.08);
+}
+.nl{font-size:20px;font-weight:800;color:var(--dark);text-decoration:none;letter-spacing:-.5px}
+.nm{display:flex;gap:28px;list-style:none}
+.nm a{font-size:13px;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s}
+.nm a:hover{opacity:1}
+.nb{background:var(--grad);color:#fff;border:none;padding:9px 20px;border-radius:7px;font:700 13px/1 var(--f);cursor:pointer;text-decoration:none}
+.back-link{font-size:13px;color:var(--mg);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:5px}
+
+/* ── HERO SPLIT ─────────────────────── */
+#hero{min-height:100vh;display:flex;position:relative;overflow:hidden;padding-top:64px}
+
+.hero-l{
+  width:52%;display:flex;flex-direction:column;justify-content:center;
+  padding:64px 56px 64px 52px;position:relative;z-index:2;
+}
+.hero-l::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(28,24,40,.065) 1px,transparent 1px);
+  background-size:26px 26px;pointer-events:none;
+}
+.hero-wm{
+  position:absolute;bottom:-20px;left:-8px;
+  font-size:clamp(80px,13vw,170px);font-weight:800;font-style:italic;
+  color:rgba(28,24,40,.03);line-height:1;pointer-events:none;
+  letter-spacing:-5px;white-space:nowrap;z-index:0;
+}
+.hero-l-inner{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:22px}
+.eyebrow i{width:18px;height:1.5px;background:var(--mg);display:block}
+h1{font-size:clamp(38px,4.6vw,62px);font-weight:800;line-height:1.06;letter-spacing:-2px;color:var(--dark);margin-bottom:18px}
+.hero-sub{font-size:16px;line-height:1.75;color:var(--muted);max-width:430px;margin-bottom:28px}
+
+/* badge row */
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px}
+.badge-light{background:rgba(28,24,40,.06);color:var(--muted)}
+.badge-grad{background:var(--grad);color:#fff}
+
+/* FORM CARD */
+.form-card{
+  background:#fff;border-radius:20px;padding:32px;
+  border:.5px solid rgba(28,24,40,.09);
+  box-shadow:0 20px 56px rgba(28,24,40,.08);
+  max-width:460px;position:relative;z-index:1;
+}
+.form-card::before{
+  content:'';position:absolute;inset:-1.5px;border-radius:21px;
+  background:var(--grad);z-index:-1;opacity:0;transition:opacity .3s;
+}
+.form-card:focus-within::before{opacity:1}
+.form-title{font-size:17px;font-weight:800;color:var(--dark);margin-bottom:5px;letter-spacing:-.3px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.55}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:700;color:var(--dark);margin-bottom:6px;letter-spacing:.04em}
+.field input,.field select{
+  width:100%;padding:12px 15px;border-radius:10px;
+  border:1.5px solid rgba(28,24,40,.12);
+  font:400 14px/1 var(--f);color:var(--dark);
+  background:var(--cream);transition:border-color .2s,background .2s;outline:none;
+  appearance:none;
+}
+.field input:focus,.field select:focus{border-color:var(--mg);background:#fff}
+.field input::placeholder{color:rgba(28,24,40,.3)}
+.btn-submit{
+  width:100%;padding:14px;background:var(--grad);color:#fff;border:none;
+  border-radius:11px;font:800 15px/1 var(--f);cursor:pointer;
+  transition:opacity .2s,transform .2s;margin-top:4px;
+}
+.btn-submit:hover{opacity:.9;transform:translateY(-1px)}
+.form-trust{display:flex;align-items:center;gap:7px;margin-top:13px;font-size:11px;color:var(--muted)}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--grad);flex-shrink:0}
+
+/* floating preview card on left */
+.preview-float{
+  position:absolute;right:-32px;bottom:100px;z-index:10;
+  background:var(--dark);border-radius:14px;padding:16px 20px;
+  box-shadow:0 20px 50px rgba(28,24,40,.22);min-width:170px;
+}
+.pf-label{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(247,246,242,.35);margin-bottom:8px}
+.pf-days{display:flex;gap:6px}
+.pf-day{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.pf-day.done{background:var(--grad)}
+.pf-day.cur{background:rgba(232,65,122,.35);border:1.5px solid var(--mg);color:var(--mg)}
+.pf-day.pend{background:rgba(247,246,242,.07);color:rgba(247,246,242,.25)}
+
+/* ── HERO RIGHT ─────────────────────── */
+.hero-r{
+  width:48%;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#E8417A 0%,#F07030 48%,#F5A623 100%);
+}
+.hr-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:.45;mix-blend-mode:overlay;pointer-events:none}
+.hr-wm{position:absolute;font-size:clamp(90px,16vw,200px);font-weight:800;font-style:italic;color:rgba(255,255,255,.08);line-height:.9;letter-spacing:-5px;pointer-events:none;z-index:1;bottom:-10px;right:-10px}
+.hr-vtxt{position:absolute;right:18px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);z-index:2}
+.hr-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:80px 48px 60px}
+.split-line{position:absolute;left:52%;top:0;bottom:0;width:2px;z-index:50;background:linear-gradient(to bottom,transparent 0%,rgba(255,255,255,.55) 25%,rgba(255,255,255,.55) 75%,transparent 100%)}
+
+/* email preview cards on right */
+.ep-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:18px}
+.email-cards{display:flex;flex-direction:column;gap:10px}
+.ec{
+  background:rgba(255,255,255,.12);backdrop-filter:blur(14px);
+  border:.5px solid rgba(255,255,255,.22);border-radius:14px;
+  padding:14px 16px;display:flex;align-items:center;gap:12px;
+  transition:background .2s;
+}
+.ec:hover{background:rgba(255,255,255,.18)}
+.ec-day{
+  width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;color:#fff;flex-shrink:0;
+}
+.ec-info{}
+.ec-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);margin-bottom:2px;letter-spacing:.06em;text-transform:uppercase}
+.ec-title{font-size:13px;font-weight:700;color:#fff;line-height:1.3}
+
+/* geo floats */
+.geo-f{position:absolute;border-radius:7px;pointer-events:none}
+.hr-geo-row{display:flex;gap:8px;margin-bottom:24px}
+.hg{border-radius:7px}
+
+/* ── SECTION BASE ───────────────────── */
+section{position:relative;overflow:hidden}
+.si{max-width:1100px;margin:0 auto;padding:0 52px}
+.sp{padding-top:clamp(70px,9vw,110px);padding-bottom:clamp(70px,9vw,110px)}
+.ey{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ey i{width:16px;height:1.5px;display:block}
+.wm{position:absolute;font-weight:800;font-style:italic;line-height:1;pointer-events:none;user-select:none;white-space:nowrap;font-size:clamp(70px,13vw,160px);letter-spacing:-4px;z-index:0}
+
+/* ── DAYS SECTION ───────────────────── */
+#days{background:var(--cream)}
+#days h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
+#days .intro{font-size:16px;line-height:1.75;color:var(--muted);max-width:580px;margin-bottom:56px}
+
+.days-timeline{position:relative;display:flex;flex-direction:column;gap:0}
+.days-timeline::before{
+  content:'';position:absolute;left:28px;top:40px;bottom:40px;width:2px;
+  background:linear-gradient(to bottom,var(--mg),var(--or),var(--am));
+  opacity:.25;
+}
+.day-item{display:grid;grid-template-columns:60px 1fr;gap:0;position:relative}
+.day-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.day-dot{
+  width:56px;height:56px;border-radius:14px;background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;color:#fff;flex-shrink:0;z-index:1;
+  box-shadow:0 8px 24px rgba(232,65,122,.2);
+}
+.day-line{flex:1;width:2px;background:linear-gradient(to bottom,rgba(232,65,122,.15),rgba(245,166,35,.05));margin-top:8px}
+.day-item:last-child .day-line{display:none}
+.day-content{
+  background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:18px;
+  padding:28px 32px;margin-left:20px;margin-bottom:14px;
+  transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;
+}
+.day-content:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(28,24,40,.07)}
+.day-content::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--grad);
+}
+.day-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:10px}
+.day-content h3{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:10px;letter-spacing:-.4px}
+.day-content p{font-size:14px;line-height:1.7;color:var(--muted);margin-bottom:16px}
+.day-takeaway{
+  background:linear-gradient(135deg,rgba(232,65,122,.06),rgba(245,166,35,.04));
+  border-radius:10px;padding:12px 16px;
+  font-size:13px;font-weight:600;color:var(--dark);
+  display:flex;align-items:flex-start;gap:8px;
+}
+.day-takeaway::before{content:'→';color:var(--mg);flex-shrink:0;font-weight:800}
+.day-wm{position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:80px;font-weight:800;font-style:italic;color:rgba(28,24,40,.03);pointer-events:none;letter-spacing:-4px}
+
+/* ── FOR WHOM ───────────────────────── */
+#forwho{background:var(--dark)}
+#forwho h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:14px}
+#forwho .intro{font-size:16px;line-height:1.75;color:var(--muted-l);max-width:560px;margin-bottom:52px}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wc{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.09);border-radius:18px;padding:28px;transition:background .2s,border-color .2s}
+.wc:hover{background:rgba(247,246,242,.07);border-color:rgba(232,65,122,.3)}
+.wc h3{font-size:16px;font-weight:800;color:var(--cream);margin-bottom:14px;letter-spacing:-.3px}
+.wc-check{font-size:13px;color:var(--muted-l);display:flex;align-items:flex-start;gap:9px;margin-bottom:9px;line-height:1.55}
+.wc-check::before{content:'';width:14px;height:14px;border-radius:50%;background:var(--grad);flex-shrink:0;margin-top:2px}
+
+/* ── DIFF FROM OTHERS ───────────────── */
+#diff{background:var(--cream)}
+#diff h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:52px}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.diff-card{border-radius:18px;padding:28px;position:relative;overflow:hidden}
+.diff-card.bad{background:#fff;border:.5px solid rgba(28,24,40,.08)}
+.diff-card.good{background:var(--dark);border:.5px solid rgba(247,246,242,.08)}
+.diff-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.diff-label.l-bad{color:rgba(28,24,40,.35)}
+.diff-label.l-good{color:rgba(247,246,242,.35)}
+.diff-label i{width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-style:normal}
+.diff-label i.x{background:rgba(232,65,122,.15);color:var(--mg)}
+.diff-label i.ok{background:rgba(29,158,117,.2);color:#1D9E75}
+.diff-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.diff-list li{font-size:14px;line-height:1.6;display:flex;align-items:flex-start;gap:10px}
+.diff-list.bad-list li{color:var(--muted)}
+.diff-list.bad-list li::before{content:'×';color:rgba(232,65,122,.6);font-weight:800;font-size:16px;line-height:1;flex-shrink:0}
+.diff-list.good-list li{color:var(--muted-l)}
+.diff-list.good-list li::before{content:'✓';background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;font-size:15px;line-height:1.1;flex-shrink:0}
+
+/* ── ABOUT VACARE ───────────────────── */
+#about{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
+#about h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-content p{font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:18px}
+.about-creds{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.cred{background:rgba(28,24,40,.06);border-radius:20px;padding:5px 13px;font-size:11px;font-weight:600;color:var(--muted)}
+.case-callout{
+  background:var(--dark);border-radius:20px;padding:32px;
+  position:relative;overflow:hidden;
+}
+.case-callout::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.05}
+.cc-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,242,.35);margin-bottom:14px}
+.cc-num{font-size:clamp(48px,7vw,80px);font-weight:800;letter-spacing:-3px;line-height:1;display:block;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.cc-label{font-size:15px;font-weight:700;color:var(--cream);margin-bottom:6px}
+.cc-sub{font-size:13px;color:rgba(247,246,242,.4);line-height:1.6}
+
+/* ── FAQ ────────────────────────────── */
+#faq{background:var(--dark)}
+#faq h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:48px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.faq-item{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.08);border-radius:16px;padding:24px;transition:background .2s}
+.faq-item:hover{background:rgba(247,246,242,.07)}
+.faq-item h3{font-size:15px;font-weight:800;color:var(--cream);margin-bottom:10px;letter-spacing:-.2px}
+.faq-item p{font-size:13px;line-height:1.7;color:var(--muted-l)}
+
+/* ── CTA BOTTOM ─────────────────────── */
+#cta-b{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
+#cta-b h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;text-align:center}
+#cta-b .cs{font-size:16px;color:var(--muted);text-align:center;max-width:460px;margin:0 auto 36px;line-height:1.7}
+.cta-b-form{max-width:440px;margin:0 auto}
+.cta-b-form .field input,.cta-b-form .field select{background:#fff}
+.trust-row{display:flex;justify-content:center;gap:22px;margin-top:18px;flex-wrap:wrap}
+.tr-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.tr-dot{width:5px;height:5px;border-radius:50%;background:var(--grad);flex-shrink:0}
+
+/* FOOTER */
+footer{background:var(--darker);padding:48px 52px 24px}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 36px}
+.fbrand p{font-size:13px;color:rgba(247,246,242,.3);line-height:1.7;margin-top:10px;max-width:220px}
+.fcol h5{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:12px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fcol a{font-size:13px;color:rgba(247,246,242,.35);text-decoration:none;transition:color .2s}
+.fcol a:hover{color:rgba(247,246,242,.7)}
+.fbot{border-top:.5px solid rgba(247,246,242,.07);padding-top:20px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{font-size:11px;color:rgba(247,246,242,.2)}
+.flogo{font-size:18px;font-weight:800;color:rgba(247,246,242,.36);letter-spacing:-.5px}
+
+/* FADE IN */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fi.vis{opacity:1;transform:none}
+.fi.d1{transition-delay:.12s}.fi.d2{transition-delay:.22s}.fi.d3{transition-delay:.32s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #hero{flex-direction:column}
+  .hero-l{width:100%;padding:24px 24px 40px}
+  .hero-r{width:100%;min-height:360px}
+  .split-line{display:none}
+  .preview-float{display:none}
+  .who-grid{grid-template-columns:1fr 1fr}
+  .diff-grid,.about-grid,.faq-grid{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr 1fr}
+  nav{padding:0 20px}
+  .nm{display:none}
+  .si{padding:0 24px}
+}
+@media(max-width:580px){
+  .who-grid,.ftop{grid-template-columns:1fr}
+  .hero-r{min-height:280px}
+  .day-item{grid-template-columns:48px 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nl" href="/">Vacaré</a>
+  <ul class="nm">
+    <li><a href="/#packs">Servicios</a></li>
+    <li><a href="/es/free-audit">Auditoría gratis</a></li>
+    <li><a href="/#case">Casos</a></li>
+  </ul>
+  <a href="#cta-b" class="nb">Empezar el curso</a>
+</nav>
+
+<!-- ══════════════════════════════════
+     HERO SPLIT
+══════════════════════════════════ -->
+<section id="hero">
+
+  <!-- LEFT -->
+  <div class="hero-l">
+    <div class="hero-wm">CURSO</div>
+    <div class="hero-l-inner">
+      <a href="/" class="back-link fi">← Volver al inicio</a>
+      <br><br>
+      <div class="eyebrow fi"><i></i>Gratis · 5 días · Sin tecnicismos</div>
+      <h1 class="fi">Descubrí exactamente qué necesita tu negocio para<br><span class="gt">vender online.</span></h1>
+      <p class="hero-sub fi d1">Sin una web, dependés 100% de referidos y algoritmos que no controlás. Este mini-curso gratuito te dice, en 5 emails, qué necesita puntualmente tu negocio — y qué no necesitás gastar todavía.</p>
+
+      <div class="badges fi d1">
+        <span class="badge badge-light">📧 5 emails en 5 días</span>
+        <span class="badge badge-light">⏱ 5 min de lectura c/u</span>
+        <span class="badge badge-grad">100% gratuito</span>
+      </div>
+
+      <div class="form-card fi d1">
+        <div class="form-title">Empezá el curso ahora</div>
+        <div class="form-sub">El primer email llega hoy. Los demás, uno por día durante 5 días.</div>
+
+        <div class="field">
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" placeholder="María García"/>
+        </div>
+        <div class="field">
+          <label for="email">Tu email</label>
+          <input type="email" id="email" placeholder="maria@tuempresa.com"/>
+        </div>
+        <div class="field">
+          <label for="rubro">¿En qué etapa estás?</label>
+          <select id="rubro">
+            <option value="" disabled selected>Elegí tu situación actual</option>
+            <option value="sin-web">No tengo web todavía</option>
+            <option value="web-nueva">Quiero hacer una web nueva</option>
+            <option value="web-existe">Tengo web pero no genera clientes</option>
+            <option value="creciendo">Tengo web y quiero escalar</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="negocio">¿Qué tipo de negocio tenés?</label>
+          <input type="text" id="negocio" placeholder="Ej: hostel, consultoría, tienda online..."/>
+        </div>
+        <button class="btn-submit" onclick="handleSubmit()">Quiero el curso gratuito →</button>
+        <div class="form-trust">
+          <div class="trust-dot"></div>
+          Sin spam · Podés darte de baja cuando quieras · 100% gratis
+        </div>
+      </div>
+
+      <!-- floating day progress card -->
+      <div class="preview-float fi d2">
+        <div class="pf-label">Tu progreso</div>
+        <div class="pf-days">
+          <div class="pf-day done">D1</div>
+          <div class="pf-day done">D2</div>
+          <div class="pf-day cur">D3</div>
+          <div class="pf-day pend">D4</div>
+          <div class="pf-day pend">D5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPLIT LINE -->
+  <div class="split-line"></div>
+
+  <!-- RIGHT -->
+  <div class="hero-r">
+    <div class="hr-noise"></div>
+    <div class="hr-wm">5</div>
+    <div class="hr-vtxt">vacaredigitalsolutions.com/email-course</div>
+
+    <div class="hr-inner">
+      <div class="hr-geo-row">
+        <div class="hg" style="width:30px;height:30px;background:rgba(255,255,255,.22);border-radius:7px"></div>
+        <div class="hg" style="width:18px;height:18px;background:rgba(255,255,255,.14);border-radius:5px;margin-top:7px"></div>
+        <div class="hg" style="width:40px;height:40px;background:transparent;border:2px solid rgba(255,255,255,.28);border-radius:10px"></div>
+        <div class="hg" style="width:14px;height:14px;background:rgba(255,255,255,.28);border-radius:3px;margin-top:12px"></div>
+        <div class="hg" style="width:24px;height:24px;background:rgba(255,255,255,.15);border-radius:6px;margin-top:5px"></div>
+      </div>
+
+      <div class="ep-label">Los 5 emails del curso</div>
+      <div class="email-cards">
+        <div class="ec">
+          <div class="ec-day">D1</div>
+          <div class="ec-info">
+            <div class="ec-num">Día 1</div>
+            <div class="ec-title">¿Por qué tu negocio necesita un sistema digital?</div>
+          </div>
+        </div>
+        <div class="ec">
+          <div class="ec-day">D2</div>
+          <div class="ec-info">
+            <div class="ec-num">Día 2</div>
+            <div class="ec-title">Qué tiene que tener una web para vender</div>
+          </div>
+        </div>
+        <div class="ec">
+          <div class="ec-day">D3</div>
+          <div class="ec-info">
+            <div class="ec-num">Día 3</div>
+            <div class="ec-title">Caso real: de 0 a 30% de facturación en 6 meses</div>
+          </div>
+        </div>
+        <div class="ec">
+          <div class="ec-day">D4</div>
+          <div class="ec-info">
+            <div class="ec-num">Día 4</div>
+            <div class="ec-title">Qué es una automatización y por qué te cambia el negocio</div>
+          </div>
+        </div>
+        <div class="ec">
+          <div class="ec-day">D5</div>
+          <div class="ec-info">
+            <div class="ec-num">Día 5</div>
+            <div class="ec-title">Qué necesita exactamente tu negocio — y qué no</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scattered geos -->
+    <div class="geo-f gb" style="width:15px;height:15px;top:68px;left:28px;opacity:.32;border-radius:4px"></div>
+    <div class="geo-f" style="width:10px;height:10px;top:94px;left:52px;opacity:.18;background:rgba(255,255,255,.45);border-radius:3px"></div>
+    <div class="geo-f gb" style="width:20px;height:20px;bottom:90px;left:40px;opacity:.22;border-radius:5px"></div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════
+     LOS 5 DÍAS EN DETALLE
+══════════════════════════════════ -->
+<section id="days">
+  <div class="si sp">
+    <div class="ey fi"><i style="background:var(--muted)"></i>El contenido del curso</div>
+    <h2 class="fi">5 emails. 5 minutos cada uno.<br><span class="gt">Estrategia real.</span></h2>
+    <p class="intro fi d1">Cada email está escrito para que puedas aplicarlo inmediatamente a tu situación. Sin teoría innecesaria. Sin ventas forzadas. Solo lo que funciona.</p>
+
+    <div class="days-timeline fi d1">
+
+      <div class="day-item">
+        <div class="day-dot-col">
+          <div class="day-dot">D1</div>
+          <div class="day-line"></div>
+        </div>
+        <div class="day-content">
+          <div class="day-wm">01</div>
+          <div class="day-tag">Día 1 · Fundamentos</div>
+          <h3>¿Por qué tu negocio necesita un sistema digital en 2026?</h3>
+          <p>No hablamos de "tener presencia en internet". Hablamos de la diferencia concreta entre un negocio que depende de que vos estés presente todo el tiempo y uno que genera ingresos aunque te vayas de vacaciones. Te explicamos exactamente qué es un sistema digital de ventas — y por qué una web bonita no es suficiente.</p>
+          <div class="day-takeaway">Terminás este email entendiendo qué te está costando no tener un sistema — en dinero real.</div>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <div class="day-dot-col">
+          <div class="day-dot">D2</div>
+          <div class="day-line"></div>
+        </div>
+        <div class="day-content">
+          <div class="day-wm">02</div>
+          <div class="day-tag">Día 2 · Diseño y conversión</div>
+          <h3>Qué tiene que tener una web para vender — y qué sobra</h3>
+          <p>El 90% de las webs fallan en lo mismo: están diseñadas para gustarle al dueño del negocio, no para convencer al cliente. Te mostramos la estructura exacta de una web que convierte: el hero, los puntos de dolor, el caso de éxito, los CTAs y el formulario. Y te decimos qué sacar porque solamente estorba.</p>
+          <div class="day-takeaway">Terminás con un checklist de 8 elementos que toda web que vende tiene que tener.</div>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <div class="day-dot-col">
+          <div class="day-dot">D3</div>
+          <div class="day-line"></div>
+        </div>
+        <div class="day-content">
+          <div class="day-wm">03</div>
+          <div class="day-tag">Día 3 · Caso real</div>
+          <h3>De depender de Booking.com a generar el 30% de la facturación desde su propia web</h3>
+          <p>El caso real de Supertramp Hostels en Cusco y Machu Picchu. Cómo pasaron de una web que no vendía nada y una dependencia total de plataformas de terceros a generar el 30% de su facturación total desde su sitio en 6 meses. Te contamos exactamente qué hicimos, en qué orden y por qué funcionó.</p>
+          <div class="day-takeaway">Terminás viendo cómo se ve un sistema real funcionando — con números concretos.</div>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <div class="day-dot-col">
+          <div class="day-dot">D4</div>
+          <div class="day-line"></div>
+        </div>
+        <div class="day-content">
+          <div class="day-wm">04</div>
+          <div class="day-tag">Día 4 · Automatizaciones</div>
+          <h3>Qué es una automatización — y qué cambia en tu operación cuando las tenés</h3>
+          <p>Sin tecnicismos. Una automatización es una tarea repetitiva que hacés manualmente hoy y que puede hacerse sola desde mañana. Te mostramos ejemplos concretos según tu tipo de negocio: confirmaciones de reserva para hostels, recordatorios de consultas para coaches, recibos automáticos para ecommerces. Todo lo que tu equipo hace a mano hoy.</p>
+          <div class="day-takeaway">Terminás con 3 automatizaciones específicas que podrías implementar en tu negocio.</div>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <div class="day-dot-col">
+          <div class="day-dot">D5</div>
+          <div class="day-line"></div>
+        </div>
+        <div class="day-content">
+          <div class="day-wm">05</div>
+          <div class="day-tag">Día 5 · Tu plan</div>
+          <h3>Exactamente qué necesita tu negocio ahora mismo — y qué no necesitás gastar todavía</h3>
+          <p>El último email no te vende nada. Te ayuda a entender en qué etapa está tu negocio y qué herramienta digital corresponde a ese momento. No todos necesitan un funnel completo. Una zapatería de barrio no necesita un lead magnet automatizado. Una agencia de marketing sí. Te damos el mapa para que tomes la decisión correcta con tu presupuesto.</p>
+          <div class="day-takeaway">Terminás con claridad total sobre cuál es tu próximo paso — y un link opcional para hablar con nosotros si querés ayuda.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(28,24,40,.025);bottom:-10px;right:-10px">EMAILS</div>
+</section>
+
+<!-- ══════════════════════════════════
+     ¿PARA QUIÉN ES?
+══════════════════════════════════ -->
+<section id="forwho">
+  <div class="si sp">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>¿Para quién es este curso?</div>
+    <h2 class="fi">Este curso es para vos si...</h2>
+    <p class="intro fi d1">No hace falta saber nada de tecnología. Hace falta tener un negocio — o la idea de uno — y querer que funcione mejor online.</p>
+    <div class="who-grid fi d1">
+      <div class="wc">
+        <h3>Emprendedor o dueño de negocio</h3>
+        <div class="wc-check">No tenés web o la que tenés no genera nada.</div>
+        <div class="wc-check">No sabés por dónde empezar sin tirar plata.</div>
+        <div class="wc-check">Querés entender qué hacen las agencias antes de contratar una.</div>
+        <div class="wc-check">Respondés consultas manualmente todo el día.</div>
+      </div>
+      <div class="wc">
+        <h3>Coach, consultor o profesional</h3>
+        <div class="wc-check">Tenés conocimiento pero no sistema para venderlo.</div>
+        <div class="wc-check">Conseguís clientes por referidos pero no es escalable.</div>
+        <div class="wc-check">Querés una agenda llena sin estar presente en redes todo el día.</div>
+        <div class="wc-check">Nunca entendiste bien para qué sirve un lead magnet.</div>
+      </div>
+      <div class="wc">
+        <h3>Negocio de turismo u hospitalidad</h3>
+        <div class="wc-check">Dependés de Booking, Airbnb o TripAdvisor.</div>
+        <div class="wc-check">Pagás comisiones altas en cada reserva.</div>
+        <div class="wc-check">Querés reservas directas pero no sabés cómo generarlas.</div>
+        <div class="wc-check">Tenés web pero nadie la encuentra en Google.</div>
+      </div>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">PARA VOS</div>
+</section>
+
+<!-- ══════════════════════════════════
+     DIFERENCIAS
+══════════════════════════════════ -->
+<section id="diff">
+  <div class="si sp">
+    <div class="ey fi"><i style="background:var(--muted)"></i>Por qué este curso es diferente</div>
+    <h2 class="fi">No es otro curso genérico<br><span class="gt">de marketing digital.</span></h2>
+    <div class="diff-grid fi d1">
+      <div class="diff-card bad">
+        <div class="diff-label l-bad"><i class="x">×</i>Lo que ofrecen otros</div>
+        <ul class="diff-list bad-list">
+          <li>Consejos genéricos que aplican a cualquier negocio (y a ninguno en particular)</li>
+          <li>Teoría de marketing que no podés implementar solo</li>
+          <li>7 módulos en video de 2 horas cada uno</li>
+          <li>Terminás sabiendo más términos pero sin saber qué hacer</li>
+          <li>El objetivo es venderte el curso premium al final</li>
+          <li>Sin casos reales ni números concretos</li>
+        </ul>
+      </div>
+      <div class="diff-card good">
+        <div class="diff-label l-good"><i class="ok">✓</i>Lo que ofrecemos nosotros</div>
+        <ul class="diff-list good-list">
+          <li>5 emails de 5 minutos, uno por día — lo leés tomando el café</li>
+          <li>Ejemplos específicos según tu tipo de negocio</li>
+          <li>Caso real con números: Supertramp Hostels, 30% en 6 meses</li>
+          <li>Terminás con acciones concretas para tu situación específica</li>
+          <li>El objetivo es que tomes la mejor decisión para tu negocio</li>
+          <li>Sin ventas forzadas — el día 5 hay una opción de hablar con nosotros, no una obligación</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     QUIÉNES SOMOS
+══════════════════════════════════ -->
+<section id="about">
+  <div class="si sp">
+    <div class="about-grid fi">
+      <div class="about-content">
+        <div class="ey"><i style="background:var(--muted)"></i>Quiénes escriben este curso</div>
+        <h2>No lo escribió un algoritmo.<br><span class="gt">Lo escribimos nosotros.</span></h2>
+        <p>Somos Germán y Noelia, los dos fundadores de Vacaré Digital Solutions LLC. Germán es desarrollador full-stack con más de 8 años construyendo sistemas digitales en Next.js, Postgres y n8n. Noelia es especialista en marketing y estrategia de conversión.</p>
+        <p>No escribimos este curso para posicionarnos como expertos. Lo escribimos porque es lo que le explicamos a cada cliente antes de empezar a trabajar juntos — y funciona mejor cuando lo entienden primero.</p>
+        <div class="about-creds">
+          <span class="cred">Delaware LLC</span>
+          <span class="cred">Stripe</span>
+          <span class="cred">Mercury</span>
+          <span class="cred">Next.js</span>
+          <span class="cred">n8n</span>
+          <span class="cred">Cloudflare</span>
+        </div>
+      </div>
+      <div class="case-callout fi d1">
+        <div class="cc-tag">Caso de éxito — Supertramp Hostels</div>
+        <span class="cc-num">30%</span>
+        <div class="cc-label">de la facturación total desde la web</div>
+        <div class="cc-sub">En 6 meses. Partiendo de una web que no generaba ninguna reserva directa y dependencia total de Booking.com. Este es el caso que analizamos en el Día 3 del curso.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FAQ
+══════════════════════════════════ -->
+<section id="faq">
+  <div class="si sp">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>Preguntas frecuentes</div>
+    <h2 class="fi">Lo que nos preguntan<br><span class="gt">antes de suscribirse.</span></h2>
+    <div class="faq-grid fi d1">
+      <div class="faq-item">
+        <h3>¿Realmente es gratis?</h3>
+        <p>Sí. Completamente. 5 emails, cero costo. No hay versión premium del curso, no hay upsell en el medio. El único momento en que aparece una opción de pago es al final del Día 5, si querés hablar con nosotros — y es completamente opcional.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuándo llega el primer email?</h3>
+        <p>El mismo día que completás el formulario, dentro de los primeros 30 minutos. Los demás llegan uno por día durante los siguientes 4 días.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Necesito saber de tecnología?</h3>
+        <p>No. El curso está escrito para dueños de negocio, no para desarrolladores. No hay código, no hay tecnicismos. Si sabés usar el email, podés aprovechar el curso.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Me van a mandar spam después?</h3>
+        <p>No. Cuando termina el curso, termina la secuencia. No te mandamos newsletters, no te agregamos a ninguna lista de marketing sin avisarte. Podés darte de baja en cualquier momento con un clic.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Sirve si ya tengo una web?</h3>
+        <p>Sí, especialmente el Día 2 (qué tiene que tener una web para vender) y el Día 4 (automatizaciones). Si ya tenés web pero no genera clientes, el curso te ayuda a entender por qué y qué hacer al respecto. Si querés un diagnóstico más profundo, te recomendamos la <a href="/es/free-audit" style="color:var(--mg);font-weight:700;text-decoration:none">auditoría gratuita</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué pasa al final del Día 5?</h3>
+        <p>El email del Día 5 incluye un formulario corto para que nos contés tu situación. Si tu perfil encaja con lo que hacemos, te enviamos una invitación para agendar una llamada gratuita de 30 minutos. Sin presión. Si no querés, no pasa nada.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">FAQ</div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA BOTTOM
+══════════════════════════════════ -->
+<section id="cta-b">
+  <div class="si sp">
+    <div class="ey fi" style="justify-content:center"><i style="background:var(--muted)"></i>Empezá hoy</div>
+    <h2 class="fi">5 días para entender<br><span class="gt">qué necesita tu negocio.</span></h2>
+    <p class="cs fi d1">Gratis. Sin spam. Sin compromiso. El primer email llega hoy.</p>
+    <div class="cta-b-form fi d1">
+      <div class="field">
+        <label for="nombre2">Tu nombre</label>
+        <input type="text" id="nombre2" placeholder="María García"/>
+      </div>
+      <div class="field">
+        <label for="email2">Tu email</label>
+        <input type="email" id="email2" placeholder="maria@tuempresa.com"/>
+      </div>
+      <div class="field">
+        <label for="rubro2">¿En qué etapa estás?</label>
+        <select id="rubro2">
+          <option value="" disabled selected>Elegí tu situación</option>
+          <option>No tengo web todavía</option>
+          <option>Quiero hacer una web nueva</option>
+          <option>Tengo web pero no genera clientes</option>
+          <option>Tengo web y quiero escalar</option>
+        </select>
+      </div>
+      <button class="btn-submit" onclick="handleSubmit()">Quiero el curso gratuito →</button>
+      <div class="trust-row">
+        <div class="tr-item"><div class="tr-dot"></div>Sin spam</div>
+        <div class="tr-item"><div class="tr-dot"></div>Baja con un clic</div>
+        <div class="tr-item"><div class="tr-dot"></div>100% gratis</div>
+        <div class="tr-item"><div class="tr-dot"></div>Vacaré LLC Delaware</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="flogo">Vacaré</div>
+      <p>Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.</p>
+    </div>
+    <div class="fcol">
+      <h5>Recursos gratuitos</h5>
+      <ul>
+        <li><a href="/es/free-audit">Auditoría web gratuita</a></li>
+        <li><a href="/es/email-course">Mini-curso 5 días</a></li>
+        <li><a href="/#case">Caso Supertramp</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="/#packs">Growth Machine</a></li>
+        <li><a href="/#packs">Full Funnel 360</a></li>
+        <li><a href="/#packs">Automation Retainer</a></li>
+        <li><a href="/#ctaf">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 Vacaré Digital Solutions LLC. Todos los derechos reservados.</p>
+    <p>ES / EN</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+setTimeout(()=>document.querySelectorAll('#hero .fi').forEach(el=>el.classList.add('vis')),80);
+
+function handleSubmit(){
+  const email = document.getElementById('email')?.value || document.getElementById('email2')?.value;
+  const nombre = document.getElementById('nombre')?.value || document.getElementById('nombre2')?.value;
+  if(!email || !nombre){
+    alert('Por favor completá tu nombre y email para empezar el curso.');
+    return;
+  }
+  // fetch('https://tu-n8n.com/webhook/email-course', {
+  //   method:'POST',
+  //   headers:{'Content-Type':'application/json'},
+  //   body: JSON.stringify({email, nombre, rubro: document.getElementById('rubro')?.value})
+  // })
+  const btn = event.target;
+  btn.textContent = '✓ ¡Listo! Revisá tu email — el Día 1 ya está en camino';
+  btn.style.opacity = '.7';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
