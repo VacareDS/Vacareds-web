@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/es)",
+      "Bash(curl -s http://localhost:3000/sitemap.xml)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://localhost:3000/en)",
+      "Bash(kill 583)",
+      "Bash(rm -f /tmp/dev-next.log)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)"
+    ]
+  }
+}

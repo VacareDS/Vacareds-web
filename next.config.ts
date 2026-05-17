@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+const withNextIntl = require('next-intl/plugin')('./src/i18n.ts');
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = withNextIntl({
+  images: {
+    remotePatterns: [],
+  },
+});

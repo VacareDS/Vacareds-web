@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Custom Vacaré Colors */
+  --cream: #F7F6F2;
+  --dark: #1C1828;
+  --darker: #0E0E12;
+  --muted: rgba(28, 24, 40, 0.5);
+  --muted-l: rgba(247, 246, 242, 0.5);
+  --mg: #E8417A;
+  --or: #F07030;
+  --am: #F5A623;
+  --grad: linear-gradient(135deg, #E8417A 0%, #F07030 55%, #F5A623 100%);
 }
 
 @theme inline {
@@ -20,7 +31,112 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom global utilities */
+.gt, .grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gb, .grad-bg {
+  background: var(--grad);
+}
+
+.fi {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fi.vis {
+  opacity: 1;
+  transform: none;
+}
+
+.fi.d1 { transition-delay: 0.1s; }
+.fi.d2 { transition-delay: 0.2s; }
+.fi.d3 { transition-delay: 0.3s; }
+
+/* CTA Animations */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  50%, 100% { transform: translateX(100%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 8px 32px rgba(232, 65, 122, 0.2); }
+  50% { box-shadow: 0 12px 48px rgba(232, 65, 122, 0.35); }
+}
+
+/* AutoFlow Node Floating Animations — subtle, organic movement */
+@keyframes floatA {
+  0%, 100% { transform: translate(-50%, -50%) translate(0, 0); }
+  33% { transform: translate(-50%, -50%) translate(3px, -5px); }
+  66% { transform: translate(-50%, -50%) translate(-4px, 3px); }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translate(-50%, -50%) translate(0, 0); }
+  33% { transform: translate(-50%, -50%) translate(-3px, 4px); }
+  66% { transform: translate(-50%, -50%) translate(5px, -2px); }
+}
+
+@keyframes floatC {
+  0%, 100% { transform: translate(-50%, -50%) translate(0, 0); }
+  25% { transform: translate(-50%, -50%) translate(4px, 3px); }
+  50% { transform: translate(-50%, -50%) translate(-2px, 6px); }
+  75% { transform: translate(-50%, -50%) translate(-5px, -3px); }
+}
+
+@keyframes floatD {
+  0%, 100% { transform: translate(-50%, -50%) translate(0, 0); }
+  25% { transform: translate(-50%, -50%) translate(-4px, -4px); }
+  50% { transform: translate(-50%, -50%) translate(3px, -2px); }
+  75% { transform: translate(-50%, -50%) translate(2px, 5px); }
+}
+
+@keyframes floatCenter {
+  0%, 100% { transform: translate(-50%, -50%) translate(0, 0); }
+  50% { transform: translate(-50%, -50%) translate(0, -4px); }
+}
+
+@keyframes enginePulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+/* Hero shape inline floats (no absolute positioning base) */
+@keyframes shapeFloat1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+@keyframes shapeFloat2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  40% { transform: translateY(-6px) rotate(-4deg); }
+  80% { transform: translateY(4px) rotate(2deg); }
+}
+@keyframes shapeFloat3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(6px) rotate(5deg); }
+  66% { transform: translateY(-5px) rotate(-3deg); }
+}
+@keyframes shapeFloat4 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

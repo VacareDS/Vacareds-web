@@ -1,0 +1,1820 @@
+{
+  "Metadata": {
+    "Home": {
+      "title": "Vacare Digital Solutions | Sistemas digitales que generan ingresos",
+      "description": "Más clientes. Más ingresos. En automático. Construimos sistemas digitales que trabajan por tu negocio todos los días."
+    },
+    "Services": {
+      "title": "Servicios | Vacare Digital Solutions",
+      "description": "Sistemas web, SEO y automatizaciones para negocios en LATAM, España y EEUU. Growth Machine, Full Funnel 360, Ecommerce Pro y más."
+    },
+    "FreeAudit": {
+      "title": "Auditoría Web Gratuita | Vacare Digital Solutions",
+      "description": "Ingresá la URL de tu sitio y en menos de 2 horas recibís un diagnóstico real: velocidad, SEO técnico y conversión — con las 3 acciones concretas para mejorar."
+    },
+    "EmailCourse": {
+      "title": "Lo que toda agencia debería explicarte antes de cobrarte | Vacare",
+      "description": "5 emails cortos. El mapa de lo que realmente necesita tu negocio online — y lo que podés ahorrarte. Gratis, sin compromiso."
+    },
+    "CaseStudies": {
+      "title": "Casos de Éxito | Vacare Digital Solutions",
+      "description": "Resultados reales de negocios que transformaron su presencia digital con Vacare. Supertramp Hostels y más."
+    }
+  },
+  "Layout": {
+    "Nav": {
+      "brand": "Vacare Digital Solutions",
+      "services": "Servicios",
+      "cases": "Casos",
+      "auto": "Cómo funciona",
+      "blog": "Blog",
+      "audit": "Auditoría gratis",
+      "contact": "Contacto",
+      "lang": "ES / EN",
+      "cta": "Mostranos tu negocio →",
+      "servicesDropdown": {
+        "starter": "Starter Presence",
+        "growth": "Growth Machine",
+        "funnel": "Full Funnel 360",
+        "retainer": "Automation Retainer"
+      },
+      "casesDropdown": {
+        "supertramp": "Supertramp Hostels",
+        "sobremi": "sobremi.online"
+      },
+      "resources": "Recursos",
+      "resourcesDropdown": {
+        "audit": "Auditoría web gratuita",
+        "course": "Curso gratis (5 emails)"
+      }
+    },
+    "Footer": {
+      "brandDesc": "Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.",
+      "services": "Servicios",
+      "growthMachine": "Growth Machine",
+      "fullFunnel": "Full Funnel 360",
+      "retainer": "Automation Retainer",
+      "freeCourse": "Mini-curso gratuito",
+      "freeAudit": "Auditoría web gratuita",
+      "legal": "Legal",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "contact": "Contacto",
+      "copyright": "© 2026 Vacare Digital Solutions LLC. Todos los derechos reservados.",
+      "lang": "ES / EN",
+      "guides": {
+        "title": "Guías",
+        "items": [
+          {
+            "label": "SEO para negocios",
+            "link": "/blog/seo-errores-comunes"
+          },
+          {
+            "label": "n8n vs Zapier",
+            "link": "/blog/n8n-vs-zapier"
+          },
+          {
+            "label": "Canal propio de ventas",
+            "link": "/blog/dejar-de-depender-de-instagram"
+          }
+        ]
+      }
+    }
+  },
+  "Home": {
+    "Hero": {
+      "watermark": "VACARE",
+      "eyebrow": "Sistemas de Venta Digital para tu negocio",
+      "title": "Más clientes.<br></br>Más ingresos.<br></br><grad>En automático.</grad>",
+      "subtitle": "Te construimos el sistema que vende mientras dormís. Automatizaciones reales, resultados medibles, sin depender de vos.",
+      "ctaPrimary": "Mostranos tu negocio →",
+      "ctaSecondary": "Ver casos de éxito",
+      "trustLogos": [
+        "LLC en Delaware",
+        "Stripe · Mercury",
+        "+8 proyectos"
+      ],
+      "float1": {
+        "tag": "Caso real",
+        "num": "30%",
+        "label": "Facturación desde la web"
+      },
+      "float2": {
+        "num": "$0",
+        "label": "Costo de hosting"
+      },
+      "rightWatermark": "GROW",
+      "rightVertical": "vacaredigitalsolutions.com",
+      "rightHeadline": "30%",
+      "metric1": {
+        "num": "+8",
+        "label": "Negocios con sistema activo",
+        "sub": "Clientes con resultados medibles"
+      },
+      "metric2": {
+        "num": "3x",
+        "label": "Leads sin intervención manual",
+        "sub": "Flujos n8n · Webhooks · Postgres"
+      },
+      "metric3": {
+        "num": "24/7",
+        "label": "El sistema trabaja por vos",
+        "sub": "Next.js · Cloudflare · Sin hosting"
+      }
+    },
+    "Why": {
+      "watermark": "CRECER",
+      "eyebrow": "El problema",
+      "title": "Tu negocio depende de vos.<br></br><grad>Eso no escala.</grad>",
+      "intro": "Si mañana dejás de publicar, de contestar mensajes o de pedir referidos — ¿seguirían llegando clientes? Un sistema de ventas digital y automático cambia esa ecuación.",
+      "cta": "Analizá tu web gratis →",
+      "cards": [
+        {
+          "num": "01",
+          "p": "Dependés de referidos para conseguir clientes nuevos. Si nadie te recomienda, el teléfono no suena."
+        },
+        {
+          "num": "02",
+          "p": "Tu presencia digital vive en Instagram — una plataforma que no es tuya y puede desaparecer mañana."
+        },
+        {
+          "num": "03",
+          "p": "Respondés consultas manualmente, una por una."
+        },
+        {
+          "num": "04",
+          "p": "Cuando alguien te busca en Google, no aparecés."
+        },
+        {
+          "num": "05",
+          "p": "Cada mes sin sistema es un mes que tu competencia te gana clientes."
+        }
+      ]
+    },
+    "Case": {
+      "tag": "Caso de éxito real",
+      "title": "De depender de Booking.com a generar el <grad>30% de su facturación</grad> desde su propia web.",
+      "body": "Supertramp tenía una web que no vendía. Dependían completamente de plataformas que cobraban comisión en cada reserva. Rediseñamos su sistema completo: web, SEO local y automatizaciones. En 6 meses, el 30% de su facturación llegaba desde su propio sitio.",
+      "cta": "Ver caso completo →",
+      "imgTag": "supertramp hostels",
+      "imgNum": "30%",
+      "imgSub": "Cusco & Machu Picchu",
+      "metrics": [
+        {
+          "num": "30%",
+          "label": "Reservas desde web"
+        },
+        {
+          "num": "6m",
+          "label": "Desde inicio"
+        },
+        {
+          "num": "2",
+          "label": "Propiedades"
+        }
+      ]
+    },
+    "Stats": {
+      "watermark": "2026",
+      "stats": [
+        {
+          "num": "+8",
+          "label": "Negocios con sistema activo"
+        },
+        {
+          "num": "3x",
+          "label": "Leads sin intervención manual"
+        },
+        {
+          "num": "30d",
+          "label": "Entrega promedio"
+        },
+        {
+          "num": "24/7",
+          "label": "El sistema trabaja por vos"
+        }
+      ]
+    },
+    "Packs": {
+      "watermark": "SISTEMA",
+      "eyebrow": "Nuestras soluciones",
+      "title": "Elegí el sistema que necesita <grad>tu negocio.</grad>",
+      "sub": "No necesitás experiencia previa en tecnología — nosotros lo hacemos por vos.",
+      "items": [
+        {
+          "badge": "Tier 1",
+          "badgeType": "def",
+          "name": "Starter Presence",
+          "price": "<b>Ideal para:</b> negocios que quieren presencia seria en Google.",
+          "desc": "Web profesional + SEO local + stack de medición. Para negocios que necesitan aparecer en Google.",
+          "features": [
+            "Web en Next.js — hasta 5 secciones",
+            "SEO técnico + Google Business Profile",
+            "GA4 + Search Console + Clarity",
+            "1 automatización básica"
+          ],
+          "btn": "Ver detalles →",
+          "btnType": "outline",
+          "isHot": false
+        },
+        {
+          "badge": "⭐ Recomendado",
+          "badgeType": "hot",
+          "name": "Growth Machine",
+          "price": "<b>Ideal para:</b> negocios que quieren escalar captación sin depender de referidos.",
+          "desc": "Web estratégica + automatizaciones n8n + lead magnet + calendario integrado.",
+          "features": [
+            "Web completa en Next.js",
+            "Estrategia de conversión por buyer persona",
+            "3 a 5 flujos en n8n",
+            "Lead magnet + secuencia 5 días",
+            "Integración cal.com + pagos"
+          ],
+          "btn": "Empezar →",
+          "btnType": "solid",
+          "isHot": true
+        },
+        {
+          "badge": "Tier 3",
+          "badgeType": "def",
+          "name": "Full Funnel 360",
+          "price": "<b>Ideal para:</b> empresas que quieren dominar buscadores y convertir tráfico.",
+          "desc": "Todo lo anterior + SEO estratégico + optimización para LLMs + consultoría EEAT + funnel completo.",
+          "features": [
+            "Todo lo del Growth Machine",
+            "Contenido SEO + EEAT",
+            "Funnel con calificación automática",
+            "Dashboard Looker Studio"
+          ],
+          "btn": "Ver detalles →",
+          "btnType": "outline",
+          "isHot": false
+        },
+        {
+          "badge": "Mensual",
+          "badgeType": "mo",
+          "name": "Automation Retainer",
+          "price": "<b>Ideal para:</b> negocios con sistema activo que quieren seguir mejorando.",
+          "desc": "Tu sistema sigue mejorando cada mes. Flujos nuevos, mantenimiento continuo, sin contratar un dev.",
+          "features": [
+            "Plan Base: hasta 6hs desarrollo/mes",
+            "Plan Pro: hasta 12hs desarrollo/mes",
+            "Documentación de cada flujo"
+          ],
+          "btn": "Ver planes →",
+          "btnType": "outline",
+          "isHot": false
+        }
+      ]
+    },
+    "Auto": {
+      "watermark": "AUTO",
+      "eyebrow": "El diferenciador",
+      "title": "Tu web trabaja.<br></br><grad>Tus flujos trabajan más.</grad>",
+      "intro": "La mayoría de las agencias te entrega una web. Nosotros te entregamos un sistema. Cada proyecto incluye automatizaciones reales en n8n: confirmaciones, seguimientos y alertas — todo funcionando solo.",
+      "note": "Así funciona sobremi.online — nuestra propia plataforma con Stripe + n8n + Postgres en producción.",
+      "cta": "Conocé todos los flujos →",
+      "flow": {
+        "trigger": "Cliente completa formulario",
+        "engine": "n8n",
+        "outputs": [
+          {
+            "text": "Email de confirmación automático",
+            "color": "#E8417A"
+          },
+          {
+            "text": "Registro en Postgres",
+            "color": "#F07030"
+          },
+          {
+            "text": "Aviso interno al equipo",
+            "color": "#F5A623"
+          },
+          {
+            "text": "Secuencia de nurturing activada",
+            "color": "rgba(247,246,242,0.3)"
+          }
+        ]
+      }
+    },
+    "Whom": {
+      "eyebrow": "¿Esto es para mí?",
+      "title": "Trabajamos con negocios<br></br>que quieren <grad>crecer en serio.</grad>",
+      "cards": [
+        {
+          "icon": "hostel",
+          "title": "Hostels y turismo",
+          "pain": "Dependés de Booking o Airbnb. Querés reservas directas y menos comisiones.",
+          "sol": "Web + automatizaciones + SEO local"
+        },
+        {
+          "icon": "coach",
+          "title": "Coaches y consultores",
+          "pain": "Respondés DMs todo el día. Querés la agenda llena sin estar pegado al teléfono.",
+          "sol": "Growth Machine con lead magnet"
+        },
+        {
+          "icon": "ecom",
+          "title": "Ecommerces",
+          "pain": "Vendés por Instagram pero no tenés tienda propia. Perdés ventas por falta de proceso.",
+          "sol": "Ecommerce Pro + post-compra automático"
+        },
+        {
+          "icon": "b2b",
+          "title": "Agencias y B2B",
+          "pain": "Tu web existe pero no genera leads. El equipo vive de referidos y outreach manual.",
+          "sol": "Full Funnel 360 con calificación automática"
+        }
+      ]
+    },
+    "Portfolio": {
+      "eyebrow": "Proyectos entregados",
+      "title": "Lo que construimos<br></br>habla por nosotros.",
+      "items": [
+        {
+          "tag": "Hostel · Turismo",
+          "title": "Supertramp Hostels",
+          "link": "30% de facturación desde la web en 6 meses"
+        },
+        {
+          "tag": "App · Automatizaciones",
+          "title": "sobremi.online",
+          "link": "Stripe + n8n + Postgres en producción"
+        },
+        {
+          "tag": "Negocio local",
+          "title": "cocherasezeizasur.com",
+          "link": "Web + SEO local"
+        }
+      ]
+    },
+    "Team": {
+      "eyebrow": "Quiénes somos",
+      "title": "Una LLC americana.<br></br>Un equipo con <grad>estrategia real.</grad>",
+      "body": "Somos Germán y Noelia. Vacare Digital Solutions es una empresa constituida en Delaware, EEUU, con operaciones en Stripe y Mercury. No somos una agencia con capas de intermediarios — somos dos especialistas que trabajan directamente con cada cliente, de la estrategia al código.",
+      "members": [
+        {
+          "name": "Germán",
+          "role": "CTO & Dev Full-Stack"
+        },
+        {
+          "name": "Noelia",
+          "role": "Marketing & Ventas"
+        }
+      ],
+      "labels": [
+        "Delaware LLC",
+        "Stripe",
+        "Next.js",
+        "n8n"
+      ]
+    },
+    "CtaFinal": {
+      "title": "¿Hablamos?",
+      "subtitle": "Agendá una llamada gratuita de 30 minutos para analizar tu negocio y ver cómo podemos ayudarte a crecer.",
+      "btn": "Mostranos tu negocio →",
+      "disclaimer": "Sin compromiso. Sin llamadas de ventas agresivas."
+    },
+    "VideoTestimonial": {
+      "eyebrow": "Caso real",
+      "quote": "El 30% de nuestra facturación ahora viene de nuestra propia web. Antes dependíamos 100% de Booking.",
+      "author": "Theo",
+      "role": "Manager General, Supertramp Hostels"
+    },
+    "BlogPreview": {
+      "eyebrow": "Recursos",
+      "title": "Guías para <grad>crecer online</grad>",
+      "subtitle": "Artículos prácticos sobre marketing digital, SEO, automatizaciones y estrategia para negocios que quieren dejar de depender de referidos.",
+      "ctaText": "Ver todas las guías →",
+      "posts": [
+        {
+          "category": "SEO",
+          "title": "Por qué tu web no aparece en Google (y cómo arreglarlo)",
+          "excerpt": "Los 5 errores técnicos que más penaliza Google y que el 70% de los sitios tienen sin saberlo.",
+          "link": "/blog/seo-errores-comunes"
+        },
+        {
+          "category": "Automatizaciones",
+          "title": "n8n vs Zapier: cuál conviene para tu negocio",
+          "excerpt": "Comparamos costos, flexibilidad y escalabilidad de las dos plataformas de automatización más usadas.",
+          "link": "/blog/n8n-vs-zapier"
+        },
+        {
+          "category": "Estrategia",
+          "title": "Cómo dejar de depender de Instagram para vender",
+          "excerpt": "El paso a paso para construir un canal propio que genera leads y ventas sin depender de algoritmos.",
+          "link": "/blog/dejar-de-depender-de-instagram"
+        }
+      ]
+    },
+    "FaqSection": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que todos preguntan <grad>antes de empezar.</grad>",
+      "items": [
+        {
+          "q": "¿Cuánto cuesta trabajar con Vacare?",
+          "a": "Nuestros paquetes arrancan desde $1,500 USD (Starter Presence) hasta $5,000 USD (Full Funnel 360). También ofrecemos un retainer mensual desde $500 USD/mes. Cada proyecto se adapta a tu etapa y presupuesto."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda en estar listo?",
+          "a": "Un proyecto típico tarda entre 30 y 45 días desde la estrategia hasta publicado. Proyectos más simples pueden estar listos en 2-3 semanas. Siempre arrancamos con una sesión de estrategia antes de escribir una línea de código."
+        },
+        {
+          "q": "¿Necesito saber de tecnología?",
+          "a": "No. Nos encargamos de todo lo técnico: hosting, dominio, SSL, DNS, deploys y mantenimiento. Vos te enfocás en tu negocio y nosotros en que tu sistema digital funcione."
+        },
+        {
+          "q": "¿Qué incluye el mantenimiento mensual?",
+          "a": "El Automation Retainer incluye hasta 6 o 12 horas de desarrollo mensual: flujos nuevos en n8n, mejoras en la web, optimización de conversión, y documentación completa de cada cambio."
+        },
+        {
+          "q": "¿Trabajan con negocios fuera de Argentina?",
+          "a": "Sí. Somos una LLC en Delaware, EEUU. Trabajamos con clientes en toda Latinoamérica, España y Estados Unidos. Facturamos en USD vía Stripe."
+        },
+        {
+          "q": "¿Qué se puede automatizar en mi negocio?",
+          "a": "Casi cualquier proceso repetitivo: confirmaciones de citas o reservas, seguimientos de leads por email o WhatsApp, pagos y facturación, notificaciones internas al equipo, incorporación de nuevos clientes y registro automático en tu base de datos. Usamos n8n conectado a tu web para que todo ocurra solo, sin que tengas que intervenir."
+        }
+      ]
+    },
+    "CtaFinalWatermark": "EMPEZÁ"
+  },
+  "Services": {
+    "Hero": {
+      "watermark": "SERVICIOS",
+      "eyebrow": "Sistemas digitales para tu negocio",
+      "title": "Una web que no genera<br />clientes no es una inversión.<br /><grad>Es un gasto.</grad>",
+      "subtitle": "Construimos sistemas digitales que traen leads de forma autónoma — no webs bonitas que no convierten.",
+      "cta": "Agendá una llamada →",
+      "ctaSecondary": "Ver los paquetes ↓",
+      "trust": {
+        "delaware": "LLC registrada en Delaware",
+        "projects": "+15 proyectos entregados",
+        "supertramp": "30% más facturación · Supertramp"
+      },
+      "stats": [
+        {
+          "num": "30%",
+          "label": "Facturación directa desde la web — Supertramp Hostels"
+        },
+        {
+          "num": "$0",
+          "label": "Costo de hosting en la mayoría de proyectos"
+        },
+        {
+          "num": "30d",
+          "label": "De primera llamada a sistema funcionando"
+        },
+        {
+          "num": "5+",
+          "label": "Automatizaciones n8n incluidas por proyecto"
+        }
+      ],
+      "quote": "\"Pasamos de depender 100% de OTAs a generar el 30% de la facturación directo desde la web. En 6 meses.\"",
+      "quoteAuthor": "— Theo · Supertramp Hostels, Cusco & Machu Picchu"
+    },
+    "WhyFailed": {
+      "watermark": "ANTES",
+      "eyebrow": "El problema con la mayoría de las agencias",
+      "title": "Lo que te entregaron antes no funcionó.<br /><grad>No fue mala suerte.</grad>",
+      "intro": "Hay tres razones por las que casi todos los proyectos digitales fallan. Si te pasó alguna, no es casualidad.",
+      "cards": [
+        {
+          "num": "01",
+          "title": "Diseñaron para verse bien, no para convertir",
+          "body": "Una web que no está construida sobre la intención de búsqueda de tu cliente es un folleto digital. Bonito, inútil."
+        },
+        {
+          "num": "02",
+          "title": "Entregaron el proyecto y desaparecieron",
+          "body": "Nadie configuró medición. Nadie miró si llegaban leads. El trabajo terminaba cuando vos pagabas. Tuyo el problema desde entonces."
+        },
+        {
+          "num": "03",
+          "title": "Todo dependía de vos para funcionar",
+          "body": "Sin automatizaciones, cada lead requiere respuesta manual. Escalás contratando personas, no construyendo sistemas."
+        }
+      ],
+      "footer": "Nosotros hacemos las tres cosas distintas.",
+      "footerLink": "Ver cómo →"
+    },
+    "Case": {
+      "eyebrow": "Un resultado real, antes de ver los paquetes"
+    },
+    "Packs": {
+      "watermark": "PACKS",
+      "eyebrow": "Los paquetes",
+      "title": "Cinco soluciones.<br /><grad>Una para cada etapa.</grad>",
+      "intro": "Cada paquete responde a un dolor específico. Si no sabés cuál corresponde, <a href='/es/auditoria-web-gratuita' class='text-[var(--mg)] font-bold no-underline hover:opacity-80'>empezá por la auditoría gratuita</a> — te lo decimos en 2 horas.",
+      "includesTitle": "Qué incluye",
+      "ctaDetail": "Ver detalles del paquete →",
+      "items": [
+        {
+          "id": "starter",
+          "slug": "starter-presence",
+          "num": "01",
+          "badge": "Primer paso",
+          "name": "Starter Presence",
+          "persona": "Para dueños de negocio que hoy son invisibles en Google y saben que cada semana pierden clientes que van a parar a la competencia.",
+          "desc": "Si un cliente busca lo que ofrecés en Google y no te encuentra, ese cliente ya es de otro. El Starter Presence te pone en el mapa — con una web que aparece, que se ve profesional y que convierte visitantes en contactos reales desde el primer mes.",
+          "cta": "Quiero aparecer en Google →",
+          "includes": [
+            "Web publicada en 30 días, sin costo mensual de hosting",
+            "Aparecés en búsquedas locales en 30-60 días (SEO técnico + Google Business)",
+            "Nunca perdés un lead: formulario con notificación automática a tu WhatsApp o email",
+            "Sabés cuánta gente visita tu web y desde dónde (GA4 + Search Console + Clarity)",
+            "1 automatización incluida que te ahorra tiempo desde el día uno"
+          ],
+          "result": "Tu negocio aparece en Google. Los leads llegan de forma organizada. Dejás de depender de que alguien te recomiende para que te encuentren."
+        },
+        {
+          "id": "growth",
+          "slug": "growth-machine",
+          "num": "02",
+          "badge": "⭐ El más elegido",
+          "name": "Growth Machine",
+          "persona": "Para negocios que tienen web y redes, pero los leads no llegan solos y el crecimiento depende de referidos que no escalan.",
+          "desc": "Tenés presencia, pero no tenés sistema. La diferencia entre un negocio que escala y uno que estanca es si sus leads llegan solos o si alguien tiene que salir a buscarlos. Growth Machine construye el sistema que trabaja mientras vos te dedicás a lo tuyo.",
+          "cta": "Quiero mi sistema de captación →",
+          "includes": [
+            "Todo lo del Starter, más:",
+            "Sistema que captura leads y los nutre automáticamente (3 a 5 flujos n8n)",
+            "Los prospectos agendan reuniones solos — sin coordinar por WhatsApp",
+            "Email marketing automatizado: los leads que no convierten hoy, convierten en 7 días",
+            "Integración de pagos (Stripe) — cobrás online sin fricción",
+            "Dashboard semanal: leads, fuente, conversión en tiempo real"
+          ],
+          "result": "Tu sistema captura y nutre leads de forma autónoma desde la semana 1. Vos recibís el prospecto calificado, listo para cerrar."
+        },
+        {
+          "id": "funnel",
+          "slug": "full-funnel-360",
+          "num": "03",
+          "badge": "Canal orgánico",
+          "name": "Full Funnel 360",
+          "persona": "Para líderes que quieren dejar de depender del boca a boca y construir un canal de clientes nuevos cada mes — predecible, sin pagar publicidad.",
+          "desc": "El boca a boca es un canal hermoso pero impredecible. Full Funnel 360 construye el canal orgánico que atrae clientes de forma sostenida: SEO que posiciona, contenido que convierte, y un funnel completo que lleva al visitante desde la búsqueda hasta la reunión agendada.",
+          "cta": "Quiero mi canal orgánico →",
+          "includes": [
+            "Todo lo del Growth Machine, más:",
+            "Tu web posiciona en Google para las búsquedas de tus clientes (SEO como arquitectura)",
+            "Aparecer en las respuestas de ChatGPT, Perplexity y otros modelos IA (optimización LLM)",
+            "10 piezas de contenido estratégico que trabajan para vos durante años",
+            "Funnel completo: tráfico → lead → nurturing → calificación → llamada agendada",
+            "CRM básico (Notion o Airtable) — sabés en qué etapa está cada prospecto",
+            "Secuencia de onboarding 7-14 días que convierte leads tibios en clientes"
+          ],
+          "result": "En 90 días, tenés un canal de clientes orgánicos funcionando. En 6 meses, ese canal es predecible. No pagás publicidad. No dependés de referidos."
+        },
+        {
+          "id": "ecommerce",
+          "slug": "ecommerce-pro",
+          "num": "04",
+          "badge": "Tienda que vende",
+          "name": "Ecommerce Pro",
+          "persona": "Para marcas con producto que están dejando dinero sobre la mesa porque su tienda online no convierte — o directamente todavía no existe.",
+          "desc": "Una tienda mal construida no es un canal de ventas — es un costo mensual que da trabajo sin generar retorno. Ecommerce Pro construye la tienda con las tres cosas que hacen que una venta online ocurra: velocidad, confianza y automatizaciones que hacen el trabajo de post-venta solas.",
+          "cta": "Quiero mi tienda que vende →",
+          "includes": [
+            "Next.js + Stripe + Postgres — velocidad máxima, sin dependencia de plataforma",
+            "WooCommerce optimizado si ya tenés WordPress",
+            "Confirmación de pago inmediata al comprador (Stripe webhook → n8n)",
+            "Seguimiento post-compra automático + solicitud de reseña",
+            "Aviso interno por cada pedido — tu equipo siempre sabe",
+            "Alerta de stock bajo — nunca te quedás sin saber"
+          ],
+          "result": "Una tienda que vende mientras dormís. Cada venta desencadena el proceso completo de forma automática. Tu equipo no pierde tiempo en tareas repetitivas."
+        },
+        {
+          "id": "retainer",
+          "slug": "automation-retainer",
+          "num": "05",
+          "badge": "Mensual",
+          "name": "Automation Retainer",
+          "persona": "Para negocios que ya tienen web y clientes, y saben que hay trabajo repetitivo que su equipo hace a mano — trabajo que una máquina podría hacer mejor, más rápido y sin errores.",
+          "desc": "El tiempo de tu equipo es el recurso más caro que tenés. Cada tarea repetitiva que hacen a mano — responder consultas, enviar confirmaciones, actualizar planillas, hacer seguimientos — es tiempo que no se usa para crecer. El Retainer construye esas automatizaciones mes a mes.",
+          "cta": "Quiero automatizar mi negocio →",
+          "includes": [
+            "Plan Base: hasta 6 horas de desarrollo de automatizaciones por mes",
+            "Plan Pro: hasta 12 horas + integraciones con APIs externas",
+            "1 a 2 flujos nuevos por mes según el plan elegido",
+            "Mantenimiento y actualización de flujos existentes",
+            "Revisión estratégica mensual (Plan Pro)",
+            "Documentación de cada entrega — sabés exactamente qué tiene tu sistema"
+          ],
+          "result": "La calibración se hace en el onboarding. Cada mes tu sistema hace más — sin que vos tengas que pedírselo."
+        }
+      ]
+    },
+    "Questions": {
+      "eyebrow": "Una pregunta rápida",
+      "title": "¿Cuál de estas situaciones<br /><grad>describe tu negocio?</grad>",
+      "intro": "Hacé click en la que más se parece a tu situación — te lleva directo al paquete que corresponde.",
+      "cards": [
+        {
+          "pain": "No tengo web o la que tengo no aparece en Google",
+          "pack": "Starter Presence"
+        },
+        {
+          "pain": "Tengo web pero los leads no llegan solos",
+          "pack": "Growth Machine"
+        },
+        {
+          "pain": "Quiero clientes nuevos sin pagar publicidad",
+          "pack": "Full Funnel 360"
+        },
+        {
+          "pain": "Quiero vender mis productos online",
+          "pack": "Ecommerce Pro"
+        },
+        {
+          "pain": "Hay trabajo repetitivo que mi equipo hace a mano",
+          "pack": "Automation Retainer"
+        },
+        {
+          "pain": "No estoy seguro de cuál necesito",
+          "pack": "Auditoría gratuita →"
+        }
+      ]
+    },
+    "Compare": {
+      "watermark": "COMPARE",
+      "eyebrow": "Tabla comparativa",
+      "title": "Los cinco paquetes<br /><grad>de un vistazo.</grad>",
+      "swipeHint": "← Deslizá para ver todos los paquetes →",
+      "colResult": "Resultado",
+      "features": [
+        "Web rápida, sin hosting mensual",
+        "Aparecer en Google",
+        "SEO local (Google Business)",
+        "Medición completa (GA4 + Clarity)",
+        "Automatizaciones que ahorran tiempo",
+        "Leads que se nutren solos por email",
+        "Reuniones agendadas solas",
+        "Cobrar online sin fricciones",
+        "Contenido que posiciona durante años",
+        "Aparecer en ChatGPT y otras IAs",
+        "Canal de ventas online completo"
+      ],
+      "automationVals": [
+        "1",
+        "3-5",
+        "5+",
+        "5",
+        "✓ mensual"
+      ],
+      "forMe": "¿Es para mí?",
+      "view": "Ver →"
+    },
+    "Process": {
+      "watermark": "PROCESO",
+      "eyebrow": "Cómo trabajamos",
+      "title": "Cuatro pasos.<br /><grad>Sin sorpresas.</grad>",
+      "intro": "La mayoría de los proyectos fallan antes de empezar: nadie se tomó el tiempo de entender el negocio. Nosotros arrancamos así:",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Llamada de diagnóstico",
+          "body": "30 minutos. Sin presentaciones de PowerPoint. Escuchamos tu negocio, tus objetivos y el momento en el que estás. Al final te decimos exactamente qué paquete corresponde — o si no somos la opción para vos."
+        },
+        {
+          "num": "2",
+          "title": "Propuesta en 48 horas",
+          "body": "No en \"una semana\". En 48 horas tenés qué vamos a construir, en qué orden, cuándo y cuánto. Sin funcionalidades ocultas. Sin precios que cambian en el medio."
+        },
+        {
+          "num": "3",
+          "title": "Desarrollo y lanzamiento",
+          "body": "Arrancamos. No desaparecemos. Ves el avance en tiempo real. 30 días para Starter y Growth; 45-60 para Full Funnel y Ecommerce. Si algo cambia, te avisamos antes de avanzar."
+        },
+        {
+          "num": "4",
+          "title": "Entrega, accesos y seguimiento",
+          "body": "Publicamos, te entregamos todos los accesos (son tuyos), documentamos todo y hacemos check-in a los 30 días para medir resultados y ajustar. El proyecto no termina en el lanzamiento."
+        }
+      ]
+    },
+    "Guarantee": {
+      "eyebrow": "Nuestra garantía",
+      "title": "No cobramos trabajo<br />que no aprobaste.<br /><grad>No desaparecemos.</grad>",
+      "p1": "Antes de empezar, sabés exactamente qué incluye el proyecto, cuánto cuesta y cuándo estará listo.",
+      "p2": "Si en el proceso aparece algo fuera del scope original, te lo comunicamos antes de avanzar. Nunca facturamos trabajo extra sin aprobación.",
+      "list": [
+        "Propuesta detallada antes de arrancar — sabés qué recibís",
+        "Precio fijo acordado — nada cambia sin tu OK",
+        "Cronograma real con fechas de entrega concretas",
+        "Todos los accesos entregados — son tuyos, no nuestros",
+        "Documentación completa — si en un año necesitás algo, sabés cómo",
+        "Check-in de 30 días post-lanzamiento incluido",
+        "Facturación en USD — LLC registrada en Delaware"
+      ],
+      "case": {
+        "tag": "Caso real — Supertramp Hostels",
+        "beforeTitle": "Antes",
+        "before": "100% reservas via OTAs<br />15-20% comisión/reserva<br />0 leads desde la web",
+        "afterTitle": "Después (6 meses)",
+        "after": "30% reservas directas<br />$0 comisión OTAs<br />Canal propio activo",
+        "num": "30%",
+        "label": "Facturación desde la web propia",
+        "sub": "Partiendo de una web que no generaba ninguna reserva directa."
+      }
+    },
+    "Faq": {
+      "watermark": "FAQ",
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que todo el mundo pregunta<br /><grad>antes de agendar.</grad>",
+      "items": [
+        {
+          "q": "¿Por qué no muestran precios?",
+          "a": "Porque el precio correcto depende del alcance específico de tu proyecto. Lo que mostramos como \"paquete\" es un punto de partida. Preferimos darte un precio exacto en la propuesta, después de entender tu caso, que ponerte un número que después no se cumple."
+        },
+        {
+          "q": "¿Trabajan con negocios de cualquier tamaño?",
+          "a": "Sí, pero el punto de partida importa. Si sos un negocio muy chico que recién empieza, el Starter Presence probablemente sea suficiente. Si ya tenés operación y querés escalar, Growth Machine o Full Funnel son más adecuados. En la llamada te lo decimos con honestidad."
+        },
+        {
+          "q": "¿Qué pasa si quiero cambios después de que entreguen?",
+          "a": "Durante el desarrollo, los cambios están incluidos en el scope acordado. Después del lanzamiento, el check-in de 30 días incluye ajustes menores sin costo. Cambios mayores se presupuestan aparte — siempre antes de avanzar."
+        },
+        {
+          "q": "¿Voy a depender de ustedes para mantener la web?",
+          "a": "No. Todos los accesos y documentación te quedan a vos. Si el día de mañana querés cambiar de proveedor o hacer cambios con otro desarrollador, podés hacerlo sin problema. Construimos para que el cliente sea independiente."
+        },
+        {
+          "q": "¿Cuánto tarda realmente?",
+          "a": "Starter y Growth: promedio 30 días. Full Funnel y Ecommerce: 45-60 días. Estos tiempos arrancan desde que se aprueba la propuesta y se realiza el pago inicial. Si necesitás urgencia, mencionalo en la llamada."
+        },
+        {
+          "q": "¿Trabajan con España y LATAM?",
+          "a": "Con ambos — y con Estados Unidos. Estamos basados en Argentina (Córdoba), trabajamos con clientes en toda LATAM, España y EEUU. Facturamos en USD desde nuestra LLC en Delaware."
+        }
+      ]
+    },
+    "CtaFinal": {
+      "headline": "Si funcionó para ellos,<br /><grad>puede funcionar para vos.</grad>",
+      "subheadline": "Sin compromiso. Sin presentaciones de agencia. Solo 30 minutos para entender tu situación y decirte honestamente si podemos ayudarte.",
+      "mainCta": "Agendá una llamada con Noelia →",
+      "disclaimer": "Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas",
+      "watermark": "EMPEZÁ",
+      "cards": [
+        {
+          "tag": "Tengo web activa",
+          "title": "Auditoría gratuita",
+          "desc": "Analizamos tu web y en menos de 2 horas recibís un diagnóstico real con las 3 acciones concretas a ejecutar."
+        },
+        {
+          "tag": "Todavía no tengo web",
+          "title": "Mini-curso gratuito · 5 emails",
+          "desc": "Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días."
+        },
+        {
+          "tag": "Ya sé lo que necesito",
+          "title": "Llamada de 30 minutos",
+          "desc": "Hablamos. Escuchamos. Al final sabés exactamente qué paquete corresponde. Sin rodeos."
+        }
+      ]
+    }
+  },
+  "FreeAudit": {
+    "Hero": {
+      "watermark": "AUDIT",
+      "back": "← Inicio",
+      "eyebrow": "100% gratuito · Tu reporte en menos de 2 horas",
+      "title": "Descubrí exactamente qué frena tu web.<br></br><grad>Antes que tu competencia.</grad>",
+      "subtitle": "En menos de 2 horas tenés un diagnóstico técnico real — velocidad, SEO y conversión — más las 3 acciones concretas para ejecutar desde mañana.",
+      "form": {
+        "title": "Activá tu análisis gratuito",
+        "sub": "Tu reporte llega a tu email en menos de 2 horas. Es gratis, siempre.",
+        "urlLabel": "URL de tu sitio web",
+        "urlHint": "Con https:// — ej: https://tuempresa.com",
+        "nameLabel": "Tu nombre",
+        "emailLabel": "Tu email",
+        "emailHint": "Acá llega el reporte en menos de 2 horas",
+        "nicheLabel": "Rubro de tu negocio",
+        "nicheHint": "Hostel, coaching, ecommerce...",
+        "submit": "Sí, quiero saber qué está fallando →",
+        "trust": "Sin spam · Reporte en < 2hs · Analizamos en orden de llegada",
+        "optinLabel": "Acepto recibir el reporte y comunicaciones de Vacare Digital Solutions. Ver",
+        "optinLinkText": "Política de privacidad",
+        "optinLinkHref": "/es/politicas"
+      },
+      "proofStat": "30%",
+      "proofStatLabel": "facturación directa desde la web",
+      "proofStatSub": "Supertramp Hostels · en 6 meses",
+      "proofCount": "37",
+      "proofCountLabel": "empresas analizadas",
+      "proofCountSub": "este mes",
+      "proofQuote": "Pasamos de depender de OTAs a que el 30% de la facturación llegara directo desde la web.",
+      "proofAuthor": "Theo · Supertramp Hostels, Cusco & Machu Picchu",
+      "previewLabel": "Ejemplo de reporte",
+      "mockCards": [
+        {
+          "title": "Velocidad de carga",
+          "sub": "Core Web Vitals · PageSpeed",
+          "score": "34",
+          "scoreClass": "bad",
+          "tag": "/ 100"
+        },
+        {
+          "title": "SEO técnico",
+          "sub": "Metadatos · Estructura · Schema",
+          "score": "61",
+          "scoreClass": "ok",
+          "tag": "/ 100"
+        },
+        {
+          "title": "Conversión y CTAs",
+          "sub": "Formularios · Llamadas a acción",
+          "score": "28",
+          "scoreClass": "bad",
+          "tag": "/ 100"
+        },
+        {
+          "title": "3 recomendaciones",
+          "sub": "Acciones concretas priorizadas",
+          "score": "✓",
+          "scoreClass": "good",
+          "tag": "incluido"
+        }
+      ]
+    },
+    "VideoSection": {
+      "eyebrow": "El resultado de saber exactamente qué arreglar",
+      "quote": "Pasamos de depender de OTAs a que el 30% de la facturación llegara directo desde la web. No sabíamos que teníamos esos problemas hasta que los vimos en el reporte.",
+      "author": "Theo",
+      "role": "Fundador · Supertramp Hostels, Cusco & Machu Picchu"
+    },
+    "Get": {
+      "watermark": "REPORTE",
+      "eyebrow": "Lo que incluye tu reporte",
+      "title": "No un número. Un diagnóstico<br></br><grad>con acciones concretas.</grad>",
+      "intro": "La mayoría de los \"analizadores de web\" te dan un puntaje y nada más. Nuestro reporte te dice exactamente qué está fallando y por qué te está costando clientes.",
+      "cards": [
+        {
+          "title": "Velocidad real de carga",
+          "p": "Medimos tu Core Web Vitals con la API de Google  — los mismos datos que Google usa para rankear tu sitio. Si tardás más de 3 segundos, estás perdiendo el 53% de los visitantes móviles antes de que vean tu propuesta."
+        },
+        {
+          "title": "Diagnóstico SEO técnico",
+          "p": "Metadatos, estructura de headings, canonical tags, schema markup y presencia en índice de Google. Si Google no puede leer tu web, no importa qué tan buen contenido tengas."
+        },
+        {
+          "title": "Análisis de conversión",
+          "p": "Evaluamos tus CTAs, formularios y flujo de usuario. ¿Le decís claramente al visitante qué hacer? ¿En cuántos clics llega al contacto?"
+        },
+        {
+          "title": "Seguridad y HTTPS",
+          "p": "Verificamos certificado SSL activo, redirecciones correctas y señales de confianza que afectan tanto al SEO como a la decisión de compra del visitante."
+        },
+        {
+          "title": "3 recomendaciones priorizadas",
+          "p": "No una lista de 40 cosas. Las 3 acciones con mayor impacto para tu caso específico, en orden de prioridad. Lo que hay que hacer primero para ver resultados más rápido."
+        }
+      ]
+    },
+    "How": {
+      "watermark": "PROCESO",
+      "eyebrow": "El proceso",
+      "title": "Tres pasos.<br></br><grad>Dos horas. Cero costo.</grad>",
+      "intro": "No hay llamadas de ventas en el medio, no hay formularios interminables. Completás tus datos, nosotros analizamos y en menos de dos horas el reporte llega a tu email.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Ingresás tu URL",
+          "desc": "Completás el formulario con la URL de tu sitio, tu email y el rubro de tu negocio. 60 segundos y listo. Sin registros, sin tarjeta de crédito.",
+          "time": "60 segundos"
+        },
+        {
+          "num": "2",
+          "title": "Analizamos tu sitio",
+          "desc": "Nuestro sistema corre un análisis técnico automático con la API de Google y un checklist de conversión elaborado por nuestro equipo. No es un bot genérico.",
+          "time": "Análisis automático"
+        },
+        {
+          "num": "3",
+          "title": "Recibís tu reporte",
+          "desc": "En menos de 2 horas llega a tu email un reporte personalizado con los problemas encontrados, su impacto estimado en conversión y las 3 acciones prioritarias a tomar.",
+          "time": "Menos de 2 horas"
+        }
+      ]
+    },
+    "Analyze": {
+      "eyebrow": "El análisis en detalle",
+      "title": "¿Qué revisamos<br></br><grad>exactamente?</grad>",
+      "intro": "Cada auditoría corre más de 40 puntos de control. Estos son los que más impactan en la visibilidad de tu sitio y en tu tasa de conversión.",
+      "list": [
+        {
+          "num": "A",
+          "title": "Core Web Vitals de Google",
+          "p": "LCP (carga del elemento principal), FID (interactividad) y CLS (estabilidad visual). Google los usa como factor de ranking desde 2021. Si fallás en alguno, tu posición en los resultados de búsqueda lo refleja."
+        },
+        {
+          "num": "B",
+          "title": "Estructura de headings y metadatos",
+          "p": "Title tag, meta description, jerarquía H1→H2→H3, alt text en imágenes. Errores básicos que el 70% de los sitios tienen y que Google penaliza silenciosamente."
+        },
+        {
+          "num": "C",
+          "title": "Llamadas a la acción (CTAs)",
+          "p": "¿Tiene tu web un CTA principal claro? ¿Está visible sin scroll? ¿El botón dice exactamente qué va a pasar cuando se hace clic? El 80% de las webs no lo tienen."
+        },
+        {
+          "num": "D",
+          "title": "Compatibilidad mobile",
+          "p": "El 60% del tráfico web es desde celular. Verificamos que tu sitio sea completamente funcional, legible y convertible en pantallas pequeñas."
+        },
+        {
+          "num": "E",
+          "title": "Presencia en Google (indexación)",
+          "p": "Verificamos que Google tenga indexadas tus páginas clave. Un sitio que no está indexado es invisible, sin importar qué tan bien esté diseñado."
+        }
+      ]
+    },
+    "Who": {
+      "eyebrow": "¿Para quién es esta auditoría?",
+      "title": "Es para vos si alguna de estas frases te suena.",
+      "cards": [
+        {
+          "title": "Tu web existe. Tu competencia te está ganando.",
+          "checks": [
+            "Tenés un sitio publicado pero nadie te contacta desde ahí.",
+            "No sabés si el problema es el diseño, el SEO o los textos.",
+            "Querés datos concretos antes de invertir en mejoras."
+          ]
+        },
+        {
+          "title": "Estás por invertir. No repitas los mismos errores.",
+          "checks": [
+            "Querés saber qué errores no cometer en tu nueva web.",
+            "Tenés presupuesto limitado y querés enfocarlo en lo que importa.",
+            "Tu agencia anterior no te dio métricas claras."
+          ]
+        },
+        {
+          "title": "Escribís, publicás, esperás. Google te ignora igual.",
+          "checks": [
+            "Tus competidores aparecen antes que vos en las búsquedas.",
+            "Nunca hiciste un análisis técnico de SEO formal.",
+            "Escribís contenido pero no ves resultados en el ranking."
+          ]
+        }
+      ]
+    },
+    "Faq": {
+      "watermark": "FAQ",
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que nos preguntan<br></br><grad>antes de completar el form.</grad>",
+      "items": [
+        {
+          "q": "¿Realmente es gratuito?",
+          "a": "Sí, completamente. No hay tarjeta de crédito, no hay período de prueba y no hay llamada de ventas obligatoria. El reporte llega a tu email sin condiciones."
+        },
+        {
+          "q": "¿Cuánto tarda en llegar el reporte?",
+          "a": "Menos de 2 horas desde que completás el formulario. En la mayoría de los casos llega en 30 a 60 minutos. Si es un sitio muy grande, puede tardar un poco más."
+        },
+        {
+          "q": "¿Qué tipo de sitios analizan?",
+          "a": "Cualquier sitio web accesible públicamente: WordPress, Wix, Squarespace, Next.js, Shopify, sitios custom. Si tiene URL pública, lo analizamos."
+        },
+        {
+          "q": "¿Van a intentar venderme algo después?",
+          "a": "Sí — vas a recibir emails nuestros con contenido útil sobre tu diagnóstico y, en algún momento, una propuesta concreta. No es spam: podés darte de baja con un clic desde cualquier email. Lo que nunca hacemos es llamarte sin que nos lo pidas."
+        },
+        {
+          "q": "¿El análisis es automático o lo hace una persona?",
+          "a": "El análisis técnico es automático (velocidad, SEO, seguridad). Las recomendaciones priorizadas son revisadas por nuestro equipo para que sean relevantes a tu rubro específico."
+        },
+        {
+          "q": "¿Qué hago si mi sitio está en construcción?",
+          "a": "En ese caso te recomendamos el <a href=\"/es/email-course\" style=\"color:var(--mg);font-weight:700;text-decoration:none\">mini-curso gratuito de 5 días</a> — diseñado específicamente para negocios que están arrancando desde cero."
+        }
+      ]
+    },
+    "CtaBottom": {
+      "eyebrow": "La ventaja real",
+      "title": "Tu competencia no tiene acceso a esto.<br></br><grad>Vos, sí.</grad>",
+      "p": "Esta información existe sobre tu web ahora mismo. Google ya la tiene. Tu competencia, probablemente, no. En menos de 2 horas la tenés vos — con las 3 acciones concretas para capitalizarla.",
+      "trust": [
+        "Sin spam",
+        "Reporte en < 2hs",
+        "Analizamos en orden de llegada",
+        "LLC Delaware · Vacare"
+      ]
+    }
+  },
+  "EmailCourse": {
+    "Hero": {
+      "watermark": "CURSO",
+      "eyebrow": "Mini-curso gratuito · 5 días · 100% gratis",
+      "title": "Lo que toda agencia debería<br></br>explicarte <grad>antes de cobrarte.</grad>",
+      "subtitle": "5 emails cortos. El mapa de lo que realmente necesita tu negocio online — y lo que podés ahorrarte.",
+      "back": "← Volver al inicio",
+      "badges": [
+        "📧 5 emails en 5 días",
+        "⏱ 5 min de lectura c/u",
+        "100% gratuito"
+      ],
+      "progressLabel": "Tu progreso",
+      "emailsLabel": "Los 5 emails del curso",
+      "emails": [
+        {
+          "day": "D1",
+          "num": "Día 1",
+          "title": "Tu web no es un flyer. Es tu vendedor que nunca duerme."
+        },
+        {
+          "day": "D2",
+          "num": "Día 2",
+          "title": "Lo que buscan tus clientes es una investigación de mercado."
+        },
+        {
+          "day": "D3",
+          "num": "Día 3",
+          "title": "Todo se puede medir. Y si no lo medís, estás adivinando."
+        },
+        {
+          "day": "D4",
+          "num": "Día 4",
+          "title": "Las automatizaciones que tu competencia ya tiene."
+        },
+        {
+          "day": "D5",
+          "num": "Día 5",
+          "title": "Tu plan de acción: qué hacer ahora y qué NO gastar."
+        }
+      ],
+      "rightWatermark": "5",
+      "rightVertical": "vacaredigitalsolutions.com/email-course",
+      "form": {
+        "title": "Empezá ahora — es gratis.",
+        "sub": "El primer email llega en ~15 minutos.",
+        "nameLabel": "Tu nombre",
+        "emailLabel": "Tu email",
+        "stageLabel": "¿En qué etapa estás?",
+        "stagePlaceholder": "Elegí tu situación actual",
+        "stages": [
+          {
+            "value": "sin-web",
+            "label": "No tengo web todavía"
+          },
+          {
+            "value": "web-nueva",
+            "label": "Quiero hacer una web nueva"
+          },
+          {
+            "value": "web-existe",
+            "label": "Tengo web pero no genera clientes"
+          },
+          {
+            "value": "creciendo",
+            "label": "Tengo web y quiero escalar"
+          }
+        ],
+        "nicheLabel": "¿Qué tipo de negocio tenés?",
+        "nicheHint": "Ej: hostel, consultoría, tienda online...",
+        "submit": "Quiero el curso gratuito →",
+        "trust": "Sin spam · Podés darte de baja cuando quieras · 100% gratis"
+      },
+      "counter": "+847 empresarios ya lo recibieron",
+      "results": [
+        {
+          "tag": "Después del Día 1",
+          "text": "Entendés qué frena tu web (no es el diseño)"
+        },
+        {
+          "tag": "Después del Día 3",
+          "text": "Sabés si tu inversión digital funciona o es dinero tirado"
+        },
+        {
+          "tag": "Después del Día 5",
+          "text": "Tenés un plan para tu situación específica"
+        }
+      ],
+      "proofNum": "30%",
+      "proofTitle": "Supertramp Hostels",
+      "proofSub": "de facturación total desde la web — en 6 meses"
+    },
+    "Stats": {
+      "items": [
+        {
+          "num": "5",
+          "label": "Emails concretos"
+        },
+        {
+          "num": "5'",
+          "label": "De lectura cada uno"
+        },
+        {
+          "num": "$0",
+          "label": "Costo total"
+        },
+        {
+          "num": "1",
+          "label": "Plan de acción al final"
+        }
+      ]
+    },
+    "Days": {
+      "watermark": "EMAILS",
+      "eyebrow": "El contenido del curso",
+      "title": "5 emails. 5 minutos cada uno.<br></br><grad>Estrategia real para tu negocio.</grad>",
+      "intro": "Cada email está escrito para dueños de negocio, no para diseñadores web. Sin jerga técnica. Sin teoría que no podés aplicar. Solo lo que necesitás saber para tomar mejores decisiones sobre tu presencia digital.",
+      "items": [
+        {
+          "num": "01",
+          "tag": "Día 1 · El error que cuesta más caro",
+          "title": "Tu web no es un flyer. Es tu vendedor que nunca duerme.",
+          "p": "La mayoría de las webs son flyers digitales: logo, colores, menú y un 'contáctanos' escondido al fondo. Después el dueño dice 'la web no funciona'. No funciona porque no fue diseñada para funcionar. Una web que vende no muestra tu negocio — resuelve el problema de tu cliente. Le dice en 5 segundos qué le resolvés, le muestra que ya lo hiciste para otros, y le da un solo camino claro para tomar acción.",
+          "takeaway": "Terminás entendiendo la diferencia entre un flyer digital y un sistema que vende — y por qué el 90% de las webs son lo primero."
+        },
+        {
+          "num": "02",
+          "tag": "Día 2 · La mina de oro que ignorás",
+          "title": "Lo que buscan tus clientes es una investigación de mercado. Gratis.",
+          "p": "¿Sabías que podés ver exactamente qué busca la gente que podría ser tu cliente? No hablamos de encuestas. Hablamos de Google Search Console y herramientas de keyword research. Cuando alguien busca 'hostel barato en Cusco con cocina', te está diciendo qué quiere y con qué palabras lo busca. Una web diseñada con esos datos no adivina — responde. Y Google la premia con visitas gratis, todos los días, sin pagar publicidad.",
+          "takeaway": "Terminás entendiendo que la keyword research de tu rubro es la investigación de mercado más honesta que existe — tus leads diciéndote qué desean."
+        },
+        {
+          "num": "03",
+          "tag": "Día 3 · El tablero que cambia todo",
+          "title": "Todo se puede medir. Y si no lo medís, estás adivinando.",
+          "p": "Tu web puede ser la más linda del mundo. Pero si no podés ver cuánta gente la visita, de dónde viene, en qué página se van y qué botón no tocan, estás manejando un auto con los ojos cerrados. Analytics te dice cuántas personas entran. Search Console te dice por qué keywords te encuentran. Un mapa de calor te muestra dónde hacen clic. UTMs te dicen si tu campaña de Instagram genera leads o solo likes. Todo esto es gratis y la mayoría de las webs no lo tienen.",
+          "takeaway": "Terminás sabiendo que existen herramientas gratuitas que convierten tu web en un laboratorio de datos — y que sin ellas, cualquier inversión en marketing es a ciegas."
+        },
+        {
+          "num": "04",
+          "tag": "Día 4 · Dejá de ser el cuello de botella",
+          "title": "Las automatizaciones que tu competencia ya tiene (y vos hacés a mano).",
+          "p": "Un cliente te escribe. Le respondés cuando podés. Le mandás el precio. Te pregunta disponibilidad. Chequeás manualmente. Confirmás. Te pide la dirección. Se la mandás. ¿Cuántas veces al día? Todo eso puede pasar automáticamente: lead magnets que se envían solos, chat inteligente 24/7, email marketing segmentado, reportes automáticos de KPIs, y disparadores que crean el contacto en tu CRM cuando alguien llena un form.",
+          "takeaway": "Terminás con una lista mental de todo lo que hacés manualmente hoy y que podría hacerse solo — y con la certeza de que no es ciencia ficción."
+        },
+        {
+          "num": "05",
+          "tag": "Día 5 · Tu mapa de ruta",
+          "title": "Exactamente qué necesita tu negocio ahora — y qué NO gastar todavía.",
+          "p": "Si llegaste hasta acá, ya sabés más que el 90% de los empresarios que piden una web. Sabés que tu web tiene que estar diseñada para tu cliente, que lo que buscan tus leads es oro para tu estrategia, que todo se puede medir, y que las tareas repetitivas se automatizan. Ahora te ayudamos a entender qué necesitás VOS específicamente según tu etapa, tu rubro y tu presupuesto. No todos necesitan un funnel completo. Pero TODOS necesitan una web que trabaje para ellos.",
+          "takeaway": "Terminás con claridad total sobre cuál es tu próximo paso — y un link opcional para hablar con nosotros si querés ayuda profesional."
+        }
+      ]
+    },
+    "Who": {
+      "watermark": "PARA VOS",
+      "eyebrow": "¿Para quién es este curso?",
+      "title": "Este curso es para vos si...",
+      "intro": "No hace falta saber nada de tecnología. Hace falta tener un negocio — o la idea de uno — y querer que funcione mejor online.",
+      "cards": [
+        {
+          "icon": "hostel",
+          "title": "Empresario o dueño de negocio",
+          "checks": [
+            "No tenés web o la que tenés no genera nada.",
+            "No sabés por dónde empezar sin tirar plata.",
+            "Querés entender qué hacen las agencias antes de contratar una.",
+            "Respondés consultas manualmente todo el día."
+          ]
+        },
+        {
+          "icon": "coach",
+          "title": "Profesional independiente o consultor",
+          "checks": [
+            "Tenés conocimiento pero no un sistema para venderlo.",
+            "Conseguís clientes por referidos pero no es escalable.",
+            "Querés una agenda llena sin vivir pegado a las redes.",
+            "Nunca entendiste bien para qué sirve un lead magnet."
+          ]
+        },
+        {
+          "icon": "ecom",
+          "title": "Negocio de turismo u hospitalidad",
+          "checks": [
+            "Dependés de Booking, Airbnb o TripAdvisor.",
+            "Pagás comisiones altas en cada reserva.",
+            "Querés reservas directas pero no sabés cómo generarlas.",
+            "Tenés web pero nadie la encuentra en Google."
+          ]
+        }
+      ]
+    },
+    "Diff": {
+      "eyebrow": "Por qué este curso es diferente",
+      "title": "No es otro curso genérico<br></br><grad>de marketing digital.</grad>",
+      "badTitle": "Lo que ofrecen otros",
+      "badItems": [
+        "Consejos genéricos que aplican a cualquier negocio (y a ninguno en particular)",
+        "Teoría de marketing que no podés implementar solo",
+        "7 módulos en video de 2 horas cada uno",
+        "Terminás sabiendo más términos pero sin saber qué hacer",
+        "El objetivo es venderte el curso premium al final",
+        "Sin casos reales ni números concretos"
+      ],
+      "goodTitle": "Lo que ofrecemos nosotros",
+      "goodItems": [
+        "5 emails de 5 minutos, uno por día — lo leés tomando el café",
+        "Ejemplos específicos según tu tipo de negocio",
+        "Caso real con números: Supertramp Hostels, 30% en 6 meses",
+        "Terminás con acciones concretas para tu situación específica",
+        "El objetivo es que tomes la mejor decisión para tu negocio",
+        "Sin ventas forzadas — el día 5 hay una opción de hablar, no una obligación"
+      ]
+    },
+    "About": {
+      "eyebrow": "Quiénes escriben este curso",
+      "title": "No lo escribió un algoritmo.<br></br><grad>Lo escribimos nosotros.</grad>",
+      "p1": "Somos Germán y Noelia, los fundadores de Vacaré Digital Solutions LLC. Germán es desarrollador full-stack con más de 8 años construyendo sistemas digitales. Noelia es especialista en marketing y estrategia de conversión.",
+      "p2": "No escribimos este curso para posicionarnos como expertos. Lo escribimos porque es lo que le explicamos a cada cliente antes de empezar a trabajar juntos — y funciona mejor cuando lo entienden primero.",
+      "creds": [
+        "Delaware LLC",
+        "LATAM · US · ES",
+        "⚡ n8n powered"
+      ],
+      "case": {
+        "tag": "Caso de éxito — Supertramp Hostels",
+        "num": "30%",
+        "label": "de la facturación total desde la web",
+        "sub": "En 6 meses. Partiendo de una web que no generaba ninguna reserva directa. Este es el caso que analizamos en el Día 3 del curso."
+      }
+    },
+    "Faq": {
+      "watermark": "FAQ",
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que nos preguntan<br></br><grad>antes de suscribirse.</grad>",
+      "items": [
+        {
+          "q": "¿Realmente es gratis?",
+          "a": "Sí. Completamente. 5 emails, cero costo. No hay versión premium del curso, no hay upsell. El único momento en que aparece una opción de pago es al final del Día 5, si querés hablar con nosotros — y es completamente opcional."
+        },
+        {
+          "q": "¿Cuándo llega el primer email?",
+          "a": "El mismo día que completás el formulario, dentro de los primeros 30 minutos. Los demás llegan uno por día durante los siguientes 4 días."
+        },
+        {
+          "q": "¿Necesito saber de tecnología?",
+          "a": "No. El curso está escrito para dueños de negocio, no para desarrolladores. No hay código, no hay tecnicismos. Si sabés usar el email, podés aprovechar el curso."
+        },
+        {
+          "q": "¿Me van a mandar spam después?",
+          "a": "No. Cuando termina el curso, termina la secuencia. No te mandamos newsletters ni te agregamos a ninguna lista. Podés darte de baja en cualquier momento con un clic."
+        },
+        {
+          "q": "¿Sirve si ya tengo una web?",
+          "a": "Sí, especialmente el Día 2 y el Día 4. Si ya tenés web pero no genera clientes, el curso te ayuda a entender por qué. Si querés un diagnóstico más profundo, te recomendamos la <a href='/es/free-audit' style='color:#E8417A;font-weight:700;text-decoration:none'>auditoría gratuita</a>."
+        },
+        {
+          "q": "¿Qué pasa al final del Día 5?",
+          "a": "El email del Día 5 incluye un link para agendar una llamada gratuita de 30 minutos si tu perfil encaja con lo que hacemos. Sin presión. Si no querés, no pasa nada — todo lo que aprendiste es tuyo."
+        }
+      ]
+    },
+    "CtaBottom": {
+      "eyebrow": "Empezá hoy",
+      "title": "5 días para entender<br></br><grad>qué necesita tu negocio.</grad>",
+      "p": "Gratis. Sin spam. Sin compromiso. El primer email llega hoy.",
+      "trust": [
+        "Sin spam",
+        "Baja con un clic",
+        "100% gratis",
+        "Vacaré LLC Delaware"
+      ]
+    }
+  },
+  "CaseSobreMi": {
+    "Hero": {
+      "watermark": "SOBREMI",
+      "back": "← Todos los casos",
+      "eyebrow": "Caso de éxito · Sistema propio",
+      "title": "Plataforma de regalos con<br></br><grad>automatizaciones reales.</grad>",
+      "subtitle": "sobremi.online es nuestra propia plataforma — construida por Vacare para demostrar en producción real todo lo que le ofrecemos a nuestros clientes. Stripe, n8n, Postgres, webhooks y Next.js funcionando juntos desde el día uno.",
+      "stack": [
+        "Next.js",
+        "n8n",
+        "Postgres",
+        "Stripe",
+        "Webhooks",
+        "Cloudflare",
+        "Supabase"
+      ],
+      "metrics": [
+        {
+          "num": "100%",
+          "label": "Automatizado"
+        },
+        {
+          "num": "$0",
+          "label": "Intervención manual por pedido"
+        },
+        {
+          "num": "2hs",
+          "label": "De form a entrega confirmada"
+        }
+      ],
+      "rightWatermark": "AUTO",
+      "rightVertical": "sobremi.online",
+      "previewLabel": "Flujo de pago automatizado — en producción"
+    },
+    "Context": {
+      "eyebrow": "El proyecto",
+      "title": "Una plataforma propia<br></br>que es nuestro<br></br><grad>caso de uso número uno.</grad>",
+      "p1": "sobremi.online nació con un objetivo doble: ser un negocio real de regalos personalizados, y ser la demostración más honesta de lo que Vacare construye para sus clientes.",
+      "p2": "En lugar de mostrar demos o prototipos, decidimos construir algo que funciona en producción real — con usuarios reales, pagos reales y automatizaciones que corren solas todos los días.",
+      "p3": "El resultado es una plataforma donde alguien puede entrar a <strong>sobremi.online/crear</strong>, armar un regalo personalizado, pagarlo con Stripe o transferencia, y recibir toda la confirmación sin que ningún humano intervenga.",
+      "challengesLabel": "Los desafíos técnicos",
+      "challenges": [
+        "Manejar dos métodos de pago (Stripe y transferencia) con flujos de confirmación completamente distintos en n8n",
+        "Generar el link de pago de Stripe dinámicamente desde el backend con webhook de retorno",
+        "Registrar cada pedido en Postgres con estado actualizado en tiempo real según el webhook de Stripe",
+        "Construir la página pública de regalo <strong>/regalos/:id</strong> con datos dinámicos desde la base de datos",
+        "Enviar emails transaccionales con diseño personalizado, sin depender de plataformas de terceros"
+      ],
+      "siteCard": {
+        "tag": "El proyecto",
+        "url": "sobremi.online",
+        "desc": "Plataforma de regalos personalizados con experiencia de usuario completa, pagos integrados y operación 100% automatizada.",
+        "tags": [
+          "Plataforma propia",
+          "Producción real",
+          "Full-stack"
+        ],
+        "stats": [
+          {
+            "label": "Framework",
+            "val": "Next.js 14 (App Router)"
+          },
+          {
+            "label": "Base de datos",
+            "val": "Postgres en VPS propio"
+          },
+          {
+            "label": "Automatizaciones",
+            "val": "n8n 2.0 dockerizado"
+          },
+          {
+            "label": "Pagos",
+            "val": "Stripe + transferencia bancaria"
+          },
+          {
+            "label": "Deploy",
+            "val": "Cloudflare Pages"
+          },
+          {
+            "label": "Emails",
+            "val": "SMTP propio vía n8n"
+          }
+        ],
+        "links": [
+          {
+            "label": "Ver sitio →",
+            "href": "https://sobremi.online"
+          },
+          {
+            "label": "/crear →",
+            "href": "https://sobremi.online/crear"
+          },
+          {
+            "label": "/como-funciona →",
+            "href": "https://sobremi.online/como-funciona"
+          }
+        ]
+      }
+    },
+    "Arch": {
+      "watermark": "ARCH",
+      "eyebrow": "Arquitectura técnica",
+      "title": "Cómo está construido<br></br><grad>el sistema.</grad>",
+      "intro": "Tres capas bien definidas: frontend en Next.js, backend con API routes y Postgres, y una capa de automatización en n8n que conecta todo sin código adicional."
+    },
+    "Flows": {
+      "watermark": "FLUJOS",
+      "eyebrow": "Los flujos automatizados",
+      "title": "Todo lo que pasa<br></br><grad>sin intervención humana.</grad>",
+      "intro": "Desde que el cliente completa el formulario hasta que el equipo recibe el aviso del pedido — todo sucede solo. Estos son los cuatro flujos n8n que corren en producción.",
+      "items": [
+        {
+          "num": "Flujo 01",
+          "title": "Pago con Stripe — flujo completo",
+          "p": "Cuando el cliente elige pagar con tarjeta, el backend de Next.js genera un Payment Intent en Stripe y devuelve el link de pago. Una vez completado el pago, Stripe envía un webhook al backend que actualiza el estado del pedido en Postgres y dispara n8n."
+        },
+        {
+          "num": "Flujo 02",
+          "title": "Pago por transferencia — confirmación en dos pasos",
+          "p": "Si el cliente elige transferencia, n8n envía inmediatamente un email de \"pedido recibido, en revisión\". Cuando el equipo confirma el pago manualmente, un segundo trigger de n8n envía el email de confirmación definitiva con todos los detalles del pedido."
+        },
+        {
+          "num": "Flujo 03",
+          "title": "Email de confirmación detallada al comprador",
+          "p": "n8n genera y envía un email con diseño personalizado que incluye los datos del pedido, el nombre del destinatario del regalo, el método de pago, el monto y el link a la página pública del regalo en /regalos/:id. Sin intervención humana. Sin plantilla genérica."
+        },
+        {
+          "num": "Flujo 04",
+          "title": "Aviso interno al equipo por cada pedido",
+          "p": "En paralelo al email al comprador, n8n envía un email a sobremionline@gmail.com con un resumen del pedido: nombre, producto, método de pago, monto y estado. El equipo sabe en tiempo real que hay un nuevo pedido pendiente, sin tener que revisar ningún panel."
+        }
+      ]
+    },
+    "Tech": {
+      "watermark": "TECH",
+      "eyebrow": "El detalle técnico",
+      "title": "Lo que hay detrás<br></br><grad>de cada funcionalidad.</grad>",
+      "intro": "Para los que quieren entender cómo está construido en profundidad — o quieren ver qué podemos replicar en su negocio."
+    },
+    "Result": {
+      "eyebrow": "El resultado",
+      "title": "Un sistema que funciona<br></br><grad>completamente solo.</grad>",
+      "p1": "Desde que se pusó en producción, sobremi.online procesa pedidos sin intervención humana en el flujo de Stripe. El equipo solo interviene en la confirmación de pagos por transferencia — el resto es automático.",
+      "p2": "Esto es exactamente lo que construimos para nuestros clientes: sistemas que trabajan mientras el equipo hace otras cosas.",
+      "metrics": [
+        {
+          "num": "100%",
+          "label": "Pedidos Stripe procesados sin toque humano"
+        },
+        {
+          "num": "<2m",
+          "label": "De pago confirmado a email en bandeja"
+        },
+        {
+          "num": "4",
+          "label": "Flujos n8n en producción activa"
+        },
+        {
+          "num": "$0",
+          "label": "Costo mensual de hosting (Cloudflare Pages)"
+        }
+      ],
+      "visual": {
+        "title": "Estado del sistema — sobremi.online",
+        "rows": [
+          {
+            "label": "Flujo Stripe → Postgres → Email",
+            "status": "En producción",
+            "type": "s-live"
+          },
+          {
+            "label": "Flujo transferencia → Email \"en revisión\"",
+            "status": "En producción",
+            "type": "s-live"
+          },
+          {
+            "label": "Email confirmación comprador",
+            "status": "Automático",
+            "type": "s-ok"
+          },
+          {
+            "label": "Aviso interno al equipo",
+            "status": "Automático",
+            "type": "s-ok"
+          },
+          {
+            "label": "Páginas /regalos/:id",
+            "status": "SSR · Dinámico",
+            "type": "s-ok"
+          },
+          {
+            "label": "Deploy en Cloudflare Pages",
+            "status": "Sin costo hosting",
+            "type": "s-ok"
+          },
+          {
+            "label": "n8n en VPS dockerizado",
+            "status": "Corriendo 24/7",
+            "type": "s-auto"
+          },
+          {
+            "label": "Base de datos Postgres",
+            "status": "VPS propio",
+            "type": "s-auto"
+          }
+        ]
+      }
+    },
+    "Learn": {
+      "watermark": "LEARN",
+      "eyebrow": "Lo que aprendimos",
+      "title": "Tres cosas que este proyecto<br></br><grad>nos enseñó.</grad>",
+      "items": [
+        {
+          "num": "01",
+          "title": "n8n como orquestador es imbatible para automatizaciones de negocio",
+          "p": "Para el tipo de flujo que necesita un negocio de servicios — formulario, condicionales, emails, base de datos — n8n en un VPS propio es más potente, más barato y más flexible que cualquier herramienta SaaS de automatización. Y cuando lo conocés bien, el tiempo de desarrollo cae radicalmente."
+        },
+        {
+          "num": "02",
+          "title": "Los webhooks de Stripe son la pieza más crítica — y la más subestimada",
+          "p": "El 80% de los problemas de ecommerce que vemos en clientes tienen que ver con pagos que \"quedaron colgados\" sin confirmación. La firma criptográfica del webhook de Stripe y el manejo correcto de reintentos es lo que hace que el sistema sea confiable en producción real, no solo en demos."
+        },
+        {
+          "num": "03",
+          "title": "Next.js + Cloudflare Pages es la combinación ganadora para la mayoría de los proyectos",
+          "p": "Cero costo de hosting, Edge network global, Core Web Vitals al 100 de fábrica. Para proyectos que no requieren un servidor persistente (que es la mayoría), esta combinación elimina la mayor excusa para no tener una web rápida y profesional."
+        }
+      ]
+    },
+    "Next": {
+      "title": "Más casos de éxito",
+      "cases": [
+        {
+          "tag": "Hostel · Turismo · SEO",
+          "title": "Supertramp Hostels",
+          "result": "<b>30% de la facturación total</b> desde la web en 6 meses",
+          "href": "/case-studies/supertramp",
+          "name": "Supertramp",
+          "type": "normal"
+        },
+        {
+          "tag": "Nuevo proyecto",
+          "title": "Construimos el tuyo",
+          "result": "Mirá todos los paquetes disponibles →",
+          "href": "/services",
+          "name": "¿El próximo?<br></br>Tu negocio.",
+          "type": "alt"
+        }
+      ]
+    },
+    "Cta": {
+      "title": "¿Querés un sistema<br></br><grad>como este para tu negocio?</grad>",
+      "p": "Stripe, n8n, Postgres, Next.js — todo lo que ves en sobremi.online lo construimos para nuestros clientes. En 30 minutos te decimos qué necesita tu caso específico.",
+      "btn": "Agendá una llamada gratuita →",
+      "dis": "Sin compromiso. 30 minutos de estrategia pura."
+    }
+  },
+  "CaseSupertramp": {
+    "Hero": {
+      "watermark": "30%",
+      "back": "← Todos los casos",
+      "eyebrow": "Caso de éxito · Hostel · Turismo · SEO",
+      "title": "De 0 a 30% de reservas<br></br><grad>directas en 6 meses.</grad>",
+      "subtitle": "Supertramp Hostels tenía dos propiedades en Cusco y Machu Picchu y dependía 100% de las OTAs para conseguir reservas. En 6 meses — incluyendo el desarrollo — el 30% de sus reservas totales llegaban directamente desde su web.",
+      "stack": [
+        "Keyword Research",
+        "SEO",
+        "Rediseño web",
+        "Google Tag Manager",
+        "Cloudbeds",
+        "Contenido orgánico"
+      ],
+      "metrics": [
+        {
+          "num": "30%",
+          "label": "Reservas totales desde la web"
+        },
+        {
+          "num": "6m",
+          "label": "Desde el inicio hasta el resultado"
+        },
+        {
+          "num": "2",
+          "label": "Propiedades — Cusco y Machu Picchu"
+        }
+      ],
+      "rightWatermark": "30%",
+      "rightVertical": "supertramphostels.com",
+      "previewLabel": "Los números al cabo de 6 meses",
+      "results": [
+        {
+          "num": "30%",
+          "title": "Reservas directas desde la web",
+          "sub": "Del total combinado de Cusco + Machu Picchu"
+        },
+        {
+          "num": "icon-down",
+          "title": "Dependencia de OTAs reducida",
+          "sub": "Menos comisiones, más margen por reserva directa"
+        },
+        {
+          "num": "icon-up",
+          "title": "Posiciones ganadas en océanos azules",
+          "sub": "Keywords sin competencia directa de cadenas grandes"
+        },
+        {
+          "num": "0",
+          "title": "Conversiones antes del proyecto",
+          "sub": "La web anterior era solo imágenes sin CTA ni motor"
+        }
+      ]
+    },
+    "Context": {
+      "eyebrow": "El punto de partida",
+      "title": "Una web que existía<br></br>pero no hacía<br></br><grad>absolutamente nada.</grad>",
+      "p1": "Supertramp Hostels tenía dos propiedades exitosas — una en Cusco y otra en Aguas Calientes, la puerta de entrada a Machu Picchu. El hostel era bueno: buenas reseñas, ubicación estratégica, ambiente que los viajeros amaban.",
+      "p2": "El problema era que para llenar sus camas dependían completamente de Booking.com, Hostelworld y otras OTAs que se llevaban comisión en cada reserva. La web era un portfolio de imágenes bonitas sin ninguna función de conversión.",
+      "p3": "Nos contactaron queriendo cambiar eso. La pregunta era cómo competir contra hostels con más presupuesto y más reseñas en las mismas plataformas — sin que la batalla se diera exactamente en el mismo terreno.",
+      "problemTag": "Los problemas que encontramos",
+      "problems": [
+        "Sin motor de reservas propio — todo el tráfico iba a OTAs",
+        "Web sin estructura SEO: sin H1 correcto, sin metadatos, sin schema",
+        "Sin keywords estratégicas — competían por las mismas búsquedas que las cadenas grandes",
+        "Sin seguimiento de conversiones — sin GTM, sin eventos, sin datos",
+        "Sin contenido — solo imágenes, cero texto indexable para Google"
+      ],
+      "siteCard": {
+        "tag": "El cliente",
+        "url": "Supertramp Hostels",
+        "desc": "Dos propiedades en el corazón del circuito turístico peruano. Cusco, ciudad histórica. Aguas Calientes, acceso a Machu Picchu.",
+        "tags": [
+          "Hospitality",
+          "Turismo mochilero",
+          "2 propiedades",
+          "Perú"
+        ],
+        "stats": [
+          {
+            "label": "Situación inicial",
+            "val": "0% reservas desde web"
+          },
+          {
+            "label": "Motor de reservas",
+            "val": "Cloudbeds (integrado)"
+          },
+          {
+            "label": "Duración total",
+            "val": "6 meses"
+          },
+          {
+            "label": "Incluye desarrollo",
+            "val": "Sí — web + SEO + contenido"
+          },
+          {
+            "label": "Resultado",
+            "val": "30% reservas totales desde web"
+          }
+        ],
+        "link": "https://supertramphostels.com",
+        "linkLabel": "Ver sitio →"
+      }
+    },
+    "Strategy": {
+      "watermark": "STRATEGY",
+      "eyebrow": "La estrategia",
+      "title": "No competir donde<br></br><grad>todos ya pelean.</grad>",
+      "intro": "La clave no era hacer una web bonita y esperar que Google la encontrara. Era encontrar el terreno donde Supertramp podía ganar — búsquedas con intención real de reserva, sin la competencia de las grandes cadenas y las OTAs con millones en SEO.",
+      "steps": [
+        {
+          "num": "01",
+          "phase": "Fase 1 — Diagnóstico",
+          "title": "Keyword research estratégico con análisis de competencia",
+          "p": "Relevamos todas las keywords con intención de reserva para hostels en Cusco y Machu Picchu. Luego analizamos qué competidores rankeaban para cada una — y lo más importante: cuáles tenían competencia débil o nula de las cadenas grandes. Eso nos dio el mapa de los océanos azules: búsquedas con volumen real donde Supertramp podía ganar posiciones sin pelear contra Booking.com con presupuesto de millones.",
+          "result": "→ Plan de contenido y keywords priorizadas por oportunidad"
+        },
+        {
+          "num": "02",
+          "phase": "Fase 2 — Diseño y desarrollo",
+          "title": "Rediseño completo orientado a conversión con motor de reservas integrado",
+          "p": "Con el keyword research aprobado, arrancamos el rediseño. Cada decisión de diseño respondía a una pregunta: ¿esto ayuda al visitante a reservar? El diseñador interno de Supertramp colaboró en la identidad visual — nosotros nos encargamos de la arquitectura de conversión. Integramos Cloudbeds como motor de reservas con los CTAs vinculados directamente al sistema de disponibilidad real.",
+          "result": "→ Web nueva con motor de reservas funcionando y CTAs medibles"
+        },
+        {
+          "num": "03",
+          "phase": "Fase 3 — Medición",
+          "title": "Google Tag Manager con eventos de conversión desde el día uno",
+          "p": "Antes de lanzar, configuramos GTM con eventos específicos: clic en \"Reservar\", inicio de proceso de reserva, reserva completada. Eso nos permitió medir exactamente qué CTAs convertían y cuáles no — y optimizar con datos reales en lugar de suposiciones.",
+          "result": "→ Embudo de conversión completamente instrumentado"
+        },
+        {
+          "num": "04",
+          "phase": "Fase 4 — Crecimiento orgánico",
+          "title": "Ejecución del plan de contenido para las keywords identificadas",
+          "p": "Con la web funcionando, ejecutamos el plan de contenido: páginas y artículos optimizados para las búsquedas de los océanos azules. Cada pieza respondía exactamente lo que buscaba alguien con intención real de visitar Cusco o Machu Picchu. En pocos meses empezamos a ganar posiciones en búsquedas que los competidores no estaban cubriendo.",
+          "result": "→ Posiciones ganadas en keywords estratégicas de bajo a mediano volumen"
+        },
+        {
+          "num": "05",
+          "phase": "Fase 5 — Sinergia con el equipo de Revenue",
+          "title": "Coordinación con el equipo de gestión de OTAs para maximizar el efecto",
+          "p": "Supertramp incorporó un equipo de revenue management de Colombia cuya función era optimizar todas las OTAs. Trabajamos en coordinación: ellos gestionando tarifas y disponibilidad en las plataformas, nosotros empujando tráfico directo desde la web. Los esfuerzos se potenciaban mutuamente. Fue el equipo de revenue quien reportó el dato definitivo: el 30% de las reservas totales llegaban desde el website.",
+          "result": "→ El 30% reportado por el equipo de revenue, no por nosotros"
+        }
+      ]
+    },
+    "Execution": {
+      "watermark": "BUILD",
+      "eyebrow": "Lo que construimos",
+      "title": "Cada pieza tenía<br></br><grad>un propósito concreto.</grad>",
+      "intro": "No fue un rediseño estético. Fue una arquitectura de conversión construida desde los datos del keyword research, medida con GTM desde el día uno y alimentada por contenido que posicionaba en los lugares correctos.",
+      "items": [
+        {
+          "tag": "Keyword Research",
+          "title": "Mapa de océanos azules para Cusco y Machu Picchu",
+          "p": "Relevamiento completo de búsquedas con intención de reserva. Análisis de competencia por keyword para identificar cuáles dominaban las cadenas y cuáles estaban disponibles. El resultado fue un plan priorizado de dónde atacar primero según dificultad y volumen."
+        },
+        {
+          "tag": "Diseño y desarrollo web",
+          "title": "Arquitectura de conversión + identidad visual del hostel",
+          "p": "Rediseño completo en colaboración con el diseñador interno de Supertramp. Cada sección responde a una etapa del proceso de decisión del viajero: interés → consideración → reserva. Los CTAs conectados directamente al motor Cloudbeds para disponibilidad en tiempo real."
+        },
+        {
+          "tag": "SEO técnico",
+          "title": "Estructura, metadatos y schema markup",
+          "p": "H1, H2 y H3 con las keywords correctas. Meta titles y descriptions optimizados por página. Schema de alojamiento (LodgingBusiness) para fragmentos enriquecidos. Velocidad y Core Web Vitals dentro del rango aceptable para Google."
+        },
+        {
+          "tag": "Google Tag Manager",
+          "title": "Eventos de conversión en cada CTA",
+          "p": "Configuración completa de GTM con triggers para cada acción de reserva. Datos conectados a GA4. Eso permitió iterar: qué CTA convertía más, en qué punto se iba la gente, qué propiedad tenía mejor tasa de conversión web."
+        },
+        {
+          "tag": "Contenido orgánico",
+          "title": "Páginas optimizadas para las búsquedas del plan",
+          "p": "Ejecución del plan de contenido sobre las keywords identificadas en Fase 1. Páginas de destino para búsquedas tipo \"hostel Machu Picchu\" o \"dónde dormir Aguas Calientes\" con bajo nivel de competencia directa y tráfico con intención de reserva real."
+        }
+      ]
+    },
+    "Result": {
+      "watermark": "30%",
+      "eyebrow": "El resultado",
+      "title": "Un número que lo<br></br><grad>dice todo.</grad>",
+      "intro": "El dato no lo reportamos nosotros. Lo reportó el equipo de revenue management de Supertramp — las personas cuyo trabajo era analizar exactamente de dónde venían las reservas. Eso lo hace un número irrefutable.",
+      "big": [
+        {
+          "featured": true,
+          "num": "30%",
+          "label": "de las reservas totales llegaban desde la web",
+          "sub": "Dato reportado por el equipo de revenue management. Total combinado de Cusco y Machu Picchu. A los 6 meses del inicio del proyecto — incluyendo el tiempo de desarrollo."
+        },
+        {
+          "featured": false,
+          "num": "6",
+          "label": "Meses desde el inicio",
+          "sub": "Incluyendo desarrollo, lanzamiento, contenido y maduración del SEO. El resultado llegó antes de que el proyecto alcanzara su velocidad de crucero."
+        },
+        {
+          "featured": false,
+          "num": "0→30%",
+          "label": "La transformación real",
+          "sub": "La web anterior no generaba ninguna reserva directa. El punto de partida era cero. Llegar al 30% en 6 meses sobre una base cero es el logro más significativo del proyecto."
+        }
+      ],
+      "small": [
+        {
+          "num": "icon-down",
+          "label": "Comisiones pagadas a OTAs por cada reserva directa"
+        },
+        {
+          "num": "2",
+          "label": "Propiedades beneficiadas — Cusco y Machu Picchu"
+        },
+        {
+          "num": "icon-up",
+          "label": "Posiciones ganadas en keywords de océano azul"
+        }
+      ]
+    },
+    "Quote": {
+      "text": "Más allá de nuestros esfuerzos en las OTAs, <span>el 30% de las reservas totales de Cusco y Machu Picchu provienen directamente desde el website.</span>",
+      "source": "Reportado por el <strong>equipo de Revenue Management</strong> de Supertramp Hostels — a los 6 meses del lanzamiento"
+    },
+    "Learn": {
+      "eyebrow": "Lo que aprendimos",
+      "title": "Tres ideas que este<br></br><grad>proyecto nos confirmó.</grad>",
+      "items": [
+        {
+          "num": "01",
+          "title": "El keyword research es la inversión con mayor retorno en SEO",
+          "p": "La diferencia entre pelear por \"hostel Cusco\" — donde Booking.com tiene millones de backlinks — y posicionar para búsquedas específicas sin competencia directa es la diferencia entre años de trabajo y meses. Encontrar esos océanos azules es el trabajo estratégico más importante del proyecto."
+        },
+        {
+          "num": "02",
+          "title": "Medir desde el día uno cambia completamente la velocidad de mejora",
+          "p": "Con GTM configurado antes del lanzamiento, cada semana teníamos datos reales de qué CTAs funcionaban y cuáles no. Eso permitió iterar rápido. Sin medición, las decisiones de mejora son subjetivas y lentas. Con datos, son obvias y rápidas."
+        },
+        {
+          "num": "03",
+          "title": "La web y las OTAs no compiten — se potencian",
+          "p": "Muchos negocios de hospitalidad ven la web directa como alternativa a las OTAs. La realidad es que se refuerzan: alguien te ve en Booking, te busca en Google, llega a tu web y reserva directo. El equipo de revenue gestionando las OTAs y la web convirtiendo en paralelo multiplicaron el resultado de ambos esfuerzos."
+        }
+      ]
+    },
+    "Next": {
+      "title": "Más casos de éxito",
+      "cases": [
+        {
+          "tag": "App · Automatizaciones · Full-stack",
+          "title": "sobremi.online",
+          "result": "Stripe + n8n + Postgres en producción real",
+          "href": "/case-studies/sobremi",
+          "name": "sobremi",
+          "type": "a"
+        },
+        {
+          "tag": "Nuevo proyecto",
+          "title": "Construimos el tuyo",
+          "result": "Mirá todos los paquetes disponibles →",
+          "href": "/services",
+          "name": "¿El próximo?<br></br>Tu negocio.",
+          "type": "b"
+        }
+      ]
+    },
+    "Cta": {
+      "title": "¿Tu negocio también<br></br><grad>depende de intermediarios?</grad>",
+      "p": "Booking, Instagram, referidos — todos son canales que no controlás. En 30 minutos te mostramos cómo construir el tuyo propio.",
+      "btn": "Agendá una llamada gratuita →",
+      "dis": "Sin compromiso. 30 minutos de estrategia pura."
+    }
+  },
+  "ExitIntent": {
+    "eyebrow": "Antes de irte",
+    "title": "¿Cuánto te cuesta no tener sistema?",
+    "body": "Cada mes sin automatización es un mes que tu competencia capta tus clientes. 15 minutos pueden cambiar eso.",
+    "cta": "¿Hablamos 15 min? (sin compromiso)",
+    "dismiss": "No, gracias"
+  }
+}

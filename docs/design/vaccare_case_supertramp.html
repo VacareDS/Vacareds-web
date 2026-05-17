@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Caso de éxito: Supertramp Hostels — 30% de reservas directas desde la web | Vacaré</title>
+<meta name="description" content="Cómo rediseñamos la web de Supertramp Hostels en Cusco y Machu Picchu, ejecutamos un keyword research estratégico y en 6 meses el 30% de sus reservas totales llegaban directamente desde su sitio."/>
+<meta name="keywords" content="caso de éxito SEO hostel, reservas directas web hostel, diseño web para hostels, keyword research turismo, reducir dependencia booking airbnb, posicionamiento web cusco machu picchu"/>
+<link rel="canonical" href="https://vacaredigitalsolutions.com/es/case-studies/supertramp"/>
+<meta property="og:title" content="Supertramp Hostels — 30% de reservas directas en 6 meses"/>
+<meta property="og:description" content="De una web sin conversión a generar el 30% de las reservas totales. Keyword research, rediseño estratégico, contenido SEO y GTM."/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F7F6F2;--dark:#1C1828;--darker:#0E0E12;
+  --muted:rgba(28,24,40,.52);--muted-l:rgba(247,246,242,.52);
+  --mg:#E8417A;--or:#F07030;--am:#F5A623;
+  --grad:linear-gradient(135deg,#E8417A 0%,#F07030 55%,#F5A623 100%);
+  --f:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--cream);color:var(--dark);overflow-x:hidden}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gb{background:var(--grad)}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;height:64px;
+  background:rgba(247,246,242,.92);backdrop-filter:blur(18px);
+  border-bottom:.5px solid rgba(28,24,40,.08);
+}
+.nl{font-size:20px;font-weight:800;color:var(--dark);text-decoration:none;letter-spacing:-.5px}
+.nm{display:flex;gap:28px;list-style:none}
+.nm a{font-size:13px;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s}
+.nm a:hover{opacity:1}
+.nb{background:var(--grad);color:#fff;border:none;padding:9px 20px;border-radius:7px;font:700 13px/1 var(--f);cursor:pointer;text-decoration:none}
+.back-link{font-size:13px;color:var(--mg);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:5px}
+.back-link:hover{opacity:.75}
+
+/* HERO SPLIT */
+#hero{min-height:92vh;display:flex;position:relative;overflow:hidden;padding-top:64px}
+.hero-l{
+  width:54%;display:flex;flex-direction:column;justify-content:center;
+  padding:64px 56px 64px 52px;position:relative;z-index:2;
+}
+.hero-l::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(28,24,40,.065) 1px,transparent 1px);
+  background-size:26px 26px;pointer-events:none;
+}
+.hero-wm{
+  position:absolute;bottom:-20px;left:-8px;
+  font-size:clamp(80px,13vw,170px);font-weight:800;font-style:italic;
+  color:rgba(28,24,40,.03);line-height:1;pointer-events:none;
+  letter-spacing:-5px;white-space:nowrap;z-index:0;
+}
+.hero-l-inner{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:22px}
+.eyebrow i{width:18px;height:1.5px;background:var(--mg);display:block}
+h1{font-size:clamp(38px,4.6vw,62px);font-weight:800;line-height:1.06;letter-spacing:-2px;color:var(--dark);margin-bottom:18px}
+.hero-sub{font-size:16px;line-height:1.75;color:var(--muted);max-width:440px;margin-bottom:32px}
+.stack-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.sp{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 13px;border-radius:20px;background:rgba(28,24,40,.07);color:var(--dark)}
+.sp.hot{background:var(--grad);color:#fff}
+.metrics-hero{display:flex;gap:0;border:.5px solid rgba(28,24,40,.1);border-radius:14px;overflow:hidden;max-width:440px}
+.mh{padding:18px 22px;flex:1;border-right:.5px solid rgba(28,24,40,.07)}
+.mh:last-child{border-right:none}
+.mh-num{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-1px;line-height:1;display:block}
+.mh-label{font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:5px;display:block}
+
+/* HERO RIGHT */
+.hero-r{
+  width:46%;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#E8417A 0%,#F07030 48%,#F5A623 100%);
+}
+.hr-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:.45;mix-blend-mode:overlay;pointer-events:none}
+.hr-wm{position:absolute;font-size:clamp(100px,18vw,230px);font-weight:800;font-style:italic;color:rgba(255,255,255,.08);line-height:.9;letter-spacing:-6px;pointer-events:none;z-index:1;bottom:-10px;right:-10px}
+.hr-vtxt{position:absolute;right:18px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);z-index:2}
+.split-line{position:absolute;left:54%;top:0;bottom:0;width:2px;z-index:50;background:linear-gradient(to bottom,transparent 0%,rgba(255,255,255,.55) 25%,rgba(255,255,255,.55) 75%,transparent 100%)}
+.hr-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:80px 48px 60px}
+.hr-geo-row{display:flex;gap:8px;margin-bottom:28px}
+.hg{border-radius:7px}
+.geo-f{position:absolute;border-radius:7px;pointer-events:none}
+
+/* result cards on right */
+.rc-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.result-cards{display:flex;flex-direction:column;gap:10px}
+.rc{
+  background:rgba(255,255,255,.12);backdrop-filter:blur(14px);
+  border:.5px solid rgba(255,255,255,.22);border-radius:14px;
+  padding:16px 18px;display:flex;align-items:center;gap:14px;
+}
+.rc-num{font-size:32px;font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1;flex-shrink:0;min-width:60px}
+.rc-info{}
+.rc-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+.rc-sub{font-size:11px;color:rgba(255,255,255,.55)}
+
+/* SECTION BASE */
+section{position:relative;overflow:hidden}
+.si{max-width:1100px;margin:0 auto;padding:0 52px}
+.sp2{padding-top:clamp(70px,9vw,110px);padding-bottom:clamp(70px,9vw,110px)}
+.ey{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ey i{width:16px;height:1.5px;display:block}
+.wm{position:absolute;font-weight:800;font-style:italic;line-height:1;pointer-events:none;user-select:none;white-space:nowrap;font-size:clamp(70px,13vw,160px);letter-spacing:-4px;z-index:0}
+
+/* CONTEXT */
+#context{background:var(--cream)}
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+#context h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+#context p{font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:14px}
+.problem-card{background:#fff;border:.5px solid rgba(28,24,40,.09);border-radius:18px;padding:28px;margin-top:28px}
+.pc-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,65,122,.7);margin-bottom:14px}
+.pc-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.pc-item{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--dark);line-height:1.5}
+.pc-item::before{content:'×';color:rgba(232,65,122,.5);font-weight:800;font-size:16px;line-height:1.1;flex-shrink:0}
+
+/* site info card */
+.site-card{background:var(--dark);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.site-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.06}
+.sc-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,242,.3);margin-bottom:14px}
+.sc-url{font-size:20px;font-weight:800;color:var(--cream);margin-bottom:6px;letter-spacing:-.5px}
+.sc-desc{font-size:13px;color:rgba(247,246,242,.45);line-height:1.6;margin-bottom:24px}
+.sc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.sc-tag-pill{background:rgba(247,246,242,.07);border:.5px solid rgba(247,246,242,.12);border-radius:20px;padding:4px 11px;font-size:11px;font-weight:600;color:rgba(247,246,242,.5)}
+.sc-divider{height:.5px;background:rgba(247,246,242,.07);margin:16px 0}
+.sc-stat{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sc-stat-label{font-size:12px;color:rgba(247,246,242,.35)}
+.sc-stat-val{font-size:13px;font-weight:700;color:var(--cream)}
+
+/* STRATEGY */
+#strategy{background:var(--dark)}
+#strategy h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:14px}
+#strategy .intro{font-size:16px;line-height:1.75;color:var(--muted-l);max-width:560px;margin-bottom:52px}
+.strategy-steps{display:flex;flex-direction:column;gap:0}
+.ss-item{display:grid;grid-template-columns:64px 1fr;gap:0;position:relative}
+.ss-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.ss-dot{width:48px;height:48px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0;z-index:1;box-shadow:0 6px 20px rgba(232,65,122,.2)}
+.ss-line{flex:1;width:2px;background:linear-gradient(to bottom,rgba(232,65,122,.2),rgba(245,166,35,.05));margin-top:8px}
+.ss-item:last-child .ss-line{display:none}
+.ss-content{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.07);border-radius:16px;padding:24px 28px;margin-left:16px;margin-bottom:12px;transition:border-color .2s;position:relative;overflow:hidden}
+.ss-content::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.ss-content:hover{border-color:rgba(232,65,122,.3)}
+.ss-phase{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:8px}
+.ss-content h3{font-size:16px;font-weight:800;color:var(--cream);margin-bottom:8px;letter-spacing:-.3px}
+.ss-content p{font-size:13px;line-height:1.65;color:var(--muted-l)}
+.ss-result{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:700;color:var(--am);background:rgba(245,166,35,.08);padding:4px 10px;border-radius:20px}
+
+/* EXECUTION */
+#execution{background:var(--cream)}
+#execution h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
+#execution .intro{font-size:16px;line-height:1.75;color:var(--muted);max-width:560px;margin-bottom:52px}
+.exec-bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.eb{background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:16px;padding:26px;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.eb:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(28,24,40,.07)}
+.eb:nth-child(1){grid-column:span 7}
+.eb:nth-child(2){grid-column:span 5}
+.eb:nth-child(3){grid-column:span 4}
+.eb:nth-child(4){grid-column:span 4}
+.eb:nth-child(5){grid-column:span 4}
+.eb-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:12px;display:block}
+.eb h3{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px;letter-spacing:-.3px}
+.eb p{font-size:13px;line-height:1.65;color:var(--muted)}
+.eb-accent{position:absolute;bottom:16px;right:16px;width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,rgba(232,65,122,.08),rgba(245,166,35,.06))}
+
+/* RESULT */
+#result{background:var(--dark)}
+#result h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:14px}
+#result .intro{font-size:16px;line-height:1.75;color:var(--muted-l);max-width:540px;margin-bottom:52px}
+.result-big{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.result-big .rb{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.08);border-radius:20px;padding:40px;transition:border-color .2s}
+.result-big .rb:hover{border-color:rgba(232,65,122,.3)}
+.result-big .rb.featured{background:var(--grad);border:none;grid-row:span 2}
+.rb-num{font-size:clamp(56px,8vw,88px);font-weight:800;letter-spacing:-4px;line-height:1;display:block;margin-bottom:8px}
+.rb-num.white{color:#fff}
+.rb-label{font-size:15px;font-weight:700;margin-bottom:6px}
+.rb-label.white{color:#fff}
+.rb-sub{font-size:13px;line-height:1.6}
+.rb-sub.white{color:rgba(255,255,255,.65)}
+.result-small{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rs-card{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.08);border-radius:16px;padding:24px;text-align:center}
+.rs-num{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-2px;line-height:1;display:block;margin-bottom:6px}
+.rs-label{font-size:11px;font-weight:600;color:rgba(247,246,242,.4);letter-spacing:.06em;text-transform:uppercase}
+
+/* QUOTE */
+#quote{background:var(--cream)}
+.quote-wrap{
+  background:var(--dark);border-radius:24px;padding:56px;
+  position:relative;overflow:hidden;text-align:center;
+}
+.quote-wrap::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.05}
+.quote-mark{font-size:80px;font-weight:800;line-height:.6;color:var(--mg);opacity:.3;display:block;margin-bottom:16px;position:relative}
+.quote-text{font-size:clamp(18px,2.8vw,26px);font-weight:700;color:var(--cream);line-height:1.4;letter-spacing:-.5px;max-width:700px;margin:0 auto;position:relative}
+.quote-text span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.quote-source{margin-top:28px;font-size:13px;color:rgba(247,246,242,.35);position:relative}
+.quote-source strong{color:rgba(247,246,242,.6)}
+
+/* LEARNINGS */
+#learn{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
+#learn h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:52px}
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lc{background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:18px;padding:28px;transition:transform .2s}
+.lc:hover{transform:translateY(-3px)}
+.lc-num{font-size:36px;font-weight:800;letter-spacing:-2px;line-height:1;display:block;margin-bottom:14px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lc h3{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px;letter-spacing:-.3px}
+.lc p{font-size:13px;line-height:1.65;color:var(--muted)}
+
+/* NEXT */
+#next{background:var(--cream)}
+#next h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:48px;text-align:center}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:52px}
+.nc{background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:18px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s;display:block}
+.nc:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(28,24,40,.07)}
+.nc-thumb{aspect-ratio:16/7;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.nc-thumb.a{background:linear-gradient(135deg,#1a2a35,#2a3d4a)}
+.nc-thumb.b{background:linear-gradient(135deg,#2a1f35,#3d2a4a)}
+.nc-ov{position:absolute;inset:0;background:var(--grad);opacity:.08}
+.nc-name{font-size:22px;font-weight:800;color:rgba(247,246,242,.4);position:relative;z-index:1}
+.nc-info{padding:20px 24px}
+.nc-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:5px}
+.nc-title{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.nc-result{font-size:13px;color:var(--muted)}
+
+.cta-final{background:var(--dark);border-radius:24px;padding:52px;text-align:center;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:.04}
+.cta-final h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:12px;position:relative}
+.cta-final p{font-size:16px;color:var(--muted-l);max-width:440px;margin:0 auto 32px;line-height:1.7;position:relative}
+.btn-main{background:var(--grad);color:#fff;border:none;padding:16px 36px;border-radius:12px;font:800 16px/1 var(--f);cursor:pointer;transition:transform .2s,opacity .2s;letter-spacing:-.3px;position:relative;text-decoration:none;display:inline-block}
+.btn-main:hover{transform:translateY(-2px);opacity:.9}
+.cta-dis{font-size:12px;color:rgba(247,246,242,.28);margin-top:14px;position:relative}
+
+/* FOOTER */
+footer{background:var(--darker);padding:48px 52px 24px}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;max-width:1100px;margin:0 auto 36px}
+.fbrand p{font-size:13px;color:rgba(247,246,242,.3);line-height:1.7;margin-top:10px;max-width:200px}
+.fcol h5{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:12px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fcol a{font-size:13px;color:rgba(247,246,242,.35);text-decoration:none;transition:color .2s}
+.fcol a:hover{color:rgba(247,246,242,.72)}
+.fbot{border-top:.5px solid rgba(247,246,242,.07);padding-top:20px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{font-size:11px;color:rgba(247,246,242,.2)}
+.flogo{font-size:18px;font-weight:800;color:rgba(247,246,242,.36);letter-spacing:-.5px}
+
+/* FADE IN */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fi.vis{opacity:1;transform:none}
+.fi.d1{transition-delay:.1s}.fi.d2{transition-delay:.2s}.fi.d3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #hero{flex-direction:column}
+  .hero-l{width:100%;padding:24px 24px 40px}
+  .hero-r{width:100%;min-height:320px}
+  .split-line,.hr-vtxt{display:none}
+  .context-grid,.next-grid{grid-template-columns:1fr}
+  .exec-bento{grid-template-columns:1fr 1fr}
+  .eb:nth-child(1),.eb:nth-child(2),.eb:nth-child(3),.eb:nth-child(4),.eb:nth-child(5){grid-column:span 1}
+  .result-big{grid-template-columns:1fr}
+  .result-big .rb.featured{grid-row:auto}
+  .result-small,.learn-grid{grid-template-columns:1fr 1fr}
+  .strategy-steps .ss-item{grid-template-columns:52px 1fr}
+  nav{padding:0 20px}.nm{display:none}
+  .si{padding:0 24px}
+  .cta-final{padding:36px 24px}
+  .ftop{grid-template-columns:1fr 1fr}
+  .metrics-hero{flex-direction:column}
+  .mh{border-right:none;border-bottom:.5px solid rgba(28,24,40,.07)}
+  .mh:last-child{border-bottom:none}
+}
+@media(max-width:580px){
+  .result-small,.learn-grid,.ftop{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nl" href="/">Vacaré</a>
+  <ul class="nm">
+    <li><a href="/es/services">Servicios</a></li>
+    <li><a href="/#case">Casos</a></li>
+    <li><a href="/es/free-audit">Auditoría gratis</a></li>
+  </ul>
+  <a href="#next" class="nb">Trabajar con nosotros</a>
+</nav>
+
+<!-- ══════ HERO SPLIT ══════ -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="hero-wm">30%</div>
+    <div class="hero-l-inner">
+      <a href="/#case" class="back-link fi">← Todos los casos</a>
+      <br><br>
+      <div class="eyebrow fi"><i></i>Caso de éxito · Hostel · Turismo · SEO</div>
+      <h1 class="fi">De una web que no<br>vendía nada a<br><span class="gt">30% de reservas directas.</span></h1>
+      <p class="hero-sub fi d1">Supertramp Hostels tenía dos propiedades en Cusco y Machu Picchu y dependía 100% de las OTAs para conseguir reservas. En 6 meses — incluyendo el desarrollo — el 30% de sus reservas totales llegaban directamente desde su web.</p>
+
+      <div class="stack-row fi d1">
+        <span class="sp hot">Keyword Research</span>
+        <span class="sp hot">SEO</span>
+        <span class="sp">Rediseño web</span>
+        <span class="sp">Google Tag Manager</span>
+        <span class="sp">Cloudbeds</span>
+        <span class="sp">Contenido orgánico</span>
+      </div>
+
+      <div class="metrics-hero fi d2">
+        <div class="mh"><span class="mh-num gt">30%</span><span class="mh-label">Reservas totales desde la web</span></div>
+        <div class="mh"><span class="mh-num gt">6m</span><span class="mh-label">Desde el inicio hasta el resultado</span></div>
+        <div class="mh"><span class="mh-num gt">2</span><span class="mh-label">Propiedades — Cusco y Machu Picchu</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="split-line"></div>
+
+  <div class="hero-r">
+    <div class="hr-noise"></div>
+    <div class="hr-wm">30%</div>
+    <div class="hr-vtxt">supertramphostels.com</div>
+    <div class="hr-inner">
+      <div class="hr-geo-row">
+        <div class="hg" style="width:30px;height:30px;background:rgba(255,255,255,.22);border-radius:7px"></div>
+        <div class="hg" style="width:18px;height:18px;background:rgba(255,255,255,.13);border-radius:5px;margin-top:7px"></div>
+        <div class="hg" style="width:42px;height:42px;background:transparent;border:2px solid rgba(255,255,255,.28);border-radius:10px"></div>
+        <div class="hg" style="width:14px;height:14px;background:rgba(255,255,255,.28);border-radius:3px;margin-top:13px"></div>
+      </div>
+      <div class="rc-label">Los números al cabo de 6 meses</div>
+      <div class="result-cards">
+        <div class="rc">
+          <div class="rc-num">30%</div>
+          <div class="rc-info">
+            <div class="rc-title">Reservas directas desde la web</div>
+            <div class="rc-sub">Del total combinado de Cusco + Machu Picchu</div>
+          </div>
+        </div>
+        <div class="rc">
+          <div class="rc-num">↓</div>
+          <div class="rc-info">
+            <div class="rc-title">Dependencia de OTAs reducida</div>
+            <div class="rc-sub">Menos comisiones, más margen por reserva directa</div>
+          </div>
+        </div>
+        <div class="rc">
+          <div class="rc-num">🔝</div>
+          <div class="rc-info">
+            <div class="rc-title">Posiciones ganadas en océanos azules</div>
+            <div class="rc-sub">Keywords sin competencia directa de cadenas grandes</div>
+          </div>
+        </div>
+        <div class="rc">
+          <div class="rc-num">0</div>
+          <div class="rc-info">
+            <div class="rc-title">Conversiones antes del proyecto</div>
+            <div class="rc-sub">La web anterior era solo imágenes sin CTA ni motor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="geo-f gb" style="width:15px;height:15px;top:68px;left:28px;opacity:.32;border-radius:4px"></div>
+    <div class="geo-f" style="width:10px;height:10px;top:94px;left:52px;opacity:.18;background:rgba(255,255,255,.45);border-radius:3px"></div>
+    <div class="geo-f gb" style="width:20px;height:20px;bottom:90px;left:38px;opacity:.22;border-radius:5px"></div>
+  </div>
+</section>
+
+<!-- ══════ CONTEXTO ══════ -->
+<section id="context">
+  <div class="si sp2">
+    <div class="context-grid">
+      <div class="fi">
+        <div class="ey"><i style="background:var(--muted)"></i>El punto de partida</div>
+        <h2>Una web que existía<br>pero no hacía<br><span class="gt">absolutamente nada.</span></h2>
+        <p>Supertramp Hostels tenía dos propiedades exitosas — una en Cusco y otra en Aguas Calientes, la puerta de entrada a Machu Picchu. El hostel era bueno: buenas reseñas, ubicación estratégica, ambiente que los viajeros amaban.</p>
+        <p>El problema era que para llenar sus camas dependían completamente de Booking.com, Hostelworld y otras OTAs que se llevaban comisión en cada reserva. La web era un portfolio de imágenes bonitas sin ninguna función de conversión.</p>
+        <p>Nos contactaron queriendo cambiar eso. La pregunta era cómo competir contra hostels con más presupuesto y más reseñas en las mismas plataformas — sin que la batalla se diera exactamente en el mismo terreno.</p>
+
+        <div class="problem-card">
+          <div class="pc-tag">Los problemas que encontramos</div>
+          <ul class="pc-list">
+            <li class="pc-item">Sin motor de reservas propio — todo el tráfico iba a OTAs</li>
+            <li class="pc-item">Web sin estructura SEO: sin H1 correcto, sin metadatos, sin schema</li>
+            <li class="pc-item">Sin keywords estratégicas — competían por las mismas búsquedas que las cadenas grandes</li>
+            <li class="pc-item">Sin seguimiento de conversiones — sin GTM, sin eventos, sin datos</li>
+            <li class="pc-item">Sin contenido — solo imágenes, cero texto indexable para Google</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fi d1">
+        <div class="site-card">
+          <div class="sc-tag">El cliente</div>
+          <div class="sc-url">Supertramp Hostels</div>
+          <div class="sc-desc">Dos propiedades en el corazón del circuito turístico peruano. Cusco, ciudad histórica. Aguas Calientes, acceso a Machu Picchu.</div>
+          <div class="sc-tags">
+            <span class="sc-tag-pill">Hospitality</span>
+            <span class="sc-tag-pill">Turismo mochilero</span>
+            <span class="sc-tag-pill">2 propiedades</span>
+            <span class="sc-tag-pill">Perú</span>
+          </div>
+          <div class="sc-divider"></div>
+          <div class="sc-stat"><span class="sc-stat-label">Situación inicial</span><span class="sc-stat-val">0% reservas desde web</span></div>
+          <div class="sc-stat"><span class="sc-stat-label">Motor de reservas</span><span class="sc-stat-val">Cloudbeds (integrado)</span></div>
+          <div class="sc-stat"><span class="sc-stat-label">Duración total</span><span class="sc-stat-val">6 meses</span></div>
+          <div class="sc-stat"><span class="sc-stat-label">Incluye desarrollo</span><span class="sc-stat-val">Sí — web + SEO + contenido</span></div>
+          <div class="sc-stat"><span class="sc-stat-label">Resultado</span><span class="sc-stat-val">30% reservas totales desde web</span></div>
+          <div class="sc-divider"></div>
+          <a href="https://supertramphostels.com" target="_blank" style="font-size:12px;font-weight:700;color:var(--mg);text-decoration:none;border-bottom:1px solid rgba(232,65,122,.3);padding-bottom:1px">Ver sitio →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ESTRATEGIA ══════ -->
+<section id="strategy">
+  <div class="si sp2">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>La estrategia</div>
+    <h2 class="fi">No competir donde<br><span class="gt">todos ya pelean.</span></h2>
+    <p class="intro fi d1">La clave no era hacer una web bonita y esperar que Google la encontrara. Era encontrar el terreno donde Supertramp podía ganar — búsquedas con intención real de reserva, sin la competencia de las grandes cadenas y las OTAs con millones en SEO.</p>
+
+    <div class="strategy-steps fi d1">
+
+      <div class="ss-item">
+        <div class="ss-dot-col">
+          <div class="ss-dot">01</div>
+          <div class="ss-line"></div>
+        </div>
+        <div class="ss-content">
+          <div class="ss-phase">Fase 1 — Diagnóstico</div>
+          <h3>Keyword research estratégico con análisis de competencia</h3>
+          <p>Relevamos todas las keywords con intención de reserva para hostels en Cusco y Machu Picchu. Luego analizamos qué competidores rankeaban para cada una — y lo más importante: cuáles tenían competencia débil o nula de las cadenas grandes. Eso nos dio el mapa de los océanos azules: búsquedas con volumen real donde Supertramp podía ganar posiciones sin pelear contra Booking.com con presupuesto de millones.</p>
+          <div class="ss-result">→ Plan de contenido y keywords priorizadas por oportunidad</div>
+        </div>
+      </div>
+
+      <div class="ss-item">
+        <div class="ss-dot-col">
+          <div class="ss-dot">02</div>
+          <div class="ss-line"></div>
+        </div>
+        <div class="ss-content">
+          <div class="ss-phase">Fase 2 — Diseño y desarrollo</div>
+          <h3>Rediseño completo orientado a conversión con motor de reservas integrado</h3>
+          <p>Con el keyword research aprobado, arrancamos el rediseño. Cada decisión de diseño respondía a una pregunta: ¿esto ayuda al visitante a reservar? El diseñador interno de Supertramp colaboró en la identidad visual — nosotros nos encargamos de la arquitectura de conversión. Integramos Cloudbeds como motor de reservas con los CTAs vinculados directamente al sistema de disponibilidad real.</p>
+          <div class="ss-result">→ Web nueva con motor de reservas funcionando y CTAs medibles</div>
+        </div>
+      </div>
+
+      <div class="ss-item">
+        <div class="ss-dot-col">
+          <div class="ss-dot">03</div>
+          <div class="ss-line"></div>
+        </div>
+        <div class="ss-content">
+          <div class="ss-phase">Fase 3 — Medición</div>
+          <h3>Google Tag Manager con eventos de conversión desde el día uno</h3>
+          <p>Antes de lanzar, configuramos GTM con eventos específicos: clic en "Reservar", inicio de proceso de reserva, reserva completada. Eso nos permitió medir exactamente qué CTAs convertían y cuáles no — y optimizar con datos reales en lugar de suposiciones.</p>
+          <div class="ss-result">→ Embudo de conversión completamente instrumentado</div>
+        </div>
+      </div>
+
+      <div class="ss-item">
+        <div class="ss-dot-col">
+          <div class="ss-dot">04</div>
+          <div class="ss-line"></div>
+        </div>
+        <div class="ss-content">
+          <div class="ss-phase">Fase 4 — Crecimiento orgánico</div>
+          <h3>Ejecución del plan de contenido para las keywords identificadas</h3>
+          <p>Con la web funcionando, ejecutamos el plan de contenido: páginas y artículos optimizados para las búsquedas de los océanos azules. Cada pieza respondía exactamente lo que buscaba alguien con intención real de visitar Cusco o Machu Picchu. En pocos meses empezamos a ganar posiciones en búsquedas que los competidores no estaban cubriendo.</p>
+          <div class="ss-result">→ Posiciones ganadas en keywords estratégicas de bajo a mediano volumen</div>
+        </div>
+      </div>
+
+      <div class="ss-item">
+        <div class="ss-dot-col">
+          <div class="ss-dot">05</div>
+          <div class="ss-line"></div>
+        </div>
+        <div class="ss-content">
+          <div class="ss-phase">Fase 5 — Sinergia con el equipo de Revenue</div>
+          <h3>Coordinación con el equipo de gestión de OTAs para maximizar el efecto</h3>
+          <p>Supertramp incorporó un equipo de revenue management de Colombia cuya función era optimizar todas las OTAs. Trabajamos en coordinación: ellos gestionando tarifas y disponibilidad en las plataformas, nosotros empujando tráfico directo desde la web. Los esfuerzos se potenciaban mutuamente. Fue el equipo de revenue quien reportó el dato definitivo: el 30% de las reservas totales llegaban desde el website.</p>
+          <div class="ss-result">→ El 30% reportado por el equipo de revenue, no por nosotros</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">STRATEGY</div>
+</section>
+
+<!-- ══════ EJECUCIÓN ══════ -->
+<section id="execution">
+  <div class="si sp2">
+    <div class="ey fi"><i style="background:var(--muted)"></i>Lo que construimos</div>
+    <h2 class="fi">Cada pieza tenía<br><span class="gt">un propósito concreto.</span></h2>
+    <p class="intro fi d1">No fue un rediseño estético. Fue una arquitectura de conversión construida desde los datos del keyword research, medida con GTM desde el día uno y alimentada por contenido que posicionaba en los lugares correctos.</p>
+
+    <div class="exec-bento fi d1">
+
+      <div class="eb">
+        <span class="eb-tag">Keyword Research</span>
+        <h3>Mapa de océanos azules para Cusco y Machu Picchu</h3>
+        <p>Relevamiento completo de búsquedas con intención de reserva. Análisis de competencia por keyword para identificar cuáles dominaban las cadenas y cuáles estaban disponibles. El resultado fue un plan priorizado de dónde atacar primero según dificultad y volumen.</p>
+        <div class="eb-accent"></div>
+      </div>
+
+      <div class="eb">
+        <span class="eb-tag">Diseño y desarrollo web</span>
+        <h3>Arquitectura de conversión + identidad visual del hostel</h3>
+        <p>Rediseño completo en colaboración con el diseñador interno de Supertramp. Cada sección responde a una etapa del proceso de decisión del viajero: interés → consideración → reserva. Los CTAs conectados directamente al motor Cloudbeds para disponibilidad en tiempo real.</p>
+        <div class="eb-accent"></div>
+      </div>
+
+      <div class="eb">
+        <span class="eb-tag">SEO técnico</span>
+        <h3>Estructura, metadatos y schema markup</h3>
+        <p>H1, H2 y H3 con las keywords correctas. Meta titles y descriptions optimizados por página. Schema de alojamiento (LodgingBusiness) para fragmentos enriquecidos. Velocidad y Core Web Vitals dentro del rango aceptable para Google.</p>
+      </div>
+
+      <div class="eb">
+        <span class="eb-tag">Google Tag Manager</span>
+        <h3>Eventos de conversión en cada CTA</h3>
+        <p>Configuración completa de GTM con triggers para cada acción de reserva. Datos conectados a GA4. Eso permitió iterar: qué CTA convertía más, en qué punto se iba la gente, qué propiedad tenía mejor tasa de conversión web.</p>
+      </div>
+
+      <div class="eb">
+        <span class="eb-tag">Contenido orgánico</span>
+        <h3>Páginas optimizadas para las búsquedas del plan</h3>
+        <p>Ejecución del plan de contenido sobre las keywords identificadas en Fase 1. Páginas de destino para búsquedas tipo "hostel Machu Picchu" o "dónde dormir Aguas Calientes" con bajo nivel de competencia directa y tráfico con intención de reserva real.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(28,24,40,.025);bottom:-10px;right:-10px">BUILD</div>
+</section>
+
+<!-- ══════ RESULTADO ══════ -->
+<section id="result">
+  <div class="si sp2">
+    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>El resultado</div>
+    <h2 class="fi">Un número que lo<br><span class="gt">dice todo.</span></h2>
+    <p class="intro fi d1">El dato no lo reportamos nosotros. Lo reportó el equipo de revenue management de Supertramp — las personas cuyo trabajo era analizar exactamente de dónde venían las reservas. Eso lo hace un número irrefutable.</p>
+
+    <div class="result-big fi d1">
+      <div class="rb featured">
+        <span class="rb-num white">30%</span>
+        <div class="rb-label white">de las reservas totales llegaban desde la web</div>
+        <div class="rb-sub white">Dato reportado por el equipo de revenue management. Total combinado de Cusco y Machu Picchu. A los 6 meses del inicio del proyecto — incluyendo el tiempo de desarrollo.</div>
+      </div>
+      <div class="rb">
+        <span class="rb-num gt">6</span>
+        <div class="rb-label" style="color:var(--dark)">Meses desde el inicio</div>
+        <div class="rb-sub" style="color:var(--muted)">Incluyendo desarrollo, lanzamiento, contenido y maduración del SEO. El resultado llegó antes de que el proyecto alcanzara su velocidad de crucero.</div>
+      </div>
+      <div class="rb">
+        <span class="rb-num gt">0→30%</span>
+        <div class="rb-label" style="color:var(--dark)">La transformación real</div>
+        <div class="rb-sub" style="color:var(--muted)">La web anterior no generaba ninguna reserva directa. El punto de partida era cero. Llegar al 30% en 6 meses sobre una base cero es el logro más significativo del proyecto.</div>
+      </div>
+    </div>
+
+    <div class="result-small fi d2">
+      <div class="rs-card">
+        <span class="rs-num gt">↓</span>
+        <span class="rs-label">Comisiones pagadas a OTAs por cada reserva directa</span>
+      </div>
+      <div class="rs-card">
+        <span class="rs-num gt">2</span>
+        <span class="rs-label">Propiedades beneficiadas — Cusco y Machu Picchu</span>
+      </div>
+      <div class="rs-card">
+        <span class="rs-num gt">🔝</span>
+        <span class="rs-label">Posiciones ganadas en keywords de océano azul</span>
+      </div>
+    </div>
+  </div>
+  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">30%</div>
+</section>
+
+<!-- ══════ QUOTE ══════ -->
+<section id="quote">
+  <div class="si sp2">
+    <div class="quote-wrap fi">
+      <span class="quote-mark">"</span>
+      <div class="quote-text">Más allá de nuestros esfuerzos en las OTAs, <span>el 30% de las reservas totales de Cusco y Machu Picchu provienen directamente desde el website.</span></div>
+      <div class="quote-source">Reportado por el <strong>equipo de Revenue Management</strong> de Supertramp Hostels — a los 6 meses del lanzamiento</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ LEARNINGS ══════ -->
+<section id="learn">
+  <div class="si sp2">
+    <div class="ey fi"><i style="background:var(--muted)"></i>Lo que aprendimos</div>
+    <h2 class="fi">Tres ideas que este<br><span class="gt">proyecto nos confirmó.</span></h2>
+    <div class="learn-grid fi d1">
+      <div class="lc">
+        <span class="lc-num">01</span>
+        <h3>El keyword research es la inversión con mayor retorno en SEO</h3>
+        <p>La diferencia entre pelear por "hostel Cusco" — donde Booking.com tiene millones de backlinks — y posicionar para búsquedas específicas sin competencia directa es la diferencia entre años de trabajo y meses. Encontrar esos océanos azules es el trabajo estratégico más importante del proyecto.</p>
+      </div>
+      <div class="lc">
+        <span class="lc-num">02</span>
+        <h3>Medir desde el día uno cambia completamente la velocidad de mejora</h3>
+        <p>Con GTM configurado antes del lanzamiento, cada semana teníamos datos reales de qué CTAs funcionaban y cuáles no. Eso permitió iterar rápido. Sin medición, las decisiones de mejora son subjetivas y lentas. Con datos, son obvias y rápidas.</p>
+      </div>
+      <div class="lc">
+        <span class="lc-num">03</span>
+        <h3>La web y las OTAs no compiten — se potencian</h3>
+        <p>Muchos negocios de hospitalidad ven la web directa como alternativa a las OTAs. La realidad es que se refuerzan: alguien te ve en Booking, te busca en Google, llega a tu web y reserva directo. El equipo de revenue gestionando las OTAs y la web convirtiendo en paralelo multiplicaron el resultado de ambos esfuerzos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ NEXT + CTA ══════ -->
+<section id="next">
+  <div class="si sp2">
+    <h2 class="fi">Más casos de éxito</h2>
+    <div class="next-grid fi d1">
+      <a href="/es/case-studies/sobremi" class="nc">
+        <div class="nc-thumb a"><div class="nc-ov"></div><span class="nc-name">sobremi</span></div>
+        <div class="nc-info">
+          <div class="nc-tag">App · Automatizaciones · Full-stack</div>
+          <div class="nc-title">sobremi.online</div>
+          <div class="nc-result">Stripe + n8n + Postgres en producción real</div>
+        </div>
+      </a>
+      <a href="/es/services" class="nc">
+        <div class="nc-thumb b"><div class="nc-ov"></div><span class="nc-name" style="font-size:16px;color:rgba(247,246,242,.35)">¿El próximo?<br>Tu negocio.</span></div>
+        <div class="nc-info">
+          <div class="nc-tag">Nuevo proyecto</div>
+          <div class="nc-title">Construimos el tuyo</div>
+          <div class="nc-result">Mirá todos los paquetes disponibles →</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="cta-final fi d1">
+      <h2>¿Tu negocio también<br><span class="gt">depende de intermediarios?</span></h2>
+      <p>Booking, Instagram, referidos — todos son canales que no controlás. En 30 minutos te mostramos cómo construir el tuyo propio.</p>
+      <a href="/#ctaf" class="btn-main">Agendá una llamada gratuita →</a>
+      <p class="cta-dis">Sin compromiso. 30 minutos de estrategia pura.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="flogo">Vacaré</div>
+      <p>Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.</p>
+    </div>
+    <div class="fcol">
+      <h5>Casos de éxito</h5>
+      <ul>
+        <li><a href="/es/case-studies/supertramp">Supertramp Hostels</a></li>
+        <li><a href="/es/case-studies/sobremi">sobremi.online</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="/es/services">Ver todos los paquetes</a></li>
+        <li><a href="/es/free-audit">Auditoría gratuita</a></li>
+        <li><a href="/es/email-course">Mini-curso gratuito</a></li>
+        <li><a href="/#ctaf">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 Vacaré Digital Solutions LLC. Todos los derechos reservados.</p>
+    <p>ES / EN</p>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+setTimeout(()=>document.querySelectorAll('#hero .fi').forEach(el=>el.classList.add('vis')),80);
+</script>
+</body>
+</html>

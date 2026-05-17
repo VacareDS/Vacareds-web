@@ -1,826 +1,1867 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Auditoría Web Gratuita | Vacaré Digital Solutions</title>
-<meta name="description" content="Ingresá la URL de tu sitio web y recibí un análisis gratuito en 2 horas: velocidad, SEO técnico, conversión y qué está costándote clientes hoy."/>
-<meta name="keywords" content="auditoría web gratuita, análisis SEO gratis, mejorar conversión web, diagnóstico sitio web"/>
-<link rel="canonical" href="https://vacaredigitalsolutions.com/es/free-audit"/>
-<meta property="og:title" content="Auditoría Web Gratuita — Descubrí qué le falta a tu sitio"/>
-<meta property="og:description" content="En 2 horas recibís un reporte con los problemas reales de tu web: velocidad, SEO y conversión."/>
-<meta property="og:type" content="website"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --cream:#F7F6F2;--dark:#1C1828;--darker:#0E0E12;
-  --muted:rgba(28,24,40,.52);--muted-l:rgba(247,246,242,.52);
-  --mg:#E8417A;--or:#F07030;--am:#F5A623;
-  --grad:linear-gradient(135deg,#E8417A 0%,#F07030 55%,#F5A623 100%);
-  --f:'Plus Jakarta Sans',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--f);background:var(--cream);color:var(--dark);overflow-x:hidden}
-.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.gb{background:var(--grad)}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auditoría Web Gratuita | Vacaré Digital Solutions</title>
+  <meta name="description"
+    content="Ingresá la URL de tu sitio web y recibí un análisis gratuito en 2 horas: velocidad, SEO técnico, conversión y qué está costándote clientes hoy." />
+  <meta name="keywords"
+    content="auditoría web gratuita, análisis SEO gratis, mejorar conversión web, diagnóstico sitio web" />
+  <link rel="canonical" href="https://vacaredigitalsolutions.com/es/free-audit" />
+  <meta property="og:title" content="Auditoría Web Gratuita — Descubrí qué le falta a tu sitio" />
+  <meta property="og:description"
+    content="En 2 horas recibís un reporte con los problemas reales de tu web: velocidad, SEO y conversión." />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 52px;height:64px;
-  background:rgba(247,246,242,.92);backdrop-filter:blur(18px);
-  border-bottom:.5px solid rgba(28,24,40,.08);
-}
-.nl{font-size:20px;font-weight:800;color:var(--dark);text-decoration:none;letter-spacing:-.5px}
-.nm{display:flex;gap:28px;list-style:none}
-.nm a{font-size:13px;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s}
-.nm a:hover{opacity:1}
-.nb{background:var(--grad);color:#fff;border:none;padding:9px 20px;border-radius:7px;font:700 13px/1 var(--f);cursor:pointer;text-decoration:none}
+    :root {
+      --cream: #F7F6F2;
+      --dark: #1C1828;
+      --darker: #0E0E12;
+      --muted: rgba(28, 24, 40, .52);
+      --muted-l: rgba(247, 246, 242, .52);
+      --mg: #E8417A;
+      --or: #F07030;
+      --am: #F5A623;
+      --grad: linear-gradient(135deg, #E8417A 0%, #F07030 55%, #F5A623 100%);
+      --f: 'Plus Jakarta Sans', sans-serif;
+    }
 
-/* HERO SPLIT */
-#hero{
-  min-height:100vh;display:flex;position:relative;overflow:hidden;
-  padding-top:64px;
-}
-.hero-l{
-  width:55%;display:flex;flex-direction:column;justify-content:center;
-  padding:70px 60px 70px 52px;position:relative;z-index:2;
-}
-.hero-l::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(28,24,40,.065) 1px,transparent 1px);
-  background-size:26px 26px;pointer-events:none;
-}
-.hero-wm{
-  position:absolute;bottom:-20px;left:-10px;
-  font-size:clamp(90px,14vw,180px);font-weight:800;
-  color:rgba(28,24,40,.035);line-height:1;pointer-events:none;
-  letter-spacing:-5px;white-space:nowrap;z-index:0;
-}
-.hero-l-inner{position:relative;z-index:1}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);margin-bottom:24px}
-.eyebrow i{width:18px;height:1.5px;background:var(--mg);display:block}
-h1{font-size:clamp(40px,4.8vw,64px);font-weight:800;line-height:1.06;letter-spacing:-2px;color:var(--dark);margin-bottom:20px}
-.hero-sub{font-size:16px;line-height:1.75;color:var(--muted);max-width:440px;margin-bottom:32px}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* FORM CARD */
-.form-card{
-  background:#fff;border-radius:20px;padding:36px;
-  border:.5px solid rgba(28,24,40,.09);
-  box-shadow:0 24px 60px rgba(28,24,40,.08);
-  max-width:500px;position:relative;z-index:1;
-}
-.form-card::before{
-  content:'';position:absolute;inset:-1.5px;border-radius:21px;
-  background:var(--grad);z-index:-1;opacity:0;
-  transition:opacity .3s;
-}
-.form-card:focus-within::before{opacity:1}
-.form-title{font-size:17px;font-weight:800;color:var(--dark);margin-bottom:6px;letter-spacing:-.3px}
-.form-sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.55}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:12px;font-weight:700;color:var(--dark);margin-bottom:7px;letter-spacing:.04em}
-.field input{
-  width:100%;padding:13px 16px;border-radius:10px;
-  border:1.5px solid rgba(28,24,40,.12);
-  font:400 14px/1 var(--f);color:var(--dark);
-  background:var(--cream);transition:border-color .2s,background .2s;outline:none;
-}
-.field input:focus{border-color:var(--mg);background:#fff}
-.field input::placeholder{color:rgba(28,24,40,.3)}
-.field-hint{font-size:11px;color:var(--muted);margin-top:5px}
-.btn-submit{
-  width:100%;padding:15px;background:var(--grad);color:#fff;border:none;
-  border-radius:11px;font:800 15px/1 var(--f);cursor:pointer;
-  transition:opacity .2s,transform .2s;margin-top:4px;
-}
-.btn-submit:hover{opacity:.9;transform:translateY(-1px)}
-.form-trust{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:11px;color:var(--muted)}
-.trust-dot{width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0}
+    body {
+      font-family: var(--f);
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden
+    }
 
-/* RIGHT PANEL */
-.hero-r{
-  width:45%;position:relative;overflow:hidden;
-  background:linear-gradient(145deg,#E8417A 0%,#F07030 48%,#F5A623 100%);
-}
-.hr-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:.45;mix-blend-mode:overlay;pointer-events:none}
-.hr-wm{position:absolute;font-size:clamp(100px,18vw,220px);font-weight:800;color:rgba(255,255,255,.09);line-height:.9;letter-spacing:-6px;pointer-events:none;z-index:1;bottom:-10px;right:-15px;font-style:italic}
-.hr-vtxt{position:absolute;right:18px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);z-index:2}
-.hr-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:80px 52px 60px 52px}
-.split-line{position:absolute;left:55%;top:0;bottom:0;width:2px;z-index:50;background:linear-gradient(to bottom,transparent 0%,rgba(255,255,255,.55) 25%,rgba(255,255,255,.55) 75%,transparent 100%)}
+    .gt {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
 
-/* report preview cards on right */
-.report-preview{display:flex;flex-direction:column;gap:12px;margin-top:0}
-.rp-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px}
-.rp-card{
-  background:rgba(255,255,255,.13);backdrop-filter:blur(14px);
-  border:.5px solid rgba(255,255,255,.22);border-radius:14px;
-  padding:16px 18px;display:flex;align-items:center;gap:14px;
-}
-.rpc-icon{
-  width:36px;height:36px;border-radius:9px;
-  background:rgba(255,255,255,.18);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-}
-.rpc-icon svg{width:18px;height:18px;stroke:#fff;stroke-width:1.5;fill:none}
-.rpc-info{}
-.rpc-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
-.rpc-sub{font-size:11px;color:rgba(255,255,255,.55)}
-.rpc-score{margin-left:auto;flex-shrink:0;text-align:right}
-.rpc-num{font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1;display:block}
-.rpc-tag{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.score-bad{color:#ffb3ca}
-.score-ok{color:#ffdc96}
-.score-good{color:#b8f5d4}
+    .gb {
+      background: var(--grad)
+    }
 
-/* geo decorations */
-.geo-f{position:absolute;border-radius:7px;pointer-events:none}
-.hr-geo-row{display:flex;gap:8px;margin-bottom:28px}
-.hg{border-radius:7px}
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 52px;
+      height: 64px;
+      background: rgba(247, 246, 242, .92);
+      backdrop-filter: blur(18px);
+      border-bottom: .5px solid rgba(28, 24, 40, .08);
+    }
 
-/* SECTION BASE */
-section{position:relative;overflow:hidden}
-.si{max-width:1100px;margin:0 auto;padding:0 52px}
-.sp{padding-top:clamp(70px,9vw,110px);padding-bottom:clamp(70px,9vw,110px)}
-.ey{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.ey i{width:16px;height:1.5px;display:block}
-.wm{position:absolute;font-weight:800;line-height:1;pointer-events:none;user-select:none;white-space:nowrap;font-size:clamp(70px,13vw,160px);letter-spacing:-4px;z-index:0}
+    .nl {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      text-decoration: none;
+      letter-spacing: -.5px
+    }
 
-/* WHAT YOU GET */
-#get{background:var(--cream)}
-#get h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;color:var(--dark)}
-#get .intro{font-size:16px;line-height:1.75;color:var(--muted);max-width:580px;margin-bottom:52px}
-.get-bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-.gb-card{
-  background:#fff;border:.5px solid rgba(28,24,40,.09);border-radius:18px;
-  padding:28px;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;
-}
-.gb-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(28,24,40,.08)}
-.gb-card:nth-child(1){grid-column:span 7}
-.gb-card:nth-child(2){grid-column:span 5}
-.gb-card:nth-child(3){grid-column:span 4}
-.gb-card:nth-child(4){grid-column:span 4}
-.gb-card:nth-child(5){grid-column:span 4}
-.gb-icon{
-  width:44px;height:44px;border-radius:11px;
-  background:linear-gradient(135deg,rgba(232,65,122,.1),rgba(245,166,35,.08));
-  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
-}
-.gb-icon svg{width:22px;height:22px;fill:none;stroke:url(#gi);stroke-width:1.5}
-.gb-card h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px;letter-spacing:-.3px}
-.gb-card p{font-size:13px;line-height:1.65;color:var(--muted)}
-.gb-accent{position:absolute;bottom:18px;right:18px;font-size:28px;font-weight:800;opacity:.06;letter-spacing:-1px}
+    .nm {
+      display: flex;
+      gap: 28px;
+      list-style: none
+    }
 
-/* HOW IT WORKS */
-#how{background:var(--dark)}
-#how h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:14px}
-#how .intro{font-size:16px;line-height:1.75;color:var(--muted-l);max-width:560px;margin-bottom:52px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
-.steps::before{content:'';position:absolute;top:28px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:1px;background:linear-gradient(to right,rgba(232,65,122,.4),rgba(245,166,35,.4));z-index:0}
-.step{padding:0 24px;position:relative;z-index:1}
-.step-num{
-  width:56px;height:56px;border-radius:14px;
-  background:var(--grad);display:flex;align-items:center;justify-content:center;
-  font-size:20px;font-weight:800;color:#fff;margin-bottom:20px;
-}
-.step h3{font-size:16px;font-weight:800;color:var(--cream);margin-bottom:8px;letter-spacing:-.3px}
-.step p{font-size:13px;line-height:1.65;color:var(--muted-l)}
-.step-time{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;color:var(--am);letter-spacing:.06em;text-transform:uppercase}
+    .nm a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+      opacity: .6;
+      transition: opacity .2s
+    }
 
-/* WHAT WE ANALYZE */
-#analyze{background:var(--cream)}
-#analyze h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
-#analyze .intro{font-size:16px;line-height:1.75;color:var(--muted);max-width:560px;margin-bottom:52px}
-.analyze-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.analyze-list{display:flex;flex-direction:column;gap:20px}
-.al-item{display:flex;gap:16px;align-items:flex-start}
-.al-num{
-  width:36px;height:36px;border-radius:9px;background:var(--grad);
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:800;color:#fff;flex-shrink:0;
-}
-.al-item h3{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:5px;letter-spacing:-.2px}
-.al-item p{font-size:13px;line-height:1.65;color:var(--muted)}
-/* mock report */
-.mock-report{
-  background:var(--dark);border-radius:20px;overflow:hidden;
-  box-shadow:0 32px 80px rgba(28,24,40,.18);
-}
-.mr-header{
-  background:rgba(247,246,242,.05);padding:16px 20px;
-  display:flex;align-items:center;gap:8px;border-bottom:.5px solid rgba(247,246,242,.07);
-}
-.mr-dots{display:flex;gap:6px}
-.mr-dot{width:10px;height:10px;border-radius:50%}
-.mr-title{font-size:12px;font-weight:600;color:rgba(247,246,242,.35);margin-left:8px}
-.mr-body{padding:20px}
-.mr-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;margin-bottom:8px;background:rgba(247,246,242,.04)}
-.mr-row:last-child{margin-bottom:0}
-.mr-label{font-size:12px;font-weight:600;color:rgba(247,246,242,.65)}
-.mr-bar-wrap{flex:1;margin:0 14px;height:5px;background:rgba(247,246,242,.08);border-radius:3px;overflow:hidden}
-.mr-bar{height:100%;border-radius:3px}
-.mr-val{font-size:12px;font-weight:800;min-width:36px;text-align:right}
-.val-bad{color:#ffb3ca}
-.val-ok{color:#ffdc96}
-.val-good{color:#b8f5d4}
-.mr-section{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,242,.25);margin-bottom:10px;margin-top:16px;padding-left:14px}
+    .nm a:hover {
+      opacity: 1
+    }
 
-/* WHO NEEDS */
-#who{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
-#who h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:48px}
-.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.wc{background:#fff;border:.5px solid rgba(28,24,40,.08);border-radius:18px;padding:28px;transition:transform .2s}
-.wc:hover{transform:translateY(-3px)}
-.wc-check{font-size:13px;color:var(--dark);display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;line-height:1.5}
-.wc-check::before{content:'';width:16px;height:16px;border-radius:50%;background:var(--grad);flex-shrink:0;margin-top:1px}
-.wc h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:16px;letter-spacing:-.3px}
+    .nb {
+      background: var(--grad);
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 7px;
+      font: 700 13px/1 var(--f);
+      cursor: pointer;
+      text-decoration: none
+    }
 
-/* FAQ */
-#faq{background:var(--dark)}
-#faq h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--cream);margin-bottom:48px}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.faq-item{background:rgba(247,246,242,.04);border:.5px solid rgba(247,246,242,.08);border-radius:16px;padding:24px;transition:background .2s}
-.faq-item:hover{background:rgba(247,246,242,.07)}
-.faq-item h3{font-size:15px;font-weight:800;color:var(--cream);margin-bottom:10px;letter-spacing:-.2px}
-.faq-item p{font-size:13px;line-height:1.7;color:var(--muted-l)}
+    /* HERO SPLIT */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      padding-top: 64px;
+    }
 
-/* CTA BOTTOM */
-#cta-b{background:var(--cream);border-top:.5px solid rgba(28,24,40,.07)}
-#cta-b h2{font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;text-align:center}
-#cta-b p{font-size:16px;color:var(--muted);text-align:center;max-width:480px;margin:0 auto 36px;line-height:1.7}
-.cta-b-form{max-width:480px;margin:0 auto}
-.cta-b-form .field input{background:#fff}
-.cta-b-trust{display:flex;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap}
-.cbt{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
-.cbt-dot{width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0}
+    .hero-l {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 60px 70px 52px;
+      position: relative;
+      z-index: 2;
+    }
 
-/* FOOTER */
-footer{background:var(--darker);padding:48px 52px 24px}
-.ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 36px}
-.fbrand p{font-size:13px;color:rgba(247,246,242,.32);line-height:1.7;margin-top:10px;max-width:220px}
-.fcol h5{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:12px}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.fcol a{font-size:13px;color:rgba(247,246,242,.35);text-decoration:none;transition:color .2s}
-.fcol a:hover{color:rgba(247,246,242,.72)}
-.fbot{border-top:.5px solid rgba(247,246,242,.07);padding-top:20px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.fbot p{font-size:11px;color:rgba(247,246,242,.2)}
-.flogo{font-size:18px;font-weight:800;color:rgba(247,246,242,.38);letter-spacing:-.5px}
-.back-link{font-size:13px;color:var(--mg);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:6px}
-.back-link:hover{opacity:.75}
+    .hero-l::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(28, 24, 40, .065) 1px, transparent 1px);
+      background-size: 26px 26px;
+      pointer-events: none;
+    }
 
-/* FADE IN */
-.fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.fi.vis{opacity:1;transform:none}
-.fi.d1{transition-delay:.12s}.fi.d2{transition-delay:.22s}
+    .hero-wm {
+      position: absolute;
+      bottom: -20px;
+      left: -10px;
+      font-size: clamp(90px, 14vw, 180px);
+      font-weight: 800;
+      color: rgba(28, 24, 40, .035);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: -5px;
+      white-space: nowrap;
+      z-index: 0;
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  #hero{flex-direction:column}
-  .hero-l{width:100%;padding:24px 24px 40px}
-  .hero-r{width:100%;min-height:380px}
-  .split-line{display:none}
-  .get-bento{grid-template-columns:1fr 1fr}
-  .gb-card:nth-child(1),.gb-card:nth-child(2),.gb-card:nth-child(3),.gb-card:nth-child(4),.gb-card:nth-child(5){grid-column:span 1}
-  .steps{grid-template-columns:1fr;gap:32px}
-  .steps::before{display:none}
-  .analyze-grid{grid-template-columns:1fr}
-  .who-grid{grid-template-columns:1fr 1fr}
-  .faq-grid{grid-template-columns:1fr}
-  .ftop{grid-template-columns:1fr 1fr}
-  nav{padding:0 20px}
-  .nm{display:none}
-  .si{padding:0 24px}
-}
-@media(max-width:580px){
-  .get-bento,.who-grid,.ftop{grid-template-columns:1fr}
-  .hero-r{min-height:300px}
-}
-</style>
+    .hero-l-inner {
+      position: relative;
+      z-index: 1
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mg);
+      margin-bottom: 24px
+    }
+
+    .eyebrow i {
+      width: 18px;
+      height: 1.5px;
+      background: var(--mg);
+      display: block
+    }
+
+    h1 {
+      font-size: clamp(40px, 4.8vw, 64px);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -2px;
+      color: var(--dark);
+      margin-bottom: 20px
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 440px;
+      margin-bottom: 32px
+    }
+
+    /* FORM CARD */
+    .form-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px;
+      border: .5px solid rgba(28, 24, 40, .09);
+      box-shadow: 0 24px 60px rgba(28, 24, 40, .08);
+      max-width: 500px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 21px;
+      background: var(--grad);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .form-card:focus-within::before {
+      opacity: 1
+    }
+
+    .form-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+      letter-spacing: -.3px
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.55
+    }
+
+    .field {
+      margin-bottom: 16px
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 7px;
+      letter-spacing: .04em
+    }
+
+    .field input {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(28, 24, 40, .12);
+      font: 400 14px/1 var(--f);
+      color: var(--dark);
+      background: var(--cream);
+      transition: border-color .2s, background .2s;
+      outline: none;
+    }
+
+    .field input:focus {
+      border-color: var(--mg);
+      background: #fff
+    }
+
+    .field input::placeholder {
+      color: rgba(28, 24, 40, .3)
+    }
+
+    .field-hint {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 5px
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background: var(--grad);
+      color: #fff;
+      border: none;
+      border-radius: 11px;
+      font: 800 15px/1 var(--f);
+      cursor: pointer;
+      transition: opacity .2s, transform .2s;
+      margin-top: 4px;
+    }
+
+    .btn-submit:hover {
+      opacity: .9;
+      transform: translateY(-1px)
+    }
+
+    .form-trust {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    .trust-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--grad);
+      flex-shrink: 0
+    }
+
+    /* RIGHT PANEL */
+    .hero-r {
+      width: 45%;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #E8417A 0%, #F07030 48%, #F5A623 100%);
+    }
+
+    .hr-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      opacity: .45;
+      mix-blend-mode: overlay;
+      pointer-events: none
+    }
+
+    .hr-wm {
+      position: absolute;
+      font-size: clamp(100px, 18vw, 220px);
+      font-weight: 800;
+      color: rgba(255, 255, 255, .09);
+      line-height: .9;
+      letter-spacing: -6px;
+      pointer-events: none;
+      z-index: 1;
+      bottom: -10px;
+      right: -15px;
+      font-style: italic
+    }
+
+    .hr-vtxt {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .3);
+      z-index: 2
+    }
+
+    .hr-inner {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 52px 60px 52px
+    }
+
+    .split-line {
+      position: absolute;
+      left: 55%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      z-index: 50;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, .55) 25%, rgba(255, 255, 255, .55) 75%, transparent 100%)
+    }
+
+    /* report preview cards on right */
+    .report-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 0
+    }
+
+    .rp-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .5);
+      margin-bottom: 16px
+    }
+
+    .rp-card {
+      background: rgba(255, 255, 255, .13);
+      backdrop-filter: blur(14px);
+      border: .5px solid rgba(255, 255, 255, .22);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .rpc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, .18);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rpc-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #fff;
+      stroke-width: 1.5;
+      fill: none
+    }
+
+    .rpc-info {}
+
+    .rpc-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px
+    }
+
+    .rpc-sub {
+      font-size: 11px;
+      color: rgba(255, 255, 255, .55)
+    }
+
+    .rpc-score {
+      margin-left: auto;
+      flex-shrink: 0;
+      text-align: right
+    }
+
+    .rpc-num {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1;
+      display: block
+    }
+
+    .rpc-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .5)
+    }
+
+    .score-bad {
+      color: #ffb3ca
+    }
+
+    .score-ok {
+      color: #ffdc96
+    }
+
+    .score-good {
+      color: #b8f5d4
+    }
+
+    /* geo decorations */
+    .geo-f {
+      position: absolute;
+      border-radius: 7px;
+      pointer-events: none
+    }
+
+    .hr-geo-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px
+    }
+
+    .hg {
+      border-radius: 7px
+    }
+
+    /* SECTION BASE */
+    section {
+      position: relative;
+      overflow: hidden
+    }
+
+    .si {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 52px
+    }
+
+    .sp {
+      padding-top: clamp(70px, 9vw, 110px);
+      padding-bottom: clamp(70px, 9vw, 110px)
+    }
+
+    .ey {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .ey i {
+      width: 16px;
+      height: 1.5px;
+      display: block
+    }
+
+    .wm {
+      position: absolute;
+      font-weight: 800;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      font-size: clamp(70px, 13vw, 160px);
+      letter-spacing: -4px;
+      z-index: 0
+    }
+
+    /* WHAT YOU GET */
+    #get {
+      background: var(--cream)
+    }
+
+    #get h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      color: var(--dark)
+    }
+
+    #get .intro {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 52px
+    }
+
+    .get-bento {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px
+    }
+
+    .gb-card {
+      background: #fff;
+      border: .5px solid rgba(28, 24, 40, .09);
+      border-radius: 18px;
+      padding: 28px;
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gb-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(28, 24, 40, .08)
+    }
+
+    .gb-card:nth-child(1) {
+      grid-column: span 7
+    }
+
+    .gb-card:nth-child(2) {
+      grid-column: span 5
+    }
+
+    .gb-card:nth-child(3) {
+      grid-column: span 4
+    }
+
+    .gb-card:nth-child(4) {
+      grid-column: span 4
+    }
+
+    .gb-card:nth-child(5) {
+      grid-column: span 4
+    }
+
+    .gb-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, rgba(232, 65, 122, .1), rgba(245, 166, 35, .08));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .gb-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: url(#gi);
+      stroke-width: 1.5
+    }
+
+    .gb-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+      letter-spacing: -.3px
+    }
+
+    .gb-card p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted)
+    }
+
+    .gb-accent {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      font-size: 28px;
+      font-weight: 800;
+      opacity: .06;
+      letter-spacing: -1px
+    }
+
+    /* HOW IT WORKS */
+    #how {
+      background: var(--dark)
+    }
+
+    #how h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 14px
+    }
+
+    #how .intro {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted-l);
+      max-width: 560px;
+      margin-bottom: 52px
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative
+    }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(16.66% + 20px);
+      right: calc(16.66% + 20px);
+      height: 1px;
+      background: linear-gradient(to right, rgba(232, 65, 122, .4), rgba(245, 166, 35, .4));
+      z-index: 0
+    }
+
+    .step {
+      padding: 0 24px;
+      position: relative;
+      z-index: 1
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--cream);
+      margin-bottom: 8px;
+      letter-spacing: -.3px
+    }
+
+    .step p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted-l)
+    }
+
+    .step-time {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--am);
+      letter-spacing: .06em;
+      text-transform: uppercase
+    }
+
+    /* WHAT WE ANALYZE */
+    #analyze {
+      background: var(--cream)
+    }
+
+    #analyze h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 14px
+    }
+
+    #analyze .intro {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 52px
+    }
+
+    .analyze-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start
+    }
+
+    .analyze-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .al-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start
+    }
+
+    .al-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: var(--grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .al-item h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 5px;
+      letter-spacing: -.2px
+    }
+
+    .al-item p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted)
+    }
+
+    /* mock report */
+    .mock-report {
+      background: var(--dark);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(28, 24, 40, .18);
+    }
+
+    .mr-header {
+      background: rgba(247, 246, 242, .05);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: .5px solid rgba(247, 246, 242, .07);
+    }
+
+    .mr-dots {
+      display: flex;
+      gap: 6px
+    }
+
+    .mr-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+    }
+
+    .mr-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(247, 246, 242, .35);
+      margin-left: 8px
+    }
+
+    .mr-body {
+      padding: 20px
+    }
+
+    .mr-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      background: rgba(247, 246, 242, .04)
+    }
+
+    .mr-row:last-child {
+      margin-bottom: 0
+    }
+
+    .mr-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(247, 246, 242, .65)
+    }
+
+    .mr-bar-wrap {
+      flex: 1;
+      margin: 0 14px;
+      height: 5px;
+      background: rgba(247, 246, 242, .08);
+      border-radius: 3px;
+      overflow: hidden
+    }
+
+    .mr-bar {
+      height: 100%;
+      border-radius: 3px
+    }
+
+    .mr-val {
+      font-size: 12px;
+      font-weight: 800;
+      min-width: 36px;
+      text-align: right
+    }
+
+    .val-bad {
+      color: #ffb3ca
+    }
+
+    .val-ok {
+      color: #ffdc96
+    }
+
+    .val-good {
+      color: #b8f5d4
+    }
+
+    .mr-section {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(247, 246, 242, .25);
+      margin-bottom: 10px;
+      margin-top: 16px;
+      padding-left: 14px
+    }
+
+    /* WHO NEEDS */
+    #who {
+      background: var(--cream);
+      border-top: .5px solid rgba(28, 24, 40, .07)
+    }
+
+    #who h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 48px
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
+
+    .wc {
+      background: #fff;
+      border: .5px solid rgba(28, 24, 40, .08);
+      border-radius: 18px;
+      padding: 28px;
+      transition: transform .2s
+    }
+
+    .wc:hover {
+      transform: translateY(-3px)
+    }
+
+    .wc-check {
+      font-size: 13px;
+      color: var(--dark);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      line-height: 1.5
+    }
+
+    .wc-check::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--grad);
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .wc h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+      letter-spacing: -.3px
+    }
+
+    /* FAQ */
+    #faq {
+      background: var(--dark)
+    }
+
+    #faq h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 48px
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .faq-item {
+      background: rgba(247, 246, 242, .04);
+      border: .5px solid rgba(247, 246, 242, .08);
+      border-radius: 16px;
+      padding: 24px;
+      transition: background .2s
+    }
+
+    .faq-item:hover {
+      background: rgba(247, 246, 242, .07)
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--cream);
+      margin-bottom: 10px;
+      letter-spacing: -.2px
+    }
+
+    .faq-item p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--muted-l)
+    }
+
+    /* CTA BOTTOM */
+    #cta-b {
+      background: var(--cream);
+      border-top: .5px solid rgba(28, 24, 40, .07)
+    }
+
+    #cta-b h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      text-align: center
+    }
+
+    #cta-b p {
+      font-size: 16px;
+      color: var(--muted);
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.7
+    }
+
+    .cta-b-form {
+      max-width: 480px;
+      margin: 0 auto
+    }
+
+    .cta-b-form .field input {
+      background: #fff
+    }
+
+    .cta-b-trust {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+      flex-wrap: wrap
+    }
+
+    .cbt {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .cbt-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--grad);
+      flex-shrink: 0
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--darker);
+      padding: 48px 52px 24px
+    }
+
+    .ftop {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto 36px
+    }
+
+    .fbrand p {
+      font-size: 13px;
+      color: rgba(247, 246, 242, .32);
+      line-height: 1.7;
+      margin-top: 10px;
+      max-width: 220px
+    }
+
+    .fcol h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 12px
+    }
+
+    .fcol ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .fcol a {
+      font-size: 13px;
+      color: rgba(247, 246, 242, .35);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .fcol a:hover {
+      color: rgba(247, 246, 242, .72)
+    }
+
+    .fbot {
+      border-top: .5px solid rgba(247, 246, 242, .07);
+      padding-top: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .fbot p {
+      font-size: 11px;
+      color: rgba(247, 246, 242, .2)
+    }
+
+    .flogo {
+      font-size: 18px;
+      font-weight: 800;
+      color: rgba(247, 246, 242, .38);
+      letter-spacing: -.5px
+    }
+
+    .back-link {
+      font-size: 13px;
+      color: var(--mg);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .back-link:hover {
+      opacity: .75
+    }
+
+    /* FADE IN */
+    .fi {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .fi.vis {
+      opacity: 1;
+      transform: none
+    }
+
+    .fi.d1 {
+      transition-delay: .12s
+    }
+
+    .fi.d2 {
+      transition-delay: .22s
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      #hero {
+        flex-direction: column
+      }
+
+      .hero-l {
+        width: 100%;
+        padding: 24px 24px 40px
+      }
+
+      .hero-r {
+        width: 100%;
+        min-height: 380px
+      }
+
+      .split-line {
+        display: none
+      }
+
+      .get-bento {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .gb-card:nth-child(1),
+      .gb-card:nth-child(2),
+      .gb-card:nth-child(3),
+      .gb-card:nth-child(4),
+      .gb-card:nth-child(5) {
+        grid-column: span 1
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .steps::before {
+        display: none
+      }
+
+      .analyze-grid {
+        grid-template-columns: 1fr
+      }
+
+      .who-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr
+      }
+
+      .ftop {
+        grid-template-columns: 1fr 1fr
+      }
+
+      nav {
+        padding: 0 20px
+      }
+
+      .nm {
+        display: none
+      }
+
+      .si {
+        padding: 0 24px
+      }
+    }
+
+    @media(max-width:580px) {
+
+      .get-bento,
+      .who-grid,
+      .ftop {
+        grid-template-columns: 1fr
+      }
+
+      .hero-r {
+        min-height: 300px
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- INLINE SVG DEFS para gradientes de íconos -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <linearGradient id="gi" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8417A"/>
-      <stop offset="100%" stop-color="#F5A623"/>
-    </linearGradient>
-  </defs>
-</svg>
+  <!-- INLINE SVG DEFS para gradientes de íconos -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="gi" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E8417A" />
+        <stop offset="100%" stop-color="#F5A623" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-<!-- NAV -->
-<nav>
-  <a class="nl" href="/">Vacaré</a>
-  <ul class="nm">
-    <li><a href="/#packs">Servicios</a></li>
-    <li><a href="/#case">Casos</a></li>
-    <li><a href="/#auto">Automatizaciones</a></li>
-    <li><a href="#cta-b">Contacto</a></li>
-  </ul>
-  <a href="#cta-b" class="nb">Agendá una llamada</a>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a class="nl" href="/">Vacaré</a>
+    <ul class="nm">
+      <li><a href="/#packs">Servicios</a></li>
+      <li><a href="/#case">Casos</a></li>
+      <li><a href="/#auto">Automatizaciones</a></li>
+      <li><a href="#cta-b">Contacto</a></li>
+    </ul>
+    <a href="#cta-b" class="nb">Agendá una llamada</a>
+  </nav>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      HERO SPLIT
 ══════════════════════════════════ -->
-<section id="hero">
+  <section id="hero">
 
-  <!-- LEFT: copy + form -->
-  <div class="hero-l">
-    <div class="hero-wm">AUDIT</div>
-    <div class="hero-l-inner">
-      <a href="/" class="back-link fi">← Volver al inicio</a>
-      <br><br>
-      <div class="eyebrow fi"><i></i>100% gratuito · Sin compromiso</div>
-      <h1 class="fi">Tu web tiene problemas.<br><span class="gt">Ya sabemos cuáles.</span></h1>
-      <p class="hero-sub fi d1">Ingresá la URL de tu sitio y en menos de 2 horas recibís un reporte con los errores reales que te están costando clientes — velocidad, SEO técnico y puntos de conversión.</p>
+    <!-- LEFT: copy + form -->
+    <div class="hero-l">
+      <div class="hero-wm">AUDIT</div>
+      <div class="hero-l-inner">
+        <a href="/" class="back-link fi">← Volver al inicio</a>
+        <br><br>
+        <div class="eyebrow fi"><i></i>100% gratuito · Sin compromiso</div>
+        <h1 class="fi">Tu web tiene problemas.<br><span class="gt">Ya sabemos cuáles.</span></h1>
+        <p class="hero-sub fi d1">Ingresá la URL de tu sitio y en menos de 2 horas recibís un reporte con los errores
+          reales que te están costando clientes — velocidad, SEO técnico y puntos de conversión.</p>
 
-      <div class="form-card fi d1">
-        <div class="form-title">Analizá tu web ahora</div>
-        <div class="form-sub">Completá los datos y recibís el análisis en tu email. Es gratis, siempre.</div>
+        <div class="form-card fi d1">
+          <div class="form-title">Analizá tu web ahora</div>
+          <div class="form-sub">Completá los datos y recibís el análisis en tu email. Es gratis, siempre.</div>
 
-        <div class="field">
-          <label for="url">URL de tu sitio web</label>
-          <input type="url" id="url" placeholder="https://tuempresa.com" autocomplete="off"/>
-          <div class="field-hint">Ingresá la URL completa con https://</div>
-        </div>
-        <div class="field">
-          <label for="nombre">Tu nombre</label>
-          <input type="text" id="nombre" placeholder="María García"/>
-        </div>
-        <div class="field">
-          <label for="email">Tu email</label>
-          <input type="email" id="email" placeholder="maria@tuempresa.com"/>
-          <div class="field-hint">Acá te llegará el reporte en menos de 2 horas</div>
-        </div>
-        <div class="field">
-          <label for="rubro">Rubro de tu negocio</label>
-          <input type="text" id="rubro" placeholder="Ej: hostel, coaching, ecommerce..."/>
-        </div>
-        <button class="btn-submit" onclick="handleSubmit()">Quiero mi análisis gratuito →</button>
-        <div class="form-trust">
-          <div class="trust-dot"></div>
-          Sin spam · Sin compromiso · Respuesta en menos de 2 horas
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SPLIT LINE -->
-  <div class="split-line"></div>
-
-  <!-- RIGHT: mock report preview -->
-  <div class="hero-r">
-    <div class="hr-noise"></div>
-    <div class="hr-wm">30%</div>
-    <div class="hr-vtxt">vacaredigitalsolutions.com/free-audit</div>
-
-    <div class="hr-inner">
-      <!-- geo deco MS Build style -->
-      <div class="hr-geo-row">
-        <div class="hg" style="width:32px;height:32px;background:rgba(255,255,255,.25);border-radius:8px"></div>
-        <div class="hg" style="width:20px;height:20px;background:rgba(255,255,255,.14);border-radius:5px;margin-top:8px"></div>
-        <div class="hg" style="width:44px;height:44px;background:transparent;border:2px solid rgba(255,255,255,.3);border-radius:11px"></div>
-        <div class="hg" style="width:16px;height:16px;background:rgba(255,255,255,.3);border-radius:4px;margin-top:14px"></div>
-        <div class="hg" style="width:26px;height:26px;background:rgba(255,255,255,.16);border-radius:6px;margin-top:4px"></div>
-      </div>
-
-      <div class="rp-label">Vista previa — Tu reporte se verá así</div>
-      <div class="report-preview">
-        <div class="rp-card">
-          <div class="rpc-icon">
-            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div class="field">
+            <label for="url">URL de tu sitio web</label>
+            <input type="url" id="url" placeholder="https://tuempresa.com" autocomplete="off" />
+            <div class="field-hint">Ingresá la URL completa con https://</div>
           </div>
-          <div class="rpc-info">
-            <div class="rpc-title">Velocidad de carga</div>
-            <div class="rpc-sub">Core Web Vitals · PageSpeed</div>
+          <div class="field">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" placeholder="María García" />
           </div>
-          <div class="rpc-score">
-            <span class="rpc-num score-bad">34</span>
-            <span class="rpc-tag">/ 100</span>
+          <div class="field">
+            <label for="email">Tu email</label>
+            <input type="email" id="email" placeholder="maria@tuempresa.com" />
+            <div class="field-hint">Acá te llegará el reporte en menos de 2 horas</div>
           </div>
-        </div>
-        <div class="rp-card">
-          <div class="rpc-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <div class="field">
+            <label for="rubro">Rubro de tu negocio</label>
+            <input type="text" id="rubro" placeholder="Ej: hostel, coaching, ecommerce..." />
           </div>
-          <div class="rpc-info">
-            <div class="rpc-title">SEO técnico</div>
-            <div class="rpc-sub">Metadatos · Estructura · Schema</div>
-          </div>
-          <div class="rpc-score">
-            <span class="rpc-num score-ok">61</span>
-            <span class="rpc-tag">/ 100</span>
-          </div>
-        </div>
-        <div class="rp-card">
-          <div class="rpc-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div class="rpc-info">
-            <div class="rpc-title">Conversión y CTAs</div>
-            <div class="rpc-sub">Formularios · Llamadas a acción</div>
-          </div>
-          <div class="rpc-score">
-            <span class="rpc-num score-bad">28</span>
-            <span class="rpc-tag">/ 100</span>
-          </div>
-        </div>
-        <div class="rp-card">
-          <div class="rpc-icon">
-            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
-          </div>
-          <div class="rpc-info">
-            <div class="rpc-title">3 recomendaciones</div>
-            <div class="rpc-sub">Acciones concretas priorizadas</div>
-          </div>
-          <div class="rpc-score">
-            <span class="rpc-num score-good">✓</span>
-            <span class="rpc-tag">incluido</span>
+          <button class="btn-submit" onclick="handleSubmit()">Quiero mi análisis gratuito →</button>
+          <div class="form-trust">
+            <div class="trust-dot"></div>
+            Sin spam · Sin compromiso · Respuesta en menos de 2 horas
           </div>
         </div>
       </div>
     </div>
 
-    <!-- scattered geos -->
-    <div class="geo-f gb" style="width:16px;height:16px;top:72px;left:32px;opacity:.35"></div>
-    <div class="geo-f" style="width:11px;height:11px;top:100px;left:56px;opacity:.2;background:rgba(255,255,255,.45);border-radius:3px"></div>
-    <div class="geo-f gb" style="width:22px;height:22px;bottom:100px;left:44px;opacity:.25;border-radius:5px"></div>
-  </div>
+    <!-- SPLIT LINE -->
+    <div class="split-line"></div>
 
-</section>
+    <!-- RIGHT: mock report preview -->
+    <div class="hero-r">
+      <div class="hr-noise"></div>
+      <div class="hr-wm">30%</div>
+      <div class="hr-vtxt">vacaredigitalsolutions.com/free-audit</div>
 
-<!-- ══════════════════════════════════
+      <div class="hr-inner">
+        <!-- geo deco MS Build style -->
+        <div class="hr-geo-row">
+          <div class="hg" style="width:32px;height:32px;background:rgba(255,255,255,.25);border-radius:8px"></div>
+          <div class="hg"
+            style="width:20px;height:20px;background:rgba(255,255,255,.14);border-radius:5px;margin-top:8px"></div>
+          <div class="hg"
+            style="width:44px;height:44px;background:transparent;border:2px solid rgba(255,255,255,.3);border-radius:11px">
+          </div>
+          <div class="hg"
+            style="width:16px;height:16px;background:rgba(255,255,255,.3);border-radius:4px;margin-top:14px"></div>
+          <div class="hg"
+            style="width:26px;height:26px;background:rgba(255,255,255,.16);border-radius:6px;margin-top:4px"></div>
+        </div>
+
+        <div class="rp-label">Vista previa — Tu reporte se verá así</div>
+        <div class="report-preview">
+          <div class="rp-card">
+            <div class="rpc-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <div class="rpc-info">
+              <div class="rpc-title">Velocidad de carga</div>
+              <div class="rpc-sub">Core Web Vitals · PageSpeed</div>
+            </div>
+            <div class="rpc-score">
+              <span class="rpc-num score-bad">34</span>
+              <span class="rpc-tag">/ 100</span>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rpc-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+              </svg>
+            </div>
+            <div class="rpc-info">
+              <div class="rpc-title">SEO técnico</div>
+              <div class="rpc-sub">Metadatos · Estructura · Schema</div>
+            </div>
+            <div class="rpc-score">
+              <span class="rpc-num score-ok">61</span>
+              <span class="rpc-tag">/ 100</span>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rpc-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="rpc-info">
+              <div class="rpc-title">Conversión y CTAs</div>
+              <div class="rpc-sub">Formularios · Llamadas a acción</div>
+            </div>
+            <div class="rpc-score">
+              <span class="rpc-num score-bad">28</span>
+              <span class="rpc-tag">/ 100</span>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rpc-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="9" y1="7" x2="15" y2="7" />
+                <line x1="9" y1="11" x2="15" y2="11" />
+                <line x1="9" y1="15" x2="13" y2="15" />
+              </svg>
+            </div>
+            <div class="rpc-info">
+              <div class="rpc-title">3 recomendaciones</div>
+              <div class="rpc-sub">Acciones concretas priorizadas</div>
+            </div>
+            <div class="rpc-score">
+              <span class="rpc-num score-good">✓</span>
+              <span class="rpc-tag">incluido</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- scattered geos -->
+      <div class="geo-f gb" style="width:16px;height:16px;top:72px;left:32px;opacity:.35"></div>
+      <div class="geo-f"
+        style="width:11px;height:11px;top:100px;left:56px;opacity:.2;background:rgba(255,255,255,.45);border-radius:3px">
+      </div>
+      <div class="geo-f gb" style="width:22px;height:22px;bottom:100px;left:44px;opacity:.25;border-radius:5px"></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════
      QUÉ RECIBÍS
 ══════════════════════════════════ -->
-<section id="get">
-  <div class="si sp">
-    <div class="ey fi"><i style="background:var(--muted)"></i>Lo que incluye tu reporte</div>
-    <h2 class="fi">No un número. Un diagnóstico<br><span class="gt">con acciones concretas.</span></h2>
-    <p class="intro fi d1">La mayoría de los "analizadores de web" te dan un puntaje y nada más. Nuestro reporte te dice exactamente qué está fallando y por qué te está costando clientes.</p>
+  <section id="get">
+    <div class="si sp">
+      <div class="ey fi"><i style="background:var(--muted)"></i>Lo que incluye tu reporte</div>
+      <h2 class="fi">No un número. Un diagnóstico<br><span class="gt">con acciones concretas.</span></h2>
+      <p class="intro fi d1">La mayoría de los "analizadores de web" te dan un puntaje y nada más. Nuestro reporte te
+        dice exactamente qué está fallando y por qué te está costando clientes.</p>
 
-    <div class="get-bento fi d1">
+      <div class="get-bento fi d1">
 
-      <div class="gb-card">
-        <div class="gb-icon">
-          <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <div class="gb-card">
+          <div class="gb-icon">
+            <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <h3>Velocidad real de carga</h3>
+          <p>Medimos tu Core Web Vitals con la API de Google — los mismos datos que Google usa para rankear tu sitio. Si
+            tardás más de 3 segundos, estás perdiendo el 53% de los visitantes móviles antes de que vean tu propuesta.
+          </p>
+          <div class="gb-accent gt">⚡</div>
         </div>
-        <h3>Velocidad real de carga</h3>
-        <p>Medimos tu Core Web Vitals con la API de Google PageSpeed. LCP, FID, CLS — los mismos datos que Google usa para rankear tu sitio. Si tardás más de 3 segundos, estás perdiendo el 53% de los visitantes móviles antes de que vean tu propuesta.</p>
-        <div class="gb-accent gt">⚡</div>
-      </div>
 
-      <div class="gb-card">
-        <div class="gb-icon">
-          <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <div class="gb-card">
+          <div class="gb-icon">
+            <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+          </div>
+          <h3>Diagnóstico SEO técnico</h3>
+          <p>Metadatos, estructura de headings, canonical tags, schema markup y presencia en índice de Google. Si Google
+            no puede leer tu web, no importa qué tan buen contenido tengas.</p>
+          <div class="gb-accent gt">🔍</div>
         </div>
-        <h3>Diagnóstico SEO técnico</h3>
-        <p>Metadatos, estructura de headings, canonical tags, schema markup y presencia en índice de Google. Si Google no puede leer tu web, no importa qué tan buen contenido tengas.</p>
-        <div class="gb-accent gt">🔍</div>
-      </div>
 
-      <div class="gb-card">
-        <div class="gb-icon">
-          <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="gb-card">
+          <div class="gb-icon">
+            <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+          </div>
+          <h3>Análisis de conversión</h3>
+          <p>Evaluamos tus CTAs, formularios y flujo de usuario. ¿Le decís claramente al visitante qué hacer? ¿En
+            cuántos clics llega al contacto?</p>
         </div>
-        <h3>Análisis de conversión</h3>
-        <p>Evaluamos tus CTAs, formularios y flujo de usuario. ¿Le decís claramente al visitante qué hacer? ¿En cuántos clics llega al contacto?</p>
-      </div>
 
-      <div class="gb-card">
-        <div class="gb-icon">
-          <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="gb-card">
+          <div class="gb-icon">
+            <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Seguridad y HTTPS</h3>
+          <p>Verificamos certificado SSL activo, redirecciones correctas y señales de confianza que afectan tanto al SEO
+            como a la decisión de compra del visitante.</p>
         </div>
-        <h3>Seguridad y HTTPS</h3>
-        <p>Verificamos certificado SSL activo, redirecciones correctas y señales de confianza que afectan tanto al SEO como a la decisión de compra del visitante.</p>
-      </div>
 
-      <div class="gb-card">
-        <div class="gb-icon">
-          <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+        <div class="gb-card">
+          <div class="gb-icon">
+            <svg viewBox="0 0 24 24" stroke="url(#gi)" stroke-width="1.5" fill="none">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <line x1="9" y1="7" x2="15" y2="7" />
+              <line x1="9" y1="11" x2="15" y2="11" />
+              <line x1="9" y1="15" x2="13" y2="15" />
+            </svg>
+          </div>
+          <h3>3 recomendaciones priorizadas</h3>
+          <p>No una lista de 40 cosas. Las 3 acciones con mayor impacto para tu caso específico, en orden de prioridad.
+            Lo que hay que hacer primero para ver resultados más rápido.</p>
         </div>
-        <h3>3 recomendaciones priorizadas</h3>
-        <p>No una lista de 40 cosas. Las 3 acciones con mayor impacto para tu caso específico, en orden de prioridad. Lo que hay que hacer primero para ver resultados más rápido.</p>
-      </div>
 
+      </div>
     </div>
-  </div>
-  <div class="wm" style="color:rgba(28,24,40,.025);bottom:-10px;right:-10px">REPORTE</div>
-</section>
+    <div class="wm" style="color:rgba(28,24,40,.025);bottom:-10px;right:-10px">REPORTE</div>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      CÓMO FUNCIONA
 ══════════════════════════════════ -->
-<section id="how">
-  <div class="si sp">
-    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>El proceso</div>
-    <h2 class="fi">Tres pasos.<br><span class="gt">Dos horas. Cero costo.</span></h2>
-    <p class="intro fi d1">No hay llamadas de ventas en el medio, no hay formularios interminables. Completás tus datos, nosotros analizamos y en menos de dos horas el reporte llega a tu email.</p>
+  <section id="how">
+    <div class="si sp">
+      <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>El proceso</div>
+      <h2 class="fi">Tres pasos.<br><span class="gt">Dos horas. Cero costo.</span></h2>
+      <p class="intro fi d1">No hay llamadas de ventas en el medio, no hay formularios interminables. Completás tus
+        datos, nosotros analizamos y en menos de dos horas el reporte llega a tu email.</p>
 
-    <div class="steps fi d1">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Ingresás tu URL</h3>
-        <p>Completás el formulario con la URL de tu sitio, tu email y el rubro de tu negocio. 60 segundos y listo. Sin registros, sin tarjeta de crédito.</p>
-        <span class="step-time">60 segundos</span>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Analizamos tu sitio</h3>
-        <p>Nuestro sistema corre un análisis técnico automático con la API de Google PageSpeed y un checklist de conversión elaborado por nuestro equipo. No es un bot genérico.</p>
-        <span class="step-time">Análisis automático</span>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Recibís tu reporte</h3>
-        <p>En menos de 2 horas llega a tu email un reporte personalizado con los problemas encontrados, su impacto estimado en conversión y las 3 acciones prioritarias a tomar.</p>
-        <span class="step-time">Menos de 2 horas</span>
+      <div class="steps fi d1">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Ingresás tu URL</h3>
+          <p>Completás el formulario con la URL de tu sitio, tu email y el rubro de tu negocio. 60 segundos y listo. Sin
+            registros, sin tarjeta de crédito.</p>
+          <span class="step-time">60 segundos</span>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Analizamos tu sitio</h3>
+          <p>Nuestro sistema corre un análisis técnico automático con la API de Google PageSpeed y un checklist de
+            conversión elaborado por nuestro equipo. No es un bot genérico.</p>
+          <span class="step-time">Análisis automático</span>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Recibís tu reporte</h3>
+          <p>En menos de 2 horas llega a tu email un reporte personalizado con los problemas encontrados, su impacto
+            estimado en conversión y las 3 acciones prioritarias a tomar.</p>
+          <span class="step-time">Menos de 2 horas</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">PROCESO</div>
-</section>
+    <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">PROCESO</div>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      QUÉ ANALIZAMOS
 ══════════════════════════════════ -->
-<section id="analyze">
-  <div class="si sp">
-    <div class="ey fi"><i style="background:var(--muted)"></i>El análisis en detalle</div>
-    <h2 class="fi">¿Qué revisamos<br><span class="gt">exactamente?</span></h2>
-    <p class="intro fi d1">Cada auditoría corre más de 40 puntos de control. Estos son los que más impactan en la visibilidad de tu sitio y en tu tasa de conversión.</p>
+  <section id="analyze">
+    <div class="si sp">
+      <div class="ey fi"><i style="background:var(--muted)"></i>El análisis en detalle</div>
+      <h2 class="fi">¿Qué revisamos<br><span class="gt">exactamente?</span></h2>
+      <p class="intro fi d1">Cada auditoría corre más de 40 puntos de control. Estos son los que más impactan en la
+        visibilidad de tu sitio y en tu tasa de conversión.</p>
 
-    <div class="analyze-grid fi d1">
-      <div class="analyze-list">
+      <div class="analyze-grid fi d1">
+        <div class="analyze-list">
 
-        <div class="al-item">
-          <div class="al-num">A</div>
-          <div>
-            <h3>Core Web Vitals de Google</h3>
-            <p>LCP (carga del elemento principal), FID (interactividad) y CLS (estabilidad visual). Google los usa como factor de ranking desde 2021. Si fallás en alguno, tu posición en los resultados de búsqueda lo refleja.</p>
+          <div class="al-item">
+            <div class="al-num">A</div>
+            <div>
+              <h3>Core Web Vitals de Google</h3>
+              <p>LCP (carga del elemento principal), FID (interactividad) y CLS (estabilidad visual). Google los usa
+                como factor de ranking desde 2021. Si fallás en alguno, tu posición en los resultados de búsqueda lo
+                refleja.</p>
+            </div>
           </div>
+
+          <div class="al-item">
+            <div class="al-num">B</div>
+            <div>
+              <h3>Estructura de headings y metadatos</h3>
+              <p>Title tag, meta description, jerarquía H1→H2→H3, alt text en imágenes. Errores básicos que el 70% de
+                los sitios tienen y que Google penaliza silenciosamente.</p>
+            </div>
+          </div>
+
+          <div class="al-item">
+            <div class="al-num">C</div>
+            <div>
+              <h3>Llamadas a la acción (CTAs)</h3>
+              <p>¿Tiene tu web un CTA principal claro? ¿Está visible sin scroll? ¿El botón dice exactamente qué va a
+                pasar cuando se hace clic? El 80% de las webs no lo tienen.</p>
+            </div>
+          </div>
+
+          <div class="al-item">
+            <div class="al-num">D</div>
+            <div>
+              <h3>Compatibilidad mobile</h3>
+              <p>El 60% del tráfico web es desde celular. Verificamos que tu sitio sea completamente funcional, legible
+                y convertible en pantallas pequeñas.</p>
+            </div>
+          </div>
+
+          <div class="al-item">
+            <div class="al-num">E</div>
+            <div>
+              <h3>Presencia en Google (indexación)</h3>
+              <p>Verificamos que Google tenga indexadas tus páginas clave. Un sitio que no está indexado es invisible,
+                sin importar qué tan bien esté diseñado.</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="al-item">
-          <div class="al-num">B</div>
-          <div>
-            <h3>Estructura de headings y metadatos</h3>
-            <p>Title tag, meta description, jerarquía H1→H2→H3, alt text en imágenes. Errores básicos que el 70% de los sitios tienen y que Google penaliza silenciosamente.</p>
+        <!-- MOCK REPORT VISUAL -->
+        <div class="mock-report fi d2">
+          <div class="mr-header">
+            <div class="mr-dots">
+              <div class="mr-dot" style="background:#ff5f57"></div>
+              <div class="mr-dot" style="background:#febc2e"></div>
+              <div class="mr-dot" style="background:#28c840"></div>
+            </div>
+            <span class="mr-title">reporte_vacare_tuempresa.pdf</span>
           </div>
-        </div>
-
-        <div class="al-item">
-          <div class="al-num">C</div>
-          <div>
-            <h3>Llamadas a la acción (CTAs)</h3>
-            <p>¿Tiene tu web un CTA principal claro? ¿Está visible sin scroll? ¿El botón dice exactamente qué va a pasar cuando se hace clic? El 80% de las webs no lo tienen.</p>
-          </div>
-        </div>
-
-        <div class="al-item">
-          <div class="al-num">D</div>
-          <div>
-            <h3>Compatibilidad mobile</h3>
-            <p>El 60% del tráfico web es desde celular. Verificamos que tu sitio sea completamente funcional, legible y convertible en pantallas pequeñas.</p>
-          </div>
-        </div>
-
-        <div class="al-item">
-          <div class="al-num">E</div>
-          <div>
-            <h3>Presencia en Google (indexación)</h3>
-            <p>Verificamos que Google tenga indexadas tus páginas clave. Un sitio que no está indexado es invisible, sin importar qué tan bien esté diseñado.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- MOCK REPORT VISUAL -->
-      <div class="mock-report fi d2">
-        <div class="mr-header">
-          <div class="mr-dots">
-            <div class="mr-dot" style="background:#ff5f57"></div>
-            <div class="mr-dot" style="background:#febc2e"></div>
-            <div class="mr-dot" style="background:#28c840"></div>
-          </div>
-          <span class="mr-title">reporte_vacare_tuempresa.pdf</span>
-        </div>
-        <div class="mr-body">
-          <div class="mr-section">Rendimiento técnico</div>
-          <div class="mr-row">
-            <span class="mr-label">Velocidad mobile</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:34%;background:linear-gradient(90deg,#E8417A,#F07030)"></div></div>
-            <span class="mr-val val-bad">34</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">Velocidad desktop</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:62%;background:linear-gradient(90deg,#F07030,#F5A623)"></div></div>
-            <span class="mr-val val-ok">62</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">HTTPS / SSL</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div></div>
-            <span class="mr-val val-good">✓</span>
-          </div>
-          <div class="mr-section">SEO técnico</div>
-          <div class="mr-row">
-            <span class="mr-label">Title tag</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div></div>
-            <span class="mr-val val-good">✓</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">Meta description</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:0%;background:#E8417A"></div></div>
-            <span class="mr-val val-bad">✗</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">H1 único</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:0%;background:#E8417A"></div></div>
-            <span class="mr-val val-bad">✗</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">Alt text en imágenes</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:40%;background:linear-gradient(90deg,#F07030,#F5A623)"></div></div>
-            <span class="mr-val val-ok">40%</span>
-          </div>
-          <div class="mr-section">Conversión</div>
-          <div class="mr-row">
-            <span class="mr-label">CTA visible above fold</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:0%;background:#E8417A"></div></div>
-            <span class="mr-val val-bad">✗</span>
-          </div>
-          <div class="mr-row">
-            <span class="mr-label">Formulario de contacto</span>
-            <div class="mr-bar-wrap"><div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div></div>
-            <span class="mr-val val-good">✓</span>
+          <div class="mr-body">
+            <div class="mr-section">Rendimiento técnico</div>
+            <div class="mr-row">
+              <span class="mr-label">Velocidad mobile</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:34%;background:linear-gradient(90deg,#E8417A,#F07030)"></div>
+              </div>
+              <span class="mr-val val-bad">34</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">Velocidad desktop</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:62%;background:linear-gradient(90deg,#F07030,#F5A623)"></div>
+              </div>
+              <span class="mr-val val-ok">62</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">HTTPS / SSL</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div>
+              </div>
+              <span class="mr-val val-good">✓</span>
+            </div>
+            <div class="mr-section">SEO técnico</div>
+            <div class="mr-row">
+              <span class="mr-label">Title tag</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div>
+              </div>
+              <span class="mr-val val-good">✓</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">Meta description</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:0%;background:#E8417A"></div>
+              </div>
+              <span class="mr-val val-bad">✗</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">H1 único</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:0%;background:#E8417A"></div>
+              </div>
+              <span class="mr-val val-bad">✗</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">Alt text en imágenes</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:40%;background:linear-gradient(90deg,#F07030,#F5A623)"></div>
+              </div>
+              <span class="mr-val val-ok">40%</span>
+            </div>
+            <div class="mr-section">Conversión</div>
+            <div class="mr-row">
+              <span class="mr-label">CTA visible above fold</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:0%;background:#E8417A"></div>
+              </div>
+              <span class="mr-val val-bad">✗</span>
+            </div>
+            <div class="mr-row">
+              <span class="mr-label">Formulario de contacto</span>
+              <div class="mr-bar-wrap">
+                <div class="mr-bar" style="width:100%;background:linear-gradient(90deg,#1D9E75,#28c840)"></div>
+              </div>
+              <span class="mr-val val-good">✓</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      QUIÉN LO NECESITA
 ══════════════════════════════════ -->
-<section id="who">
-  <div class="si sp">
-    <div class="ey fi"><i style="background:var(--muted)"></i>¿Para quién es esta auditoría?</div>
-    <h2 class="fi">Esta auditoría es para vos si...</h2>
-    <div class="who-grid fi d1">
+  <section id="who">
+    <div class="si sp">
+      <div class="ey fi"><i style="background:var(--muted)"></i>¿Para quién es esta auditoría?</div>
+      <h2 class="fi">Esta auditoría es para vos si...</h2>
+      <div class="who-grid fi d1">
 
-      <div class="wc">
-        <h3>Tenés web pero no genera clientes</h3>
-        <div class="wc-check">Tenés un sitio publicado pero nadie te contacta desde ahí.</div>
-        <div class="wc-check">No sabés si el problema es el diseño, el SEO o los textos.</div>
-        <div class="wc-check">Querés datos concretos antes de invertir en mejoras.</div>
+        <div class="wc">
+          <h3>Tenés web pero no genera clientes</h3>
+          <div class="wc-check">Tenés un sitio publicado pero nadie te contacta desde ahí.</div>
+          <div class="wc-check">No sabés si el problema es el diseño, el SEO o los textos.</div>
+          <div class="wc-check">Querés datos concretos antes de invertir en mejoras.</div>
+        </div>
+
+        <div class="wc">
+          <h3>Estás por lanzar o rediseñar</h3>
+          <div class="wc-check">Querés saber qué errores no cometer en tu nueva web.</div>
+          <div class="wc-check">Tenés presupuesto limitado y querés enfocarlo en lo que importa.</div>
+          <div class="wc-check">Tu agencia anterior no te dio métricas claras.</div>
+        </div>
+
+        <div class="wc">
+          <h3>Querés mejorar tu posición en Google</h3>
+          <div class="wc-check">Tus competidores aparecen antes que vos en las búsquedas.</div>
+          <div class="wc-check">Nunca hiciste un análisis técnico de SEO formal.</div>
+          <div class="wc-check">Escribís contenido pero no ves resultados en el ranking.</div>
+        </div>
+
       </div>
-
-      <div class="wc">
-        <h3>Estás por lanzar o rediseñar</h3>
-        <div class="wc-check">Querés saber qué errores no cometer en tu nueva web.</div>
-        <div class="wc-check">Tenés presupuesto limitado y querés enfocarlo en lo que importa.</div>
-        <div class="wc-check">Tu agencia anterior no te dio métricas claras.</div>
-      </div>
-
-      <div class="wc">
-        <h3>Querés mejorar tu posición en Google</h3>
-        <div class="wc-check">Tus competidores aparecen antes que vos en las búsquedas.</div>
-        <div class="wc-check">Nunca hiciste un análisis técnico de SEO formal.</div>
-        <div class="wc-check">Escribís contenido pero no ves resultados en el ranking.</div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      FAQ
 ══════════════════════════════════ -->
-<section id="faq">
-  <div class="si sp">
-    <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>Preguntas frecuentes</div>
-    <h2 class="fi">Lo que nos preguntan<br><span class="gt">antes de completar el form.</span></h2>
-    <div class="faq-grid fi d1">
+  <section id="faq">
+    <div class="si sp">
+      <div class="ey" style="color:var(--am)"><i style="background:var(--am)"></i>Preguntas frecuentes</div>
+      <h2 class="fi">Lo que nos preguntan<br><span class="gt">antes de completar el form.</span></h2>
+      <div class="faq-grid fi d1">
 
-      <div class="faq-item">
-        <h3>¿Realmente es gratuito?</h3>
-        <p>Sí, completamente. No hay tarjeta de crédito, no hay período de prueba y no hay llamada de ventas obligatoria. El reporte llega a tu email sin condiciones.</p>
+        <div class="faq-item">
+          <h3>¿Realmente es gratuito?</h3>
+          <p>Sí, completamente. No hay tarjeta de crédito, no hay período de prueba y no hay llamada de ventas
+            obligatoria. El reporte llega a tu email sin condiciones.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cuánto tarda en llegar el reporte?</h3>
+          <p>Menos de 2 horas desde que completás el formulario. En la mayoría de los casos llega en 30 a 60 minutos. Si
+            es un sitio muy grande, puede tardar un poco más.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué tipo de sitios analizan?</h3>
+          <p>Cualquier sitio web accesible públicamente: WordPress, Wix, Squarespace, Next.js, Shopify, sitios custom.
+            Si tiene URL pública, lo analizamos.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Van a intentar venderme algo después?</h3>
+          <p>No te llamamos ni mandamos emails de ventas automáticos. Si después de leer el reporte querés hablar con
+            nosotros, hay un link para agendar una llamada opcional. La decisión es tuya.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿El análisis es automático o lo hace una persona?</h3>
+          <p>El análisis técnico es automático (velocidad, SEO, seguridad). Las recomendaciones priorizadas son
+            revisadas por nuestro equipo para que sean relevantes a tu rubro específico.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué hago si mi sitio está en construcción?</h3>
+          <p>En ese caso te recomendamos el <a href="/es/email-course"
+              style="color:var(--mg);font-weight:700;text-decoration:none">mini-curso gratuito de 5 días</a> — diseñado
+            específicamente para negocios que están arrancando desde cero.</p>
+        </div>
+
       </div>
-
-      <div class="faq-item">
-        <h3>¿Cuánto tarda en llegar el reporte?</h3>
-        <p>Menos de 2 horas desde que completás el formulario. En la mayoría de los casos llega en 30 a 60 minutos. Si es un sitio muy grande, puede tardar un poco más.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>¿Qué tipo de sitios analizan?</h3>
-        <p>Cualquier sitio web accesible públicamente: WordPress, Wix, Squarespace, Next.js, Shopify, sitios custom. Si tiene URL pública, lo analizamos.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>¿Van a intentar venderme algo después?</h3>
-        <p>No te llamamos ni mandamos emails de ventas automáticos. Si después de leer el reporte querés hablar con nosotros, hay un link para agendar una llamada opcional. La decisión es tuya.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>¿El análisis es automático o lo hace una persona?</h3>
-        <p>El análisis técnico es automático (velocidad, SEO, seguridad). Las recomendaciones priorizadas son revisadas por nuestro equipo para que sean relevantes a tu rubro específico.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>¿Qué hago si mi sitio está en construcción?</h3>
-        <p>En ese caso te recomendamos el <a href="/es/email-course" style="color:var(--mg);font-weight:700;text-decoration:none">mini-curso gratuito de 5 días</a> — diseñado específicamente para negocios que están arrancando desde cero.</p>
-      </div>
-
     </div>
-  </div>
-  <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">FAQ</div>
-</section>
+    <div class="wm" style="color:rgba(247,246,242,.025);bottom:-10px;right:-10px">FAQ</div>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      CTA BOTTOM
 ══════════════════════════════════ -->
-<section id="cta-b">
-  <div class="si sp">
-    <div class="ey fi" style="justify-content:center"><i style="background:var(--muted)"></i>¿Listo?</div>
-    <h2 class="fi">Descubrí qué le falta<br><span class="gt">a tu web. Gratis.</span></h2>
-    <p class="fi d1">Menos de 60 segundos para completar el formulario. Menos de 2 horas para recibir el reporte. Sin costo. Sin llamadas de ventas.</p>
-    <div class="cta-b-form fi d1">
-      <div class="field">
-        <label for="url2">URL de tu sitio web</label>
-        <input type="url" id="url2" placeholder="https://tuempresa.com"/>
+  <section id="cta-b">
+    <div class="si sp">
+      <div class="ey fi" style="justify-content:center"><i style="background:var(--muted)"></i>¿Listo?</div>
+      <h2 class="fi">Descubrí qué le falta<br><span class="gt">a tu web. Gratis.</span></h2>
+      <p class="fi d1">Menos de 60 segundos para completar el formulario. Menos de 2 horas para recibir el reporte. Sin
+        costo. Sin llamadas de ventas.</p>
+      <div class="cta-b-form fi d1">
+        <div class="field">
+          <label for="url2">URL de tu sitio web</label>
+          <input type="url" id="url2" placeholder="https://tuempresa.com" />
+        </div>
+        <div class="field">
+          <label for="email2">Tu email</label>
+          <input type="email" id="email2" placeholder="maria@tuempresa.com" />
+        </div>
+        <button class="btn-submit" onclick="handleSubmit()">Quiero mi análisis gratuito →</button>
+        <div class="cta-b-trust">
+          <div class="cbt">
+            <div class="cbt-dot"></div>Sin spam
+          </div>
+          <div class="cbt">
+            <div class="cbt-dot"></div>Sin compromiso
+          </div>
+          <div class="cbt">
+            <div class="cbt-dot"></div>Respuesta en 2hs
+          </div>
+          <div class="cbt">
+            <div class="cbt-dot"></div>LLC Delaware · Vacaré
+          </div>
+        </div>
       </div>
-      <div class="field">
-        <label for="email2">Tu email</label>
-        <input type="email" id="email2" placeholder="maria@tuempresa.com"/>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ftop">
+      <div class="fbrand">
+        <div class="flogo">Vacaré</div>
+        <p>Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.</p>
       </div>
-      <button class="btn-submit" onclick="handleSubmit()">Quiero mi análisis gratuito →</button>
-      <div class="cta-b-trust">
-        <div class="cbt"><div class="cbt-dot"></div>Sin spam</div>
-        <div class="cbt"><div class="cbt-dot"></div>Sin compromiso</div>
-        <div class="cbt"><div class="cbt-dot"></div>Respuesta en 2hs</div>
-        <div class="cbt"><div class="cbt-dot"></div>LLC Delaware · Vacaré</div>
+      <div class="fcol">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="/#packs">Growth Machine</a></li>
+          <li><a href="/#packs">Full Funnel 360</a></li>
+          <li><a href="/#packs">Automation Retainer</a></li>
+          <li><a href="/es/email-course">Mini-curso gratuito</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="/#ctaf">Contacto</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ftop">
-    <div class="fbrand">
-      <div class="flogo">Vacaré</div>
-      <p>Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.</p>
+    <div class="fbot">
+      <p>© 2026 Vacaré Digital Solutions LLC. Todos los derechos reservados.</p>
+      <p>ES / EN</p>
     </div>
-    <div class="fcol">
-      <h5>Servicios</h5>
-      <ul>
-        <li><a href="/#packs">Growth Machine</a></li>
-        <li><a href="/#packs">Full Funnel 360</a></li>
-        <li><a href="/#packs">Automation Retainer</a></li>
-        <li><a href="/es/email-course">Mini-curso gratuito</a></li>
-      </ul>
-    </div>
-    <div class="fcol">
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Términos</a></li>
-        <li><a href="/#ctaf">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fbot">
-    <p>© 2026 Vacaré Digital Solutions LLC. Todos los derechos reservados.</p>
-    <p>ES / EN</p>
-  </div>
-</footer>
+  </footer>
 
-<script>
-// Fade in
-const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-setTimeout(()=>document.querySelectorAll('#hero .fi').forEach(el=>el.classList.add('vis')),80);
+  <script>
+    // Fade in
+    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis') }), { threshold: .1 });
+    document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+    setTimeout(() => document.querySelectorAll('#hero .fi').forEach(el => el.classList.add('vis')), 80);
 
-// Form submit mock
-function handleSubmit(){
-  const url = document.getElementById('url')?.value || document.getElementById('url2')?.value;
-  const email = document.getElementById('email')?.value || document.getElementById('email2')?.value;
-  if(!url || !email){
-    alert('Por favor completá la URL y tu email para recibir el reporte.');
-    return;
-  }
-  // Acá iría el POST al webhook de n8n
-  // fetch('https://tu-n8n.com/webhook/audit', { method:'POST', body: JSON.stringify({url, email}) })
-  const btn = event.target;
-  btn.textContent = '✓ Reporte en camino — revisá tu email en 2 horas';
-  btn.style.opacity = '.7';
-  btn.disabled = true;
-}
-</script>
+    // Form submit mock
+    function handleSubmit() {
+      const url = document.getElementById('url')?.value || document.getElementById('url2')?.value;
+      const email = document.getElementById('email')?.value || document.getElementById('email2')?.value;
+      if (!url || !email) {
+        alert('Por favor completá la URL y tu email para recibir el reporte.');
+        return;
+      }
+      // Acá iría el POST al webhook de n8n
+      // fetch('https://tu-n8n.com/webhook/audit', { method:'POST', body: JSON.stringify({url, email}) })
+      const btn = event.target;
+      btn.textContent = '✓ Reporte en camino — revisá tu email en 2 horas';
+      btn.style.opacity = '.7';
+      btn.disabled = true;
+    }
+  </script>
 </body>
+
 </html>
