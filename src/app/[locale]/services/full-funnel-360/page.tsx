@@ -157,40 +157,25 @@ function IconX({ color = 'rgba(247,246,242,0.25)', size = 16 }: { color?: string
 }
 
 // ─── Data ──────────────────────────────────────────────────────────────────
-const INCLUDES = [
-  { Icon: IconLayers, what: 'Web estratégica — cada URL posiciona una keyword', means: 'No es una web. Es una red de captura. Cada página existe para atraer un tipo de búsqueda específica y llevar al visitante al siguiente paso.' },
-  { Icon: IconSearch, what: 'SEO técnico como arquitectura — la base de todo', means: 'Velocidad, Core Web Vitals, schema markup, estructura de URLs, enlazado interno. Sin esta base, el contenido no posiciona. Con ella, cada artículo tiene ventaja desde el día uno.' },
-  { Icon: IconCpu, what: 'LLM Optimization — aparecer en ChatGPT y Perplexity', means: 'Estructura de contenido y autoridad para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés. Nadie más lo está haciendo en LATAM.' },
-  { Icon: IconFileText, what: '10 piezas de contenido estratégico — vendedores que no duermen', means: 'Artículos y guías que posicionan las keywords de mayor intención de tu industria. Cada uno es un vendedor digital que trabaja 24/7 durante años, sin que paguéis nada.' },
-  { Icon: IconGift, what: 'Lead magnet avanzado — captura a quien de verdad importa', means: 'PDF, calculadora o herramienta que da valor real y captura el email del prospecto calificado. No cualquier email — el de alguien que ya demostró interés en lo que hacés.' },
-  { Icon: IconFunnel, what: 'Funnel completo — del visitante desconocido al cliente', means: 'Tráfico → captación → nurturing → calificación → reunión agendada. Nada queda al azar. Cada etapa está diseñada para llevar al siguiente paso.' },
-  { Icon: IconMail, what: 'Secuencia de onboarding 7-14 días — construye la confianza sola', means: 'El prospecto nuevo recibe la secuencia que responde sus objeciones, muestra tu autoridad y lo lleva a la decisión. Sin que vos hagas nada más que el primer contacto.' },
-  { Icon: IconDatabase, what: 'CRM básico — sabés en qué etapa está cada prospecto', means: 'Notion o Airtable configurado para tu proceso. Nada se pierde. Sabés quién está listo para cerrar, quién necesita un empujón y quién llegó esta semana.' },
-  { Icon: IconZap, what: '5+ flujos en n8n — todos los puntos conectados', means: 'Automatizaciones que conectan el funnel completo. Cuando llega un lead: entra al CRM, recibe el primer email, agenda si está listo. El sistema no tiene fisuras.' },
-  { Icon: IconBarChart, what: 'Dashboard Looker Studio — el canal entero en un lugar', means: 'Tráfico, leads, fuente, conversión, pipeline. En tiempo real. Sin abrir 5 herramientas. Sin adivinar si el canal está creciendo o estancado.' },
+const INCLUDES_ICONS = [
+  IconLayers,
+  IconSearch,
+  IconCpu,
+  IconFileText,
+  IconGift,
+  IconFunnel,
+  IconMail,
+  IconDatabase,
+  IconZap,
+  IconBarChart,
 ];
 
-const FAQ_ITEMS = [
-  {
-    q: '¿Cuánto tarda en verse resultados?',
-    a: 'Los primeros indicadores (indexación, posiciones en keywords de long-tail) se ven en 4-6 semanas. Los resultados de conversión maduran en 3-6 meses. El canal a plena velocidad, entre los 6 y 12 meses. Full Funnel es una inversión con retorno compuesto — no un sprint.',
-  },
-  {
-    q: '¿Qué pasa con el SEO si después no seguimos publicando?',
-    a: 'El contenido existente sigue trabajando. A diferencia de una campaña de publicidad que cae a cero cuando pausás, un artículo posicionado sigue trayendo tráfico sin ninguna inversión adicional. Recomendamos seguir publicando, pero el activo no desaparece si parás.',
-  },
-  {
-    q: '¿Cómo aparezco en ChatGPT con mi negocio?',
-    a: 'Los modelos de IA citan fuentes de autoridad. Construimos la arquitectura de contenido y la estructura de schema markup para que tu sitio sea reconocido como fuente confiable cuando alguien pregunta por tu categoría. No es instantáneo — madura en 3-6 meses como el SEO.',
-  },
-  {
-    q: 'Contratamos SEO antes y no funcionó. ¿Por qué sería distinto ahora?',
-    a: 'El SEO sin contenido estratégico es como construir paredes sin cimientos. Y el contenido sin SEO técnico es contenido que nadie encuentra. El problema más común es que se hicieron las dos cosas por separado, sin integración. Nosotros las integramos desde el día uno.',
-  },
-  {
-    q: '¿Puedo hacer solo una parte del Full Funnel?',
-    a: 'Podemos arrancar con el scope que corresponde a tu situación. En la llamada evaluamos qué tiene más impacto primero — si tu web ya está funcionando bien, el primer foco puede ser el contenido y las automatizaciones. Si necesitás la base técnica, arrancamos por ahí.',
-  },
+const FUNNEL_ICONS = [
+  <IconSearch key="0" className="w-[18px] h-[18px]" />,
+  <IconUsers key="1" className="w-[18px] h-[18px]" />,
+  <IconGift key="2" />,
+  <IconFunnel key="3" />,
+  <IconCheck key="4" size={18} color="white" />,
 ];
 
 // ─── Page ──────────────────────────────────────────────────────────────────
@@ -198,24 +183,37 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
   const { locale } = await params;
   setRequestLocale(locale);
   const tLayout = await getTranslations({ locale, namespace: 'Layout' });
+  const t = await getTranslations({ locale, namespace: 'ServicePages.fullFunnel360' });
 
   const BASE = 'https://vacaredigitalsolutions.com';
   const isEn = locale === 'en';
   const svcPath = isEn ? `${BASE}/en/services/full-funnel-360` : `${BASE}/es/servicios/full-funnel-360`;
+
+  // ─── Localized Data ────────────────────────────────────────────────────────
+  const includes = (t.raw('includes') as Array<{ what: string; means: string }>).map((item, i) => ({
+    ...item,
+    Icon: INCLUDES_ICONS[i] || IconLayers,
+  }));
+  const faqItems = t.raw('faq') as Array<{ q: string; a: string }>;
+  const heroBullets = t.raw('heroBullets') as string[];
+  const forYou = t.raw('forYou') as string[];
+  const funnelStages = (t.raw('funnelSection.stages') as Array<{ step: string; label: string; body: string }>).map((stage, i) => ({
+    ...stage,
+    icon: FUNNEL_ICONS[i] || FUNNEL_ICONS[0],
+  }));
+  const milestones = t.raw('timelineSection.milestones') as Array<{ period: string; title: string; items: string[] }>;
 
   return (
     <>
       <ServiceJsonLd
         url={svcPath}
         name="Full Funnel 360"
-        description={isEn
-          ? 'Predictable organic client channel. SEO, strategic content, ChatGPT optimization and complete funnel. Without paid ads. Results from 90 days.'
-          : 'Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.'}
+        description={t('meta.seoDescription')}
         price="5000"
       />
       <BreadcrumbJsonLd items={[
-        { name: isEn ? 'Home' : 'Inicio', item: `${BASE}/${locale}` },
-        { name: isEn ? 'Services' : 'Servicios', item: isEn ? `${BASE}/en/services` : `${BASE}/es/servicios` },
+        { name: t('breadcrumb.home'), item: `${BASE}/${locale}` },
+        { name: t('breadcrumb.services'), item: isEn ? `${BASE}/en/services` : `${BASE}/es/servicios` },
         { name: 'Full Funnel 360', item: svcPath },
       ]} />
       <HomeClient>
@@ -238,34 +236,30 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <div className="w-full lg:w-[55%] flex flex-col justify-center px-6 lg:px-[52px] py-[72px] relative z-10">
               <MotionWrapper type="fadeUp">
                 <nav className="flex items-center gap-[8px] text-[11px] text-[rgba(247,246,242,0.3)] mb-[28px]">
-                  <a href="/" className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{isEn ? 'Home' : 'Inicio'}</a>
+                  <a href="/" className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{t('breadcrumb.home')}</a>
                   <span>/</span>
-                  <a href={isEn ? '/services' : '/servicios'} className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{isEn ? 'Services' : 'Servicios'}</a>
+                  <a href={isEn ? '/services' : '/servicios'} className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{t('breadcrumb.services')}</a>
                   <span>/</span>
                   <span className="text-[var(--or)] font-semibold">Full Funnel 360</span>
                 </nav>
 
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--or)] mb-[20px]">
                   <i className="w-[18px] h-[1.5px] bg-[var(--or)] block" />
-                  Paquete 03 · Canal orgánico completo
+                  {t('hero.badge')}
                 </div>
 
                 <h1 className="text-[clamp(34px,4.5vw,58px)] font-extrabold leading-[1.07] tracking-[-2px] text-[var(--cream)] mb-[18px]">
                   <span className="block grad-text text-[clamp(22px,2.8vw,36px)] mb-[8px]">Full Funnel 360</span>
-                  El boca a boca es hermoso.<br />Pero no escala,<br />
-                  <GradientText>y no construye nada si para.</GradientText>
+                  {t('hero.h1Line1')}<br />{t('hero.h1Line2')}<br />
+                  <GradientText>{t('hero.h1Gradient')}</GradientText>
                 </h1>
 
                 <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[460px] mb-[28px]">
-                  Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.
+                  {t('hero.description')}
                 </p>
 
                 <ul className="flex flex-col gap-[10px] mb-[36px] max-w-[440px]">
-                  {[
-                    'Canal orgánico que trae clientes sin publicidad pagada',
-                    'Aparecer en Google Y en respuestas de ChatGPT y Perplexity',
-                    'Funnel completo: del visitante desconocido a la reunión agendada',
-                  ].map((b, i) => (
+                  {heroBullets.map((b, i) => (
                     <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--cream)]">
                       <span className="w-[20px] h-[20px] rounded-full grad-bg flex items-center justify-center shrink-0 mt-[1px]">
                         <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-[10px] h-[10px]"><polyline points="20 6 9 17 4 12" /></svg>
@@ -279,14 +273,14 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeUp" delay={0.15}>
                 <div className="flex flex-wrap gap-[12px] mb-[28px]">
                   <OpenMeetingBtn className="px-[28px] py-[15px] rounded-[10px] grad-bg text-white text-[15px] font-bold leading-none cursor-pointer transition-all hover:-translate-y-[1px] hover:shadow-[0_12px_32px_rgba(232,65,122,0.35)] border-none">
-                    Quiero mi canal orgánico →
+                    {t('hero.ctaPrimary')}
                   </OpenMeetingBtn>
                   <a href="#como-funciona" className="px-[24px] py-[15px] rounded-[10px] border-[1.5px] border-[rgba(247,246,242,0.15)] text-[var(--cream)] text-[15px] font-bold leading-none no-underline inline-flex items-center transition-all hover:border-[rgba(247,246,242,0.38)] hover:-translate-y-[1px]">
-                    Ver cómo funciona ↓
+                    {t('hero.ctaSecondary')}
                   </a>
                 </div>
                 <p className="text-[12px] text-[rgba(247,246,242,0.3)] font-medium">
-                  Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas
+                  {t('hero.disclaimer')}
                 </p>
               </MotionWrapper>
             </div>
@@ -308,17 +302,13 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                       <IconTrendingUp className="w-[20px] h-[20px] text-[var(--or)]" />
                     </div>
                     <div>
-                      <div className="text-[12px] font-bold text-[rgba(255,255,255,0.7)] uppercase tracking-[0.1em]">Crecimiento Orgánico</div>
-                      <div className="text-[20px] font-extrabold text-white leading-tight">Canal Predecible</div>
+                      <div className="text-[12px] font-bold text-[rgba(255,255,255,0.7)] uppercase tracking-[0.1em]">{t('hero.panel.growthLabel')}</div>
+                      <div className="text-[20px] font-extrabold text-white leading-tight">{t('hero.panel.channelLabel')}</div>
                     </div>
                   </div>
                   
                   <div className="flex flex-col gap-[14px] mt-[24px]">
-                    {[
-                      { label: 'Mes 1', desc: 'Canal y Funnel Activos' },
-                      { label: 'Mes 3', desc: 'Primeros Leads Orgánicos' },
-                      { label: 'Mes 6', desc: 'Crecimiento Sostenido' },
-                    ].map((item, i) => (
+                    {(t.raw('hero.panel.milestones') as Array<{ label: string; desc: string }>).map((item, i) => (
                       <div key={i} className="flex items-center gap-[16px]">
                         <div className="w-[45px] text-right text-[14px] font-bold text-white">{item.label}</div>
                         <div className="flex-1 h-[8px] bg-[rgba(255,255,255,0.2)] rounded-full overflow-hidden relative">
@@ -333,12 +323,12 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                 <div className="grid grid-cols-2 gap-[16px]">
                   <div className="bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.2)] rounded-[16px] p-[20px] flex flex-col justify-center items-center text-center hover:bg-[rgba(255,255,255,0.18)] transition-colors">
                     <span className="text-[36px] font-extrabold text-white tracking-[-1.5px] leading-none mb-[6px]">$0</span>
-                    <span className="text-[12px] font-bold text-[rgba(255,255,255,0.85)] uppercase tracking-[0.05em]">En Publicidad</span>
+                    <span className="text-[12px] font-bold text-[rgba(255,255,255,0.85)] uppercase tracking-[0.05em]">{t('hero.panel.noAds')}</span>
                   </div>
                   
                   <div className="bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.2)] rounded-[16px] p-[20px] flex flex-col justify-center items-center text-center hover:bg-[rgba(255,255,255,0.18)] transition-colors">
                     <IconCpu />
-                    <span className="text-[12px] font-bold text-[rgba(255,255,255,0.85)] uppercase tracking-[0.05em] mt-[10px]">Optimizado p/ IA</span>
+                    <span className="text-[12px] font-bold text-[rgba(255,255,255,0.85)] uppercase tracking-[0.05em] mt-[10px]">{t('hero.panel.aiOptimized')}</span>
                   </div>
                 </div>
               </div>
@@ -353,14 +343,14 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                El diagnóstico
+                {t('problemSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.8vw,50px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[14px]">
-                Dos canales que funcionan.<br />
-                <GradientText>Ninguno construye activos.</GradientText>
+                {t('problemSection.h2Part1')}<br />
+                <GradientText>{t('problemSection.h2Gradient')}</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[580px] mb-[48px]">
-                El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando parás. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.
+                {t('problemSection.description')}
               </p>
             </MotionWrapper>
 
@@ -368,10 +358,10 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeUp" delay={0.05}>
                 <div className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[20px] p-[28px] h-full">
                   <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(28,24,40,0.3)] mb-[16px] flex items-center gap-[6px]">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[rgba(28,24,40,0.2)]" /> Boca a boca
+                    <span className="w-[5px] h-[5px] rounded-full bg-[rgba(28,24,40,0.2)]" /> {t('problemSection.channel1Title')}
                   </div>
                   <ul className="flex flex-col gap-[9px]">
-                    {['Funciona — pero no escala', 'Impredecible por definición', 'Para si el dueño para', 'No podés proyectar el próximo mes'].map((item, i) => (
+                    {(t.raw('problemSection.channel1Items') as string[]).map((item, i) => (
                       <li key={i} className="flex items-start gap-[8px] text-[13px] text-[var(--muted)] leading-[1.5]">
                         <IconX size={13} color="rgba(28,24,40,0.25)" />
                         {item}
@@ -383,10 +373,10 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeUp" delay={0.1}>
                 <div className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[20px] p-[28px] h-full">
                   <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(28,24,40,0.3)] mb-[16px] flex items-center gap-[6px]">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[rgba(28,24,40,0.2)]" /> Publicidad pagada
+                    <span className="w-[5px] h-[5px] rounded-full bg-[rgba(28,24,40,0.2)]" /> {t('problemSection.channel2Title')}
                   </div>
                   <ul className="flex flex-col gap-[9px]">
-                    {['Funciona mientras pagás', 'Cae a cero cuando parás', 'No construye ningún activo', 'El costo por lead sube con la competencia'].map((item, i) => (
+                    {(t.raw('problemSection.channel2Items') as string[]).map((item, i) => (
                       <li key={i} className="flex items-start gap-[8px] text-[13px] text-[var(--muted)] leading-[1.5]">
                         <IconX size={13} color="rgba(28,24,40,0.25)" />
                         {item}
@@ -402,7 +392,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                     <span className="w-[5px] h-[5px] rounded-full bg-[var(--am)]" /> Full Funnel 360
                   </div>
                   <ul className="flex flex-col gap-[9px] relative z-10">
-                    {['Crece mientras vos hacés otra cosa', 'Predecible después del mes 3', 'Construye activos que duran años', 'Costo marginal cerca de cero con el tiempo'].map((item, i) => (
+                    {(t.raw('problemSection.channel3Items') as string[]).map((item, i) => (
                       <li key={i} className="flex items-start gap-[8px] text-[13px] text-[var(--cream)] leading-[1.5]">
                         <IconCheck size={13} color="#1D9E75" />
                         {item}
@@ -410,7 +400,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                     ))}
                   </ul>
                   <p className="text-[11px] text-[rgba(247,246,242,0.4)] mt-[16px] leading-[1.6] relative z-10">
-                    Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada.
+                    {t('problemSection.channel3Note')}
                   </p>
                 </div>
               </MotionWrapper>
@@ -426,23 +416,23 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeLeft">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                  El futuro del search
+                  {t('llmSection.label')}
                 </div>
                 <h2 className="text-[clamp(26px,3.5vw,44px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[18px]">
-                  ¿Tu negocio aparece cuando<br /><GradientText>alguien le pregunta a ChatGPT?</GradientText>
+                  {t('llmSection.h2Part1')}<br /><GradientText>{t('llmSection.h2Gradient')}</GradientText>
                 </h2>
                 <p className="text-[15px] leading-[1.75] text-[var(--muted-l)] mb-[20px]">
-                  Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.
+                  {t('llmSection.p1')}
                 </p>
                 <p className="text-[15px] leading-[1.75] text-[var(--muted-l)] mb-[28px]">
-                  Full Funnel 360 incluye <strong className="text-[var(--am)]">LLM Optimization</strong>: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.
+                  Full Funnel 360 incluye <strong className="text-[var(--am)]">LLM Optimization</strong>: {t('llmSection.p2')}
                 </p>
                 <div className="bg-[rgba(240,112,48,0.08)] border-[0.5px] border-[rgba(240,112,48,0.2)] rounded-[12px] p-[16px_20px] flex items-start gap-[12px]">
                   <div className="w-[32px] h-[32px] rounded-[8px] bg-[rgba(240,112,48,0.12)] border-[0.5px] border-[rgba(240,112,48,0.25)] flex items-center justify-center shrink-0">
                     <IconBulb />
                   </div>
                   <p className="text-[13px] text-[var(--cream)] leading-[1.6]">
-                    Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.
+                    {t('llmSection.note')}
                   </p>
                 </div>
               </MotionWrapper>
@@ -455,12 +445,12 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                     <div className="w-[7px] h-[7px] rounded-full bg-[rgba(247,246,242,0.15)]" />
                     <div className="w-[7px] h-[7px] rounded-full bg-[rgba(247,246,242,0.15)]" />
                     <div className="w-[7px] h-[7px] rounded-full bg-[rgba(247,246,242,0.15)]" />
-                    <span className="text-[10px] text-[rgba(247,246,242,0.3)] ml-[6px]">ChatGPT · nueva conversación</span>
+                    <span className="text-[10px] text-[rgba(247,246,242,0.3)] ml-[6px]">{t('llmSection.chatgptLabel')}</span>
                   </div>
                   {/* Prompt */}
                   <div className="p-[16px_18px] border-b border-[rgba(247,246,242,0.05)]">
                     <div className="bg-[rgba(247,246,242,0.06)] rounded-[10px] px-[14px] py-[10px] inline-block max-w-[80%]">
-                      <p className="text-[12px] text-[rgba(247,246,242,0.75)] leading-[1.5]">¿Cuál es la mejor agencia digital para negocios locales en Argentina?</p>
+                      <p className="text-[12px] text-[rgba(247,246,242,0.75)] leading-[1.5]">{t('llmSection.chatgptQuestion')}</p>
                     </div>
                   </div>
                   {/* Response */}
@@ -471,13 +461,13 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                       </div>
                       <div>
                         <p className="text-[12px] text-[rgba(247,246,242,0.75)] leading-[1.65] mb-[8px]">
-                          Para negocios locales en Argentina, algunas agencias destacadas incluyen...
+                          {t('llmSection.chatgptResponse1')}
                         </p>
                         <p className="text-[12px] text-[rgba(247,246,242,0.75)] leading-[1.65]">
-                          <strong className="text-[var(--am)]">Vacaré Digital Solutions</strong> es mencionada frecuentemente por su enfoque en automatizaciones y resultados medibles para pymes...
+                          <strong className="text-[var(--am)]">Vacaré Digital Solutions</strong> {t('llmSection.chatgptResponse2')}
                         </p>
                         <div className="flex gap-[6px] mt-[10px]">
-                          {['vacaredigitalsolutions.com', '+2 fuentes'].map((src, i) => (
+                          {['vacaredigitalsolutions.com', t('llmSection.chatgptSources')].map((src, i) => (
                             <span key={i} className="text-[8px] bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[4px] px-[7px] py-[3px] text-[rgba(247,246,242,0.4)]">{src}</span>
                           ))}
                         </div>
@@ -486,7 +476,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                   </div>
                   <div className="px-[18px] pb-[14px]">
                     <p className="text-[9px] text-[rgba(247,246,242,0.25)]">
-                      Así se ve cuando Full Funnel 360 lleva 6+ meses activo
+                      {t('llmSection.chatgptNote')}
                     </p>
                   </div>
                 </div>
@@ -502,30 +492,24 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                El canal en funcionamiento
+                {t('funnelSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[14px]">
-                Del visitante que no te conoce<br /><GradientText>al cliente que te contrata — sin publicidad.</GradientText>
+                {t('funnelSection.h2Part1')}<br /><GradientText>{t('funnelSection.h2Gradient')}</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[520px] mb-[48px]">
-                Cinco etapas. Cada una automatizada. El sistema las recorre por vos.
+                {t('funnelSection.description')}
               </p>
             </MotionWrapper>
 
             <MotionWrapper type="fadeUp" delay={0.1}>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-[2px] bg-[rgba(28,24,40,0.06)] rounded-[20px] overflow-hidden">
-                {[
-                  { step: '01', label: 'Búsqueda', body: 'Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas.', icon: <IconSearch className="w-[18px] h-[18px]" /> },
-                  { step: '02', label: 'Descubrimiento', body: 'Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba.', icon: <IconUsers className="w-[18px] h-[18px]" /> },
-                  { step: '03', label: 'Interés', body: 'Descarga el lead magnet y deja su email. El sistema toma el control desde acá.', icon: <IconGift /> },
-                  { step: '04', label: 'Calificación', body: 'La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés.', icon: <IconFunnel /> },
-                  { step: '05', label: 'Conversión', body: 'Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar.', icon: <IconCheck size={18} color="white" /> },
-                ].map((stage, i) => (
+                {funnelStages.map((stage, i) => (
                   <div key={i} className="bg-white p-[24px_20px] hover:bg-[rgba(28,24,40,0.02)] transition-colors relative">
                     <div className="w-[40px] h-[40px] rounded-[10px] grad-bg flex items-center justify-center mb-[14px] shadow-[0_4px_14px_rgba(232,65,122,0.2)]">
                       {stage.icon}
                     </div>
-                    <div className="text-[9px] font-bold uppercase tracking-[0.1em] text-[var(--muted)] mb-[6px]">Etapa {stage.step}</div>
+                    <div className="text-[9px] font-bold uppercase tracking-[0.1em] text-[var(--muted)] mb-[6px]">{t('funnelSection.stageLabel')} {stage.step}</div>
                     <h3 className="text-[14px] font-extrabold text-[var(--dark)] mb-[8px] tracking-[-0.2px]">{stage.label}</h3>
                     <p className="text-[12px] leading-[1.6] text-[var(--muted)]">{stage.body}</p>
                     {i > 0 && (
@@ -549,18 +533,18 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                Los 10 componentes
+                {t('includesSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                10 vendedores digitales.<br /><GradientText>Trabajando 24/7 durante años.</GradientText>
+                {t('includesSection.h2Part1')}<br /><GradientText>{t('includesSection.h2Gradient')}</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[540px] mb-[48px]">
-                Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo.
+                {t('includesSection.description')}
               </p>
             </MotionWrapper>
 
             <StaggerContainer className="flex flex-col gap-[8px]" staggerDelay={0.05}>
-              {INCLUDES.map((item, i) => (
+              {includes.map((item, i) => (
                 <StaggerItem key={i}>
                   <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-0 bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] overflow-hidden hover:bg-[rgba(247,246,242,0.065)] hover:border-[rgba(247,246,242,0.13)] transition-all duration-200 group">
                     <div className="p-[20px_24px] flex items-center gap-[14px] border-b-[0.5px] lg:border-b-0 lg:border-r-[0.5px] border-[rgba(247,246,242,0.06)]">
@@ -589,48 +573,49 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeLeft">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                  El efecto compuesto
+                  {t('compoundSection.label')}
                 </div>
                 <h2 className="text-[clamp(26px,3.5vw,44px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[20px]">
-                  Lo que construís en mes 1<br /><GradientText>sigue trabajando en año 3.</GradientText>
+                  {t('compoundSection.h2Part1')}<br /><GradientText>{t('compoundSection.h2Gradient')}</GradientText>
                 </h2>
                 <p className="text-[15px] leading-[1.75] text-[var(--muted)] mb-[20px]">
-                  Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.
+                  {t('compoundSection.p1')}
                 </p>
                 <p className="text-[15px] leading-[1.75] text-[var(--muted)]">
-                  El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.
+                  {t('compoundSection.p2')}
                 </p>
               </MotionWrapper>
 
               <MotionWrapper type="fadeRight" delay={0.1}>
                 <div className="bg-[var(--dark)] rounded-[24px] p-[28px] border-[0.5px] border-[rgba(247,246,242,0.09)] shadow-[0_24px_80px_rgba(28,24,40,0.14)]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[20px]">Retorno en el tiempo</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[20px]">{t('compoundSection.chartTitle')}</p>
                   {/* Simple CSS chart comparison */}
                   <div className="flex flex-col gap-[12px]">
-                    {[
-                      { label: 'Publicidad pagada', data: [80, 80, 0, 0, 0], color: 'rgba(247,246,242,0.2)', note: 'Cae a 0 cuando parás' },
-                      { label: 'Full Funnel 360', data: [15, 30, 55, 75, 100], color: 'var(--am)', note: 'Sigue creciendo' },
-                    ].map((series, si) => (
-                      <div key={si}>
-                        <div className="flex items-center justify-between mb-[6px]">
-                          <span className="text-[11px] font-bold" style={{ color: series.color }}>{series.label}</span>
-                          <span className="text-[9px] text-[rgba(247,246,242,0.35)]">{series.note}</span>
+                    {(t.raw('compoundSection.series') as Array<{ label: string; note: string; color?: string; data?: number[] }>).map((series, si) => {
+                      const color = si === 0 ? 'rgba(247,246,242,0.2)' : 'var(--am)';
+                      const data = si === 0 ? [80, 80, 0, 0, 0] : [15, 30, 55, 75, 100];
+                      return (
+                        <div key={si}>
+                          <div className="flex items-center justify-between mb-[6px]">
+                            <span className="text-[11px] font-bold" style={{ color }}>{series.label}</span>
+                            <span className="text-[9px] text-[rgba(247,246,242,0.35)]">{series.note}</span>
+                          </div>
+                          <div className="flex gap-[3px] items-end h-[36px]">
+                            {data.map((v, i) => (
+                              <div key={i} className="flex-1 rounded-t-[3px] transition-all" style={{ height: `${v}%`, background: color, minHeight: v > 0 ? '3px' : '0' }} />
+                            ))}
+                          </div>
+                          <div className="flex gap-[3px] mt-[3px]">
+                            {(t.raw('compoundSection.chartLabels') as string[]).map((l, i) => (
+                              <div key={i} className="flex-1 text-center text-[7px] text-[rgba(247,246,242,0.25)]">{l}</div>
+                            ))}
+                          </div>
                         </div>
-                        <div className="flex gap-[3px] items-end h-[36px]">
-                          {series.data.map((v, i) => (
-                            <div key={i} className="flex-1 rounded-t-[3px] transition-all" style={{ height: `${v}%`, background: series.color, minHeight: v > 0 ? '3px' : '0' }} />
-                          ))}
-                        </div>
-                        <div className="flex gap-[3px] mt-[3px]">
-                          {['Mes 1', 'Mes 3', 'Mes 6', 'Año 1', 'Año 2'].map((l, i) => (
-                            <div key={i} className="flex-1 text-center text-[7px] text-[rgba(247,246,242,0.25)]">{l}</div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                   <p className="text-[11px] text-[rgba(247,246,242,0.3)] mt-[18px] border-t border-[rgba(247,246,242,0.07)] pt-[14px]">
-                    * Representación ilustrativa basada en comportamiento típico de canales
+                    {t('compoundSection.disclaimer')}
                   </p>
                 </div>
               </MotionWrapper>
@@ -645,22 +630,16 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                Qué pasa en cada etapa
+                {t('timelineSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[44px]">
-                <GradientText>Los hitos reales</GradientText> del canal orgánico.
+                <GradientText>{t('timelineSection.h2Gradient')}</GradientText> {t('timelineSection.h2Suffix')}
               </h2>
             </MotionWrapper>
 
             <MotionWrapper type="fadeUp" delay={0.1}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[rgba(247,246,242,0.05)] rounded-[20px] overflow-hidden">
-                {[
-                  { period: 'Mes 1', title: 'El canal arranca', items: ['Web publicada con SEO técnico', 'Google indexando el sitio', 'Lead magnet y funnel activos', 'Primeras piezas de contenido publicadas'] },
-                  { period: 'Mes 2–3', title: 'Primeras señales', items: ['Keywords de long-tail posicionando', 'Primeros leads orgánicos entrando', 'Secuencia de nurturing activa', 'Dashboard con primeras métricas'] },
-                  { period: 'Mes 4–6', title: 'El canal madura', items: ['Flujo estable de leads orgánicos', 'LLM citations activos', 'Contenido acumulando autoridad', 'Canal predecible — sabés cuántos vienen'] },
-                  { period: 'Año 1', title: 'El canal trabaja solo', items: ['Crecimiento sin intervención constante', 'Costo marginal cerca de cero', 'Autoridad de dominio consolidada', 'Pipeline predecible mes a mes'] },
-                  { period: 'Año 2+', title: 'Ventaja competitiva', items: ['Los competidores tardaron 2 años en arrancar', 'El canal genera mientras el equipo duerme', 'Activo digital que se revende con el negocio', 'Independencia total de publicidad pagada'] },
-                ].map((stage, i) => (
+                {milestones.map((stage, i) => (
                   <div key={i} className="bg-[rgba(247,246,242,0.03)] p-[28px] hover:bg-[rgba(247,246,242,0.055)] transition-colors">
                     <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[8px]">{stage.period}</div>
                     <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[14px] tracking-[-0.2px]">{stage.title}</h3>
@@ -685,20 +664,20 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                Autodiagnóstico
+                {t('forYouSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.5vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[44px]">
-                <GradientText>Full Funnel 360</GradientText> es para vos si...
+                <GradientText>{t('forYouSection.h2Gradient')}</GradientText> {t('forYouSection.h2Suffix')}
               </h2>
             </MotionWrapper>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
               <MotionWrapper type="fadeLeft">
                 <div className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[20px] p-[32px] h-full shadow-[0_8px_32px_rgba(28,24,40,0.04)]">
                   <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[#1D9E75] mb-[22px] flex items-center gap-[8px]">
-                    <span className="w-[6px] h-[6px] rounded-full bg-[#1D9E75]" /> Para vos
+                    <span className="w-[6px] h-[6px] rounded-full bg-[#1D9E75]" /> {t('forYouSection.forYouLabel')}
                   </div>
                   <ul className="flex flex-col gap-[12px]">
-                    {['Tenés un negocio con tracción y querés un canal que no dependa de ads ni referidos', 'Estás dispuesto a invertir en algo que tarda 3-6 meses en madurar pero que dura años', 'Querés aparecer en Google Y en ChatGPT cuando alguien busca lo que hacés', 'Vendés servicios con ciclo de venta largo donde la confianza importa', 'Querés construir algo que crezca con el tiempo, no una solución de corto plazo'].map((item, i) => (
+                    {forYou.map((item, i) => (
                       <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--dark)] leading-[1.5]">
                         <IconCheck size={16} color="#1D9E75" />
                         {item}
@@ -710,24 +689,20 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeRight" delay={0.1}>
                 <div className="bg-[rgba(28,24,40,0.03)] border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[20px] p-[32px] h-full">
                   <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[22px] flex items-center gap-[8px]">
-                    <span className="w-[6px] h-[6px] rounded-full bg-[rgba(28,24,40,0.28)]" /> Otro paquete te sirve más si...
+                    <span className="w-[6px] h-[6px] rounded-full bg-[rgba(28,24,40,0.28)]" /> {t('forYouSection.notForYouLabel')}
                   </div>
                   <ul className="flex flex-col gap-[14px]">
-                    {[
-                      { text: 'Necesitás leads esta semana — el canal orgánico tarda meses en madurar', pack: 'Growth Machine', href: `/${isEn ? 'services' : 'servicios'}/growth-machine` },
-                      { text: 'Recién empezás y no tenés presencia digital todavía', pack: 'Starter Presence', href: `/${isEn ? 'services' : 'servicios'}/starter-presence` },
-                      { text: 'Tu problema son las tareas repetitivas internas, no la captación', pack: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
-                    ].map((item, i) => (
+                    {(t.raw('forYouSection.notForYou') as Array<{ text: string; pack: string; href: string }>).map((item, i) => (
                       <li key={i} className="flex items-start gap-[10px] text-[14px] leading-[1.5]">
                         <svg viewBox="0 0 24 24" fill="none" stroke="rgba(28,24,40,0.3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[14px] h-[14px] mt-[1px] shrink-0">
                           <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
                         </svg>
-                        <span className="text-[var(--muted)]">{item.text}{' '}<a href={item.href} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">Ver {item.pack} →</a></span>
+                        <span className="text-[var(--muted)]">{item.text}{' '}<a href={isEn ? item.href : item.href.replace('/services/', '/servicios/')} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">{isEn ? 'See' : 'Ver'} {item.pack} →</a></span>
                       </li>
                     ))}
                   </ul>
                   <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(28,24,40,0.07)]">
-                    <p className="text-[12px] text-[var(--muted)]">¿No sabés cuál corresponde?{' '}<a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">Pedí la auditoría gratuita →</a></p>
+                    <p className="text-[12px] text-[var(--muted)]">{t('forYouSection.auditNote')}{' '}<a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">{t('forYouSection.auditLinkLabel')}</a></p>
                   </div>
                 </div>
               </MotionWrapper>
@@ -741,15 +716,15 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                Preguntas frecuentes
+                {t('faqSection.label')}
               </div>
               <h2 className="text-[clamp(28px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                Lo que todo el mundo pregunta<br /><GradientText>antes de dar el paso.</GradientText>
+                {t('faqSection.h2Part1')}<br /><GradientText>{t('faqSection.h2Gradient')}</GradientText>
               </h2>
-              <p className="text-[15px] leading-[1.7] text-[var(--muted-l)] max-w-[500px] mb-[44px]">Respondemos con honestidad.</p>
+              <p className="text-[15px] leading-[1.7] text-[var(--muted-l)] max-w-[500px] mb-[44px]">{t('faqSection.description')}</p>
             </MotionWrapper>
             <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]" staggerDelay={0.06}>
-              {FAQ_ITEMS.map((faq, idx) => (
+              {faqItems.map((faq, idx) => (
                 <StaggerItem key={idx}>
                   <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[24px] transition-all duration-200 hover:bg-[rgba(247,246,242,0.065)] hover:border-[rgba(247,246,242,0.14)] hover:-translate-y-[2px]">
                     <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[10px] tracking-[-0.2px]">{faq.q}</h3>
@@ -760,7 +735,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             </StaggerContainer>
             <MotionWrapper type="fadeUp" delay={0.3}>
               <div className="mt-[40px] flex flex-wrap items-center justify-center gap-x-[32px] gap-y-[12px] border-t-[0.5px] border-[rgba(247,246,242,0.07)] pt-[32px]">
-                {['LLC registrada en Delaware', 'Todos los activos son tuyos', 'Sin contratos de permanencia', 'Resultados medibles desde el mes 1'].map((item, i) => (
+                {(t.raw('faqSection.trustBadges') as string[]).map((item, i) => (
                   <div key={i} className="flex items-center gap-[8px] text-[12px] text-[rgba(247,246,242,0.4)] font-semibold">
                     <IconCheck size={13} color="var(--am)" />
                     {item}
@@ -773,35 +748,40 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
 
         {/* ══════ CTA FINAL ══════ */}
         <CtaFinal
-          headline={<>El canal que construís hoy<br /><GradientText>trae clientes en 2027 sin que hagas nada.</GradientText></>}
-          subheadline="30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado."
-          mainCta={{ label: 'Agendá tu llamada estratégica →', href: '#' }}
-          disclaimer="Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas"
-          watermarkText="ORGÁNICO"
-          cards={[
-            { tag: 'Tengo web pero no trae clientes', title: 'Auditoría gratuita', desc: 'Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
-            { tag: 'Quiero entender el proceso', title: 'Mini-curso 5 días', desc: 'Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.', href: isEn ? '/email-course' : '/curso-web-gratis' },
-            { tag: 'Ya sé lo que quiero', title: 'Llamada estratégica', desc: '30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.', href: '#ctaf' },
-          ]}
+          headline={<>{t('ctaFinal.headlinePart1')}<br /><GradientText>{t('ctaFinal.headlineGradient')}</GradientText></>}
+          subheadline={t('ctaFinal.subheadline')}
+          mainCta={{ label: t('ctaFinal.ctaLabel'), href: '#' }}
+          disclaimer={t('ctaFinal.disclaimer')}
+          watermarkText={t('ctaFinal.watermark')}
+          cards={(t.raw('ctaFinal.cards') as Array<{ tag: string; title: string; desc: string; href: string }>).map(card => ({
+            ...card,
+            href: isEn ? card.href : card.href.replace('/services/', '/servicios/').replace('/free-audit', '/auditoria-web-gratuita').replace('/email-course', '/curso-web-gratis')
+          }))}
         />
       </main>
 
       <Footer
-        variant="full"
         brandName="Vacaré Digital Solutions"
         brandDesc={tLayout('Footer.brandDesc')}
         copyrightText={tLayout('Footer.copyright')}
         langText={tLayout('Footer.lang')}
         columns={[
-          { title: isEn ? 'Services' : 'Servicios', links: [
+          { title: t('footerColumns.servicesTitle'), links: [
             { label: 'Starter Presence', href: `/${isEn ? 'services' : 'servicios'}/starter-presence` },
             { label: 'Growth Machine', href: `/${isEn ? 'services' : 'servicios'}/growth-machine` },
             { label: 'Full Funnel 360', href: `/${isEn ? 'services' : 'servicios'}/full-funnel-360` },
             { label: 'Ecommerce Pro', href: `/${isEn ? 'services' : 'servicios'}/ecommerce-pro` },
             { label: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
           ]},
-          { title: isEn ? 'Free' : 'Gratuito', links: [{ label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' }, { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/curso-web-gratis' }] },
-          { title: isEn ? 'Company' : 'Empresa', links: [{ label: isEn ? 'All services' : 'Todos los servicios', href: isEn ? '/services' : '/servicios' }, { label: isEn ? 'Case studies' : 'Casos de éxito', href: '/#case' }, { label: isEn ? 'Privacy' : 'Privacidad', href: '#' }] },
+          { title: t('footerColumns.freeTitle'), links: [
+            { label: t('footerColumns.webAudit'), href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+            { label: t('footerColumns.emailCourse'), href: isEn ? '/email-course' : '/curso-web-gratis' }
+          ] },
+          { title: t('footerColumns.companyTitle'), links: [
+            { label: t('footerColumns.allServices'), href: isEn ? '/services' : '/servicios' },
+            { label: t('footerColumns.caseStudies'), href: '/#case' },
+            { label: t('footerColumns.privacy'), href: '#' }
+          ] },
         ]}
       />
       </HomeClient>

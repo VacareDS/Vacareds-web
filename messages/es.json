@@ -49,6 +49,19 @@
       }
     },
     "Footer": {
+      "cols": {
+        "packs": "Servicios",
+        "free": "Gratuito",
+        "company": "Empresa"
+      },
+      "links": {
+        "audit": "Auditoría web",
+        "course": "Mini-curso 5 días",
+        "cases": "Casos de éxito",
+        "team": "Equipo",
+        "privacy": "Privacidad",
+        "terms": "Términos"
+      },
       "brandDesc": "Sistemas digitales que generan ingresos. LLC constituida en Delaware, EEUU.",
       "services": "Servicios",
       "growthMachine": "Growth Machine",
@@ -499,68 +512,6 @@
       ]
     },
     "fullFunnel360": {
-      "meta": {
-        "title": "Full Funnel 360 — Canal Orgánico de Clientes, SEO y Visibilidad en IA | Vacaré",
-        "description": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
-        "ogTitle": "Full Funnel 360 — Vacaré Digital Solutions",
-        "ogDescription": "El boca a boca no escala. Los ads no acumulan. Full Funnel 360 construye el canal orgánico que trabaja por años."
-      },
-      "jsonLdDescription": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
-      "badge": "Paquete 03 · Canal orgánico completo",
-      "h1Line1": "El boca a boca es hermoso.",
-      "h1Line2": "Pero no escala,",
-      "h1Line3": "y no construye nada si para.",
-      "lead": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
-      "bullets": [
-        "Canal orgánico que trae clientes sin publicidad pagada",
-        "Aparecer en Google Y en respuestas de ChatGPT y Perplexity",
-        "Funnel completo: del visitante desconocido a la reunión agendada"
-      ],
-      "ctaPrimary": "Quiero mi canal orgánico →",
-      "ctaSecondary": "Ver cómo funciona ↓",
-      "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
-      "heroPanelGrowthLabel": "Crecimiento Orgánico",
-      "heroPanelChannelLabel": "Canal Predecible",
-      "heroPanelMilestones": [
-        { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
-        { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
-        { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
-      ],
-      "heroPanelNoAds": "En Publicidad",
-      "heroPanelAiOptimized": "Optimizado p/ IA",
-      "diagSection": "El diagnóstico",
-      "diagH2Line1": "Dos canales que funcionan.",
-      "diagH2Line2": "Ninguno construye activos.",
-      "diagLead": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando parán. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
-      "channel1Title": "Boca a boca",
-      "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
-      "channel2Title": "Publicidad pagada",
-      "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
-      "channel3Title": "Full Funnel 360",
-      "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
-      "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada.",
-      "llmSection": "El futuro del search",
-      "llmH2Line1": "¿Tu negocio aparece cuando",
-      "llmH2Line2": "alguien le pregunta a ChatGPT?",
-      "llmP1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
-      "llmP2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
-      "llmNote": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
-      "funnelSection": "El canal en funcionamiento",
-      "funnelH2Line1": "Del visitante que no te conoce",
-      "funnelH2Line2": "al cliente que te contrata — sin publicidad.",
-      "funnelLead": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
-      "funnelStageLabel": "Etapa",
-      "funnelStages": [
-        { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
-        { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
-        { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
-        { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
-        { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
-      ],
-      "includesSection": "Los 10 componentes",
-      "includesH2Line1": "10 vendedores digitales.",
-      "includesH2Line2": "Trabajando 24/7 durante años.",
-      "includesLead": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo.",
       "includes": [
         { "what": "Web estratégica — cada URL posiciona una keyword", "means": "No es una web. Es una red de captura. Cada página existe para atraer un tipo de búsqueda específica y llevar al visitante al siguiente paso." },
         { "what": "SEO técnico como arquitectura — la base de todo", "means": "Velocidad, Core Web Vitals, schema markup, estructura de URLs, enlazado interno. Sin esta base, el contenido no posiciona. Con ella, cada artículo tiene ventaja desde el día uno." },
@@ -573,47 +524,6 @@
         { "what": "5+ flujos en n8n — todos los puntos conectados", "means": "Automatizaciones que conectan el funnel completo. Cuando llega un lead: entra al CRM, recibe el primer email, agenda si está listo. El sistema no tiene fisuras." },
         { "what": "Dashboard Looker Studio — el canal entero en un lugar", "means": "Tráfico, leads, fuente, conversión, pipeline. En tiempo real. Sin abrir 5 herramientas. Sin adivinar si el canal está creciendo o estancado." }
       ],
-      "compoundSection": "El efecto compuesto",
-      "compoundH2Line1": "Lo que construís en mes 1",
-      "compoundH2Line2": "sigue trabajando en año 3.",
-      "compoundP1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
-      "compoundP2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
-      "compoundChartTitle": "Retorno en el tiempo",
-      "compoundSeries": [
-        { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
-        { "label": "Full Funnel 360", "note": "Sigue creciendo" }
-      ],
-      "compoundChartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
-      "compoundDisclaimer": "* Representación ilustrativa basada en comportamiento típico de canales",
-      "timelineSection": "Qué pasa en cada etapa",
-      "timelineH2": "Los hitos reales del canal orgánico.",
-      "timelineMilestones": [
-        { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
-        { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
-        { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "LLM citations activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
-        { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
-        { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
-      ],
-      "forWhoSection": "Autodiagnóstico",
-      "forWhoH2": "Full Funnel 360 es para vos si...",
-      "forYou": "Para vos",
-      "otherPack": "Otro paquete te sirve más si...",
-      "forYouItems": [
-        "Tenés un negocio con tracción y querés un canal que no dependa de ads ni referidos",
-        "Estás dispuesto a invertir en algo que tarda 3-6 meses en madurar pero que dura años",
-        "Querés aparecer en Google Y en ChatGPT cuando alguien busca lo que hacés",
-        "Vendés servicios con ciclo de venta largo donde la confianza importa",
-        "Querés construir algo que crezca con el tiempo, no una solución de corto plazo"
-      ],
-      "otherPackItems": [
-        { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "href": "/services/growth-machine" },
-        { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "href": "/services/starter-presence" },
-        { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "href": "/services/automation-retainer" }
-      ],
-      "faqSection": "Preguntas frecuentes",
-      "faqH2Line1": "Lo que todo el mundo pregunta",
-      "faqH2Line2": "antes de dar el paso.",
-      "faqLead": "Respondemos con honestidad.",
       "faq": [
         { "q": "¿Cuánto tarda en verse resultados?", "a": "Los primeros indicadores (indexación, posiciones en keywords de long-tail) se ven en 4-6 semanas. Los resultados de conversión maduran en 3-6 meses. El canal a plena velocidad, entre los 6 y 12 meses. Full Funnel es una inversión con retorno compuesto — no un sprint." },
         { "q": "¿Qué pasa con el SEO si después no seguimos publicando?", "a": "El contenido existente sigue trabajando. A diferencia de una campaña de publicidad que cae a cero cuando pausás, un artículo posicionado sigue trayendo tráfico sin ninguna inversión adicional. Recomendamos seguir publicando, pero el activo no desaparece si parás." },
@@ -621,22 +531,168 @@
         { "q": "Contratamos SEO antes y no funcionó. ¿Por qué sería distinto ahora?", "a": "El SEO sin contenido estratégico es como construir paredes sin cimientos. Y el contenido sin SEO técnico es contenido que nadie encuentra. El problema más común es que se hicieron las dos cosas por separado, sin integración. Nosotros las integramos desde el día uno." },
         { "q": "¿Puedo hacer solo una parte del Full Funnel?", "a": "Podemos arrancar con el scope que corresponde a tu situación. En la llamada evaluamos qué tiene más impacto primero — si tu web ya está funcionando bien, el primer foco puede ser el contenido y las automatizaciones. Si necesitás la base técnica, arrancamos por ahí." }
       ],
-      "trustItems": [
-        "LLC registrada en Delaware",
-        "Todos los activos son tuyos",
-        "Sin contratos de permanencia",
-        "Resultados medibles desde el mes 1"
+      "heroBullets": [
+        "Canal orgánico que trae clientes sin publicidad pagada",
+        "Aparecer en Google Y en respuestas de ChatGPT y Perplexity",
+        "Funnel completo: del visitante desconocido a la reunión agendada"
       ],
-      "ctaHeadline": "El canal que construís hoy trae clientes en 2027 sin que hagas nada.",
-      "ctaSubheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
-      "ctaMainLabel": "Agendá tu llamada estratégica →",
-      "ctaDisclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
-      "ctaWatermark": "ORGÁNICO",
-      "ctaCards": [
-        { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/free-audit" },
-        { "tag": "Quiero entender el proceso", "title": "Mini-curso 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.", "href": "/email-course" },
-        { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.", "href": "#ctaf" }
-      ]
+      "forYou": [
+        "Tenés un negocio con tracción y querés un canal que no dependa de ads ni referidos",
+        "Estás dispuesto a invertir en algo que tarda 3-6 meses en madurar pero que dura años",
+        "Querés aparecer en Google Y en ChatGPT cuando alguien busca lo que hacés",
+        "Vendés servicios con ciclo de venta largo donde la confianza importa",
+        "Querés construir algo que crezca con el tiempo, no una solución de corto plazo"
+      ],
+      "meta": {
+        "title": "Full Funnel 360 — Canal Orgánico de Clientes, SEO y Visibilidad en IA | Vacaré",
+        "description": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
+        "ogTitle": "Full Funnel 360 — Vacaré Digital Solutions",
+        "ogDescription": "El boca a boca no escala. Los ads no acumulan. Full Funnel 360 construye el canal orgánico que trabaja por años.",
+        "seoDescription": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días."
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "hero": {
+        "badge": "Paquete 03 · Canal orgánico completo",
+        "h1Line1": "El boca a boca es hermoso.",
+        "h1Line2": "Pero no escala,",
+        "h1Gradient": "y no construye nada si para.",
+        "description": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
+        "ctaPrimary": "Quiero mi canal orgánico →",
+        "ctaSecondary": "Ver cómo funciona ↓",
+        "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
+        "panel": {
+          "growthLabel": "Crecimiento Orgánico",
+          "channelLabel": "Canal Predecible",
+          "milestones": [
+            { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
+            { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
+            { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
+          ],
+          "noAds": "En Publicidad",
+          "aiOptimized": "Optimizado p/ IA"
+        }
+      },
+      "problemSection": {
+        "label": "El diagnóstico",
+        "h2Part1": "Dos canales que funcionan.",
+        "h2Gradient": "Ninguno construye activos.",
+        "description": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando parás. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
+        "channel1Title": "Boca a boca",
+        "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
+        "channel2Title": "Publicidad pagada",
+        "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
+        "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
+        "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada."
+      },
+      "llmSection": {
+        "label": "El futuro del search",
+        "h2Part1": "¿Tu negocio aparece cuando",
+        "h2Gradient": "alguien le pregunta a ChatGPT?",
+        "p1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
+        "p2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
+        "note": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
+        "chatgptLabel": "ChatGPT · nueva conversación",
+        "chatgptQuestion": "¿Cuál es la mejor agencia digital para negocios locales en Argentina?",
+        "chatgptResponse1": "Para negocios locales en Argentina, algunas agencias destacadas incluyen...",
+        "chatgptResponse2": "es mencionada frecuentemente por su enfoque en automatizaciones y resultados medibles para pymes...",
+        "chatgptSources": "+2 fuentes",
+        "chatgptNote": "Así se ve cuando Full Funnel 360 lleva 6+ meses activo"
+      },
+      "funnelSection": {
+        "label": "El canal en funcionamiento",
+        "h2Part1": "Del visitante que no te conoce",
+        "h2Gradient": "al cliente que te contrata — sin publicidad.",
+        "description": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
+        "stageLabel": "Etapa",
+        "stages": [
+          { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
+          { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
+          { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
+          { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
+          { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
+        ]
+      },
+      "includesSection": {
+        "label": "Los 10 componentes",
+        "h2Part1": "10 vendedores digitales.",
+        "h2Gradient": "Trabajando 24/7 durante años.",
+        "description": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo."
+      },
+      "compoundSection": {
+        "label": "El efecto compuesto",
+        "h2Part1": "Lo que construís en mes 1",
+        "h2Gradient": "sigue trabajando en año 3.",
+        "p1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
+        "p2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
+        "chartTitle": "Retorno en el tiempo",
+        "series": [
+          { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
+          { "label": "Full Funnel 360", "note": "Sigue creciendo" }
+        ],
+        "chartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
+        "disclaimer": "* Representación ilustrativa basada en comportamiento típico de canales"
+      },
+      "timelineSection": {
+        "label": "Qué pasa en cada etapa",
+        "h2Gradient": "Los hitos reales",
+        "h2Suffix": "del canal orgánico.",
+        "milestones": [
+          { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
+          { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
+          { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "LLM citations activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
+          { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
+          { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
+        ]
+      },
+      "forYouSection": {
+        "label": "Autodiagnóstico",
+        "h2Gradient": "Full Funnel 360",
+        "h2Suffix": "es para vos si...",
+        "forYouLabel": "Para vos",
+        "notForYouLabel": "Otro paquete te sirve más si...",
+        "notForYou": [
+          { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "href": "/services/growth-machine" },
+          { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "href": "/services/starter-presence" },
+          { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "href": "/services/automation-retainer" }
+        ],
+        "seeLabel": "Ver",
+        "auditNote": "¿No estás seguro de cuál te sirve?",
+        "auditLinkLabel": "Solicitá la auditoría gratuita →",
+        "auditHref": "/free-audit"
+      },
+      "faqSection": {
+        "label": "Preguntas frecuentes",
+        "h2Part1": "Lo que todo el mundo pregunta",
+        "h2Gradient": "antes de dar el paso.",
+        "description": "Respondemos con honestidad.",
+        "trustBadges": ["LLC registrada en Delaware", "Todos los activos son tuyos", "Sin contratos de permanencia", "Resultados medibles desde el mes 1"]
+      },
+      "ctaFinal": {
+        "headlinePart1": "El canal que construís hoy",
+        "headlineGradient": "trae clientes en 2027 sin que hagas nada.",
+        "subheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
+        "ctaLabel": "Agendá tu llamada estratégica →",
+        "disclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
+        "watermark": "ORGÁNICO",
+        "cards": [
+          { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/free-audit" },
+          { "tag": "Quiero entender el proceso", "title": "Mini-course 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.", "href": "/email-course" },
+          { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.", "href": "#ctaf" }
+        ]
+      },
+      "footerColumns": {
+        "servicesTitle": "Servicios",
+        "freeTitle": "Gratis",
+        "companyTitle": "Compañía",
+        "webAudit": "Auditoría Web",
+        "emailCourse": "Curso de 5 días",
+        "allServices": "Todos los servicios",
+        "caseStudies": "Casos de éxito",
+        "privacy": "Privacidad"
+      }
     },
     "ecommercePro": {
       "meta": {
@@ -3414,110 +3470,157 @@
         "Vendés servicios con ciclo de venta largo donde la confianza importa",
         "Querés construir algo que crezca con el tiempo, no una solución de corto plazo"
       ],
-      "badge": "Paquete 03 · Canal orgánico completo",
-      "h1Line1": "El boca a boca es hermoso.",
-      "h1Line2": "Pero no escala,",
-      "h1Line3": "y no construye nada si para.",
-      "lead": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
-      "ctaPrimary": "Quiero mi canal orgánico →",
-      "ctaSecondary": "Ver cómo funciona ↓",
-      "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
-      "heroPanelGrowthLabel": "Crecimiento Orgánico",
-      "heroPanelChannelLabel": "Canal Predecible",
-      "heroPanelMilestones": [
-        { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
-        { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
-        { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
-      ],
-      "heroPanelNoAds": "En Publicidad",
-      "heroPanelAiOptimized": "Optimizado p/ IA",
-      "diagSection": "El diagnóstico",
-      "diagH2Line1": "Dos canales que funcionan.",
-      "diagH2Line2": "Ninguno construye activos.",
-      "diagLead": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando paran. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
-      "channel1Title": "Boca a boca",
-      "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
-      "channel2Title": "Publicidad pagada",
-      "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
-      "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
-      "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada.",
-      "llmSection": "El futuro del search",
-      "llmH2Line1": "¿Tu negocio aparece cuando",
-      "llmH2Line2": "alguien le pregunta a ChatGPT?",
-      "llmP1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
-      "llmP2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
-      "llmNote": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
-      "chatgptLabel": "ChatGPT · nueva conversación",
-      "chatgptQuestion": "¿Cuál es la mejor agencia digital para negocios locales en Argentina?",
-      "chatgptResponse1": "Para negocios locales en Argentina, algunas agencias destacadas incluyen...",
-      "chatgptResponse2": "es mencionada frecuentemente por su enfoque en automatizaciones y resultados medibles para pymes...",
-      "chatgptSources": "+2 fuentes",
-      "chatgptNote": "Así se ve cuando Full Funnel 360 lleva 6+ meses activo",
-      "funnelSection": "El canal en funcionamiento",
-      "funnelH2Line1": "Del visitante que no te conoce",
-      "funnelH2Line2": "al cliente que te contrata — sin publicidad.",
-      "funnelLead": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
-      "funnelStageLabel": "Etapa",
-      "funnelStages": [
-        { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
-        { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
-        { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
-        { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
-        { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
-      ],
-      "includesSection": "Los 10 componentes",
-      "includesH2Line1": "10 vendedores digitales.",
-      "includesH2Line2": "Trabajando 24/7 durante años.",
-      "includesLead": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo.",
-      "compoundSection": "El efecto compuesto",
-      "compoundH2Line1": "Lo que construís en mes 1",
-      "compoundH2Line2": "sigue trabajando en año 3.",
-      "compoundP1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
-      "compoundP2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
-      "compoundChartTitle": "Retorno en el tiempo",
-      "compoundSeries": [
-        { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
-        { "label": "Full Funnel 360", "note": "Sigue creciendo" }
-      ],
-      "compoundChartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
-      "compoundDisclaimer": "* Representación ilustrativa basada en comportamiento típico de canales",
-      "timelineSection": "Qué pasa en cada etapa",
-      "timelineH2": "Los hitos reales del canal orgánico.",
-      "timelineMilestones": [
-        { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
-        { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
-        { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "LLM citations activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
-        { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
-        { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
-      ],
-      "forWhoSection": "Autodiagnóstico",
-      "forWhoH2": "Full Funnel 360 es para vos si...",
-      "forYouLabel": "Para vos",
-      "otherPack": "Otro paquete te sirve más si...",
-      "seeLabel": "Ver",
-      "notSureText": "¿No sabés cuál corresponde?",
-      "freeAuditLink": "Pedí la auditoría gratuita →",
-      "otherPackItems": [
-        { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "slug": "growth-machine" },
-        { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "slug": "starter-presence" },
-        { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "slug": "automation-retainer" }
-      ],
-      "faqSection": "Preguntas frecuentes",
-      "faqH2Line1": "Lo que todo el mundo pregunta",
-      "faqH2Line2": "antes de dar el paso.",
-      "faqLead": "Respondemos con honestidad.",
-      "trustItems": ["LLC registrada en Delaware", "Todos los activos son tuyos", "Sin contratos de permanencia", "Resultados medibles desde el mes 1"],
-      "ctaHeadlineLine1": "El canal que construís hoy",
-      "ctaHeadlineLine2": "trae clientes en 2027 sin que hagas nada.",
-      "ctaSubheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
-      "ctaMainLabel": "Agendá tu llamada estratégica →",
-      "ctaDisclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
-      "ctaWatermark": "ORGÁNICO",
-      "ctaCards": [
-        { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan." },
-        { "tag": "Quiero entender el proceso", "title": "Mini-curso 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox." },
-        { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico." }
-      ]
+      "meta": {
+        "title": "Full Funnel 360 — Canal Orgánico de Clientes, SEO y Visibilidad en IA | Vacaré",
+        "description": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
+        "ogTitle": "Full Funnel 360 — Vacaré Digital Solutions",
+        "ogDescription": "El boca a boca es impredecible. Los ads no se acumulan. Full Funnel 360 construye el canal orgánico que funciona durante años.",
+        "seoDescription": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días."
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "hero": {
+        "badge": "Paquete 03 · Canal orgánico completo",
+        "h1Line1": "El boca a boca es hermoso.",
+        "h1Line2": "Pero no escala,",
+        "h1Gradient": "y no construye nada si para.",
+        "description": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
+        "ctaPrimary": "Quiero mi canal orgánico →",
+        "ctaSecondary": "Ver cómo funciona ↓",
+        "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
+        "panel": {
+          "growthLabel": "Crecimiento Orgánico",
+          "channelLabel": "Canal Predecible",
+          "milestones": [
+            { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
+            { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
+            { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
+          ],
+          "noAds": "Sin Ads",
+          "aiOptimized": "Optimizado p/ IA"
+        }
+      },
+      "problemSection": {
+        "label": "El diagnóstico",
+        "h2Part1": "Dos canales que funcionan.",
+        "h2Gradient": "Ninguno construye activos.",
+        "description": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando paran. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
+        "channel1Title": "Boca a boca",
+        "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
+        "channel2Title": "Publicidad pagada",
+        "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
+        "channel3Title": "Full Funnel 360",
+        "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
+        "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que pagues nada."
+      },
+      "llmSection": {
+        "label": "El futuro del search",
+        "h2Part1": "¿Tu negocio aparece cuando",
+        "h2Gradient": "alguien le pregunta a ChatGPT?",
+        "p1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
+        "p2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
+        "note": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
+        "chatgptLabel": "ChatGPT · nueva conversación",
+        "chatgptQuestion": "¿Cuál es la mejor agencia digital para negocios locales en Argentina?",
+        "chatgptResponse1": "Para negocios locales en Argentina, algunas agencias destacadas incluyen...",
+        "chatgptResponse2": "es mencionada frecuentemente por su enfoque en automatizaciones y resultados medibles para pymes...",
+        "chatgptSources": "+2 fuentes",
+        "chatgptNote": "Así se ve cuando Full Funnel 360 lleva 6+ meses activo"
+      },
+      "funnelSection": {
+        "label": "El canal en funcionamiento",
+        "h2Part1": "Del visitante que no te conoce",
+        "h2Gradient": "al cliente que te contrata — sin publicidad.",
+        "description": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
+        "stageLabel": "Etapa",
+        "stages": [
+          { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
+          { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
+          { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
+          { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
+          { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
+        ]
+      },
+      "includesSection": {
+        "label": "Los 10 componentes",
+        "h2Part1": "10 vendedores digitales.",
+        "h2Gradient": "Trabajando 24/7 durante años.",
+        "description": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo."
+      },
+      "compoundSection": {
+        "label": "El efecto compuesto",
+        "h2Part1": "Lo que construís en mes 1",
+        "h2Gradient": "sigue trabajando en año 3.",
+        "p1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
+        "p2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
+        "chartTitle": "Retorno en el tiempo",
+        "series": [
+          { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
+          { "label": "Full Funnel 360", "note": "Sigue creciendo" }
+        ],
+        "chartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
+        "disclaimer": "* Representación ilustrativa basada en comportamiento típico de canales"
+      },
+      "timelineSection": {
+        "label": "Qué pasa en cada etapa",
+        "h2Gradient": "Los hitos reales del canal orgánico.",
+        "h2Suffix": "",
+        "milestones": [
+          { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
+          { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
+          { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "Citas en LLMs activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
+          { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
+          { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
+        ]
+      },
+      "forYouSection": {
+        "label": "Autodiagnóstico",
+        "h2Gradient": "Full Funnel 360",
+        "h2Suffix": "es para vos si...",
+        "forYouLabel": "Para vos",
+        "notForYouLabel": "Otro paquete te sirve más si...",
+        "notForYou": [
+          { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "href": "/servicios/growth-machine" },
+          { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "href": "/servicios/starter-presence" },
+          { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "href": "/servicios/automation-retainer" }
+        ],
+        "seeLabel": "Ver",
+        "auditNote": "¿No sabés cuál corresponde?",
+        "auditLinkLabel": "Pedí la auditoría gratuita →",
+        "auditHref": "/auditoria-web-gratuita"
+      },
+      "faqSection": {
+        "label": "Preguntas frecuentes",
+        "h2Part1": "Lo que todo el mundo pregunta",
+        "h2Gradient": "antes de dar el paso.",
+        "description": "Respondemos con honestidad.",
+        "trustBadges": ["LLC registrada en Delaware", "Todos los activos son tuyos", "Sin contratos de permanencia", "Resultados medibles desde el mes 1"]
+      },
+      "ctaFinal": {
+        "headlinePart1": "El canal que construís hoy",
+        "headlineGradient": "trae clientes en 2027 sin que hagas nada.",
+        "subheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
+        "ctaLabel": "Agendá tu llamada estratégica →",
+        "disclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
+        "watermark": "ORGÁNICO",
+        "cards": [
+          { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/auditoria-web-gratuita" },
+          { "tag": "Quiero entender el proceso", "title": "Mini-curso 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.", "href": "/curso-web-gratis" },
+          { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.", "href": "#ctaf" }
+        ]
+      },
+      "footerColumns": {
+        "servicesTitle": "Servicios",
+        "freeTitle": "Gratuito",
+        "companyTitle": "Empresa",
+        "webAudit": "Auditoría web",
+        "emailCourse": "Mini-curso 5 días",
+        "allServices": "Todos los servicios",
+        "caseStudies": "Casos de éxito",
+        "privacy": "Privacidad"
+      }
     }
   }
 }

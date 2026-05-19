@@ -49,6 +49,19 @@
       }
     },
     "Footer": {
+      "cols": {
+        "packs": "Services",
+        "free": "Free",
+        "company": "Company"
+      },
+      "links": {
+        "audit": "Web Audit",
+        "course": "5-day course",
+        "cases": "Case studies",
+        "team": "Team",
+        "privacy": "Privacy",
+        "terms": "Terms"
+      },
       "brandDesc": "Digital systems that generate revenue. LLC incorporated in Delaware, USA.",
       "services": "Services",
       "growthMachine": "Growth Machine",
