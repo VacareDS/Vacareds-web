@@ -8,6 +8,10 @@ import ScrollObserver from '@/components/layout/ScrollObserver';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import HomeClient from '@/components/layout/HomeClient';
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://vacaredigitalsolutions.com'),
   title: {
