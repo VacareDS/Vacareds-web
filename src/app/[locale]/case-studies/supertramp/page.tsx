@@ -326,8 +326,16 @@ export default function SupertrampCasePage() {
             <div className="bg-[var(--dark)] rounded-[24px] p-[56px] relative overflow-hidden text-center">
               <div className="absolute inset-0 grad-bg opacity-5" />
               <span className="text-[80px] font-extrabold leading-[0.6] text-[var(--mg)] opacity-30 block mb-[16px] relative z-[1]">"</span>
-              <div className="text-[clamp(18px,2.8vw,26px)] font-bold text-[var(--cream)] leading-[1.4] tracking-[-0.5px] max-w-[700px] mx-auto relative z-[1]" dangerouslySetInnerHTML={{ __html: t('Quote.text').replace('<span>', '<span class="grad-text">') }} />
-              <div className="mt-[28px] text-[13px] text-[rgba(247,246,242,0.35)] relative z-[1]" dangerouslySetInnerHTML={{ __html: t('Quote.source') }} />
+              <div className="text-[clamp(18px,2.8vw,26px)] font-bold text-[var(--cream)] leading-[1.4] tracking-[-0.5px] max-w-[700px] mx-auto relative z-[1]">
+                {t.rich('Quote.text', {
+                  span: (chunks) => <span className="grad-text">{chunks}</span>
+                })}
+              </div>
+              <div className="mt-[28px] text-[13px] text-[rgba(247,246,242,0.35)] relative z-[1]">
+                {t.rich('Quote.source', {
+                  strong: (chunks) => <strong>{chunks}</strong>
+                })}
+              </div>
             </div>
           </PageWrapper>
         </section>

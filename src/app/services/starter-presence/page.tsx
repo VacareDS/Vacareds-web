@@ -138,35 +138,71 @@ function IconX({ color = 'rgba(247,246,242,0.25)', size = 16 }: { color?: string
   );
 }
 
-// ─── Icon arrays (order must match JSON array order) ───────────────────────
-const INCLUDES_ICONS = [IconLightning, IconMapPin, IconMessage, IconBarChart, IconSettings];
-const PROBLEMS_ICONS = [IconSearch, IconUserX, IconMonitorX];
+// ─── Data ──────────────────────────────────────────────────────────────────
+const INCLUDES = [
+  {
+    Icon: IconLightning,
+    what: 'Web ultrarrápida — sin costos mensuales de por vida',
+    means: 'Carga antes de que el visitante termine de respirar. Sin hosting que pagar mes a mes. La mayoría de webs que construimos no tienen costo recurrente — el dinero que invertís no se va diluyendo en cuotas.',
+  },
+  {
+    Icon: IconMapPin,
+    what: 'Aparecés cuando te buscan en Google — local y orgánico',
+    means: 'Cuando alguien escribe tu servicio + tu ciudad, queremos que aparezcas en el mapa y en los resultados. SEO técnico completo + Google Business optimizado. En 30-60 días las primeras búsquedas locales ya te encuentran.',
+  },
+  {
+    Icon: IconMessage,
+    what: 'Cada consulta llega directo a tu WhatsApp en segundos',
+    means: 'Ningún lead se pierde en un formulario que nadie revisa. Cuando alguien completa el contacto, vos recibís un mensaje en segundos con nombre, teléfono y lo que necesita. Respondés al toque, cuando la intención de compra está en el pico.',
+  },
+  {
+    Icon: IconBarChart,
+    what: 'Sabés exactamente qué funciona y qué no',
+    means: 'Panel completo con visitas, fuentes, comportamiento y búsquedas que usaron para encontrarte. Tomás decisiones con datos reales, no con intuición. Si algo no está funcionando, lo sabés antes de seguir invirtiendo.',
+  },
+  {
+    Icon: IconSettings,
+    what: 'Una tarea que hacés a mano hoy — se hace sola desde el día uno',
+    means: 'Elegimos la tarea que más te consume (confirmación de cita, respuesta de bienvenida, alerta interna de consulta) y la automatizamos. El sistema trabaja aunque vos no estés mirando.',
+  },
+];
 
-// ─── Types ────────────────────────────────────────────────────────────────
-type IncludeItem = { what: string; means: string };
-type FaqItem = { q: string; a: string };
-type ProcessItem = { num: string; time: string; title: string; body: string };
-type ProblemItem = { title: string; body: string };
+const FAQ_ITEMS = [
+  {
+    q: '¿Voy a depender de ustedes para mantener la web?',
+    a: 'No, y ese es un principio que no negociamos. Al terminar el proyecto te entregamos todos los accesos — dominio, código, herramientas de analítica. Si el día de mañana querés trabajar con otro proveedor o hacer cambios vos mismo, podés hacerlo sin perder absolutamente nada.',
+  },
+  {
+    q: '¿Cómo aparezco en Google si la web es nueva?',
+    a: 'Google indexa sitios nuevos en 15-30 días. El SEO técnico que implementamos desde el primer día acelera ese proceso. A eso sumamos Google Business Profile optimizado, que empieza a mostrar tu negocio en búsquedas locales mucho antes que el SEO orgánico tradicional. En la mayoría de proyectos, las primeras posiciones aparecen en 30-60 días.',
+  },
+  {
+    q: '¿Cuánto cuesta?',
+    a: 'No publicamos un número fijo porque cada proyecto tiene alcances distintos. Lo que sí te garantizamos: en la llamada de diagnóstico te damos el precio exacto. Sin "desde", sin "podría ser". Un número concreto por un scope concreto. Si no encaja con tu presupuesto, también te lo decimos con honestidad.',
+  },
+  {
+    q: '¿Qué pasa si no me gusta lo que construyeron?',
+    a: 'Trabajamos con aprobación por etapas. Diseño aprobado antes de desarrollar. Desarrollo aprobado antes de publicar. Nunca llegás a una entrega final con sorpresas — porque las cosas grandes las definiste vos en cada revisión.',
+  },
+  {
+    q: '¿Cuánto tiempo lleva de mi parte?',
+    a: 'Menos de lo que pensás. Una llamada inicial de 30 minutos, una o dos revisiones por texto o videollamada breve, y la aprobación final. El trabajo pesado lo hacemos nosotros. Vos seguís operando tu negocio.',
+  },
+  {
+    q: '¿Funciona para cualquier tipo de negocio?',
+    a: 'Starter Presence es ideal para negocios de servicios locales: clínicas, estudios profesionales, gastronomía, educación, hoteles chicos, consultores independientes. Si tenés producto y querés una tienda online, hay un paquete mejor — Ecommerce Pro.',
+  },
+];
 
 // ─── Page ──────────────────────────────────────────────────────────────────
 export default async function StarterPresencePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const tLayout = await getTranslations({ locale, namespace: 'Layout' });
-  const t = await getTranslations({ locale, namespace: 'ServicePages.starterPresence' });
 
   const BASE = 'https://vacaredigitalsolutions.com';
   const isEn = locale === 'en';
   const svcPath = isEn ? `${BASE}/en/services/starter-presence` : `${BASE}/es/servicios/starter-presence`;
-
-  const includes = (t.raw('includes') as IncludeItem[]).map((item, i) => ({ ...item, Icon: INCLUDES_ICONS[i] }));
-  const faqItems = t.raw('faq') as FaqItem[];
-  const heroBullets = t.raw('heroBullets') as string[];
-  const before = t.raw('before') as string[];
-  const after = t.raw('after') as string[];
-  const process = t.raw('process') as ProcessItem[];
-  const forYou = t.raw('forYou') as string[];
-  const problems = (t.raw('problems') as ProblemItem[]).map((item, i) => ({ ...item, Icon: PROBLEMS_ICONS[i] }));
 
   return (
     <>
@@ -183,7 +219,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
         { name: isEn ? 'Services' : 'Servicios', item: isEn ? `${BASE}/en/services` : `${BASE}/es/servicios` },
         { name: 'Starter Presence', item: svcPath },
       ]} />
-      <FaqJsonLd items={faqItems.map(f => ({ question: f.q, answer: f.a }))} />
+      <FaqJsonLd items={FAQ_ITEMS.map(f => ({ question: f.q, answer: f.a }))} />
       <HomeClient>
         <Nav
           transparent={false}
@@ -205,35 +241,34 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                 <MotionWrapper type="fadeUp">
                   {/* Breadcrumb */}
                   <nav className="flex items-center gap-[8px] text-[11px] text-[rgba(247,246,242,0.3)] mb-[28px]">
-                    <a href="/" className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{isEn ? 'Home' : 'Inicio'}</a>
+                    <a href="/" className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">Inicio</a>
                     <span>/</span>
-                    <a href={isEn ? '/services' : '/servicios'} className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">{isEn ? 'Services' : 'Servicios'}</a>
+                    <a href="/servicios" className="hover:text-[rgba(247,246,242,0.6)] transition-colors no-underline">Servicios</a>
                     <span>/</span>
                     <span className="text-[var(--mg)] font-semibold">Starter Presence</span>
                   </nav>
 
                   <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[20px]">
                     <i className="w-[18px] h-[1.5px] bg-[var(--mg)] block" />
-                    {isEn ? 'Package 01 · First strategic website' : 'Paquete 01 · Primera web estratégica'}
+                    Paquete 01 · Primera web estratégica
                   </div>
 
                   <h1 className="text-[clamp(34px,4.5vw,58px)] font-extrabold leading-[1.07] tracking-[-2px] text-[var(--cream)] mb-[18px]">
-                    {isEn ? (
-                      <>If you search for your business<br />on Google and don&apos;t appear,<br /><GradientText>your clients go elsewhere.</GradientText></>
-                    ) : (
-                      <>Si buscás tu negocio<br />en Google y no aparecés,<br /><GradientText>tus clientes van a otro.</GradientText></>
-                    )}
+                    Si buscás tu negocio<br />en Google y no aparecés,<br />
+                    <GradientText>tus clientes van a otro.</GradientText>
                   </h1>
 
                   <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[460px] mb-[28px]">
-                    {isEn
-                      ? "In 30 days your business appears when searched, your website conveys what you really do, and every inquiry arrives directly to your WhatsApp — without you doing anything extra."
-                      : 'En 30 días tu negocio aparece cuando te buscan, tu web transmite lo que realmente hacés, y cada consulta llega directo a tu WhatsApp — sin que hagas nada extra.'}
+                    En 30 días tu negocio aparece cuando te buscan, tu web transmite lo que realmente hacés, y cada consulta llega directo a tu WhatsApp — sin que hagas nada extra.
                   </p>
 
                   {/* 3-bullet outcomes */}
                   <ul className="flex flex-col gap-[10px] mb-[36px] max-w-[420px]">
-                    {heroBullets.map((b, i) => (
+                    {[
+                      'Web publicada en 30 días, sin hosting mensual de por vida',
+                      'Posicionado en Google local en 30-60 días',
+                      'Cada lead llega solo — notificación automática a tu WhatsApp',
+                    ].map((b, i) => (
                       <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--cream)]">
                         <span className="w-[20px] h-[20px] rounded-full grad-bg flex items-center justify-center shrink-0 mt-[1px]">
                           <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-[10px] h-[10px]">
@@ -249,16 +284,14 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                 <MotionWrapper type="fadeUp" delay={0.15}>
                   <div className="flex flex-wrap gap-[12px] mb-[28px]">
                     <OpenMeetingBtn className="px-[28px] py-[15px] rounded-[10px] grad-bg text-white text-[15px] font-bold leading-none cursor-pointer transition-all hover:-translate-y-[1px] hover:shadow-[0_12px_32px_rgba(232,65,122,0.35)] border-none">
-                      {isEn ? 'Book a free call →' : 'Agendá una llamada gratuita →'}
+                      Agendá una llamada gratuita →
                     </OpenMeetingBtn>
                     <a href="#includes" className="px-[24px] py-[15px] rounded-[10px] border-[1.5px] border-[rgba(247,246,242,0.15)] text-[var(--cream)] text-[15px] font-bold leading-none no-underline inline-flex items-center transition-all hover:border-[rgba(247,246,242,0.38)] hover:-translate-y-[1px]">
-                      {isEn ? "See what's included ↓" : 'Ver qué incluye ↓'}
+                      Ver qué incluye ↓
                     </a>
                   </div>
                   <p className="text-[12px] text-[rgba(247,246,242,0.3)] font-medium">
-                    {isEn
-                      ? 'Free call · No commitment · We respond in less than 2 hours'
-                      : 'Llamada gratuita · Sin compromiso · Respondemos en menos de 2 horas'}
+                    Llamada gratuita · Sin compromiso · Respondemos en menos de 2 horas
                   </p>
                 </MotionWrapper>
               </div>
@@ -290,9 +323,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                       </div>
                       <div className="flex-1 bg-white rounded-[6px] px-[10px] py-[5px] flex items-center gap-[6px] border border-[rgba(0,0,0,0.12)]">
                         <IconSearch className="w-[11px] h-[11px]" color="rgba(0,0,0,0.4)" />
-                        <span className="text-[11px] text-[rgba(0,0,0,0.55)]">
-                          {isEn ? 'dentist in New York' : 'dentista en Córdoba'}
-                        </span>
+                        <span className="text-[11px] text-[rgba(0,0,0,0.55)]">dentista en Córdoba</span>
                       </div>
                     </div>
                     {/* Result card */}
@@ -305,31 +336,20 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-[12px] font-bold text-[#1558d6] leading-[1.2] mb-[3px]">
-                            {isEn ? 'Your Business · Dentist in New York' : 'Tu Negocio · Dentista en Córdoba'}
-                          </p>
+                          <p className="text-[12px] font-bold text-[#1558d6] leading-[1.2] mb-[3px]">Tu Negocio · Dentista en Córdoba</p>
                           <div className="flex items-center gap-[3px] mb-[3px]">
                             <span className="text-[10px] text-[#e37400] font-bold">4.9</span>
                             <div className="flex gap-[1px]">
                               {[1, 2, 3, 4, 5].map(s => <IconStar key={s} />)}
                             </div>
-                            <span className="text-[9px] text-[rgba(0,0,0,0.5)]">
-                              {isEn ? '47 reviews' : '47 reseñas'}
-                            </span>
+                            <span className="text-[9px] text-[rgba(0,0,0,0.5)]">47 reseñas</span>
                           </div>
                           <div className="flex flex-wrap items-center gap-x-[6px] gap-y-[2px]">
-                            <span className="text-[9px] text-[#137333] font-semibold">
-                              {isEn ? 'Open now' : 'Abierto ahora'}
-                            </span>
-                            <span className="text-[9px] text-[rgba(0,0,0,0.4)]">
-                              {isEn ? '· Dentist · New York' : '· Dentista · Córdoba'}
-                            </span>
+                            <span className="text-[9px] text-[#137333] font-semibold">Abierto ahora</span>
+                            <span className="text-[9px] text-[rgba(0,0,0,0.4)]">· Dentista · Córdoba</span>
                           </div>
                           <div className="flex gap-[5px] mt-[8px]">
-                            {(isEn
-                              ? ['Book appointment', 'Call', 'Website']
-                              : ['Reservar turno', 'Llamar', 'Sitio web']
-                            ).map(btn => (
+                            {['Reservar turno', 'Llamar', 'Sitio web'].map(btn => (
                               <span key={btn} className="text-[8px] font-bold text-[#1558d6] border border-[rgba(21,88,214,0.3)] rounded-[4px] px-[6px] py-[3px] bg-[rgba(21,88,214,0.04)]">{btn}</span>
                             ))}
                           </div>
@@ -338,24 +358,18 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                     </div>
                     <div className="px-[16px] pb-[10px]">
                       <div className="text-[9px] text-[rgba(0,0,0,0.35)] font-medium border-t border-[rgba(0,0,0,0.06)] pt-[8px]">
-                        {isEn
-                          ? "This is how clients find you. Right now they're finding nothing."
-                          : 'Así es como tus clientes te encuentran. Hoy no están encontrando nada.'}
+                        Así es como tus clientes te encuentran. Hoy no están encontrando nada.
                       </div>
                     </div>
                   </div>
 
                   {/* 3 stats */}
                   <div className="grid grid-cols-3 gap-[8px]">
-                    {(isEn ? [
-                      { num: '30d', label: 'Website live' },
-                      { num: '$0', label: 'Monthly hosting' },
-                      { num: '60d', label: 'Local Google top' },
-                    ] : [
+                    {[
                       { num: '30d', label: 'Web publicada' },
                       { num: '$0', label: 'Hosting mensual' },
                       { num: '60d', label: 'Top Google local' },
-                    ]).map((s, i) => (
+                    ].map((s, i) => (
                       <div key={i} className="bg-[rgba(255,255,255,0.13)] backdrop-blur-[14px] border-[0.5px] border-[rgba(255,255,255,0.22)] rounded-[12px] p-[12px_10px] text-center">
                         <span className="text-[22px] font-extrabold text-white tracking-[-1px] leading-none block mb-[2px]">{s.num}</span>
                         <span className="text-[9px] font-bold text-[rgba(255,255,255,0.6)] leading-[1.3]">{s.label}</span>
@@ -365,9 +379,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
 
                   {/* WhatsApp notification */}
                   <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] border-[0.5px] border-[rgba(255,255,255,0.18)] rounded-[12px] p-[12px_14px]">
-                    <div className="text-[9px] font-bold text-[rgba(255,255,255,0.45)] uppercase tracking-[0.08em] mb-[7px]">
-                      {isEn ? 'Automatic notification — WhatsApp' : 'Notificación automática — WhatsApp'}
-                    </div>
+                    <div className="text-[9px] font-bold text-[rgba(255,255,255,0.45)] uppercase tracking-[0.08em] mb-[7px]">Notificación automática — WhatsApp</div>
                     <div className="bg-[rgba(37,211,102,0.18)] border-[0.5px] border-[rgba(37,211,102,0.35)] rounded-[8px] p-[9px_11px] flex items-start gap-[8px]">
                       <div className="w-[16px] h-[16px] rounded-full bg-[rgba(37,211,102,0.6)] flex items-center justify-center shrink-0 mt-[1px]">
                         <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-[8px] h-[8px]">
@@ -375,12 +387,8 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                         </svg>
                       </div>
                       <div>
-                        <p className="text-[11px] text-[rgba(255,255,255,0.92)] font-bold leading-[1.3] mb-[2px]">
-                          {isEn ? 'New inquiry from the website' : 'Nueva consulta desde la web'}
-                        </p>
-                        <p className="text-[10px] text-[rgba(255,255,255,0.6)] leading-[1.35]">
-                          {isEn ? 'Martin — wants pricing for implants' : 'Martín — quiere saber precios para implantes'}
-                        </p>
+                        <p className="text-[11px] text-[rgba(255,255,255,0.92)] font-bold leading-[1.3] mb-[2px]">Nueva consulta desde la web</p>
+                        <p className="text-[10px] text-[rgba(255,255,255,0.6)] leading-[1.35]">Martín — quiere saber precios para implantes</p>
                       </div>
                     </div>
                   </div>
@@ -392,29 +400,40 @@ export default async function StarterPresencePage({ params }: { params: Promise<
 
           {/* ══════ COSTO DE LA INVISIBILIDAD ══════ */}
           <section className="bg-[var(--cream)] py-[80px] lg:py-[110px] relative overflow-hidden">
-            <AnimatedWatermark text={isEn ? 'INVISIBLE' : 'INVISIBLE'} direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
+            <AnimatedWatermark text="INVISIBLE" direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
             <PageWrapper className="relative z-10">
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                  {isEn ? 'The real problem' : 'El problema real'}
+                  El problema real
                 </div>
                 <h2 className="text-[clamp(28px,3.8vw,50px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[14px]">
-                  {isEn ? (
-                    <>It&apos;s not bad luck.<br /><GradientText>It&apos;s that your clients choose whoever appears.</GradientText></>
-                  ) : (
-                    <>No es mala suerte.<br /><GradientText>Es que tus clientes eligen al que aparece.</GradientText></>
-                  )}
+                  No es mala suerte.<br />
+                  <GradientText>Es que tus clientes eligen al que aparece.</GradientText>
                 </h2>
                 <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[560px] mb-[52px]">
-                  {isEn
-                    ? "Google decides in 3 seconds. If you're not there when someone searches for what you offer, that client doesn't exist for you. And what hurts is you don't even know it."
-                    : 'Google elige en 3 segundos. Si no estás ahí cuando alguien busca lo que ofrecés, ese cliente no existe para vos. Y lo que duele es que ni lo sabés.'}
+                  Google elige en 3 segundos. Si no estás ahí cuando alguien busca lo que ofrecés, ese cliente no existe para vos. Y lo que duele es que ni lo sabés.
                 </p>
               </MotionWrapper>
 
               <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mb-[44px]" staggerDelay={0.1}>
-                {problems.map((card, i) => (
+                {[
+                  {
+                    Icon: IconSearch,
+                    title: 'Tu competidor aparece. Vos no.',
+                    body: 'El cliente busca, ve tres resultados con foto, reseñas y horario. Vos no estás. Llama al que aparece. No siente que eligió mal — simplemente no te encontró.',
+                  },
+                  {
+                    Icon: IconUserX,
+                    title: 'La recomendación que no llega.',
+                    body: 'Alguien te recomienda. La persona te googlea para confirmar que existís. No aparece nada, o aparece algo que no da confianza. La recomendación muere ahí.',
+                  },
+                  {
+                    Icon: IconMonitorX,
+                    title: 'La web que destruye credibilidad.',
+                    body: 'Una web lenta o desactualizada no es neutral — activamente trabaja en tu contra. Mandás el link a un prospecto y perdés credibilidad antes de abrir la boca.',
+                  },
+                ].map((card, i) => (
                   <StaggerItem key={i}>
                     <div className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[20px] p-[28px] h-full hover:shadow-[0_14px_36px_rgba(28,24,40,0.08)] hover:-translate-y-[3px] transition-all duration-300 group">
                       <div className="w-[44px] h-[44px] rounded-[11px] bg-[rgba(232,65,122,0.07)] border-[0.5px] border-[rgba(232,65,122,0.14)] flex items-center justify-center mb-[18px] text-[var(--mg)] transition-colors group-hover:bg-[rgba(232,65,122,0.12)]">
@@ -433,11 +452,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                     <IconBulb />
                   </div>
                   <p className="text-[14px] text-[var(--dark)] leading-[1.6]">
-                    {isEn ? (
-                      <><strong>Starter Presence solves all three.</strong> In 30 days you appear on Google, your website conveys real professionalism, and each inquiry arrives on its own — organized, with data, ready for you to respond.</>
-                    ) : (
-                      <><strong>Starter Presence resuelve los tres.</strong> En 30 días aparecés en Google, tu web transmite profesionalismo real, y cada consulta te llega sola — organizada, con datos, lista para que respondas.</>
-                    )}
+                    <strong>Starter Presence resuelve los tres.</strong> En 30 días aparecés en Google, tu web transmite profesionalismo real, y cada consulta te llega sola — organizada, con datos, lista para que respondas.
                   </p>
                 </div>
               </MotionWrapper>
@@ -446,29 +461,23 @@ export default async function StarterPresencePage({ params }: { params: Promise<
 
           {/* ══════ QUÉ INCLUYE ══════ */}
           <section id="includes" className="bg-[var(--dark)] py-[80px] lg:py-[110px] relative overflow-hidden border-t-[0.5px] border-[rgba(247,246,242,0.06)]">
-            <AnimatedWatermark text={isEn ? 'INCLUDES' : 'INCLUYE'} direction="left" className="-bottom-[10px] -left-[8px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
+            <AnimatedWatermark text="INCLUYE" direction="left" className="-bottom-[10px] -left-[8px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
             <PageWrapper className="relative z-10">
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                  {isEn ? "What you receive" : 'Qué recibís'}
+                  Qué recibís
                 </div>
                 <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                  {isEn ? (
-                    <>Not a feature list.<br /><GradientText>What each thing means for your business.</GradientText></>
-                  ) : (
-                    <>No una lista de features.<br /><GradientText>Lo que cada cosa significa para tu negocio.</GradientText></>
-                  )}
+                  No una lista de features.<br /><GradientText>Lo que cada cosa significa para tu negocio.</GradientText>
                 </h2>
                 <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[540px] mb-[48px]">
-                  {isEn
-                    ? "Each component exists to solve a concrete problem. If it didn't solve anything, we wouldn't include it."
-                    : 'Cada componente existe para resolver un problema concreto. Si no resolviera nada, no lo incluiríamos.'}
+                  Cada componente existe para resolver un problema concreto. Si no resolviera nada, no lo incluiríamos.
                 </p>
               </MotionWrapper>
 
               <StaggerContainer className="flex flex-col gap-[8px]" staggerDelay={0.07}>
-                {includes.map((item, i) => (
+                {INCLUDES.map((item, i) => (
                   <StaggerItem key={i}>
                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-0 bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] overflow-hidden hover:bg-[rgba(247,246,242,0.065)] hover:border-[rgba(247,246,242,0.13)] transition-all duration-200 group">
                       <div className="p-[20px_24px] flex items-center gap-[14px] border-b-[0.5px] lg:border-b-0 lg:border-r-[0.5px] border-[rgba(247,246,242,0.06)]">
@@ -496,14 +505,10 @@ export default async function StarterPresencePage({ params }: { params: Promise<
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                  {isEn ? 'The transformation' : 'La transformación'}
+                  La transformación
                 </div>
                 <h2 className="text-[clamp(28px,3.5vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[44px]">
-                  {isEn ? (
-                    <>What changes in 30 days.<br /><GradientText>Concrete. No empty promises.</GradientText></>
-                  ) : (
-                    <>Lo que cambia en 30 días.<br /><GradientText>Concreto. Sin promesas vacías.</GradientText></>
-                  )}
+                  Lo que cambia en 30 días.<br /><GradientText>Concreto. Sin promesas vacías.</GradientText>
                 </h2>
               </MotionWrapper>
 
@@ -514,10 +519,17 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                     <div className="p-[36px_40px] border-b-[0.5px] lg:border-b-0 lg:border-r-[0.5px] border-[rgba(247,246,242,0.07)]">
                       <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.28)] mb-[20px] flex items-center gap-[8px]">
                         <span className="w-[6px] h-[6px] rounded-full bg-[rgba(247,246,242,0.22)] inline-block" />
-                        {isEn ? 'Today' : 'Hoy'}
+                        Hoy
                       </div>
                       <ul className="flex flex-col gap-[11px]">
-                        {before.map((item, i) => (
+                        {[
+                          'Sin web — o con una que da vergüenza mostrar',
+                          'Invisible en Google · los clientes no te encuentran',
+                          'El 100% de leads por boca a boca — impredecible',
+                          'No sabés cuánta gente llega ni desde dónde',
+                          'Seguimiento de consultas a mano, sin organización',
+                          'Pagando hosting mes a mes sin retorno visible',
+                        ].map((item, i) => (
                           <li key={i} className="flex items-start gap-[10px] text-[14px] text-[rgba(247,246,242,0.4)] leading-[1.5]">
                             <IconX size={15} color="rgba(247,246,242,0.2)" />
                             {item}
@@ -530,10 +542,17 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                       <div className="absolute top-0 right-0 w-[220px] h-[220px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(232,65,122,0.09) 0%, transparent 65%)' }} />
                       <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[20px] flex items-center gap-[8px] relative z-10">
                         <span className="w-[6px] h-[6px] rounded-full bg-[var(--am)] inline-block" />
-                        {isEn ? '30 days later' : '30 días después'}
+                        30 días después
                       </div>
                       <ul className="flex flex-col gap-[11px] relative z-10">
-                        {after.map((item, i) => (
+                        {[
+                          'Web profesional que da confianza al primer vistazo',
+                          'Aparecés en Google cuando te buscan',
+                          'Leads que llegan solos — sin salir a buscarlos',
+                          'Dashboard que muestra visitas, fuente y comportamiento',
+                          'Cada consulta al WhatsApp, organizada, lista para responder',
+                          '$0 de hosting mensual en la mayoría de proyectos',
+                        ].map((item, i) => (
                           <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--cream)] leading-[1.5]">
                             <IconCheck size={15} color="#1D9E75" />
                             {item}
@@ -544,11 +563,9 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                   </div>
                   {/* Bottom CTA */}
                   <div className="border-t-[0.5px] border-[rgba(247,246,242,0.07)] p-[18px_32px] lg:p-[18px_40px] flex flex-wrap items-center justify-between gap-[14px] bg-[rgba(247,246,242,0.03)]">
-                    <p className="text-[13px] text-[var(--muted-l)]">
-                      {isEn ? 'Want this result for your business?' : '¿Querés este resultado en tu negocio?'}
-                    </p>
+                    <p className="text-[13px] text-[var(--muted-l)]">¿Querés este resultado en tu negocio?</p>
                     <OpenMeetingBtn className="px-[22px] py-[10px] rounded-[8px] grad-bg text-white text-[13px] font-bold leading-none cursor-pointer transition-all hover:opacity-90 hover:-translate-y-[1px] border-none shadow-[0_4px_16px_rgba(232,65,122,0.25)]">
-                      {isEn ? 'Book the call →' : 'Agendá la llamada →'}
+                      Agendá la llamada →
                     </OpenMeetingBtn>
                   </div>
                 </div>
@@ -562,10 +579,10 @@ export default async function StarterPresencePage({ params }: { params: Promise<
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                  {isEn ? 'Self-diagnosis' : 'Autodiagnóstico'}
+                  Autodiagnóstico
                 </div>
                 <h2 className="text-[clamp(28px,3.5vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[44px]">
-                  <GradientText>Starter Presence</GradientText> {isEn ? 'is for you if...' : 'es para vos si...'}
+                  <GradientText>Starter Presence</GradientText> es para vos si...
                 </h2>
               </MotionWrapper>
 
@@ -574,10 +591,17 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                   <div className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[20px] p-[32px] h-full shadow-[0_8px_32px_rgba(28,24,40,0.04)]">
                     <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[#1D9E75] mb-[22px] flex items-center gap-[8px]">
                       <span className="w-[6px] h-[6px] rounded-full bg-[#1D9E75] inline-block" />
-                      {isEn ? 'For you' : 'Para vos'}
+                      Para vos
                     </div>
                     <ul className="flex flex-col gap-[12px]">
-                      {forYou.map((item, i) => (
+                      {[
+                        'Tu negocio funciona pero no tenés web, o la que tenés no genera nada',
+                        'Tus clientes llegan por recomendación — querés sumarle un canal digital propio',
+                        'Buscás tu negocio en Google y no aparece nada confiable',
+                        'Querés algo profesional sin depender de nadie para cambios básicos',
+                        'No querés pagar hosting mensual eternamente',
+                        'Querés saber qué gente entra, desde dónde y qué hacen',
+                      ].map((item, i) => (
                         <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--dark)] leading-[1.5]">
                           <IconCheck size={16} color="#1D9E75" />
                           {item}
@@ -591,37 +615,30 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                   <div className="bg-[rgba(28,24,40,0.03)] border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[20px] p-[32px] h-full">
                     <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[22px] flex items-center gap-[8px]">
                       <span className="w-[6px] h-[6px] rounded-full bg-[rgba(28,24,40,0.28)] inline-block" />
-                      {isEn ? 'Another package suits you better if...' : 'Otro paquete te sirve más si...'}
+                      Otro paquete te sirve más si...
                     </div>
                     <ul className="flex flex-col gap-[14px]">
-                      {(isEn ? [
-                        { text: "You already have a website and leads, you need to automate acquisition", pack: 'Growth Machine', href: '/services/growth-machine' },
-                        { text: 'You want a predictable organic channel with SEO and long-term content', pack: 'Full Funnel 360', href: '/services/full-funnel-360' },
-                        { text: 'You have a product and want to sell online directly, without commissions', pack: 'Ecommerce Pro', href: '/services/ecommerce-pro' },
-                        { text: 'Your team spends hours on repetitive tasks that could be automated', pack: 'Automation Retainer', href: '/services/automation-retainer' },
-                      ] : [
+                      {[
                         { text: 'Ya tenés web y leads, necesitás automatizar la captación', pack: 'Growth Machine', href: '/servicios/growth-machine' },
                         { text: 'Querés un canal orgánico predecible con SEO y contenido a largo plazo', pack: 'Full Funnel 360', href: '/servicios/full-funnel-360' },
                         { text: 'Tenés producto y querés vender online directo, sin comisiones', pack: 'Ecommerce Pro', href: '/servicios/ecommerce-pro' },
                         { text: 'Tu equipo gasta horas en tareas repetitivas que podrían automatizarse', pack: 'Automation Retainer', href: '/servicios/automation-retainer' },
-                      ]).map((item, i) => (
+                      ].map((item, i) => (
                         <li key={i} className="flex items-start gap-[10px] text-[14px] leading-[1.5]">
                           <svg viewBox="0 0 24 24" fill="none" stroke="rgba(28,24,40,0.3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[14px] h-[14px] mt-[1px] shrink-0">
                             <line x1="5" y1="12" x2="19" y2="12" />
                             <polyline points="12 5 19 12 12 19" />
                           </svg>
                           <span className="text-[var(--muted)]">{item.text}{' '}
-                            <a href={item.href} className="text-[var(--mg)] font-bold no-underline hover:opacity-80 transition-opacity whitespace-nowrap">{isEn ? 'See' : 'Ver'} {item.pack} →</a>
+                            <a href={item.href} className="text-[var(--mg)] font-bold no-underline hover:opacity-80 transition-opacity whitespace-nowrap">Ver {item.pack} →</a>
                           </span>
                         </li>
                       ))}
                     </ul>
                     <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(28,24,40,0.07)]">
                       <p className="text-[12px] text-[var(--muted)] leading-[1.6]">
-                        {isEn ? "Not sure which one fits? " : '¿No sabés cuál corresponde? '}
-                        <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">
-                          {isEn ? 'Request the free audit →' : 'Pedí la auditoría gratuita →'}
-                        </a>
+                        ¿No sabés cuál corresponde?{' '}
+                        <a href="/auditoria-web-gratuita" className="text-[var(--mg)] font-bold no-underline hover:opacity-80">Pedí la auditoría gratuita →</a>
                       </p>
                     </div>
                   </div>
@@ -632,30 +649,43 @@ export default async function StarterPresencePage({ params }: { params: Promise<
 
           {/* ══════ CÓMO FUNCIONA (3 pasos) ══════ */}
           <section className="bg-[var(--dark)] py-[80px] lg:py-[110px] relative overflow-hidden border-t-[0.5px] border-[rgba(247,246,242,0.06)]">
-            <AnimatedWatermark text={isEn ? 'PROCESS' : 'PROCESO'} direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
+            <AnimatedWatermark text="PROCESO" direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
             <PageWrapper className="relative z-10">
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                  {isEn ? 'How it works' : 'Cómo funciona'}
+                  Cómo funciona
                 </div>
                 <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                  {isEn ? (
-                    <>From the first conversation<br /><GradientText>to the live website in 30 days.</GradientText></>
-                  ) : (
-                    <>De la primera conversación<br /><GradientText>a la web publicada en 30 días.</GradientText></>
-                  )}
+                  De la primera conversación<br /><GradientText>a la web publicada en 30 días.</GradientText>
                 </h2>
                 <p className="text-[16px] leading-[1.7] text-[var(--muted-l)] max-w-[480px] mb-[52px]">
-                  {isEn
-                    ? 'No endless processes. No meetings that go nowhere. Three steps and done.'
-                    : 'Sin procesos interminables. Sin reuniones que no van a ningún lado. Tres pasos y listo.'}
+                  Sin procesos interminables. Sin reuniones que no van a ningún lado. Tres pasos y listo.
                 </p>
               </MotionWrapper>
 
               <MotionWrapper type="fadeUp" delay={0.1}>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-[rgba(247,246,242,0.05)] rounded-[20px] overflow-hidden">
-                  {process.map((step, i) => (
+                  {[
+                    {
+                      num: '01',
+                      time: 'Día 0',
+                      title: 'Llamada de diagnóstico',
+                      body: '30 minutos. Te escuchamos. Entendemos tu negocio y tus objetivos. Al final sabés exactamente qué vas a recibir, cuándo y cuánto. Si no somos la opción correcta, también te lo decimos sin rodeos.',
+                    },
+                    {
+                      num: '02',
+                      time: 'Días 1–30',
+                      title: 'Construimos juntos',
+                      body: 'Arrancamos con propuesta aprobada. Ves el avance en tiempo real. Cada etapa tiene revisión antes de seguir. No desaparecemos — te mantenemos informado durante todo el proceso.',
+                    },
+                    {
+                      num: '03',
+                      time: 'Día 30+',
+                      title: 'Publicamos y te entregamos todo',
+                      body: 'Lanzamos la web, entregamos todos los accesos (son tuyos, siempre), documentamos cada herramienta. A los 30 días del lanzamiento hacemos check-in para medir resultados y ajustar.',
+                    },
+                  ].map((step, i) => (
                     <div key={i} className="bg-[rgba(247,246,242,0.03)] p-[32px_28px] hover:bg-[rgba(247,246,242,0.055)] transition-colors">
                       <div className="w-[50px] h-[50px] rounded-[12px] grad-bg flex items-center justify-center text-[15px] font-extrabold text-white mb-[16px] shadow-[0_6px_20px_rgba(232,65,122,0.22)]">{step.num}</div>
                       <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[7px]">{step.time}</div>
@@ -674,23 +704,17 @@ export default async function StarterPresencePage({ params }: { params: Promise<
               <MotionWrapper type="fadeUp">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                  {isEn ? 'Frequently asked questions' : 'Preguntas frecuentes'}
+                  Preguntas frecuentes
                 </div>
                 <h2 className="text-[clamp(28px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                  {isEn ? (
-                    <>What everyone asks<br /><GradientText>before taking the step.</GradientText></>
-                  ) : (
-                    <>Lo que todo el mundo pregunta<br /><GradientText>antes de dar el paso.</GradientText></>
-                  )}
+                  Lo que todo el mundo pregunta<br /><GradientText>antes de dar el paso.</GradientText>
                 </h2>
                 <p className="text-[15px] leading-[1.7] text-[var(--muted-l)] max-w-[500px] mb-[44px]">
-                  {isEn
-                    ? 'We answer honestly. If something is not here, we answer it on the call.'
-                    : 'Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.'}
+                  Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.
                 </p>
               </MotionWrapper>
               <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]" staggerDelay={0.06}>
-                {faqItems.map((faq, idx) => (
+                {FAQ_ITEMS.map((faq, idx) => (
                   <StaggerItem key={idx}>
                     <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[24px] transition-all duration-200 hover:bg-[rgba(247,246,242,0.065)] hover:border-[rgba(247,246,242,0.14)] hover:-translate-y-[2px]">
                       <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[10px] tracking-[-0.2px]">{faq.q}</h3>
@@ -703,17 +727,12 @@ export default async function StarterPresencePage({ params }: { params: Promise<
               {/* Trust bar */}
               <MotionWrapper type="fadeUp" delay={0.3}>
                 <div className="mt-[40px] flex flex-wrap items-center justify-center gap-x-[32px] gap-y-[12px] border-t-[0.5px] border-[rgba(247,246,242,0.07)] pt-[32px]">
-                  {(isEn ? [
-                    'Delaware LLC registered',
-                    '100% your access credentials',
-                    'No long-term contracts',
-                    'Proposal before payment',
-                  ] : [
+                  {[
                     'LLC registrada en Delaware',
                     'Accesos 100% tuyos',
                     'Sin contratos de permanencia',
                     'Propuesta antes de cobrar',
-                  ]).map((item, i) => (
+                  ].map((item, i) => (
                     <div key={i} className="flex items-center gap-[8px] text-[12px] text-[rgba(247,246,242,0.4)] font-semibold">
                       <IconCheck size={13} color="var(--am)" />
                       {item}
@@ -726,42 +745,28 @@ export default async function StarterPresencePage({ params }: { params: Promise<
 
           {/* ══════ CTA FINAL ══════ */}
           <CtaFinal
-            headline={isEn ? (
-              <>30 days from today,<br /><GradientText>your business appears on Google.</GradientText></>
-            ) : (
-              <>30 días a partir de hoy,<br /><GradientText>tu negocio aparece en Google.</GradientText></>
-            )}
-            subheadline={isEn
-              ? 'The call is free and lasts 30 minutes. At the end you know exactly what you receive, how much it costs and whether it makes sense to move forward. No commitment of any kind.'
-              : 'La llamada es gratuita y dura 30 minutos. Al final sabés exactamente qué recibís, cuánto cuesta y si tiene sentido avanzar. Sin compromiso de ningún tipo.'}
-            mainCta={{ label: isEn ? 'Book your free call →' : 'Agendá tu llamada gratuita →', href: '#' }}
-            disclaimer={isEn
-              ? 'No commitment · No hidden costs · We respond in less than 2 hours'
-              : 'Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas'}
-            watermarkText={isEn ? 'START' : 'EMPEZÁ'}
+            headline={<>30 días a partir de hoy,<br /><GradientText>tu negocio aparece en Google.</GradientText></>}
+            subheadline="La llamada es gratuita y dura 30 minutos. Al final sabés exactamente qué recibís, cuánto cuesta y si tiene sentido avanzar. Sin compromiso de ningún tipo."
+            mainCta={{ label: 'Agendá tu llamada gratuita →', href: '#' }}
+            disclaimer="Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas"
+            watermarkText="EMPEZÁ"
             cards={[
               {
-                tag: isEn ? "I have a website but it doesn't work" : 'Tengo web pero no funciona',
-                title: isEn ? 'Free audit first' : 'Auditoría gratuita primero',
-                desc: isEn
-                  ? 'We analyze your website in 2 hours and you receive the diagnosis with the 3 highest-impact concrete actions.'
-                  : 'Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.',
-                href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
+                tag: 'Tengo web pero no funciona',
+                title: 'Auditoría gratuita primero',
+                desc: 'Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.',
+                href: '/auditoria-web-gratuita',
               },
               {
-                tag: isEn ? "I don't have a website yet" : 'Todavía no tengo web',
-                title: isEn ? 'Free mini-course · 5 emails' : 'Mini-curso gratuito · 5 emails',
-                desc: isEn
-                  ? 'What you need to know before investing in your digital presence. Free, in 5 days.'
-                  : 'Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.',
-                href: isEn ? '/email-course' : '/email-course',
+                tag: 'Todavía no tengo web',
+                title: 'Mini-curso gratuito · 5 emails',
+                desc: 'Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.',
+                href: '/email-course',
               },
               {
-                tag: isEn ? "I know what I want" : 'Ya sé lo que quiero',
-                title: isEn ? 'Diagnosis call' : 'Llamada de diagnóstico',
-                desc: isEn
-                  ? '30 minutes. No sales. At the end you know what Starter Presence includes for your specific business.'
-                  : '30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.',
+                tag: 'Ya sé lo que quiero',
+                title: 'Llamada de diagnóstico',
+                desc: '30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.',
                 href: '#ctaf',
               },
             ]}
@@ -777,28 +782,28 @@ export default async function StarterPresencePage({ params }: { params: Promise<
           langText={tLayout('Footer.lang')}
           columns={[
             {
-              title: isEn ? 'Services' : 'Servicios',
+              title: 'Servicios',
               links: [
-                { label: 'Starter Presence', href: `/${isEn ? 'services' : 'servicios'}/starter-presence` },
-                { label: 'Growth Machine', href: `/${isEn ? 'services' : 'servicios'}/growth-machine` },
-                { label: 'Full Funnel 360', href: `/${isEn ? 'services' : 'servicios'}/full-funnel-360` },
-                { label: 'Ecommerce Pro', href: `/${isEn ? 'services' : 'servicios'}/ecommerce-pro` },
-                { label: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
+                { label: 'Starter Presence', href: '/servicios/starter-presence' },
+                { label: 'Growth Machine', href: '/servicios/growth-machine' },
+                { label: 'Full Funnel 360', href: '/servicios/full-funnel-360' },
+                { label: 'Ecommerce Pro', href: '/servicios/ecommerce-pro' },
+                { label: 'Automation Retainer', href: '/servicios/automation-retainer' },
               ],
             },
             {
-              title: isEn ? 'Free' : 'Gratuito',
+              title: 'Gratuito',
               links: [
-                { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
-                { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/email-course' },
+                { label: 'Auditoría web', href: '/auditoria-web-gratuita' },
+                { label: 'Mini-curso 5 días', href: '/email-course' },
               ],
             },
             {
-              title: isEn ? 'Company' : 'Empresa',
+              title: 'Empresa',
               links: [
-                { label: isEn ? 'All services' : 'Todos los servicios', href: isEn ? '/services' : '/servicios' },
-                { label: isEn ? 'Case studies' : 'Casos de éxito', href: '/#case' },
-                { label: isEn ? 'Privacy' : 'Privacidad', href: '#' },
+                { label: 'Todos los servicios', href: '/servicios' },
+                { label: 'Casos de éxito', href: '/#case' },
+                { label: 'Privacidad', href: '#' },
               ],
             },
           ]}

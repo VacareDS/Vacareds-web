@@ -139,33 +139,100 @@ function IconX({ color = 'rgba(247,246,242,0.25)', size = 16 }: { color?: string
   );
 }
 
-// ─── Icon arrays (order must match JSON array order) ───────────────────────
-const INCLUDES_ICONS = [IconLayers, IconMail, IconCalendar, IconZap, IconCreditCard, IconBarChart];
-const SYMPTOM_ICONS = [IconDroplet, IconClock, IconUsers];
+// ─── Data ──────────────────────────────────────────────────────────────────
+const INCLUDES = [
+  {
+    Icon: IconLayers,
+    what: 'Web estratégica — diseñada para convertir, no para decorar',
+    means: 'No un folleto digital. Cada sección tiene un CTA, cada palabra está escrita sobre los puntos de dolor de tu buyer persona. El objetivo es uno: que el visitante deje sus datos o agende.',
+  },
+  {
+    Icon: IconMail,
+    what: 'Lead magnet + 5 emails que llevan al prospecto de interesado a listo',
+    means: 'Un recurso de valor (PDF, checklist, guía corta) que captura el email. Luego, 5 emails automatizados en 7 días — cada uno diseñado para responder una objeción distinta y acercar a la conversación.',
+  },
+  {
+    Icon: IconCalendar,
+    what: 'Agendamiento automático — los prospectos eligen su horario sin vos',
+    means: 'Integración de cal.com. El prospecto ve tu disponibilidad, elige el horario y confirma. Vos recibís la notificación con los datos. Sin "¿el martes a las 3?" por WhatsApp.',
+  },
+  {
+    Icon: IconZap,
+    what: '3 a 5 flujos en n8n — el sistema que trabaja cuando vos no estás',
+    means: 'Automatizaciones que conectan tu web, tu email, tu WhatsApp y tu calendario. Cuando llega un lead: notificación inmediata, email de bienvenida, seguimiento programado. El sistema trabaja a las 2am.',
+  },
+  {
+    Icon: IconCreditCard,
+    what: 'Integración de pagos — cobrás sin fricción, el onboarding arranca solo',
+    means: 'Si vendés servicios online, Stripe integrado en el flujo. El pago activa automáticamente el proceso de onboarding. Sin enviar links de pago manual ni confirmar transferencias.',
+  },
+  {
+    Icon: IconBarChart,
+    what: 'Dashboard en tiempo real — sabés de dónde vienen y cuántos convierten',
+    means: 'Un único lugar con cuántos leads entraron, desde qué fuente, cuántos agendaron y cuántos convirtieron. Sin abrir 5 herramientas distintas. Sin adivinar qué está funcionando.',
+  },
+];
 
-// ─── Types ────────────────────────────────────────────────────────────────
-type IncludeItem = { what: string; means: string };
-type TimelineItem = { stage: string; without: string; with: string };
-type FaqItem = { q: string; a: string };
-type SymptomItem = { title: string; body: string };
+const TIMELINE = [
+  {
+    stage: 'Visita la web',
+    without: 'Sale sin dejar datos — no hay forma de volver a contactarlo',
+    with: 'Descarga el lead magnet, deja su email, entra al sistema',
+  },
+  {
+    stage: 'Primer contacto',
+    without: 'Manual, cuando tenés tiempo — a veces horas o días después',
+    with: 'Email automático en 5 minutos, mientras la intención está en su pico',
+  },
+  {
+    stage: 'Nurturing',
+    without: 'No existe — o un mensaje de WhatsApp que mandás si te acordás',
+    with: 'Secuencia de 5 emails en 7 días, cada uno con un propósito específico',
+  },
+  {
+    stage: 'Agendamiento',
+    without: '"¿El martes a las 3?" — 4 mensajes para acordar un horario',
+    with: 'Link de cal.com en el último email — el prospecto elige solo',
+  },
+  {
+    stage: 'Seguimiento',
+    without: 'Hoja de cálculo o memoria — inevitablemente se pierde alguno',
+    with: 'Dashboard con estado de cada lead en tiempo real',
+  },
+];
+
+const FAQ_ITEMS = [
+  {
+    q: '¿Qué pasa si no soy técnico y no entiendo n8n?',
+    a: 'No necesitás entenderlo — ni aprender nada técnico. Nosotros construimos todos los flujos, los documentamos con capturas y los probamos antes de entregar. Si algo falla después del lanzamiento, lo arreglamos. Es nuestro sistema, no tuyo — hasta que esté funcionando perfecto.',
+  },
+  {
+    q: '¿Cuánto tarda en dar resultados?',
+    a: 'El sistema captura leads desde el día del lanzamiento. Los primeros resultados de nurturing se ven en la primera semana — si alguien se suscribe al lead magnet el lunes, el viernes ya recibió 3 emails automatizados. El primer lead calificado suele aparecer en los primeros 7-14 días de operación.',
+  },
+  {
+    q: '¿Puedo empezar con Growth Machine si ya tengo una web?',
+    a: 'Sí. Podemos construir el sistema de captación y automatización sobre tu web actual, sin tocar nada del diseño si no hace falta. Si la web tiene problemas técnicos que afectan la conversión, te lo decimos y lo discutimos — pero no es condición para empezar.',
+  },
+  {
+    q: '¿Qué herramientas usa el sistema?',
+    a: 'n8n para automatizaciones, cal.com para agendamiento, Stripe para pagos (si aplica), GA4 + Looker Studio para métricas. Son herramientas open source o de bajo costo — sin licencias caras que vos tengas que pagar mes a mes. Todo documentado. Todo tuyo.',
+  },
+  {
+    q: '¿Voy a depender de ustedes para que funcione?',
+    a: 'No. Al terminar el proyecto te entregamos todos los accesos, credenciales y documentación. Si el día de mañana querés que lo gestione otra persona o agencia, podés hacerlo sin perder nada. El sistema es de tu negocio, no nuestro.',
+  },
+];
 
 // ─── Page ──────────────────────────────────────────────────────────────────
 export default async function GrowthMachinePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const tLayout = await getTranslations({ locale, namespace: 'Layout' });
-  const t = await getTranslations({ locale, namespace: 'ServicePages.growthMachine' });
 
   const BASE = 'https://vacaredigitalsolutions.com';
   const isEn = locale === 'en';
   const svcPath = isEn ? `${BASE}/en/services/growth-machine` : `${BASE}/es/servicios/growth-machine`;
-
-  const includes = (t.raw('includes') as IncludeItem[]).map((item, i) => ({ ...item, Icon: INCLUDES_ICONS[i] }));
-  const timeline = t.raw('timeline') as TimelineItem[];
-  const faqItems = t.raw('faq') as FaqItem[];
-  const heroBullets = t.raw('heroBullets') as string[];
-  const forYou = t.raw('forYou') as string[];
-  const symptoms = (t.raw('symptoms') as SymptomItem[]).map((item, i) => ({ ...item, Icon: SYMPTOM_ICONS[i] }));
 
   return (
     <>
@@ -212,27 +279,26 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[20px]">
                   <i className="w-[18px] h-[1.5px] bg-[var(--am)] block" />
-                  {isEn ? 'Package 02 · Automated lead capture system' : 'Paquete 02 · Sistema de captación automatizado'}
+                  Paquete 02 · Sistema de captación automatizado
                 </div>
 
                 <h1 className="text-[clamp(34px,4.5vw,58px)] font-extrabold leading-[1.07] tracking-[-2px] text-[var(--cream)] mb-[18px]">
                   <span className="block grad-text text-[clamp(22px,2.8vw,36px)] mb-[8px]">Growth Machine</span>
-                  {isEn ? (
-                    <>Your business has leads.<br />The problem is they<br /><GradientText>go cold before you get there.</GradientText></>
-                  ) : (
-                    <>Tu negocio tiene leads.<br />El problema es que<br /><GradientText>se enfrían antes de que llegués.</GradientText></>
-                  )}
+                  Tu negocio tiene leads.<br />El problema es que<br />
+                  <GradientText>se enfrían antes de que llegués.</GradientText>
                 </h1>
 
                 <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[460px] mb-[28px]">
-                  {isEn
-                    ? 'Growth Machine builds the system that captures, nurtures and qualifies leads autonomously. You receive the prospect ready to close — the system does the rest.'
-                    : 'Growth Machine construye el sistema que captura, nutre y califica leads de forma autónoma. Vos recibís el prospecto listo para cerrar — el sistema hace el resto.'}
+                  Growth Machine construye el sistema que captura, nutre y califica leads de forma autónoma. Vos recibís el prospecto listo para cerrar — el sistema hace el resto.
                 </p>
 
                 {/* 3-bullet outcomes */}
                 <ul className="flex flex-col gap-[10px] mb-[36px] max-w-[440px]">
-                  {heroBullets.map((b, i) => (
+                  {[
+                    'Leads capturados y nutridos solos — mientras dormís',
+                    'Reuniones agendadas automáticamente, sin coordinar por WhatsApp',
+                    'Dashboard con estado de cada lead en tiempo real',
+                  ].map((b, i) => (
                     <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--cream)]">
                       <span className="w-[20px] h-[20px] rounded-full grad-bg flex items-center justify-center shrink-0 mt-[1px]">
                         <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-[10px] h-[10px]">
@@ -248,16 +314,14 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeUp" delay={0.15}>
                 <div className="flex flex-wrap gap-[12px] mb-[28px]">
                   <OpenMeetingBtn className="px-[28px] py-[15px] rounded-[10px] grad-bg text-white text-[15px] font-bold leading-none cursor-pointer transition-all hover:-translate-y-[1px] hover:shadow-[0_12px_32px_rgba(232,65,122,0.35)] border-none">
-                    {isEn ? 'I want my lead capture system →' : 'Quiero mi sistema de captación →'}
+                    Quiero mi sistema de captación →
                   </OpenMeetingBtn>
                   <a href="#como-funciona" className="px-[24px] py-[15px] rounded-[10px] border-[1.5px] border-[rgba(247,246,242,0.15)] text-[var(--cream)] text-[15px] font-bold leading-none no-underline inline-flex items-center transition-all hover:border-[rgba(247,246,242,0.38)] hover:-translate-y-[1px]">
-                    {isEn ? 'See how it works ↓' : 'Ver cómo funciona ↓'}
+                    Ver cómo funciona ↓
                   </a>
                 </div>
                 <p className="text-[12px] text-[rgba(247,246,242,0.3)] font-medium">
-                  {isEn
-                    ? 'Free call · No commitment · System running in less than 30 days'
-                    : 'Llamada gratuita · Sin compromiso · Sistema funcionando en menos de 30 días'}
+                  Llamada gratuita · Sin compromiso · Sistema funcionando en menos de 30 días
                 </p>
               </MotionWrapper>
             </div>
@@ -280,11 +344,15 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
                 {/* Flow diagram */}
                 <div className="bg-[rgba(255,255,255,0.12)] backdrop-blur-[14px] border-[0.5px] border-[rgba(255,255,255,0.22)] rounded-[14px] p-[18px_16px]">
-                  <div className="text-[9px] font-bold text-[rgba(255,255,255,0.55)] uppercase tracking-[0.08em] mb-[12px]">
-                    {isEn ? 'Automated flow · Growth Machine' : 'Flujo automatizado · Growth Machine'}
-                  </div>
+                  <div className="text-[9px] font-bold text-[rgba(255,255,255,0.55)] uppercase tracking-[0.08em] mb-[12px]">Flujo automatizado · Growth Machine</div>
                   <div className="flex flex-col gap-[6px]">
-                    {(t.raw('flowSteps') as Array<{ step: string; label: string; sub: string }>).map((item, i, arr) => (
+                    {[
+                      { step: '01', label: 'Visita la web', sub: 'Ve el lead magnet' },
+                      { step: '02', label: 'Descarga y deja email', sub: '→ entra al sistema' },
+                      { step: '03', label: 'Secuencia de 5 emails', sub: 'En 7 días, automático' },
+                      { step: '04', label: 'Agenda la reunión', sub: 'Elige su horario solo' },
+                      { step: '05', label: 'Vos cerrás', sub: 'Prospecto calificado' },
+                    ].map((item, i, arr) => (
                       <div key={i}>
                         <div className="flex items-center gap-[10px]">
                           <div className="w-[26px] h-[26px] rounded-full bg-[rgba(255,255,255,0.18)] border-[0.5px] border-[rgba(255,255,255,0.3)] flex items-center justify-center shrink-0">
@@ -312,7 +380,11 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
                 {/* 3 stats */}
                 <div className="grid grid-cols-3 gap-[8px]">
-                  {(t.raw('stats') as Array<{ num: string; label: string }>).map((s, i) => (
+                  {[
+                    { num: '7d', label: 'Leads nutridos' },
+                    { num: '5min', label: '1er email auto' },
+                    { num: '0', label: 'Coord. manuales' },
+                  ].map((s, i) => (
                     <div key={i} className="bg-[rgba(255,255,255,0.13)] backdrop-blur-[14px] border-[0.5px] border-[rgba(255,255,255,0.22)] rounded-[12px] p-[12px_10px] text-center">
                       <span className="text-[22px] font-extrabold text-white tracking-[-1px] leading-none block mb-[2px]">{s.num}</span>
                       <span className="text-[9px] font-bold text-[rgba(255,255,255,0.6)] leading-[1.3]">{s.label}</span>
@@ -322,9 +394,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
                 {/* "2am" insight */}
                 <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] border-[0.5px] border-[rgba(255,255,255,0.18)] rounded-[12px] p-[12px_14px]">
-                  <div className="text-[9px] font-bold text-[rgba(255,255,255,0.45)] uppercase tracking-[0.08em] mb-[6px]">
-                    {isEn ? 'Activity at 2:04 AM' : 'Actividad a las 2:04 AM'}
-                  </div>
+                  <div className="text-[9px] font-bold text-[rgba(255,255,255,0.45)] uppercase tracking-[0.08em] mb-[6px]">Actividad a las 2:04 AM</div>
                   <div className="bg-[rgba(255,255,255,0.12)] border-[0.5px] border-[rgba(255,255,255,0.2)] rounded-[8px] p-[8px_11px] flex items-start gap-[8px]">
                     <div className="w-[16px] h-[16px] rounded-full bg-[rgba(255,255,255,0.3)] flex items-center justify-center shrink-0 mt-[1px]">
                       <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-[8px] h-[8px]">
@@ -332,12 +402,8 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                       </svg>
                     </div>
                     <div>
-                      <p className="text-[11px] text-white font-bold leading-[1.3] mb-[1px]">
-                        {isEn ? 'New qualified lead' : 'Nuevo lead calificado'}
-                      </p>
-                      <p className="text-[10px] text-[rgba(255,255,255,0.65)] leading-[1.35]">
-                        {isEn ? 'Meeting booked — tomorrow 10am' : 'Reunión agendada — mañana 10am'}
-                      </p>
+                      <p className="text-[11px] text-white font-bold leading-[1.3] mb-[1px]">Nuevo lead calificado</p>
+                      <p className="text-[10px] text-[rgba(255,255,255,0.65)] leading-[1.35]">Reunión agendada — mañana 10am</p>
                     </div>
                   </div>
                 </div>
@@ -349,20 +415,19 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
         {/* ══════ EL BALDE CON AGUJEROS ══════ */}
         <section className="bg-[var(--cream)] py-[80px] lg:py-[110px] relative overflow-hidden">
-          <AnimatedWatermark text={isEn ? 'LEAKS' : 'AGUJEROS'} direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
+          <AnimatedWatermark text="AGUJEROS" direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
           <PageWrapper className="relative z-10">
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                {isEn ? 'The diagnosis' : 'El diagnóstico'}
+                El diagnóstico
               </div>
               <h2 className="text-[clamp(28px,3.8vw,50px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[14px]">
-                {isEn ? <>How much is a lead worth<br /><GradientText>that goes cold?</GradientText></> : <>¿Cuánto vale un lead<br /><GradientText>que se enfría?</GradientText></>}
+                ¿Cuánto vale un lead<br />
+                <GradientText>que se enfría?</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[580px] mb-[52px]">
-                {isEn
-                  ? "Most businesses work hard to attract visitors — with ads, social media, word of mouth. But they have no system to convert that interest into a real conversation. Visitors arrive, find no reason to stay, and disappear."
-                  : 'La mayoría de los negocios trabajan duro para atraer visitantes — con publicidad, redes, boca a boca. Pero no tienen ningún sistema para convertir ese interés en una conversación real. Los visitantes llegan, no encuentran razón para quedarse, y desaparecen.'}
+                La mayoría de los negocios trabajan duro para atraer visitantes — con publicidad, redes, boca a boca. Pero no tienen ningún sistema para convertir ese interés en una conversación real. Los visitantes llegan, no encuentran razón para quedarse, y desaparecen.
               </p>
             </MotionWrapper>
 
@@ -370,17 +435,12 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
               {/* Visual "balde" */}
               <MotionWrapper type="fadeLeft">
                 <div className="bg-white rounded-[24px] border-[0.5px] border-[rgba(28,24,40,0.08)] p-[32px] shadow-[0_8px_40px_rgba(28,24,40,0.06)] h-full">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[var(--muted)] mb-[20px]">
-                    {isEn ? 'Your business today' : 'Tu negocio hoy'}
-                  </p>
+                  <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[var(--muted)] mb-[20px]">Tu negocio hoy</p>
                   {/* Balde visual */}
                   <div className="relative mx-auto w-[220px]">
                     {/* Fuentes arriba */}
                     <div className="flex justify-around items-end mb-[12px] px-[10px]">
-                      {(isEn
-                        ? ['Ads', 'Referrals', 'Social']
-                        : ['Publicidad', 'Referidos', 'Redes']
-                      ).map((src) => (
+                      {['Publicidad', 'Referidos', 'Redes'].map((src) => (
                         <div key={src} className="flex flex-col items-center gap-[6px]">
                           <span className="text-[10px] font-bold text-[var(--muted)] text-center">{src}</span>
                           <div className="w-[2px] h-[24px] bg-gradient-to-b from-[rgba(232,65,122,0.1)] to-[var(--mg)] rounded-full relative">
@@ -389,32 +449,21 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                         </div>
                       ))}
                     </div>
-
+                    
                     {/* Balde */}
                     <div className="relative bg-white border-[1.5px] border-[rgba(28,24,40,0.15)] shadow-[inset_0_-12px_24px_rgba(28,24,40,0.03)] rounded-b-[40px] rounded-t-[8px] h-[100px] flex flex-col items-center justify-center">
-                      <p className="text-[12px] font-extrabold text-[var(--dark)] leading-[1.3]">
-                        {isEn ? 'Visits & leads' : 'Visitas & leads'}
-                      </p>
-                      <p className="text-[10px] text-[var(--muted)] mt-[4px]">
-                        {isEn ? 'no nurturing system' : 'sin sistema de nurturing'}
-                      </p>
+                      <p className="text-[12px] font-extrabold text-[var(--dark)] leading-[1.3]">Visitas &amp; leads</p>
+                      <p className="text-[10px] text-[var(--muted)] mt-[4px]">sin sistema de nurturing</p>
 
                       {/* Agua adentro */}
                       <div className="absolute bottom-0 left-0 right-0 h-[40px] bg-[rgba(232,65,122,0.05)] rounded-b-[40px] pointer-events-none" />
 
                       {/* Agujeros */}
-                      {(isEn
-                        ? [
-                            { left: '22%', bottom: '10px', label: 'No follow-up' },
-                            { left: '50%', bottom: '-2px', label: 'No nurturing' },
-                            { left: '78%', bottom: '10px', label: 'No scheduling' },
-                          ]
-                        : [
-                            { left: '22%', bottom: '10px', label: 'Sin seguimiento' },
-                            { left: '50%', bottom: '-2px', label: 'Sin nurturing' },
-                            { left: '78%', bottom: '10px', label: 'Sin agenda' },
-                          ]
-                      ).map((hole, i) => (
+                      {[
+                        { left: '22%', bottom: '10px', label: 'Sin seguimiento' },
+                        { left: '50%', bottom: '-2px', label: 'Sin nurturing' },
+                        { left: '78%', bottom: '10px', label: 'Sin agenda' },
+                      ].map((hole, i) => (
                         <div key={i} className="absolute flex flex-col items-center" style={{ left: hole.left, bottom: hole.bottom, transform: 'translateX(-50%) translateY(100%)' }}>
                           <div className="w-[3px] h-[24px] bg-gradient-to-b from-[var(--mg)] to-[rgba(232,65,122,0.05)] rounded-full opacity-80" />
                           <span className="text-[10px] text-[var(--mg)] font-bold whitespace-nowrap mt-[4px] drop-shadow-sm">{hole.label}</span>
@@ -422,9 +471,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                       ))}
                     </div>
 
-                    <p className="text-center text-[11px] text-[var(--muted)] mt-[60px] font-medium">
-                      {isEn ? 'Leads leak through the holes' : 'Los leads se escurren por los agujeros'}
-                    </p>
+                    <p className="text-center text-[11px] text-[var(--muted)] mt-[60px] font-medium">Los leads se escurren por los agujeros</p>
                   </div>
                 </div>
               </MotionWrapper>
@@ -432,7 +479,23 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
               {/* 3 síntomas */}
               <MotionWrapper type="fadeRight" delay={0.1}>
                 <div className="flex flex-col gap-[12px] h-full">
-                  {symptoms.map((card, i) => (
+                  {[
+                    {
+                      Icon: IconDroplet,
+                      title: 'Tenés tráfico, pero pocas consultas',
+                      body: 'Visitantes que llegan y se van. Sin un lead magnet ni un incentivo para dejar datos, el 97% sale para siempre. Ese tráfico es dinero que ya gastaste en conseguirlo.',
+                    },
+                    {
+                      Icon: IconClock,
+                      title: 'Las consultas se enfrían si no respondés rápido',
+                      body: 'Responder un lead en 5 minutos tiene 21 veces más probabilidad de conversión que en 30 minutos. Si tu respuesta depende de que vos estés mirando el teléfono, perdés.',
+                    },
+                    {
+                      Icon: IconUsers,
+                      title: 'No podés seguir a todos — el crecimiento tiene techo',
+                      body: 'Cuando el seguimiento es manual, el límite de clientes es el límite de horas. Growth Machine rompe ese techo: el sistema sigue a todos, al mismo tiempo, sin cansarse.',
+                    },
+                  ].map((card, i) => (
                     <div key={i} className="bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[16px] p-[20px] hover:shadow-[0_8px_28px_rgba(28,24,40,0.07)] hover:-translate-y-[2px] transition-all duration-300 group">
                       <div className="flex items-start gap-[14px]">
                         <div className="w-[38px] h-[38px] rounded-[10px] bg-[rgba(232,65,122,0.07)] border-[0.5px] border-[rgba(232,65,122,0.14)] flex items-center justify-center shrink-0 text-[var(--mg)] transition-colors group-hover:bg-[rgba(232,65,122,0.12)]">
@@ -455,11 +518,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                   <IconBulb />
                 </div>
                 <p className="text-[14px] text-[var(--dark)] leading-[1.6]">
-                  {isEn ? (
-                    <><strong>Growth Machine plugs the leaks.</strong> It captures the email before they leave, sends the first email in 5 minutes, nurtures the prospect over 7 days, and books the meeting without you doing anything.</>
-                  ) : (
-                    <><strong>Growth Machine tapa el balde.</strong> Captura el email antes de que se vaya, envía el primer email en 5 minutos, nutre al prospecto en 7 días, y agenda la reunión sin que vos hagas nada.</>
-                  )}
+                  <strong>Growth Machine tapa el balde.</strong> Captura el email antes de que se vaya, envía el primer email en 5 minutos, nutre al prospecto en 7 días, y agenda la reunión sin que vos hagas nada.
                 </p>
               </div>
             </MotionWrapper>
@@ -468,24 +527,18 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
         {/* ══════ CÓMO FUNCIONA — TIMELINE ANTES / DESPUÉS ══════ */}
         <section id="como-funciona" className="bg-[var(--dark)] py-[80px] lg:py-[110px] relative overflow-hidden border-t-[0.5px] border-[rgba(247,246,242,0.06)]">
-          <AnimatedWatermark text={isEn ? 'SYSTEM' : 'SISTEMA'} direction="left" className="-bottom-[10px] -left-[8px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
+          <AnimatedWatermark text="SISTEMA" direction="left" className="-bottom-[10px] -left-[8px] text-[clamp(70px,13vw,160px)] text-[rgba(247,246,242,0.025)] tracking-[-4px] italic" />
           <PageWrapper className="relative z-10">
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                {isEn ? 'The system' : 'El sistema'}
+                El sistema
               </div>
               <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                {isEn ? (
-                  <>What happens from the moment someone<br /><GradientText>discovers you to when they hire you.</GradientText></>
-                ) : (
-                  <>Lo que pasa desde que alguien<br /><GradientText>te descubre hasta que te contrata.</GradientText></>
-                )}
+                Lo que pasa desde que alguien<br /><GradientText>te descubre hasta que te contrata.</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[520px] mb-[48px]">
-                {isEn
-                  ? 'Today every stage depends on someone triggering it manually. Growth Machine automates all of them.'
-                  : 'Hoy cada etapa depende de que alguien la active manualmente. Growth Machine las automatiza todas.'}
+                Hoy cada etapa depende de que alguien la active manualmente. Growth Machine las automatiza todas.
               </p>
             </MotionWrapper>
 
@@ -494,17 +547,17 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                 {/* Header */}
                 <div className="grid grid-cols-[1fr_1.1fr_1.1fr] bg-[rgba(247,246,242,0.06)] border-b-[0.5px] border-[rgba(247,246,242,0.08)]">
                   <div className="px-[20px] py-[14px]">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(247,246,242,0.4)]">{isEn ? 'Stage' : 'Etapa'}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(247,246,242,0.4)]">Etapa</span>
                   </div>
                   <div className="px-[20px] py-[14px] border-l-[0.5px] border-[rgba(247,246,242,0.06)]">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(247,246,242,0.25)]">{isEn ? 'Without system' : 'Sin sistema'}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[rgba(247,246,242,0.25)]">Sin sistema</span>
                   </div>
                   <div className="px-[20px] py-[14px] border-l-[0.5px] border-[rgba(247,246,242,0.06)]">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--am)]">{isEn ? 'With Growth Machine' : 'Con Growth Machine'}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--am)]">Con Growth Machine</span>
                   </div>
                 </div>
                 {/* Rows */}
-                {timeline.map((row, i) => (
+                {TIMELINE.map((row, i) => (
                   <div key={i} className={`grid grid-cols-[1fr_1.1fr_1.1fr] border-b-[0.5px] border-[rgba(247,246,242,0.06)] ${i % 2 === 0 ? 'bg-[rgba(247,246,242,0.02)]' : 'bg-transparent'} hover:bg-[rgba(247,246,242,0.04)] transition-colors`}>
                     <div className="px-[20px] py-[16px]">
                       <span className="text-[13px] font-bold text-[var(--cream)] leading-[1.4]">{row.stage}</span>
@@ -529,15 +582,9 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
             {/* "2am" narrative */}
             <MotionWrapper type="fadeUp" delay={0.2}>
               <div className="mt-[32px] bg-[rgba(245,166,35,0.07)] border-[0.5px] border-[rgba(245,166,35,0.18)] rounded-[16px] p-[24px_28px] max-w-[720px]">
-                <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[10px]">
-                  {isEn ? "This is what happens while you sleep" : 'Esto es lo que pasa mientras dormís'}
-                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[10px]">Esto es lo que pasa mientras dormís</div>
                 <p className="text-[14px] text-[var(--cream)] leading-[1.7]">
-                  {isEn ? (
-                    <>It&apos;s 2am. Someone in the US searches for a hostel in Cusco. They find your website. They download the free guide. At 2:05am they receive an automatic welcome email. At 2:10am they have the cal.com link in their inbox. <strong className="text-[var(--am)]">At 9am you open your email and have a meeting booked for tomorrow.</strong> You did nothing.</>
-                  ) : (
-                    <>Son las 2am. Alguien en España busca un hostel en Cusco. Encuentra tu web. Descarga la guía gratuita. A las 2:05am recibe un email automático de bienvenida. A las 2:10am tiene el link de cal.com en la bandeja. <strong className="text-[var(--am)]">A las 9am vos abrís el mail y tenés una reunión agendada para mañana.</strong> Vos no hiciste nada.</>
-                  )}
+                  Son las 2am. Alguien en España busca un hostel en Cusco. Encuentra tu web. Descarga la guía gratuita. A las 2:05am recibe un email automático de bienvenida. A las 2:10am tiene el link de cal.com en la bandeja. <strong className="text-[var(--am)]">A las 9am vos abrís el mail y tenés una reunión agendada para mañana.</strong> Vos no hiciste nada.
                 </p>
               </div>
             </MotionWrapper>
@@ -546,29 +593,23 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
         {/* ══════ QUÉ INCLUYE ══════ */}
         <section id="includes" className="bg-[var(--cream)] py-[80px] lg:py-[110px] relative overflow-hidden border-t-[0.5px] border-[rgba(28,24,40,0.07)]">
-          <AnimatedWatermark text={isEn ? 'INCLUDES' : 'INCLUYE'} direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
+          <AnimatedWatermark text="INCLUYE" direction="right" className="-bottom-[10px] -right-[10px] text-[clamp(70px,13vw,160px)] text-[rgba(28,24,40,0.025)] tracking-[-4px] italic" />
           <PageWrapper className="relative z-10">
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                {isEn ? 'The 6 components' : 'Los 6 componentes'}
+                Los 6 componentes
               </div>
               <h2 className="text-[clamp(28px,3.8vw,48px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[14px]">
-                {isEn ? (
-                  <>Not a feature list.<br /><GradientText>What each one does for your business.</GradientText></>
-                ) : (
-                  <>No una lista de features.<br /><GradientText>Lo que cada uno hace por tu negocio.</GradientText></>
-                )}
+                No una lista de features.<br /><GradientText>Lo que cada uno hace por tu negocio.</GradientText>
               </h2>
               <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[540px] mb-[48px]">
-                {isEn
-                  ? 'Each component exists to solve one stage of the capture process. Together they form the complete system.'
-                  : 'Cada componente existe para resolver una etapa del proceso de captación. Juntos forman el sistema completo.'}
+                Cada componente existe para resolver una etapa del proceso de captación. Juntos forman el sistema completo.
               </p>
             </MotionWrapper>
 
             <StaggerContainer className="flex flex-col gap-[8px]" staggerDelay={0.07}>
-              {includes.map((item, i) => (
+              {INCLUDES.map((item, i) => (
                 <StaggerItem key={i}>
                   <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-0 bg-white border-[0.5px] border-[rgba(28,24,40,0.09)] rounded-[16px] overflow-hidden hover:shadow-[0_8px_28px_rgba(28,24,40,0.07)] hover:-translate-y-[2px] transition-all duration-200 group">
                     <div className="p-[20px_24px] flex items-center gap-[14px] border-b-[0.5px] lg:border-b-0 lg:border-r-[0.5px] border-[rgba(28,24,40,0.07)]">
@@ -596,37 +637,27 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                {isEn ? 'Real case' : 'Caso real'}
+                Caso real
               </div>
               <h2 className="text-[clamp(28px,3.5vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[40px]">
-                {isEn ? (
-                  <>This is what a business looks like<br /><GradientText>when it has the system.</GradientText></>
-                ) : (
-                  <>Así se ve un negocio<br /><GradientText>cuando tiene el sistema.</GradientText></>
-                )}
+                Así se ve un negocio<br /><GradientText>cuando tiene el sistema.</GradientText>
               </h2>
             </MotionWrapper>
             <CaseStudyBlock
-              tag={isEn ? 'Hostel · Cusco, Peru' : 'Hostel · Cusco, Perú'}
-              title={isEn ? (
-                <>Supertramp went from 100% OTA dependency to generating <span style={{ background: 'linear-gradient(135deg,#E8417A,#F5A623)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>30% of revenue direct</span> in 6 months.</>
-              ) : (
-                <>Supertramp pasó de depender 100% de OTAs a generar el <span style={{ background: 'linear-gradient(135deg,#E8417A,#F5A623)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>30% de su facturación directa</span> en 6 meses.</>
-              )}
-              description={isEn
-                ? 'Critical mobile speed issues, no direct booking CTAs, 0 positioning on conversion keywords. We built the website, the direct booking system and follow-up automations. The result spoke for itself.'
-                : 'Velocidad crítica en mobile, sin CTAs de reserva directa, 0 posicionamiento en keywords de conversión. Construimos la web, el sistema de reserva directa y las automatizaciones de seguimiento. El resultado habló solo.'}
+              tag="Hostel · Cusco, Perú"
+              title={<>Supertramp pasó de depender 100% de OTAs a generar el <span style={{ background: 'linear-gradient(135deg,#E8417A,#F5A623)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>30% de su facturación directa</span> en 6 meses.</>}
+              description="Velocidad crítica en mobile, sin CTAs de reserva directa, 0 posicionamiento en keywords de conversión. Construimos la web, el sistema de reserva directa y las automatizaciones de seguimiento. El resultado habló solo."
               metrics={[
-                { num: '30%', label: isEn ? 'Direct revenue (before: 0%)' : 'Facturación directa (antes: 0%)' },
-                { num: '6m', label: isEn ? 'To see results' : 'Para ver resultados' },
-                { num: '20%', label: isEn ? 'OTA commission saved per booking' : 'Comisión OTA eliminada por reserva' },
+                { num: '30%', label: 'Facturación directa (antes: 0%)' },
+                { num: '6m', label: 'Para ver resultados' },
+                { num: '20%', label: 'Comisión OTA eliminada por reserva' },
               ]}
-              linkHref={isEn ? '/case-studies/supertramp' : '/casos-de-exito/supertramp'}
-              linkText={isEn ? 'See the full case →' : 'Ver el caso completo →'}
+              linkHref="/case-studies/supertramp"
+              linkText="Ver el caso completo →"
               imgSrc="/images/home_06_case_hostel.jpg"
               imgTag="Supertramp Hostel"
               imgNum="30%"
-              imgSub={isEn ? 'direct revenue' : 'facturación directa'}
+              imgSub="facturación directa"
             />
           </PageWrapper>
         </section>
@@ -639,44 +670,29 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
               <MotionWrapper type="fadeLeft">
                 <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] mb-[16px]">
                   <i className="w-[16px] h-[1.5px] bg-[var(--muted)] block" />
-                  {isEn ? 'The financial argument' : 'El argumento financiero'}
+                  El argumento financiero
                 </div>
                 <h2 className="text-[clamp(26px,3.5vw,44px)] font-extrabold tracking-[-1.5px] leading-[1.1] mb-[20px]">
-                  {isEn ? (
-                    <>Not an expense.<br /><GradientText>An investment with a calculable return.</GradientText></>
-                  ) : (
-                    <>No es un gasto.<br /><GradientText>Es una inversión con retorno calculable.</GradientText></>
-                  )}
+                  No es un gasto.<br /><GradientText>Es una inversión con retorno calculable.</GradientText>
                 </h2>
                 <p className="text-[15px] leading-[1.75] text-[var(--muted)] mb-[24px]">
-                  {isEn
-                    ? 'If a new client generates an average of $500 USD in margin, and the system recovers 3 leads per month that were previously lost... the system pays for itself in the first month.'
-                    : 'Si un cliente nuevo te genera en promedio $500 USD de margen, y el sistema recupera 3 leads por mes que antes se perdían... el sistema se paga solo en el primer mes.'}
+                  Si un cliente nuevo te genera en promedio $500 USD de margen, y el sistema recupera 3 leads por mes que antes se perdían... el sistema se paga solo en el primer mes.
                 </p>
                 <p className="text-[13px] text-[var(--muted)] leading-[1.6] max-w-[400px]">
-                  {isEn
-                    ? 'A junior sales assistant costs $600–1,200 USD/month. The system does the lead follow-up work 24/7, never gets sick, never takes vacation and never makes copy errors.'
-                    : 'Un asistente de ventas junior cuesta $600–1,200 USD/mes. El sistema hace el trabajo de seguimiento de leads 24/7, nunca se enferma, no se va de vacaciones y no comete errores de copy.'}
+                  Un asistente de ventas junior cuesta $600–1,200 USD/mes. El sistema hace el trabajo de seguimiento de leads 24/7, nunca se enferma, no se va de vacaciones y no comete errores de copy.
                 </p>
               </MotionWrapper>
 
               <MotionWrapper type="fadeRight" delay={0.1}>
                 <div className="bg-[var(--dark)] rounded-[24px] p-[32px] border-[0.5px] border-[rgba(247,246,242,0.09)] shadow-[0_24px_80px_rgba(28,24,40,0.14)]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[22px]">
-                    {isEn ? 'Return calculator' : 'Calculadora de retorno'}
-                  </p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--am)] mb-[22px]">Calculadora de retorno</p>
                   <div className="flex flex-col gap-[16px]">
-                    {(isEn ? [
-                      { label: 'Average ticket per client', value: '$500 USD' },
-                      { label: 'Leads recovered per month (estimate)', value: '3 → 5' },
-                      { label: 'Monthly cost of not having a system', value: '$1,500 USD' },
-                      { label: 'Months to recover the investment', value: '~2 months' },
-                    ] : [
+                    {[
                       { label: 'Ticket promedio por cliente', value: '$500 USD' },
                       { label: 'Leads recuperados por mes (estimado)', value: '3 → 5' },
                       { label: 'Costo mensual de no tener sistema', value: '$1,500 USD' },
                       { label: 'Meses para recuperar la inversión', value: '~2 meses' },
-                    ]).map((row, i) => (
+                    ].map((row, i) => (
                       <div key={i} className={`flex items-center justify-between gap-[16px] ${i < 3 ? 'pb-[16px] border-b-[0.5px] border-[rgba(247,246,242,0.07)]' : 'pt-[4px]'}`}>
                         <span className="text-[13px] text-[var(--muted-l)] leading-[1.4] flex-1">{row.label}</span>
                         <span className={`text-[15px] font-extrabold whitespace-nowrap ${i === 3 ? 'text-[var(--am)]' : 'text-[var(--cream)]'}`}>{row.value}</span>
@@ -685,9 +701,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                   </div>
                   <div className="mt-[24px] pt-[18px] border-t-[0.5px] border-[rgba(247,246,242,0.09)]">
                     <p className="text-[12px] text-[rgba(247,246,242,0.3)] leading-[1.6]">
-                      {isEn
-                        ? '* Conservative estimate based on real projects. Your exact number we calculate on the call.'
-                        : '* Estimación conservadora basada en proyectos reales. Tu número exacto lo calculamos en la llamada.'}
+                      * Estimación conservadora basada en proyectos reales. Tu número exacto lo calculamos en la llamada.
                     </p>
                   </div>
                 </div>
@@ -702,10 +716,10 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                {isEn ? 'Self-diagnosis' : 'Autodiagnóstico'}
+                Autodiagnóstico
               </div>
               <h2 className="text-[clamp(28px,3.5vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[44px]">
-                <GradientText>Growth Machine</GradientText> {isEn ? 'is for you if...' : 'es para vos si...'}
+                <GradientText>Growth Machine</GradientText> es para vos si...
               </h2>
             </MotionWrapper>
 
@@ -714,10 +728,17 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                 <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.09)] rounded-[20px] p-[32px] h-full">
                   <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[#1D9E75] mb-[22px] flex items-center gap-[8px]">
                     <span className="w-[6px] h-[6px] rounded-full bg-[#1D9E75] inline-block" />
-                    {isEn ? 'For you' : 'Para vos'}
+                    Para vos
                   </div>
                   <ul className="flex flex-col gap-[12px]">
-                    {forYou.map((item, i) => (
+                    {[
+                      'Tenés un negocio funcionando con clientes reales',
+                      'Tus leads llegan pero el proceso de convertirlos es manual y caótico',
+                      'Querés que el sistema trabaje mientras vos entregás el servicio',
+                      'El crecimiento está limitado por las horas del equipo, no por la demanda',
+                      'Estás listo para escalar sin contratar más personas para captación',
+                      'Sabés que perdés leads — simplemente no tenés tiempo de seguir a todos',
+                    ].map((item, i) => (
                       <li key={i} className="flex items-start gap-[10px] text-[14px] text-[var(--cream)] leading-[1.5]">
                         <IconCheck size={16} color="#1D9E75" />
                         {item}
@@ -731,37 +752,30 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                 <div className="bg-[rgba(247,246,242,0.025)] border-[0.5px] border-[rgba(247,246,242,0.06)] rounded-[20px] p-[32px] h-full">
                   <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.3)] mb-[22px] flex items-center gap-[8px]">
                     <span className="w-[6px] h-[6px] rounded-full bg-[rgba(247,246,242,0.22)] inline-block" />
-                    {isEn ? 'Another package suits you better if...' : 'Otro paquete te sirve más si...'}
+                    Otro paquete te sirve más si...
                   </div>
                   <ul className="flex flex-col gap-[14px]">
-                    {(isEn ? [
-                      { text: "You don't have a website yet — you need to start from scratch", pack: 'Starter Presence', href: '/services/starter-presence' },
-                      { text: 'You want organic positioning with SEO and long-term content', pack: 'Full Funnel 360', href: '/services/full-funnel-360' },
-                      { text: 'You have a product and want to sell online directly, without commissions', pack: 'Ecommerce Pro', href: '/services/ecommerce-pro' },
-                      { text: 'Your team spends hours on repetitive internal tasks — not on lead capture', pack: 'Automation Retainer', href: '/services/automation-retainer' },
-                    ] : [
-                      { text: 'No tenés web todavía — necesitás empezar desde cero', pack: 'Starter Presence', href: '/servicios/starter-presence' },
-                      { text: 'Querés posicionamiento orgánico con SEO y contenido a largo plazo', pack: 'Full Funnel 360', href: '/servicios/full-funnel-360' },
-                      { text: 'Tenés producto y querés vender online directo, sin comisiones', pack: 'Ecommerce Pro', href: '/servicios/ecommerce-pro' },
-                      { text: 'Tu equipo gasta horas en tareas repetitivas internas — no en captación', pack: 'Automation Retainer', href: '/servicios/automation-retainer' },
-                    ]).map((item, i) => (
+                    {[
+                      { text: 'No tenés web todavía — necesitás empezar desde cero', pack: 'Starter Presence', href: `/${isEn ? 'services' : 'servicios'}/starter-presence` },
+                      { text: 'Querés posicionamiento orgánico con SEO y contenido a largo plazo', pack: 'Full Funnel 360', href: `/${isEn ? 'services' : 'servicios'}/full-funnel-360` },
+                      { text: 'Tenés producto y querés vender online directo, sin comisiones', pack: 'Ecommerce Pro', href: `/${isEn ? 'services' : 'servicios'}/ecommerce-pro` },
+                      { text: 'Tu equipo gasta horas en tareas repetitivas internas — no en captación', pack: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
+                    ].map((item, i) => (
                       <li key={i} className="flex items-start gap-[10px] text-[14px] leading-[1.5]">
                         <svg viewBox="0 0 24 24" fill="none" stroke="rgba(247,246,242,0.3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[14px] h-[14px] mt-[1px] shrink-0">
                           <line x1="5" y1="12" x2="19" y2="12" />
                           <polyline points="12 5 19 12 12 19" />
                         </svg>
                         <span className="text-[var(--muted-l)]">{item.text}{' '}
-                          <a href={item.href} className="text-[var(--am)] font-bold no-underline hover:opacity-80 transition-opacity whitespace-nowrap">{isEn ? 'See' : 'Ver'} {item.pack} →</a>
+                          <a href={item.href} className="text-[var(--am)] font-bold no-underline hover:opacity-80 transition-opacity whitespace-nowrap">Ver {item.pack} →</a>
                         </span>
                       </li>
                     ))}
                   </ul>
                   <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(247,246,242,0.07)]">
                     <p className="text-[12px] text-[var(--muted-l)] leading-[1.6]">
-                      {isEn ? "Not sure which one fits? " : '¿No sabés cuál corresponde? '}
-                      <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">
-                        {isEn ? 'Request the free audit →' : 'Pedí la auditoría gratuita →'}
-                      </a>
+                      ¿No sabés cuál corresponde?{' '}
+                      <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">Pedí la auditoría gratuita →</a>
                     </p>
                   </div>
                 </div>
@@ -776,23 +790,17 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
             <MotionWrapper type="fadeUp">
               <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
                 <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-                {isEn ? 'Frequently asked questions' : 'Preguntas frecuentes'}
+                Preguntas frecuentes
               </div>
               <h2 className="text-[clamp(28px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-                {isEn ? (
-                  <>What everyone asks<br /><GradientText>before taking the step.</GradientText></>
-                ) : (
-                  <>Lo que todo el mundo pregunta<br /><GradientText>antes de dar el paso.</GradientText></>
-                )}
+                Lo que todo el mundo pregunta<br /><GradientText>antes de dar el paso.</GradientText>
               </h2>
               <p className="text-[15px] leading-[1.7] text-[var(--muted-l)] max-w-[500px] mb-[44px]">
-                {isEn
-                  ? 'We answer honestly. If something is not here, we answer it on the call.'
-                  : 'Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.'}
+                Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.
               </p>
             </MotionWrapper>
             <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]" staggerDelay={0.06}>
-              {faqItems.map((faq, idx) => (
+              {FAQ_ITEMS.map((faq, idx) => (
                 <StaggerItem key={idx}>
                   <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[24px] transition-all duration-200 hover:bg-[rgba(247,246,242,0.065)] hover:border-[rgba(247,246,242,0.14)] hover:-translate-y-[2px]">
                     <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[10px] tracking-[-0.2px]">{faq.q}</h3>
@@ -805,17 +813,12 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
             {/* Trust bar */}
             <MotionWrapper type="fadeUp" delay={0.3}>
               <div className="mt-[40px] flex flex-wrap items-center justify-center gap-x-[32px] gap-y-[12px] border-t-[0.5px] border-[rgba(247,246,242,0.07)] pt-[32px]">
-                {(isEn ? [
-                  'Delaware LLC registered',
-                  'All access credentials are yours',
-                  'System documented in detail',
-                  'No long-term contracts',
-                ] : [
+                {[
                   'LLC registrada en Delaware',
                   'Todos los accesos son tuyos',
                   'Sistema documentado al detalle',
                   'Sin contratos de permanencia',
-                ]).map((item, i) => (
+                ].map((item, i) => (
                   <div key={i} className="flex items-center gap-[8px] text-[12px] text-[rgba(247,246,242,0.4)] font-semibold">
                     <IconCheck size={13} color="var(--am)" />
                     {item}
@@ -828,42 +831,28 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
 
         {/* ══════ CTA FINAL ══════ */}
         <CtaFinal
-          headline={isEn ? (
-            <>Your business can start<br />working on its own<br /><GradientText>from this week.</GradientText></>
-          ) : (
-            <>Tu negocio puede empezar<br />a trabajar solo<br /><GradientText>a partir de esta semana.</GradientText></>
-          )}
-          subheadline={isEn
-            ? '30-minute call. No agency presentations. We tell you exactly what system we would build for your business and when it would be running.'
-            : '30 minutos de llamada. Sin presentaciones de agencia. Te decimos exactamente qué sistema construiríamos para tu negocio y cuándo estaría funcionando.'}
-          mainCta={{ label: isEn ? 'Book the call →' : 'Agendá la llamada →', href: '#' }}
-          disclaimer={isEn
-            ? 'No commitment · No aggressive sales · We respond in less than 2 hours'
-            : 'Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas'}
-          watermarkText={isEn ? 'SYSTEM' : 'SISTEMA'}
+          headline={<>Tu negocio puede empezar<br />a trabajar solo<br /><GradientText>a partir de esta semana.</GradientText></>}
+          subheadline="30 minutos de llamada. Sin presentaciones de agencia. Te decimos exactamente qué sistema construiríamos para tu negocio y cuándo estaría funcionando."
+          mainCta={{ label: 'Agendá la llamada →', href: '#' }}
+          disclaimer="Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas"
+          watermarkText="SISTEMA"
           cards={[
             {
-              tag: isEn ? "I have a website but it doesn't convert" : 'Ya tengo web pero no convierte',
-              title: isEn ? 'Free audit first' : 'Auditoría gratuita primero',
-              desc: isEn
-                ? 'We analyze your current funnel and tell you exactly where leads are being lost.'
-                : 'Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.',
+              tag: 'Ya tengo web pero no convierte',
+              title: 'Auditoría gratuita primero',
+              desc: 'Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.',
               href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
             },
             {
-              tag: isEn ? 'I want to understand the system' : 'Quiero entender el sistema',
-              title: isEn ? 'Free mini-course · 5 emails' : 'Mini-curso gratuito · 5 emails',
-              desc: isEn
-                ? 'How an automated capture system works, in 5 emails. Free.'
-                : 'Cómo funciona un sistema de captación automatizado, en 5 emails. Gratis.',
+              tag: 'Quiero entender el sistema',
+              title: 'Mini-curso gratuito · 5 emails',
+              desc: 'Cómo funciona un sistema de captación automatizado, en 5 emails. Gratis.',
               href: isEn ? '/email-course' : '/curso-web-gratis',
             },
             {
-              tag: isEn ? "I know what I want" : 'Ya sé lo que quiero',
-              title: isEn ? 'Diagnosis call' : 'Llamada de diagnóstico',
-              desc: isEn
-                ? '30 minutes. No sales. At the end you know what Growth Machine includes for your specific business.'
-                : '30 minutos. Sin ventas. Al final sabés qué incluye Growth Machine para tu negocio específico.',
+              tag: 'Ya sé lo que quiero',
+              title: 'Llamada de diagnóstico',
+              desc: '30 minutos. Sin ventas. Al final sabés qué incluye Growth Machine para tu negocio específico.',
               href: '#ctaf',
             },
           ]}

@@ -67,18 +67,706 @@
         "items": [
           {
             "label": "SEO para negocios",
-            "link": "/blog/seo-errores-comunes"
+            "link": "/blog"
           },
           {
             "label": "n8n vs Zapier",
-            "link": "/blog/n8n-vs-zapier"
+            "link": "/blog"
           },
           {
             "label": "Canal propio de ventas",
-            "link": "/blog/dejar-de-depender-de-instagram"
+            "link": "/blog"
           }
         ]
       }
+    }
+  },
+  "services": {
+    "common": {
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "auditLink": "Pedí la auditoría gratuita →",
+      "noSabes": "¿No sabés cuál corresponde?",
+      "footerServices": "Servicios",
+      "footerFree": "Gratuito",
+      "footerCompany": "Empresa",
+      "footerAudit": "Auditoría web",
+      "footerCourse": "Mini-curso 5 días",
+      "footerAllServices": "Todos los servicios",
+      "footerCases": "Casos de éxito",
+      "footerPrivacy": "Privacidad"
+    },
+    "automationRetainer": {
+      "meta": {
+        "title": "Automation Retainer — Automatizaciones Mensuales que Construyen tu Sistema Operativo | Vacaré",
+        "description": "Flujos n8n que eliminan el trabajo repetitivo de tu equipo. Sin contratar un desarrollador. Sin depender de Zapier. Plan mensual con hasta 12 horas de desarrollo y documentación completa.",
+        "ogTitle": "Automation Retainer — Vacaré Digital Solutions",
+        "ogDescription": "El tiempo de tu equipo es el recurso más caro que tenés. Cada tarea repetitiva que hacen a mano es tiempo que no se usa para crecer."
+      },
+      "jsonLdDescription": "Flujos n8n que eliminan el trabajo repetitivo de tu equipo. Sin contratar un desarrollador. Plan mensual con hasta 12 horas de desarrollo y documentación completa.",
+      "badge": "Paquete 05 · Sistema operativo mensual",
+      "h1Line1": "El tiempo de tu equipo es tu recurso más caro.",
+      "h1Line2": "Cada tarea repetitiva que hacen a mano es tiempo que no crece.",
+      "lead": "Automation Retainer construye las automatizaciones que eliminan ese trabajo — mes a mes. Sin contratar un desarrollador. Sin depender de Zapier. Sin que vos tengas que entender cómo funciona.",
+      "bullets": [
+        "Las tareas que hacen a mano hoy — se hacen solas desde el mes 1",
+        "Cada mes el sistema hace más — nunca termina",
+        "Flujos documentados y 100% tuyos si cancelás"
+      ],
+      "ctaPrimary": "Quiero automatizar mi negocio →",
+      "ctaSecondary": "Ver qué se construye ↓",
+      "disclaimer": "Auditoría de procesos incluida en la llamada · Sin compromiso",
+      "heroHiddenCostLabel": "El Costo Oculto",
+      "heroManualWorkLabel": "Trabajo Manual",
+      "heroPerMonth": "/mes",
+      "heroCostDesc": "Costo estimado en horas perdidas en tareas repetitivas como onboarding y reportes.",
+      "heroStat1Num": "3h+",
+      "heroStat1Label": "Ahorradas por día",
+      "heroStat2Num": "2-4",
+      "heroStat2Label": "Flujos nuevos / mes",
+      "diagSection": "El diagnóstico",
+      "diagH2Line1": "¿Cuánto le pagás a tu equipo",
+      "diagH2Line2": "para hacer trabajo de máquina?",
+      "diagLead": "La mayoría de los negocios no calculan el costo real del trabajo manual. Hasta que lo hacen, y el número les cambia la perspectiva completamente.",
+      "auditTableTitle": "Auditoría de tiempo · Ejemplo real",
+      "auditColTask": "Tarea",
+      "auditColHours": "Horas/mes",
+      "auditColCost": "Costo ($20/h)",
+      "auditRows": [
+        { "task": "Confirmaciones de pedido/reserva", "hours": "8h", "cost": "$160" },
+        { "task": "Onboarding de nuevos clientes", "hours": "6h", "cost": "$120" },
+        { "task": "Generación de reportes semanales", "hours": "4h", "cost": "$80" },
+        { "task": "Seguimiento de cobros pendientes", "hours": "5h", "cost": "$100" }
+      ],
+      "auditTotalLabel": "Total mensual",
+      "auditTotalHours": "23h",
+      "auditTotalCost": "$460/mes",
+      "painPoints": [
+        { "title": "Horas del equipo en tareas sin valor", "body": "Cada hora que tu equipo pasa mandando confirmaciones a mano es una hora que no está mejorando el servicio, consiguiendo clientes o haciendo crecer el negocio." },
+        { "title": "Error humano constante — y evitable", "body": "Alguien se olvidó de mandar el mail. Alguien actualizó mal la planilla. Alguien no avisó al cliente. Con automatizaciones, los procesos se ejecutan igual siempre — sin excepciones." },
+        { "title": "El techo de crecimiento invisible", "body": "Para atender 20% más de clientes necesitás contratar una persona más. Ese es el techo. El Retainer lo rompe: el sistema atiende más sin que el equipo crezca proporcionalmente." }
+      ],
+      "casesSection": "Qué se construye",
+      "casesH2Line1": "Ejemplos de lo que construimos",
+      "casesH2Line2": "en los primeros meses.",
+      "casesLead": "Cada flujo está diseñado para eliminar una tarea concreta. Arrancamos por los de mayor impacto.",
+      "savedSuffix": "ahorrados",
+      "useCases": [
+        { "category": "Comunicación", "title": "Confirmaciones automáticas", "saved": "~4h/mes", "body": "Email + WhatsApp en segundos cuando entra una compra, reserva o consulta. Sin que nadie lo tenga que mandar." },
+        { "category": "Onboarding", "title": "Alta de nuevos clientes", "saved": "~6h/mes", "body": "Nuevo cliente = creación en CRM + carpeta en Drive + email de bienvenida. Todo en 2 minutos, sin intervención." },
+        { "category": "Reporting", "title": "Reportes automáticos", "saved": "~4h/mes", "body": "Datos de 3 planillas distintas consolidados y enviados por email al equipo cada lunes a las 8am." },
+        { "category": "Facturación", "title": "Seguimiento de cobros", "saved": "~5h/mes", "body": "Aviso automático de factura vencida. Escala a WhatsApp si no se paga en 48h. Sin que nadie tenga que recordarlo." },
+        { "category": "Operaciones", "title": "Integración entre sistemas", "saved": "Variable", "body": "CRM ↔ facturación ↔ email ↔ calendario. Sistemas que no \"se hablan\" — conectados con n8n." },
+        { "category": "Seguimiento", "title": "Recordatorio de citas", "saved": "~2h/mes", "body": "24h y 1h antes de cada reunión. Automático. Sin que el equipo tenga que acordarse de mandarlo." }
+      ],
+      "plansSection": "Elegís el alcance",
+      "plansH2Line1": "Dos planes.",
+      "plansH2Line2": "Cada uno correcto para una situación.",
+      "plansLead": "La unidad de medida es el tiempo de desarrollo, no la cantidad de flujos. Un flujo simple = 2h. Una integración compleja = 6h. En el onboarding calibramos el alcance real.",
+      "plans": [
+        {
+          "name": "Plan Base",
+          "for": "Negocios que empiezan a automatizar",
+          "hours": "6h / mes",
+          "featured": false,
+          "features": [
+            "1 a 2 flujos nuevos por mes (complejidad baja/media)",
+            "Mantenimiento de flujos existentes",
+            "Documentación completa de cada entrega",
+            "Comunicación por chat + actualizaciones semanales"
+          ]
+        },
+        {
+          "name": "Plan Pro",
+          "for": "Negocios con operación establecida que quieren acelerar",
+          "hours": "12h / mes",
+          "featured": true,
+          "features": [
+            "Flujos complejos + integraciones con APIs externas",
+            "Webhooks avanzados y subworkflows",
+            "Revisión estratégica mensual — qué construir primero y por qué",
+            "Soporte prioritario con respuesta en menos de 4 horas",
+            "Mapa de automatización del negocio entregado en el mes 1"
+          ]
+        }
+      ],
+      "plansMostChosen": "Más elegido",
+      "plansDev": "de desarrollo",
+      "plansStartWith": "Empezar con",
+      "compoundSection": "El efecto compuesto",
+      "compoundH2Line1": "Cada mes construye",
+      "compoundH2Line2": "sobre el anterior.",
+      "compoundMonths": [
+        { "month": "Mes 1", "title": "Onboarding + primeras 2 automatizaciones", "body": "Auditoría de procesos. Las 2 automatizaciones de mayor impacto ya activas." },
+        { "month": "Mes 2", "title": "2 flujos nuevos + optimización", "body": "Los del mes 1 ya están documentados. Sumamos la siguiente capa." },
+        { "month": "Mes 3", "title": "El equipo nota la diferencia", "body": "Menos tiempo en tareas operativas. Empezamos con integraciones entre sistemas." },
+        { "month": "Mes 4–5", "title": "Flujos encadenados", "body": "El sistema de nurturing y seguimiento está completo. Los flujos se conectan entre sí." },
+        { "month": "Mes 6", "title": "30-40% menos trabajo manual", "body": "El equipo tiene tiempo para tareas de mayor valor. El sistema trabaja solo." }
+      ],
+      "n8nSection": "Por qué n8n",
+      "n8nH2Line1": "Y no Zapier,",
+      "n8nH2Line2": "Make ni ningún otro.",
+      "n8nReasons": [
+        { "title": "$0 por automatización ejecutada", "body": "Zapier cobra por cada \"tarea\" ejecutada. n8n puede correr a costo fijo sin importar cuántas veces se ejecute el flujo. Si tu negocio escala, el costo no escala con él." },
+        { "title": "Sin límites de lógica", "body": "Zapier tiene lógica lineal. n8n permite condicionales complejos, loops, subworkflows y llamadas a APIs externas sin restricciones. Las automatizaciones más importantes no son lineales." },
+        { "title": "Los flujos te pertenecen", "body": "Si el día de mañana querés que otro equipo los gestione, los flujos exportan en JSON y se instalan en cualquier entorno. Sin vendor lock-in. Sin perder lo construido." }
+      ],
+      "n8nNote": "Si ya pagás Zapier Business ($599/mes), el Retainer Pro hace más por menos — con un profesional construyendo los flujos estratégicamente en vez de armar zaps a mano.",
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Automation Retainer es para vos si...",
+      "forYou": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "forYouItems": [
+        "Ya tenés un negocio funcionando con procesos establecidos pero manuales",
+        "Tenés 2+ personas que gastan tiempo en tareas repetitivas todos los días",
+        "Querés escalar sin contratar más personas solo para tareas operativas",
+        "Tenés sistemas que no se hablan entre sí (CRM + facturación + email)",
+        "Ya usás Zapier y querés algo más robusto y más barato",
+        "Sabés que hay que automatizar pero nadie en el equipo sabe cómo"
+      ],
+      "otherPackItems": [
+        { "text": "Todavía no tenés web ni leads — la base digital va primero", "pack": "Starter Presence", "href": "/services/starter-presence" },
+        { "text": "Tu problema es la captación de clientes nuevos, no las operaciones internas", "pack": "Growth Machine", "href": "/services/growth-machine" },
+        { "text": "Querés un canal orgánico con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/services/full-funnel-360" }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad.",
+      "faq": [
+        { "q": "¿Cómo sé qué automatizar primero?", "a": "En el onboarding hacemos una auditoría de procesos. Vos nos contás cómo opera el negocio y nosotros identificamos los 3 puntos de mayor impacto — los que más tiempo consumen y más errores generan. Arrancamos por ahí." },
+        { "q": "¿Necesito saber algo técnico?", "a": "No. Vos describís el proceso en lenguaje llano: \"cuando llega un nuevo cliente, mandamos este mail y creamos esta carpeta\". Nosotros lo construimos. Nunca vas a tener que entender código, flujos o APIs." },
+        { "q": "¿Qué pasa con los flujos si cancelo el Retainer?", "a": "Son completamente tuyos. Te entregamos la exportación de cada flujo con documentación en lenguaje claro. Podés seguir usándolos en tu propio servidor de n8n sin pagar nada más a nadie." },
+        { "q": "¿Cuánto tiempo hasta los primeros resultados?", "a": "El primer flujo suele estar activo en la primera semana del retainer. El ahorro de tiempo se nota desde el mes 1. A los 3 meses, el equipo ya nota claramente la diferencia." },
+        { "q": "¿Puede conectar mi CRM con mi sistema de facturación?", "a": "Sí, siempre que ambos tengan API. En la llamada evaluamos la viabilidad técnica y te decimos qué es posible y qué no — sin comprometerte con algo que después no se puede hacer." },
+        { "q": "¿Cuál es la diferencia entre el Plan Base y el Pro?", "a": "Principalmente las horas disponibles y la complejidad de las integraciones. Base = 6h/mes, flujos simples y medios. Pro = 12h/mes, integraciones con APIs externas, webhooks avanzados y revisión estratégica mensual." }
+      ],
+      "trustItems": [
+        "Flujos 100% tuyos al terminar",
+        "Documentación completa de cada entrega",
+        "Sin permanencia — cancelás cuando querés",
+        "Auditoría de procesos incluida en la llamada"
+      ],
+      "ctaHeadline": "¿Cuántas horas regaló tu equipo esta semana a tareas que una máquina puede hacer?",
+      "ctaSubheadline": "30 minutos de llamada. Hacemos la auditoría de tus procesos juntos y te decimos exactamente qué automatizaciones tienen más impacto y en qué orden las construiríamos.",
+      "ctaMainLabel": "Quiero automatizar mi negocio →",
+      "ctaDisclaimer": "Sin compromiso · Auditoría de procesos incluida · Respondemos en 2 horas",
+      "ctaWatermark": "AUTOMÁTICO",
+      "ctaCards": [
+        { "tag": "No sé qué automatizar primero", "title": "Auditoría de procesos gratuita", "desc": "Mapeamos tus 3 tareas de mayor impacto y estimamos el tiempo que ahorrarías.", "href": "/free-audit" },
+        { "tag": "Quiero entender cómo funciona", "title": "Mini-curso 5 días", "desc": "Qué se puede automatizar, con qué herramientas y cómo evaluar el ROI. Gratis.", "href": "/email-course" },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Al final sabés qué plan corresponde y cuáles son los primeros flujos a construir.", "href": "#ctaf" }
+      ]
+    },
+    "starterPresence": {
+      "meta": {
+        "title": "Starter Presence — Web Profesional que Aparece en Google | Vacaré",
+        "description": "Web profesional en 30 días. Aparecés en Google, sin hosting mensual, con notificación automática de leads a tu WhatsApp. Llamada de diagnóstico gratuita.",
+        "ogTitle": "Starter Presence — Vacaré Digital Solutions",
+        "ogDescription": "Si buscás tu negocio en Google y no te encontrás, tus clientes tampoco."
+      },
+      "jsonLdDescription": "Web profesional en 30 días. Aparecés en Google, sin hosting mensual, con notificación automática de leads a tu WhatsApp.",
+      "badge": "Paquete 01 · Primera web estratégica",
+      "h1Line1": "Si buscás tu negocio",
+      "h1Line2": "en Google y no aparecés,",
+      "h1Line3": "tus clientes van a otro.",
+      "lead": "En 30 días tu negocio aparece cuando te buscan, tu web transmite lo que realmente hacés, y cada consulta llega directo a tu WhatsApp — sin que hagas nada extra.",
+      "bullets": [
+        "Web publicada en 30 días, sin hosting mensual de por vida",
+        "Posicionado en Google local en 30-60 días",
+        "Cada lead llega solo — notificación automática a tu WhatsApp"
+      ],
+      "ctaPrimary": "Agendá una llamada gratuita →",
+      "ctaSecondary": "Ver qué incluye ↓",
+      "disclaimer": "Llamada gratuita · Sin compromiso · Respondemos en menos de 2 horas",
+      "problemSection": "El problema real",
+      "problemH2Line1": "No es mala suerte.",
+      "problemH2Line2": "Es que tus clientes eligen al que aparece.",
+      "problemLead": "Google elige en 3 segundos. Si no estás ahí cuando alguien busca lo que ofrecés, ese cliente no existe para vos. Y lo que duele es que ni lo sabés.",
+      "problemCards": [
+        { "title": "Tu competidor aparece. Vos no.", "body": "El cliente busca, ve tres resultados con foto, reseñas y horario. Vos no estás. Llama al que aparece. No siente que eligió mal — simplemente no te encontró." },
+        { "title": "La recomendación que no llega.", "body": "Alguien te recomienda. La persona te googlea para confirmar que existís. No aparece nada, o aparece algo que no da confianza. La recomendación muere ahí." },
+        { "title": "La web que destruye credibilidad.", "body": "Una web lenta o desactualizada no es neutral — activamente trabaja en tu contra. Mandás el link a un prospecto y perdés credibilidad antes de abrir la boca." }
+      ],
+      "problemSolution": "Starter Presence resuelve los tres. En 30 días aparecés en Google, tu web transmite profesionalismo real, y cada consulta te llega sola — organizada, con datos, lista para que respondas.",
+      "includesSection": "Qué recibís",
+      "includesH2Line1": "No una lista de features.",
+      "includesH2Line2": "Lo que cada cosa significa para tu negocio.",
+      "includesLead": "Cada componente existe para resolver un problema concreto. Si no resolviera nada, no lo incluiríamos.",
+      "includes": [
+        { "what": "Web ultrarrápida — sin costos mensuales de por vida", "means": "Carga antes de que el visitante termine de respirar. Sin hosting que pagar mes a mes. La mayoría de webs que construimos no tienen costo recurrente — el dinero que invertís no se va diluyendo en cuotas." },
+        { "what": "Aparecés cuando te buscan en Google — local y orgánico", "means": "Cuando alguien escribe tu servicio + tu ciudad, queremos que aparezcas en el mapa y en los resultados. SEO técnico completo + Google Business optimizado. En 30-60 días las primeras búsquedas locales ya te encuentran." },
+        { "what": "Cada consulta llega directo a tu WhatsApp en segundos", "means": "Ningún lead se pierde en un formulario que nadie revisa. Cuando alguien completa el contacto, vos recibís un mensaje en segundos con nombre, teléfono y lo que necesita. Respondés al toque, cuando la intención de compra está en el pico." },
+        { "what": "Sabés exactamente qué funciona y qué no", "means": "Panel completo con visitas, fuentes, comportamiento y búsquedas que usaron para encontrarte. Tomás decisiones con datos reales, no con intuición. Si algo no está funcionando, lo sabés antes de seguir invirtiendo." },
+        { "what": "Una tarea que hacés a mano hoy — se hace sola desde el día uno", "means": "Elegimos la tarea que más te consume (confirmación de cita, respuesta de bienvenida, alerta interna de consulta) y la automatizamos. El sistema trabaja aunque vos no estés mirando." }
+      ],
+      "beforeAfterSection": "La transformación",
+      "beforeAfterH2Line1": "Lo que cambia en 30 días.",
+      "beforeAfterH2Line2": "Concreto. Sin promesas vacías.",
+      "beforeLabel": "Hoy",
+      "afterLabel": "30 días después",
+      "beforeItems": [
+        "Sin web — o con una que da vergüenza mostrar",
+        "Invisible en Google · los clientes no te encuentran",
+        "El 100% de leads por boca a boca — impredecible",
+        "No sabés cuánta gente llega ni desde dónde",
+        "Seguimiento de consultas a mano, sin organización",
+        "Pagando hosting mes a mes sin retorno visible"
+      ],
+      "afterItems": [
+        "Web profesional que da confianza al primer vistazo",
+        "Aparecés en Google cuando te buscan",
+        "Leads que llegan solos — sin salir a buscarlos",
+        "Dashboard que muestra visitas, fuente y comportamiento",
+        "Cada consulta al WhatsApp, organizada, lista para responder",
+        "$0 de hosting mensual en la mayoría de proyectos"
+      ],
+      "beforeAfterCta": "¿Querés este resultado en tu negocio?",
+      "beforeAfterCtaBtn": "Agendá la llamada →",
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Starter Presence es para vos si...",
+      "forYou": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "forYouItems": [
+        "Tu negocio funciona pero no tenés web, o la que tenés no genera nada",
+        "Tus clientes llegan por recomendación — querés sumarle un canal digital propio",
+        "Buscás tu negocio en Google y no aparece nada confiable",
+        "Querés algo profesional sin depender de nadie para cambios básicos",
+        "No querés pagar hosting mensual eternamente",
+        "Querés saber qué gente entra, desde dónde y qué hacen"
+      ],
+      "otherPackItems": [
+        { "text": "Ya tenés web y leads, necesitás automatizar la captación", "pack": "Growth Machine", "href": "/services/growth-machine" },
+        { "text": "Querés un canal orgánico predecible con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/services/full-funnel-360" },
+        { "text": "Tenés producto y querés vender online directo, sin comisiones", "pack": "Ecommerce Pro", "href": "/services/ecommerce-pro" },
+        { "text": "Tu equipo gasta horas en tareas repetitivas que podrían automatizarse", "pack": "Automation Retainer", "href": "/services/automation-retainer" }
+      ],
+      "howSection": "Cómo funciona",
+      "howH2Line1": "De la primera conversación",
+      "howH2Line2": "a la web publicada en 30 días.",
+      "howLead": "Sin procesos interminables. Sin reuniones que no van a ningún lado. Tres pasos y listo.",
+      "steps": [
+        { "num": "01", "time": "Día 0", "title": "Llamada de diagnóstico", "body": "30 minutos. Te escuchamos. Entendemos tu negocio y tus objetivos. Al final sabés exactamente qué vas a recibir, cuándo y cuánto. Si no somos la opción correcta, también te lo decimos sin rodeos." },
+        { "num": "02", "time": "Días 1–30", "title": "Construimos juntos", "body": "Arrancamos con propuesta aprobada. Ves el avance en tiempo real. Cada etapa tiene revisión antes de seguir. No desaparecemos — te mantenemos informado durante todo el proceso." },
+        { "num": "03", "time": "Día 30+", "title": "Publicamos y te entregamos todo", "body": "Lanzamos la web, entregamos todos los accesos (son tuyos, siempre), documentamos cada herramienta. A los 30 días del lanzamiento hacemos check-in para medir resultados y ajustar." }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.",
+      "faq": [
+        { "q": "¿Voy a depender de ustedes para mantener la web?", "a": "No, y ese es un principio que no negociamos. Al terminar el proyecto te entregamos todos los accesos — dominio, código, herramientas de analítica. Si el día de mañana querés trabajar con otro proveedor o hacer cambios vos mismo, podés hacerlo sin perder absolutamente nada." },
+        { "q": "¿Cómo aparezco en Google si la web es nueva?", "a": "Google indexa sitios nuevos en 15-30 días. El SEO técnico que implementamos desde el primer día acelera ese proceso. A eso sumamos Google Business Profile optimizado, que empieza a mostrar tu negocio en búsquedas locales mucho antes que el SEO orgánico tradicional. En la mayoría de proyectos, las primeras posiciones aparecen en 30-60 días." },
+        { "q": "¿Cuánto cuesta?", "a": "No publicamos un número fijo porque cada proyecto tiene alcances distintos. Lo que sí te garantizamos: en la llamada de diagnóstico te damos el precio exacto. Sin \"desde\", sin \"podría ser\". Un número concreto por un scope concreto. Si no encaja con tu presupuesto, también te lo decimos con honestidad." },
+        { "q": "¿Qué pasa si no me gusta lo que construyeron?", "a": "Trabajamos con aprobación por etapas. Diseño aprobado antes de desarrollar. Desarrollo aprobado antes de publicar. Nunca llegás a una entrega final con sorpresas — porque las cosas grandes las definiste vos en cada revisión." },
+        { "q": "¿Cuánto tiempo lleva de mi parte?", "a": "Menos de lo que pensás. Una llamada inicial de 30 minutos, una o dos revisiones por texto o videollamada breve, y la aprobación final. El trabajo pesado lo hacemos nosotros. Vos seguís operando tu negocio." },
+        { "q": "¿Funciona para cualquier tipo de negocio?", "a": "Starter Presence es ideal para negocios de servicios locales: clínicas, estudios profesionales, gastronomía, educación, hoteles chicos, consultores independientes. Si tenés producto y querés una tienda online, hay un paquete mejor — Ecommerce Pro." }
+      ],
+      "trustItems": [
+        "LLC registrada en Delaware",
+        "Accesos 100% tuyos",
+        "Sin contratos de permanencia",
+        "Propuesta antes de cobrar"
+      ],
+      "ctaHeadline": "30 días a partir de hoy, tu negocio aparece en Google.",
+      "ctaSubheadline": "La llamada es gratuita y dura 30 minutos. Al final sabés exactamente qué recibís, cuánto cuesta y si tiene sentido avanzar. Sin compromiso de ningún tipo.",
+      "ctaMainLabel": "Agendá tu llamada gratuita →",
+      "ctaDisclaimer": "Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas",
+      "ctaWatermark": "EMPEZÁ",
+      "ctaCards": [
+        { "tag": "Tengo web pero no funciona", "title": "Auditoría gratuita primero", "desc": "Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.", "href": "/free-audit" },
+        { "tag": "Todavía no tengo web", "title": "Mini-curso gratuito · 5 emails", "desc": "Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.", "href": "/email-course" },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.", "href": "#ctaf" }
+      ]
+    },
+    "growthMachine": {
+      "meta": {
+        "title": "Growth Machine — Sistema Automatizado de Captación de Leads | Vacaré",
+        "description": "Automatizaciones n8n + web estratégica + nurturing por email + agendamiento automático. Tu negocio captura y califica leads mientras dormís. Llamada gratuita de 30 minutos.",
+        "ogTitle": "Growth Machine — Vacaré Digital Solutions",
+        "ogDescription": "Tus leads se enfrían antes de poder atenderlos. Growth Machine los captura, nutre y califica de forma autónoma."
+      },
+      "jsonLdDescription": "Automatizaciones n8n + web estratégica + nurturing por email + agendamiento automático. Tu negocio captura y califica leads mientras dormís.",
+      "badge": "Paquete 02 · Sistema de captación automatizado",
+      "h1Line1": "Tu negocio tiene leads.",
+      "h1Line2": "El problema es que",
+      "h1Line3": "se enfrían antes de que llegués.",
+      "lead": "Growth Machine construye el sistema que captura, nutre y califica leads de forma autónoma. Vos recibís el prospecto listo para cerrar — el sistema hace el resto.",
+      "bullets": [
+        "Leads capturados y nutridos solos — mientras dormís",
+        "Reuniones agendadas automáticamente, sin coordinar por WhatsApp",
+        "Dashboard con estado de cada lead en tiempo real"
+      ],
+      "ctaPrimary": "Quiero mi sistema de captación →",
+      "ctaSecondary": "Ver cómo funciona ↓",
+      "disclaimer": "Llamada gratuita · Sin compromiso · Sistema funcionando en menos de 30 días",
+      "diagSection": "El diagnóstico",
+      "diagH2Line1": "¿Cuánto vale un lead",
+      "diagH2Line2": "que se enfría?",
+      "diagLead": "La mayoría de los negocios trabajan duro para atraer visitantes — con publicidad, redes, boca a boca. Pero no tienen ningún sistema para convertir ese interés en una conversación real. Los visitantes llegan, no encuentran razón para quedarse, y desaparecen.",
+      "todayLabel": "Tu negocio hoy",
+      "painPoints": [
+        { "title": "Tenés tráfico, pero pocas consultas", "body": "Visitantes que llegan y se van. Sin un lead magnet ni un incentivo para dejar datos, el 97% sale para siempre. Ese tráfico es dinero que ya gastaste en conseguirlo." },
+        { "title": "Las consultas se enfrían si no respondés rápido", "body": "Responder un lead en 5 minutos tiene 21 veces más probabilidad de conversión que en 30 minutos. Si tu respuesta depende de que vos estés mirando el teléfono, perdés." },
+        { "title": "No podés seguir a todos — el crecimiento tiene techo", "body": "Cuando el seguimiento es manual, el límite de clientes es el límite de horas. Growth Machine rompe ese techo: el sistema sigue a todos, al mismo tiempo, sin cansarse." }
+      ],
+      "diagSolution": "Growth Machine tapa el balde. Captura el email antes de que se vaya, envía el primer email en 5 minutos, nutre al prospecto en 7 días, y agenda la reunión sin que vos hagas nada.",
+      "systemSection": "El sistema",
+      "systemH2Line1": "Lo que pasa desde que alguien",
+      "systemH2Line2": "te descubre hasta que te contrata.",
+      "systemLead": "Hoy cada etapa depende de que alguien la active manualmente. Growth Machine las automatiza todas.",
+      "timelineHeader": ["Etapa", "Sin sistema", "Con Growth Machine"],
+      "timeline": [
+        { "stage": "Visita la web", "without": "Sale sin dejar datos — no hay forma de volver a contactarlo", "with": "Descarga el lead magnet, deja su email, entra al sistema" },
+        { "stage": "Primer contacto", "without": "Manual, cuando tenés tiempo — a veces horas o días después", "with": "Email automático en 5 minutos, mientras la intención está en su pico" },
+        { "stage": "Nurturing", "without": "No existe — o un mensaje de WhatsApp que mandás si te acordás", "with": "Secuencia de 5 emails en 7 días, cada uno con un propósito específico" },
+        { "stage": "Agendamiento", "without": "\"¿El martes a las 3?\" — 4 mensajes para acordar un horario", "with": "Link de cal.com en el último email — el prospecto elige solo" },
+        { "stage": "Seguimiento", "without": "Hoja de cálculo o memoria — inevitablemente se pierde alguno", "with": "Dashboard con estado de cada lead en tiempo real" }
+      ],
+      "systemNight": "Esto es lo que pasa mientras dormís",
+      "systemNightBody": "Son las 2am. Alguien en España busca un hostel en Cusco. Encuentra tu web. Descarga la guía gratuita. A las 2:05am recibe un email automático de bienvenida. A las 2:10am tiene el link de cal.com en la bandeja. A las 9am vos abrís el mail y tenés una reunión agendada para mañana. Vos no hiciste nada.",
+      "includesSection": "Los 6 componentes",
+      "includesH2Line1": "No una lista de features.",
+      "includesH2Line2": "Lo que cada uno hace por tu negocio.",
+      "includesLead": "Cada componente existe para resolver una etapa del proceso de captación. Juntos forman el sistema completo.",
+      "includes": [
+        { "what": "Web estratégica — diseñada para convertir, no para decorar", "means": "No un folleto digital. Cada sección tiene un CTA, cada palabra está escrita sobre los puntos de dolor de tu buyer persona. El objetivo es uno: que el visitante deje sus datos o agende." },
+        { "what": "Lead magnet + 5 emails que llevan al prospecto de interesado a listo", "means": "Un recurso de valor (PDF, checklist, guía corta) que captura el email. Luego, 5 emails automatizados en 7 días — cada uno diseñado para responder una objeción distinta y acercar a la conversación." },
+        { "what": "Agendamiento automático — los prospectos eligen su horario sin vos", "means": "Integración de cal.com. El prospecto ve tu disponibilidad, elige el horario y confirma. Vos recibís la notificación con los datos. Sin \"¿el martes a las 3?\" por WhatsApp." },
+        { "what": "3 a 5 flujos en n8n — el sistema que trabaja cuando vos no estás", "means": "Automatizaciones que conectan tu web, tu email, tu WhatsApp y tu calendario. Cuando llega un lead: notificación inmediata, email de bienvenida, seguimiento programado. El sistema trabaja a las 2am." },
+        { "what": "Integración de pagos — cobrás sin fricción, el onboarding arranca solo", "means": "Si vendés servicios online, Stripe integrado en el flujo. El pago activa automáticamente el proceso de onboarding. Sin enviar links de pago manual ni confirmar transferencias." },
+        { "what": "Dashboard en tiempo real — sabés de dónde vienen y cuántos convierten", "means": "Un único lugar con cuántos leads entraron, desde qué fuente, cuántos agendaron y cuántos convirtieron. Sin abrir 5 herramientas distintas. Sin adivinar qué está funcionando." }
+      ],
+      "roiSection": "El argumento financiero",
+      "roiH2Line1": "No es un gasto.",
+      "roiH2Line2": "Es una inversión con retorno calculable.",
+      "roiLead": "Si un cliente nuevo te genera en promedio $500 USD de margen, y el sistema recupera 3 leads por mes que antes se perdían... el sistema se paga solo en el primer mes.",
+      "roiNote": "Un asistente de ventas junior cuesta $600–1,200 USD/mes. El sistema hace el trabajo de seguimiento de leads 24/7, nunca se enferma, no se va de vacaciones y no comete errores de copy.",
+      "roiCalcTitle": "Calculadora de retorno",
+      "roiRows": [
+        { "label": "Ticket promedio por cliente", "value": "$500 USD" },
+        { "label": "Leads recuperados por mes (estimado)", "value": "3 → 5" },
+        { "label": "Costo mensual de no tener sistema", "value": "$1,500 USD" },
+        { "label": "Meses para recuperar la inversión", "value": "~2 meses" }
+      ],
+      "roiDisclaimer": "* Estimación conservadora basada en proyectos reales. Tu número exacto lo calculamos en la llamada.",
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Growth Machine es para vos si...",
+      "forYou": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "forYouItems": [
+        "Tenés un negocio funcionando con clientes reales",
+        "Tus leads llegan pero el proceso de convertirlos es manual y caótico",
+        "Querés que el sistema trabaje mientras vos entregás el servicio",
+        "El crecimiento está limitado por las horas del equipo, no por la demanda",
+        "Estás listo para escalar sin contratar más personas para captación",
+        "Sabés que perdés leads — simplemente no tenés tiempo de seguir a todos"
+      ],
+      "otherPackItems": [
+        { "text": "No tenés web todavía — necesitás empezar desde cero", "pack": "Starter Presence", "href": "/services/starter-presence" },
+        { "text": "Querés posicionamiento orgánico con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/services/full-funnel-360" },
+        { "text": "Tenés producto y querés vender online directo, sin comisiones", "pack": "Ecommerce Pro", "href": "/services/ecommerce-pro" },
+        { "text": "Tu equipo gasta horas en tareas repetitivas internas — no en captación", "pack": "Automation Retainer", "href": "/services/automation-retainer" }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.",
+      "faq": [
+        { "q": "¿Qué pasa si no soy técnico y no entiendo n8n?", "a": "No necesitás entenderlo — ni aprender nada técnico. Nosotros construimos todos los flujos, los documentamos con capturas y los probamos antes de entregar. Si algo falla después del lanzamiento, lo arreglamos. Es nuestro sistema, no tuyo — hasta que esté funcionando perfecto." },
+        { "q": "¿Cuánto tarda en dar resultados?", "a": "El sistema captura leads desde el día del lanzamiento. Los primeros resultados de nurturing se ven en la primera semana — si alguien se suscribe al lead magnet el lunes, el viernes ya recibió 3 emails automatizados. El primer lead calificado suele aparecer en los primeros 7-14 días de operación." },
+        { "q": "¿Puedo empezar con Growth Machine si ya tengo una web?", "a": "Sí. Podemos construir el sistema de captación y automatización sobre tu web actual, sin tocar nada del diseño si no hace falta. Si la web tiene problemas técnicos que afectan la conversión, te lo decimos y lo discutimos — pero no es condición para empezar." },
+        { "q": "¿Qué herramientas usa el sistema?", "a": "n8n para automatizaciones, cal.com para agendamiento, Stripe para pagos (si aplica), GA4 + Looker Studio para métricas. Son herramientas open source o de bajo costo — sin licencias caras que vos tengas que pagar mes a mes. Todo documentado. Todo tuyo." },
+        { "q": "¿Voy a depender de ustedes para que funcione?", "a": "No. Al terminar el proyecto te entregamos todos los accesos, credenciales y documentación. Si el día de mañana querés que lo gestione otra persona o agencia, podés hacerlo sin perder nada. El sistema es de tu negocio, no nuestro." }
+      ],
+      "trustItems": [
+        "LLC registrada en Delaware",
+        "Todos los accesos son tuyos",
+        "Sistema documentado al detalle",
+        "Sin contratos de permanencia"
+      ],
+      "ctaHeadline": "Tu negocio puede empezar a trabajar solo a partir de esta semana.",
+      "ctaSubheadline": "30 minutos de llamada. Sin presentaciones de agencia. Te decimos exactamente qué sistema construiríamos para tu negocio y cuándo estaría funcionando.",
+      "ctaMainLabel": "Agendá la llamada →",
+      "ctaDisclaimer": "Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas",
+      "ctaWatermark": "SISTEMA",
+      "ctaCards": [
+        { "tag": "Ya tengo web pero no convierte", "title": "Auditoría gratuita primero", "desc": "Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.", "href": "/free-audit" },
+        { "tag": "Quiero entender el sistema", "title": "Mini-curso gratuito · 5 emails", "desc": "Cómo funciona un sistema de captación automatizado, en 5 emails. Gratis.", "href": "/email-course" },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Growth Machine para tu negocio específico.", "href": "#ctaf" }
+      ]
+    },
+    "fullFunnel360": {
+      "meta": {
+        "title": "Full Funnel 360 — Canal Orgánico de Clientes, SEO y Visibilidad en IA | Vacaré",
+        "description": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
+        "ogTitle": "Full Funnel 360 — Vacaré Digital Solutions",
+        "ogDescription": "El boca a boca no escala. Los ads no acumulan. Full Funnel 360 construye el canal orgánico que trabaja por años."
+      },
+      "jsonLdDescription": "Canal de clientes orgánico y predecible. SEO, contenido estratégico, optimización para ChatGPT y funnel completo. Sin publicidad pagada. Resultados desde los 90 días.",
+      "badge": "Paquete 03 · Canal orgánico completo",
+      "h1Line1": "El boca a boca es hermoso.",
+      "h1Line2": "Pero no escala,",
+      "h1Line3": "y no construye nada si para.",
+      "lead": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
+      "bullets": [
+        "Canal orgánico que trae clientes sin publicidad pagada",
+        "Aparecer en Google Y en respuestas de ChatGPT y Perplexity",
+        "Funnel completo: del visitante desconocido a la reunión agendada"
+      ],
+      "ctaPrimary": "Quiero mi canal orgánico →",
+      "ctaSecondary": "Ver cómo funciona ↓",
+      "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
+      "heroPanelGrowthLabel": "Crecimiento Orgánico",
+      "heroPanelChannelLabel": "Canal Predecible",
+      "heroPanelMilestones": [
+        { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
+        { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
+        { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
+      ],
+      "heroPanelNoAds": "En Publicidad",
+      "heroPanelAiOptimized": "Optimizado p/ IA",
+      "diagSection": "El diagnóstico",
+      "diagH2Line1": "Dos canales que funcionan.",
+      "diagH2Line2": "Ninguno construye activos.",
+      "diagLead": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando parán. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
+      "channel1Title": "Boca a boca",
+      "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
+      "channel2Title": "Publicidad pagada",
+      "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
+      "channel3Title": "Full Funnel 360",
+      "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
+      "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada.",
+      "llmSection": "El futuro del search",
+      "llmH2Line1": "¿Tu negocio aparece cuando",
+      "llmH2Line2": "alguien le pregunta a ChatGPT?",
+      "llmP1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
+      "llmP2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
+      "llmNote": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
+      "funnelSection": "El canal en funcionamiento",
+      "funnelH2Line1": "Del visitante que no te conoce",
+      "funnelH2Line2": "al cliente que te contrata — sin publicidad.",
+      "funnelLead": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
+      "funnelStageLabel": "Etapa",
+      "funnelStages": [
+        { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
+        { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
+        { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
+        { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
+        { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
+      ],
+      "includesSection": "Los 10 componentes",
+      "includesH2Line1": "10 vendedores digitales.",
+      "includesH2Line2": "Trabajando 24/7 durante años.",
+      "includesLead": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo.",
+      "includes": [
+        { "what": "Web estratégica — cada URL posiciona una keyword", "means": "No es una web. Es una red de captura. Cada página existe para atraer un tipo de búsqueda específica y llevar al visitante al siguiente paso." },
+        { "what": "SEO técnico como arquitectura — la base de todo", "means": "Velocidad, Core Web Vitals, schema markup, estructura de URLs, enlazado interno. Sin esta base, el contenido no posiciona. Con ella, cada artículo tiene ventaja desde el día uno." },
+        { "what": "LLM Optimization — aparecer en ChatGPT y Perplexity", "means": "Estructura de contenido y autoridad para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés. Nadie más lo está haciendo en LATAM." },
+        { "what": "10 piezas de contenido estratégico — vendedores que no duermen", "means": "Artículos y guías que posicionan las keywords de mayor intención de tu industria. Cada uno es un vendedor digital que trabaja 24/7 durante años, sin que paguéis nada." },
+        { "what": "Lead magnet avanzado — captura a quien de verdad importa", "means": "PDF, calculadora o herramienta que da valor real y captura el email del prospecto calificado. No cualquier email — el de alguien que ya demostró interés en lo que hacés." },
+        { "what": "Funnel completo — del visitante desconocido al cliente", "means": "Tráfico → captación → nurturing → calificación → reunión agendada. Nada queda al azar. Cada etapa está diseñada para llevar al siguiente paso." },
+        { "what": "Secuencia de onboarding 7-14 días — construye la confianza sola", "means": "El prospecto nuevo recibe la secuencia que responde sus objeciones, muestra tu autoridad y lo lleva a la decisión. Sin que vos hagas nada más que el primer contacto." },
+        { "what": "CRM básico — sabés en qué etapa está cada prospecto", "means": "Notion o Airtable configurado para tu proceso. Nada se pierde. Sabés quién está listo para cerrar, quién necesita un empujón y quién llegó esta semana." },
+        { "what": "5+ flujos en n8n — todos los puntos conectados", "means": "Automatizaciones que conectan el funnel completo. Cuando llega un lead: entra al CRM, recibe el primer email, agenda si está listo. El sistema no tiene fisuras." },
+        { "what": "Dashboard Looker Studio — el canal entero en un lugar", "means": "Tráfico, leads, fuente, conversión, pipeline. En tiempo real. Sin abrir 5 herramientas. Sin adivinar si el canal está creciendo o estancado." }
+      ],
+      "compoundSection": "El efecto compuesto",
+      "compoundH2Line1": "Lo que construís en mes 1",
+      "compoundH2Line2": "sigue trabajando en año 3.",
+      "compoundP1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
+      "compoundP2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
+      "compoundChartTitle": "Retorno en el tiempo",
+      "compoundSeries": [
+        { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
+        { "label": "Full Funnel 360", "note": "Sigue creciendo" }
+      ],
+      "compoundChartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
+      "compoundDisclaimer": "* Representación ilustrativa basada en comportamiento típico de canales",
+      "timelineSection": "Qué pasa en cada etapa",
+      "timelineH2": "Los hitos reales del canal orgánico.",
+      "timelineMilestones": [
+        { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
+        { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
+        { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "LLM citations activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
+        { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
+        { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
+      ],
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Full Funnel 360 es para vos si...",
+      "forYou": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "forYouItems": [
+        "Tenés un negocio con tracción y querés un canal que no dependa de ads ni referidos",
+        "Estás dispuesto a invertir en algo que tarda 3-6 meses en madurar pero que dura años",
+        "Querés aparecer en Google Y en ChatGPT cuando alguien busca lo que hacés",
+        "Vendés servicios con ciclo de venta largo donde la confianza importa",
+        "Querés construir algo que crezca con el tiempo, no una solución de corto plazo"
+      ],
+      "otherPackItems": [
+        { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "href": "/services/growth-machine" },
+        { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "href": "/services/starter-presence" },
+        { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "href": "/services/automation-retainer" }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad.",
+      "faq": [
+        { "q": "¿Cuánto tarda en verse resultados?", "a": "Los primeros indicadores (indexación, posiciones en keywords de long-tail) se ven en 4-6 semanas. Los resultados de conversión maduran en 3-6 meses. El canal a plena velocidad, entre los 6 y 12 meses. Full Funnel es una inversión con retorno compuesto — no un sprint." },
+        { "q": "¿Qué pasa con el SEO si después no seguimos publicando?", "a": "El contenido existente sigue trabajando. A diferencia de una campaña de publicidad que cae a cero cuando pausás, un artículo posicionado sigue trayendo tráfico sin ninguna inversión adicional. Recomendamos seguir publicando, pero el activo no desaparece si parás." },
+        { "q": "¿Cómo aparezco en ChatGPT con mi negocio?", "a": "Los modelos de IA citan fuentes de autoridad. Construimos la arquitectura de contenido y la estructura de schema markup para que tu sitio sea reconocido como fuente confiable cuando alguien pregunta por tu categoría. No es instantáneo — madura en 3-6 meses como el SEO." },
+        { "q": "Contratamos SEO antes y no funcionó. ¿Por qué sería distinto ahora?", "a": "El SEO sin contenido estratégico es como construir paredes sin cimientos. Y el contenido sin SEO técnico es contenido que nadie encuentra. El problema más común es que se hicieron las dos cosas por separado, sin integración. Nosotros las integramos desde el día uno." },
+        { "q": "¿Puedo hacer solo una parte del Full Funnel?", "a": "Podemos arrancar con el scope que corresponde a tu situación. En la llamada evaluamos qué tiene más impacto primero — si tu web ya está funcionando bien, el primer foco puede ser el contenido y las automatizaciones. Si necesitás la base técnica, arrancamos por ahí." }
+      ],
+      "trustItems": [
+        "LLC registrada en Delaware",
+        "Todos los activos son tuyos",
+        "Sin contratos de permanencia",
+        "Resultados medibles desde el mes 1"
+      ],
+      "ctaHeadline": "El canal que construís hoy trae clientes en 2027 sin que hagas nada.",
+      "ctaSubheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
+      "ctaMainLabel": "Agendá tu llamada estratégica →",
+      "ctaDisclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
+      "ctaWatermark": "ORGÁNICO",
+      "ctaCards": [
+        { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/free-audit" },
+        { "tag": "Quiero entender el proceso", "title": "Mini-curso 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.", "href": "/email-course" },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.", "href": "#ctaf" }
+      ]
+    },
+    "ecommercePro": {
+      "meta": {
+        "title": "Ecommerce Pro — Tienda Directa, Sin Comisiones y Automatizada | Vacaré",
+        "description": "Tienda online en Next.js + Stripe con 5 automatizaciones post-compra. Sin comisiones a marketplaces. Sin hosting caro. Cada venta es completamente tuya.",
+        "ogTitle": "Ecommerce Pro — Vacaré Digital Solutions",
+        "ogDescription": "Cada venta por Booking o MercadoLibre le regala el 15-25% a otra empresa. Ecommerce Pro construye tu canal directo."
+      },
+      "jsonLdDescription": "Tienda online en Next.js + Stripe con automatizaciones post-compra. Sin comisiones a marketplaces. Sin hosting caro. Cada venta es completamente tuya.",
+      "badge": "Paquete 04 · Tienda directa y automatizada",
+      "h1Line1": "Cada venta por Booking",
+      "h1Line2": "o MercadoLibre le regala",
+      "h1Line3": "el 15-25% a otra empresa.",
+      "lead": "Ecommerce Pro construye tu canal de venta directo — rápido, automatizado y libre de comisiones. Cada venta activa confirmaciones, avisos al equipo y seguimientos de forma automática.",
+      "bullets": [
+        "Tienda directa — $0 de comisión por cada venta",
+        "Carga en menos de 1 segundo en mobile",
+        "Post-compra automatizado: confirmación, seguimiento y reseña"
+      ],
+      "ctaPrimary": "Quiero mi tienda que vende →",
+      "ctaSecondary": "Ver qué incluye ↓",
+      "disclaimer": "Llamada gratuita · Sin compromiso · Respondemos en 2 horas",
+      "heroStats": [
+        { "num": "20%", "label": "Comisión Booking promedio", "sub": "que dejás de pagar" },
+        { "num": "<1s", "label": "Velocidad de carga", "sub": "Next.js en mobile" },
+        { "num": "$0", "label": "Comisión por venta directa", "sub": "tuya al 100%" },
+        { "num": "5", "label": "Automatizaciones post-compra", "sub": "incluidas desde el día 1" }
+      ],
+      "heroCommissionTitle": "Comisión regalada por año",
+      "heroCommissionRows": [
+        { "industry": "Hostel", "monthly": "$8,000", "pct": "18%", "year": "$17,280" },
+        { "industry": "Tienda online", "monthly": "$4,000", "pct": "22%", "year": "$10,560" }
+      ],
+      "finSection": "El argumento financiero",
+      "finH2Line1": "Calculá cuánto estás",
+      "finH2Line2": "regalando cada año.",
+      "finLead": "Una tienda propia no es un gasto. Es recuperar lo que ya generaste — sin darlo a otra empresa.",
+      "finExamples": [
+        { "industry": "Hostel / Hotel boutique", "monthly": "$8,000", "pct": "18%", "monthly_lost": "$1,440", "yearly": "$17,280", "platform": "Booking · Hostelworld" },
+        { "industry": "Tienda de producto", "monthly": "$4,000", "pct": "22%", "monthly_lost": "$880", "yearly": "$10,560", "platform": "MercadoLibre · Amazon" },
+        { "industry": "Cursos y digital", "monthly": "$3,000", "pct": "15%", "monthly_lost": "$450", "yearly": "$5,400", "platform": "Hotmart · Teachable" }
+      ],
+      "finColRevenue": "Facturación mensual",
+      "finColCommission": "Comisión del marketplace",
+      "finColLost": "Regalado por mes",
+      "finYearlyLabel": "Regalado por año",
+      "finSummary": "Con una tienda directa, esos números se quedan en tu negocio.",
+      "finSummaryBold": "La tienda se paga sola en los primeros meses.",
+      "killersSection": "Lo que mata las conversiones",
+      "killersH2Line1": "Tu tienda puede estar perdiendo",
+      "killersH2Line2": "el 60% de las ventas por esto.",
+      "killersLead": "La mayoría de los dueños de tienda nunca probaron su propio checkout en el celular. Estos son los 5 problemas más comunes — y cómo Ecommerce Pro los resuelve.",
+      "killers": [
+        { "title": "Lentitud en mobile", "body": "+3 segundos de carga = 50% de abandono. El 70% del tráfico ecommerce viene del celular — y la mayoría de tiendas fallan en este punto." },
+        { "title": "Checkout con fricción", "body": "Cada campo extra = 10% de abandono. Si pedís registro obligatorio antes del pago, perdés el 30% de los compradores antes de llegar a la pantalla de pago." },
+        { "title": "Sin señales de confianza", "body": "Sin reseñas visibles, sin política de devolución clara, sin logos de pago reconocidos — el usuario no compra. La confianza se construye o se destruye en 3 segundos." },
+        { "title": "Sin recuperación de abandono", "body": "El 65-75% de los carritos se abandonan. Sin sistema de recuperación, esa venta está muerta. Con uno bien configurado, recuperás el 10-15%." },
+        { "title": "Proceso post-compra manual", "body": "Si la confirmación tarda o el comprador no sabe qué pasa después de pagar, llama al soporte, hace un contracargo o simplemente no vuelve a comprarte." }
+      ],
+      "killersCta": "Ecommerce Pro resuelve los cinco.",
+      "killersCtaDesc": "Velocidad, checkout sin fricción, confianza, recuperación de abandono y post-compra automatizado — todo desde el día del lanzamiento.",
+      "killersCtaBtn": "Quiero mi tienda →",
+      "techSection": "Tu situación, tu solución",
+      "techH2Line1": "La tienda que construimos",
+      "techH2Line2": "depende de tu negocio.",
+      "techLead": "No hay una solución única. Hay tres opciones — cada una correcta para una situación distinta.",
+      "techOptions": [
+        { "name": "A — Máximo control", "for": "Marcas que quieren independencia total y performance máxima", "how": "Next.js + Stripe + base de datos propia", "why": "Carga en menos de 1 segundo. Sin dependencia de plataforma. Sin costos mensuales por \"plan Premium\". Si Shopify sube precios mañana, no importa — el código es tuyo.", "best": true },
+        { "name": "B — Ya tenés WordPress", "for": "Negocios con inversión existente en WooCommerce", "how": "Optimización WooCommerce + automatizaciones", "why": "No tiras lo que tenés. Aceleramos el sitio, bajamos el tiempo de carga y sumamos automatizaciones post-compra que no tenías.", "best": false },
+        { "name": "C — Headless Shopify", "for": "Marcas con alto volumen que quieren lo mejor de ambos mundos", "how": "Frontend en Next.js + Shopify como backend", "why": "El SEO y la velocidad de Next.js sobre la infraestructura de pagos e inventario de Shopify. Sin sacrificar ninguno de los dos.", "best": false }
+      ],
+      "techMostChosen": "Más elegida",
+      "techForLabel": "Para:",
+      "techHowLabel": "Cómo",
+      "techWhyLabel": "Por qué",
+      "postPurchaseSection": "Post-compra automatizado",
+      "postPurchaseH2Line1": "Lo que pasa automáticamente",
+      "postPurchaseH2Line2": "después de cada venta.",
+      "postPurchaseLead": "Cada venta desencadena este proceso completo. Sin que vos hagas nada. Sin que tu equipo tenga que recordar mandarlo.",
+      "postPurchase": [
+        { "time": "0 min", "event": "Venta confirmada", "desc": "Email automático al comprador con resumen completo del pedido" },
+        { "time": "1 min", "event": "Aviso al equipo", "desc": "WhatsApp o email interno con detalle de la venta para preparar el pedido" },
+        { "time": "5 min", "event": "Recibo generado", "desc": "PDF automático con los datos fiscales correspondientes, enviado sin que nadie lo genere" },
+        { "time": "3 días", "event": "Seguimiento post-entrega", "desc": "\"¿Llegó todo bien?\" — simple, automático, en el momento justo" },
+        { "time": "7 días", "event": "Solicitud de reseña", "desc": "Pedido automático en el momento de mayor satisfacción — cuando ya usó el producto y está feliz" },
+        { "time": "Continuo", "event": "Alerta de stock bajo", "desc": "Nunca te quedás sin saber que algo se está agotando — el sistema te avisa antes de que pase" }
+      ],
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Ecommerce Pro es para vos si...",
+      "forYou": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "forYouItems": [
+        "Vendés productos o servicios online y le pagás comisión a una plataforma",
+        "Tenés tienda pero la tasa de conversión es baja o el post-venta es manual",
+        "Querés vender online sin depender de Shopify, MercadoLibre o cualquier marketplace",
+        "Querés que cada venta dispare el proceso completo de forma automática",
+        "Tu tienda es lenta en mobile y sabés que estás perdiendo ventas por eso"
+      ],
+      "otherPackItems": [
+        { "text": "Necesitás un canal orgánico de clientes con SEO", "pack": "Full Funnel 360", "href": "/services/full-funnel-360" },
+        { "text": "Tu problema es la captación de leads, no la venta directa", "pack": "Growth Machine", "href": "/services/growth-machine" },
+        { "text": "Recién empezás y necesitás la base digital primero", "pack": "Starter Presence", "href": "/services/starter-presence" }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad.",
+      "faq": [
+        { "q": "¿Es mejor Shopify o Next.js para mi caso?", "a": "Depende de tu volumen, tu equipo técnico y tus necesidades. No recomendamos la opción más cara — recomendamos la correcta para cada negocio. En la llamada evaluamos tu caso y te decimos sin rodeos cuál tiene más sentido." },
+        { "q": "¿Puedo migrar mi tienda de WooCommerce sin perder datos?", "a": "Sí. La migración incluye productos, imágenes, historial de clientes y pedidos. Hacemos la migración en etapas para que en ningún momento tu tienda esté offline o pierdas ventas durante el proceso." },
+        { "q": "¿Cómo funciona Stripe en Argentina/LATAM?", "a": "Stripe funciona en Argentina, México, Colombia, Chile, España y más. La pasarela correcta depende de tu ubicación y moneda. En la llamada te explicamos la configuración exacta para tu caso — incluyendo opciones para recibir pagos en USD desde el exterior." },
+        { "q": "¿La tienda va a ser mía o voy a depender de ustedes?", "a": "Todo el código y los accesos te quedan a vos. Si el día de mañana querés que lo gestione otro desarrollador o hacés cambios internamente, podés hacerlo sin perder nada. El código es tuyo desde el primer día." },
+        { "q": "¿Puedo agregar productos después sin necesitar ayuda técnica?", "a": "Sí. El panel de administración te permite agregar, editar y gestionar productos sin ningún conocimiento técnico. Si es Next.js con CMS headless, operás todo desde una interfaz visual simple." }
+      ],
+      "trustItems": [
+        "$0 de comisión por venta directa",
+        "Código 100% tuyo",
+        "Sin dependencia de plataformas",
+        "Propuesta antes de cobrar"
+      ],
+      "ctaHeadline": "Cada mes que pasás pagando comisión es un mes de margen regalado.",
+      "ctaSubheadline": "30 minutos de llamada. Te decimos qué opción técnica corresponde a tu negocio, cuánto tarda y cuándo empieza a recuperar la inversión.",
+      "ctaMainLabel": "Quiero mi tienda directa →",
+      "ctaDisclaimer": "Sin compromiso · Te recomendamos la opción correcta, no la más cara · Respondemos en 2 horas",
+      "ctaWatermark": "DIRECTO",
+      "ctaCards": [
+        { "tag": "Tengo tienda pero convierte poco", "title": "Auditoría de conversión", "desc": "Revisamos tu tienda y te decimos exactamente dónde se pierden las ventas.", "href": "/free-audit" },
+        { "tag": "Quiero entender mis opciones", "title": "Mini-curso 5 días", "desc": "Qué tener en cuenta antes de construir o migrar tu tienda online. Gratis.", "href": "/email-course" },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada técnica", "desc": "30 minutos. Evaluamos tu situación y te decimos la opción correcta para tu negocio.", "href": "#ctaf" }
+      ]
     }
   },
   "Home": {
@@ -270,10 +958,10 @@
     "Auto": {
       "watermark": "AUTO",
       "eyebrow": "El diferenciador",
-      "title": "Tu web trabaja.<br></br><grad>Tus flujos trabajan más.</grad>",
+      "title": "Tu web atrae.<br></br><grad>Tus sistemas convierten.</grad>",
       "intro": "La mayoría de las agencias te entrega una web. Nosotros te entregamos un sistema. Cada proyecto incluye automatizaciones reales en n8n: confirmaciones, seguimientos y alertas — todo funcionando solo.",
-      "note": "Así funciona sobremi.online — nuestra propia plataforma con Stripe + n8n + Postgres en producción.",
-      "cta": "Conocé todos los flujos →",
+      "note": "Así funciona sobremi.online - plataforma con Stripe + n8n + Postgres en producción.",
+      "cta": "Conocé nuestros sistemas →",
       "flow": {
         "trigger": "Cliente completa formulario",
         "engine": "n8n",
@@ -299,7 +987,7 @@
     },
     "Whom": {
       "eyebrow": "¿Esto es para mí?",
-      "title": "Trabajamos con negocios<br></br>que quieren <grad>crecer en serio.</grad>",
+      "title": "Trabajamos con negocios<br></br> <grad> que buscan crecer.</grad>",
       "cards": [
         {
           "icon": "hostel",
@@ -375,6 +1063,13 @@
       "btn": "Mostranos tu negocio →",
       "disclaimer": "Sin compromiso. Sin llamadas de ventas agresivas."
     },
+    "GoldSponsorBanner": {
+      "eyebrow": "✦ Reconocimiento Oficial",
+      "title": "Sponsors de Oro Oficial del Tercer Congreso Internacional de Hostels de Argentina 2025",
+      "description": "Fuimos expositores y Sponsors para la industria turística argentina en el Tercer Congreso Internacional de Hostels de Argentina en Noviembre de 2025.",
+      "stampMonth": "NOV",
+      "stampYear": "2025"
+    },
     "VideoTestimonial": {
       "eyebrow": "Caso real",
       "quote": "El 30% de nuestra facturación ahora viene de nuestra propia web. Antes dependíamos 100% de Booking.",
@@ -391,19 +1086,19 @@
           "category": "SEO",
           "title": "Por qué tu web no aparece en Google (y cómo arreglarlo)",
           "excerpt": "Los 5 errores técnicos que más penaliza Google y que el 70% de los sitios tienen sin saberlo.",
-          "link": "/blog/seo-errores-comunes"
+          "link": "/blog"
         },
         {
           "category": "Automatizaciones",
           "title": "n8n vs Zapier: cuál conviene para tu negocio",
           "excerpt": "Comparamos costos, flexibilidad y escalabilidad de las dos plataformas de automatización más usadas.",
-          "link": "/blog/n8n-vs-zapier"
+          "link": "/blog"
         },
         {
           "category": "Estrategia",
           "title": "Cómo dejar de depender de Instagram para vender",
           "excerpt": "El paso a paso para construir un canal propio que genera leads y ventas sin depender de algoritmos.",
-          "link": "/blog/dejar-de-depender-de-instagram"
+          "link": "/blog"
         }
       ]
     },
@@ -413,7 +1108,7 @@
       "items": [
         {
           "q": "¿Cuánto cuesta trabajar con Vacare?",
-          "a": "Nuestros paquetes arrancan desde $1,500 USD (Starter Presence) hasta $5,000 USD (Full Funnel 360). También ofrecemos un retainer mensual desde $500 USD/mes. Cada proyecto se adapta a tu etapa y presupuesto."
+          "a": "Nuestras soluciones escalan con tu negocio: desde una base sólida (Starter Presence) hasta ecosistemas de conversión 100% automatizados (Full Funnel 360). También contamos con esquemas de retainer mensual para optimización continua. Evaluamos tu etapa operativa actual y estructuramos una propuesta a tu medida."
         },
         {
           "q": "¿Cuánto tiempo tarda en estar listo?",
@@ -773,6 +1468,205 @@
           "desc": "Hablamos. Escuchamos. Al final sabés exactamente qué paquete corresponde. Sin rodeos."
         }
       ]
+    },
+    "StarterPresence": {
+      "Metadata": {
+        "title": "Starter Presence — Tu primera web estratégica | Vacaré",
+        "description": "Web profesional en 30 días. Aparecés en Google, sin hosting mensual, con notificación automática de leads a tu WhatsApp."
+      },
+      "Hero": {
+        "badge": "Paquete 01 · Primera web estratégica",
+        "title": "Si buscás tu negocio<br />en Google y no aparecés,<br /><grad>tus clientes van a otro.</grad>",
+        "subtitle": "En 30 días tu negocio aparece cuando te buscan, tu web transmite lo que realmente hacés, y cada consulta llega directo a tu WhatsApp — sin que hagas nada extra.",
+        "bullet1": "Web publicada en 30 días, sin hosting mensual de por vida",
+        "bullet2": "Posicionado en Google local en 30-60 días",
+        "bullet3": "Cada lead llega solo — notificación automática a tu WhatsApp",
+        "ctaPrimary": "Agendá una llamada gratuita →",
+        "ctaSecondary": "Ver qué incluye ↓",
+        "disclaimer": "Llamada gratuita · Sin compromiso · Respondemos en menos de 2 horas"
+      },
+      "Problem": {
+        "eyebrow": "El problema real",
+        "title": "No es mala suerte.<br /><grad>Es que tus clientes eligen al que aparece.</grad>",
+        "subtitle": "Google elige en 3 segundos. Si no estás ahí cuando alguien busca lo que ofrecés, ese cliente no existe para vos. Y lo que duele es que ni lo sabés.",
+        "cards": [
+          {
+            "title": "Tu competidor aparece. Vos no.",
+            "body": "El cliente busca, ve tres resultados con foto, reseñas y horario. Vos no estás. Llama al que aparece. No siente que eligió mal — simplemente no te encontró."
+          },
+          {
+            "title": "La recomendación que no llega.",
+            "body": "Alguien te recomienda. La persona te googlea para confirmar que existís. No aparece nada, o aparece algo que no da confianza. La recomendación muere ahí."
+          },
+          {
+            "title": "La web que destruye credibilidad.",
+            "body": "Una web lenta o desactualizada no es neutral — activamente trabaja en tu contra. Mandás el link a un prospecto y perdés credibilidad antes de abrir la boca."
+          }
+        ],
+        "bottomNote": "<strong>Starter Presence resuelve los tres.</strong> En 30 días aparecés en Google, tu web transmite profesionalismo real, y cada consulta te llega sola — organizada, con datos, lista para que respondas."
+      },
+      "Includes": {
+        "eyebrow": "Qué recibís",
+        "title": "No una lista de features.<br /><grad>Lo que cada cosa significa para tu negocio.</grad>",
+        "subtitle": "Cada componente existe para resolver un problema concreto. Si no resolviera nada, no lo incluiríamos.",
+        "items": [
+          {
+            "what": "Web rápida en Next.js",
+            "means": "Tu cliente no espera. Si la web tarda más de 3 segundos, se va. Tu web cargará en menos de un segundo."
+          },
+          {
+            "what": "Posicionamiento local",
+            "means": "Cuando alguien busque en tu ciudad, vas a aparecer en el mapa con información correcta."
+          },
+          {
+            "what": "Notificación por WhatsApp",
+            "means": "Cada vez que alguien complete el formulario, te llega un mensaje. Respondés al instante."
+          },
+          {
+            "what": "Medición integrada",
+            "means": "Vas a saber exactamente cuánta gente entra, desde dónde y qué mira en tu web."
+          }
+        ]
+      },
+      "Transformation": {
+        "eyebrow": "La transformación",
+        "title": "Lo que cambia en 30 días.<br /><grad>Concreto. Sin promesas vacías.</grad>",
+        "beforeTitle": "Hoy",
+        "beforeItems": [
+          "Sin web — o con una que da vergüenza mostrar",
+          "Invisible en Google · los clientes no te encuentran",
+          "El 100% de leads por boca a boca — impredecible",
+          "No sabés cuánta gente llega ni desde dónde",
+          "Seguimiento de consultas a mano, sin organización",
+          "Pagando hosting mes a mes sin retorno visible"
+        ],
+        "afterTitle": "30 días después",
+        "afterItems": [
+          "Web profesional que da confianza al primer vistazo",
+          "Aparecés en Google cuando te buscan",
+          "Leads que llegan solos — sin salir a buscarlos",
+          "Dashboard que muestra visitas, fuente y comportamiento",
+          "Cada consulta al WhatsApp, organizada, lista para responder",
+          "$0 de hosting mensual en la mayoría de proyectos"
+        ],
+        "ctaText": "¿Querés este resultado en tu negocio?",
+        "ctaBtn": "Agendá la llamada →"
+      },
+      "ForWhom": {
+        "eyebrow": "Autodiagnóstico",
+        "title": "<grad>Starter Presence</grad> es para vos si...",
+        "yesTitle": "Para vos",
+        "yesItems": [
+          "Tu negocio funciona pero no tenés web, o la que tenés no genera nada",
+          "Tus clientes llegan por recomendación — querés sumarle un canal digital propio",
+          "Buscás tu negocio en Google y no aparece nada confiable",
+          "Querés algo profesional sin depender de nadie para cambios básicos",
+          "No querés pagar hosting mensual eternamente",
+          "Querés saber qué gente entra, desde dónde y qué hacen"
+        ],
+        "noTitle": "Otro paquete te sirve más si...",
+        "noItems": [
+          {
+            "text": "Ya tenés web y leads, necesitás automatizar la captación",
+            "pack": "Growth Machine",
+            "link": "/servicios/growth-machine"
+          },
+          {
+            "text": "Querés un canal orgánico predecible con SEO y contenido a largo plazo",
+            "pack": "Full Funnel 360",
+            "link": "/servicios/full-funnel-360"
+          },
+          {
+            "text": "Tenés producto y querés vender online directo, sin comisiones",
+            "pack": "Ecommerce Pro",
+            "link": "/servicios/ecommerce-pro"
+          },
+          {
+            "text": "Tu equipo gasta horas en tareas repetitivas que podrían automatizarse",
+            "pack": "Automation Retainer",
+            "link": "/servicios/automation-retainer"
+          }
+        ],
+        "footerText": "¿No sabés cuál corresponde?",
+        "footerLink": "Pedí la auditoría gratuita →"
+      },
+      "Process": {
+        "eyebrow": "Cómo funciona",
+        "title": "De la primera conversación<br /><grad>a la web publicada en 30 días.</grad>",
+        "subtitle": "Sin procesos interminables. Sin reuniones que no van a ningún lado. Tres pasos y listo.",
+        "steps": [
+          {
+            "time": "Día 0",
+            "title": "Llamada de diagnóstico",
+            "body": "30 minutos. Te escuchamos. Entendemos tu negocio y tus objetivos. Al final sabés exactamente qué vas a recibir, cuándo y cuánto. Si no somos la opción correcta, también te lo decimos sin rodeos."
+          },
+          {
+            "time": "Días 1–30",
+            "title": "Construimos juntos",
+            "body": "Arrancamos con propuesta aprobada. Ves el avance en tiempo real. Cada etapa tiene revisión antes de seguir. No desaparecemos — te mantenemos informado durante todo el proceso."
+          },
+          {
+            "time": "Día 30+",
+            "title": "Publicamos y te entregamos todo",
+            "body": "Lanzamos la web, entregamos todos los accesos (son tuyos, siempre), documentamos cada herramienta. A los 30 días del lanzamiento hacemos check-in para medir resultados y ajustar."
+          }
+        ]
+      },
+      "Faq": {
+        "eyebrow": "Preguntas frecuentes",
+        "title": "Lo que todo el mundo pregunta<br /><grad>antes de dar el paso.</grad>",
+        "subtitle": "Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.",
+        "items": [
+          {
+            "q": "¿Por qué dicen $0 de hosting?",
+            "a": "Construimos en Next.js y alojamos en plataformas modernas gratuitas (Vercel/Netlify/Cloudflare). El 90% de los negocios no necesita pagar hosting mensual para una web Starter."
+          },
+          {
+            "q": "¿Puedo actualizar la web yo mismo?",
+            "a": "Sí. Dependiendo del proyecto, integramos un CMS visual para que cambies textos e imágenes sin saber programar."
+          },
+          {
+            "q": "¿Aparecer en Google es instantáneo?",
+            "a": "No. Entregar la web toma 30 días. Luego, Google tarda algunas semanas en indexar y posicionar la página en las búsquedas locales. Es un proceso de 30-60 días en total."
+          },
+          {
+            "q": "¿Qué pasa si mi negocio crece?",
+            "a": "Starter Presence está construido sobre la misma tecnología que nuestras soluciones avanzadas. Cuando estés listo, podemos agregar automatizaciones o convertirlo en un Growth Machine sin tirar nada."
+          }
+        ],
+        "trustBar": [
+          "LLC registrada en Delaware",
+          "Accesos 100% tuyos",
+          "Sin contratos de permanencia",
+          "Propuesta antes de cobrar"
+        ]
+      },
+      "CtaFinal": {
+        "title": "30 días a partir de hoy,<br /><grad>tu negocio aparece en Google.</grad>",
+        "subtitle": "La llamada es gratuita y dura 30 minutos. Al final sabés exactamente qué recibís, cuánto cuesta y si tiene sentido avanzar. Sin compromiso de ningún tipo.",
+        "btn": "Agendá tu llamada gratuita →",
+        "disclaimer": "Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas",
+        "cards": [
+          {
+            "tag": "Tengo web pero no funciona",
+            "title": "Auditoría gratuita primero",
+            "desc": "Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.",
+            "link": "/auditoria-web-gratuita"
+          },
+          {
+            "tag": "Todavía no tengo web",
+            "title": "Mini-curso gratuito · 5 emails",
+            "desc": "Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.",
+            "link": "/email-course"
+          },
+          {
+            "tag": "Ya sé lo que quiero",
+            "title": "Llamada de diagnóstico",
+            "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.",
+            "link": "#"
+          }
+        ]
+      }
     }
   },
   "FreeAudit": {
@@ -1284,28 +2178,27 @@
       "back": "← Todos los casos",
       "eyebrow": "Caso de éxito · Sistema propio",
       "title": "Plataforma de regalos con<br></br><grad>automatizaciones reales.</grad>",
-      "subtitle": "sobremi.online es nuestra propia plataforma — construida por Vacare para demostrar en producción real todo lo que le ofrecemos a nuestros clientes. Stripe, n8n, Postgres, webhooks y Next.js funcionando juntos desde el día uno.",
+      "subtitle": "Un negocio real de regalos personalizados que funciona 100% solo — cobros, confirmaciones y avisos al equipo, sin intervención humana. Construido por Vacare para demostrar en producción lo que hacemos para nuestros clientes.",
       "stack": [
-        "Next.js",
-        "n8n",
-        "Postgres",
-        "Stripe",
-        "Webhooks",
-        "Cloudflare",
-        "Supabase"
+        "Ventas automáticas",
+        "Cobros online",
+        "Emails al instante",
+        "Sin costo de hosting",
+        "Tiempo real",
+        "Escala solo"
       ],
       "metrics": [
         {
           "num": "100%",
-          "label": "Automatizado"
+          "label": "Ventas sin intervención humana"
         },
         {
-          "num": "$0",
-          "label": "Intervención manual por pedido"
+          "num": "0",
+          "label": "Empleados procesando pedidos"
         },
         {
-          "num": "2hs",
-          "label": "De form a entrega confirmada"
+          "num": "<2min",
+          "label": "De pago a confirmación automática"
         }
       ],
       "rightWatermark": "AUTO",
@@ -1314,17 +2207,17 @@
     },
     "Context": {
       "eyebrow": "El proyecto",
-      "title": "Una plataforma propia<br></br>que es nuestro<br></br><grad>caso de uso número uno.</grad>",
+      "title": "Nuestra propia plataforma,<br></br><grad>en producción real.</grad>",
       "p1": "sobremi.online nació con un objetivo doble: ser un negocio real de regalos personalizados, y ser la demostración más honesta de lo que Vacare construye para sus clientes.",
       "p2": "En lugar de mostrar demos o prototipos, decidimos construir algo que funciona en producción real — con usuarios reales, pagos reales y automatizaciones que corren solas todos los días.",
-      "p3": "El resultado es una plataforma donde alguien puede entrar a <strong>sobremi.online/crear</strong>, armar un regalo personalizado, pagarlo con Stripe o transferencia, y recibir toda la confirmación sin que ningún humano intervenga.",
-      "challengesLabel": "Los desafíos técnicos",
+      "p3": "El resultado es una plataforma donde alguien puede entrar a <strong>sobremi.online/crear</strong>, armar un regalo personalizado, pagarlo con tarjeta o transferencia, y recibir toda la confirmación sin que ningún humano intervenga.",
+      "challengesLabel": "Los problemas que resolvimos",
       "challenges": [
-        "Manejar dos métodos de pago (Stripe y transferencia) con flujos de confirmación completamente distintos en n8n",
-        "Generar el link de pago de Stripe dinámicamente desde el backend con webhook de retorno",
-        "Registrar cada pedido en Postgres con estado actualizado en tiempo real según el webhook de Stripe",
-        "Construir la página pública de regalo <strong>/regalos/:id</strong> con datos dinámicos desde la base de datos",
-        "Enviar emails transaccionales con diseño personalizado, sin depender de plataformas de terceros"
+        "Aceptar tarjeta y transferencia sin agregar trabajo manual para el equipo",
+        "Cobrar en línea sin redirigir al cliente a otra plataforma ni perder la venta en el camino",
+        "Saber en todo momento qué pedidos están pagados, cuáles pendientes y cuáles entregados — sin planillas ni WhatsApp",
+        "Dar al comprador una URL personalizada que puede compartir con el destinatario del regalo",
+        "Confirmar cada compra al instante con un email profesional — automático, sin costo por envío, sin depender de Mailchimp"
       ],
       "siteCard": {
         "tag": "El proyecto",
@@ -1379,35 +2272,62 @@
     },
     "Arch": {
       "watermark": "ARCH",
-      "eyebrow": "Arquitectura técnica",
-      "title": "Cómo está construido<br></br><grad>el sistema.</grad>",
-      "intro": "Tres capas bien definidas: frontend en Next.js, backend con API routes y Postgres, y una capa de automatización en n8n que conecta todo sin código adicional."
+      "eyebrow": "Cómo funciona",
+      "title": "Del pedido al email,<br></br><grad>sin tocar nada.</grad>",
+      "intro": "Cinco pasos completamente automáticos. El equipo solo interviene para confirmar pagos por transferencia — el resto corre solo.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "El cliente elige y ordena",
+          "p": "Entra al sitio, elige el regalo, completa sus datos y elige cómo pagar. Todo desde el celular o la computadora, sin fricciones."
+        },
+        {
+          "num": "02",
+          "title": "El cobro se genera automáticamente",
+          "p": "El sistema crea el enlace de pago en segundos. El cliente paga con tarjeta de crédito o hace una transferencia bancaria — sin intermediarios."
+        },
+        {
+          "num": "03",
+          "title": "El pago se confirma y el pedido se registra",
+          "p": "En el momento en que el pago se acredita, el sistema lo registra y actualiza el estado del pedido en tiempo real. Sin demoras. Sin errores humanos."
+        },
+        {
+          "num": "04",
+          "title": "Confirmación automática al comprador",
+          "p": "El comprador recibe al instante un email con todos los detalles de su pedido y el link personalizado del regalo para compartir con el destinatario."
+        },
+        {
+          "num": "05",
+          "title": "Aviso automático al equipo",
+          "p": "En paralelo, el equipo recibe un resumen del pedido en su bandeja. Sin revisar paneles. Sin perder ningún pedido."
+        }
+      ]
     },
     "Flows": {
       "watermark": "FLUJOS",
       "eyebrow": "Los flujos automatizados",
       "title": "Todo lo que pasa<br></br><grad>sin intervención humana.</grad>",
-      "intro": "Desde que el cliente completa el formulario hasta que el equipo recibe el aviso del pedido — todo sucede solo. Estos son los cuatro flujos n8n que corren en producción.",
+      "intro": "Desde que el cliente completa el formulario hasta que el equipo recibe el aviso del pedido — todo sucede solo. Estos son los cuatro flujos que corren en producción.",
       "items": [
         {
           "num": "Flujo 01",
-          "title": "Pago con Stripe — flujo completo",
-          "p": "Cuando el cliente elige pagar con tarjeta, el backend de Next.js genera un Payment Intent en Stripe y devuelve el link de pago. Una vez completado el pago, Stripe envía un webhook al backend que actualiza el estado del pedido en Postgres y dispara n8n."
+          "title": "Pago con tarjeta — automático de punta a punta",
+          "p": "El comprador paga con tarjeta en segundos. El sistema registra el pedido y activa la confirmación de forma inmediata — sin que nadie toque nada."
         },
         {
           "num": "Flujo 02",
           "title": "Pago por transferencia — confirmación en dos pasos",
-          "p": "Si el cliente elige transferencia, n8n envía inmediatamente un email de \"pedido recibido, en revisión\". Cuando el equipo confirma el pago manualmente, un segundo trigger de n8n envía el email de confirmación definitiva con todos los detalles del pedido."
+          "p": "El cliente recibe un email de seguimiento al instante. Cuando el equipo confirma el pago, el sistema envía la confirmación final automáticamente con todos los detalles."
         },
         {
           "num": "Flujo 03",
           "title": "Email de confirmación detallada al comprador",
-          "p": "n8n genera y envía un email con diseño personalizado que incluye los datos del pedido, el nombre del destinatario del regalo, el método de pago, el monto y el link a la página pública del regalo en /regalos/:id. Sin intervención humana. Sin plantilla genérica."
+          "p": "Cuando el pedido está listo, el comprador recibe automáticamente un email con todos los detalles y su link personalizado del regalo — en menos de 2 minutos."
         },
         {
           "num": "Flujo 04",
           "title": "Aviso interno al equipo por cada pedido",
-          "p": "En paralelo al email al comprador, n8n envía un email a sobremionline@gmail.com con un resumen del pedido: nombre, producto, método de pago, monto y estado. El equipo sabe en tiempo real que hay un nuevo pedido pendiente, sin tener que revisar ningún panel."
+          "p": "El equipo recibe un resumen del pedido en su bandeja. Sin revisar paneles. Sin perderse de nada."
         }
       ]
     },
@@ -1420,41 +2340,41 @@
     "Result": {
       "eyebrow": "El resultado",
       "title": "Un sistema que funciona<br></br><grad>completamente solo.</grad>",
-      "p1": "Desde que se pusó en producción, sobremi.online procesa pedidos sin intervención humana en el flujo de Stripe. El equipo solo interviene en la confirmación de pagos por transferencia — el resto es automático.",
+      "p1": "Desde que se puso en producción, sobremi.online procesa pedidos sin intervención humana en el flujo de tarjeta. El equipo solo interviene en la confirmación de pagos por transferencia — el resto es automático.",
       "p2": "Esto es exactamente lo que construimos para nuestros clientes: sistemas que trabajan mientras el equipo hace otras cosas.",
       "metrics": [
         {
           "num": "100%",
-          "label": "Pedidos Stripe procesados sin toque humano"
+          "label": "Pedidos con tarjeta procesados sin toque humano"
         },
         {
-          "num": "<2m",
+          "num": "<2min",
           "label": "De pago confirmado a email en bandeja"
         },
         {
-          "num": "4",
-          "label": "Flujos n8n en producción activa"
+          "num": "0",
+          "label": "Horas de trabajo manual por pedido"
         },
         {
           "num": "$0",
-          "label": "Costo mensual de hosting (Cloudflare Pages)"
+          "label": "Costo mensual de hosting"
         }
       ],
       "visual": {
         "title": "Estado del sistema — sobremi.online",
         "rows": [
           {
-            "label": "Flujo Stripe → Postgres → Email",
-            "status": "En producción",
-            "type": "s-live"
+            "label": "Pago con tarjeta → Pedido → Email",
+            "status": "Automático",
+            "type": "s-ok"
           },
           {
-            "label": "Flujo transferencia → Email \"en revisión\"",
-            "status": "En producción",
-            "type": "s-live"
+            "label": "Transferencia → confirmación en 2 pasos",
+            "status": "Automático",
+            "type": "s-ok"
           },
           {
-            "label": "Email confirmación comprador",
+            "label": "Email confirmación al comprador",
             "status": "Automático",
             "type": "s-ok"
           },
@@ -1464,47 +2384,70 @@
             "type": "s-ok"
           },
           {
-            "label": "Páginas /regalos/:id",
-            "status": "SSR · Dinámico",
+            "label": "Link personalizado del regalo",
+            "status": "Dinámico",
             "type": "s-ok"
           },
           {
-            "label": "Deploy en Cloudflare Pages",
-            "status": "Sin costo hosting",
+            "label": "Hosting sin costo mensual",
+            "status": "Cloudflare",
             "type": "s-ok"
           },
           {
-            "label": "n8n en VPS dockerizado",
-            "status": "Corriendo 24/7",
-            "type": "s-auto"
+            "label": "Motor de automatización",
+            "status": "Activo 24/7",
+            "type": "s-ok"
           },
           {
-            "label": "Base de datos Postgres",
-            "status": "VPS propio",
-            "type": "s-auto"
+            "label": "Base de datos de pedidos",
+            "status": "Activo",
+            "type": "s-ok"
           }
         ]
       }
     },
+    "ForWho": {
+      "eyebrow": "¿Es para tu negocio?",
+      "title": "¿Es para<br></br><grad>tu negocio?</grad>",
+      "intro": "Lo mismo que ves aquí — cobros online, confirmaciones automáticas, avisos al equipo — funciona para cualquier negocio que hoy gestiona pedidos, reservas o ventas de forma manual.",
+      "items": [
+        {
+          "title": "Servicios profesionales",
+          "p": "Coaches, consultores, diseñadores o cualquier servicio que cobra por sesión o paquete. El cliente elige, paga y recibe confirmación sin que vos intervengas."
+        },
+        {
+          "title": "Tiendas y productos físicos",
+          "p": "Si hoy gestionás pedidos por WhatsApp o planilla, esto lo reemplaza. El cliente compra, el sistema registra, vos entregás."
+        },
+        {
+          "title": "Turismo y reservas",
+          "p": "Hostels, tours, actividades — cualquier negocio donde la confirmación manual es el cuello de botella. Reserva, paga, confirma: automático."
+        },
+        {
+          "title": "Cualquier tarea repetitiva",
+          "p": "Si hay algo en tu negocio que hacés igual todos los días — un aviso, un registro, un email — probablemente se pueda automatizar."
+        }
+      ]
+    },
     "Learn": {
       "watermark": "LEARN",
-      "eyebrow": "Lo que aprendimos",
-      "title": "Tres cosas que este proyecto<br></br><grad>nos enseñó.</grad>",
+      "eyebrow": "Lo que esto significa para vos",
+      "title": "Tres cosas que<br></br><grad>podés tener hoy.</grad>",
       "items": [
         {
           "num": "01",
-          "title": "n8n como orquestador es imbatible para automatizaciones de negocio",
-          "p": "Para el tipo de flujo que necesita un negocio de servicios — formulario, condicionales, emails, base de datos — n8n en un VPS propio es más potente, más barato y más flexible que cualquier herramienta SaaS de automatización. Y cuando lo conocés bien, el tiempo de desarrollo cae radicalmente."
+          "title": "Un equipo que vende mientras dormís",
+          "p": "Cuando las ventas, confirmaciones y avisos corren solos, el equipo puede enfocarse en lo que importa: entregar valor, no gestionar pedidos. Esto no es ciencia ficción — está corriendo en producción desde el día uno."
         },
         {
           "num": "02",
-          "title": "Los webhooks de Stripe son la pieza más crítica — y la más subestimada",
-          "p": "El 80% de los problemas de ecommerce que vemos en clientes tienen que ver con pagos que \"quedaron colgados\" sin confirmación. La firma criptográfica del webhook de Stripe y el manejo correcto de reintentos es lo que hace que el sistema sea confiable en producción real, no solo en demos."
+          "title": "Sin confirmación automática, perdés la venta",
+          "p": "Un comprador que paga y no recibe confirmación inmediata se preocupa, llama, o pide el reintegro. La automatización no es un lujo — es lo que separa un negocio profesional de uno que genera fricción."
         },
         {
           "num": "03",
-          "title": "Next.js + Cloudflare Pages es la combinación ganadora para la mayoría de los proyectos",
-          "p": "Cero costo de hosting, Edge network global, Core Web Vitals al 100 de fábrica. Para proyectos que no requieren un servidor persistente (que es la mayoría), esta combinación elimina la mayor excusa para no tener una web rápida y profesional."
+          "title": "Web rápida, profesional, sin costo de servidor",
+          "p": "La tecnología correcta no es la más cara. Una web bien construida carga en menos de 1 segundo en cualquier país, no tiene costo mensual de servidor, y aguanta cualquier pico de tráfico. Eso es lo que construimos."
         }
       ]
     },
@@ -1525,13 +2468,14 @@
           "result": "Mirá todos los paquetes disponibles →",
           "href": "/services",
           "name": "¿El próximo?<br></br>Tu negocio.",
-          "type": "alt"
+          "type": "alt",
+          "action": "meeting"
         }
       ]
     },
     "Cta": {
       "title": "¿Querés un sistema<br></br><grad>como este para tu negocio?</grad>",
-      "p": "Stripe, n8n, Postgres, Next.js — todo lo que ves en sobremi.online lo construimos para nuestros clientes. En 30 minutos te decimos qué necesita tu caso específico.",
+      "p": "Todo lo que ves en sobremi.online — pedidos automáticos, cobros integrados, emails sin intervención — lo construimos para los negocios de nuestros clientes. En 30 minutos te decimos qué necesita el tuyo.",
       "btn": "Agendá una llamada gratuita →",
       "dis": "Sin compromiso. 30 minutos de estrategia pura."
     }
@@ -1816,5 +2760,764 @@
     "body": "Cada mes sin automatización es un mes que tu competencia capta tus clientes. 15 minutos pueden cambiar eso.",
     "cta": "¿Hablamos 15 min? (sin compromiso)",
     "dismiss": "No, gracias"
+  },
+  "ServicePages": {
+    "automationRetainer": {
+      "useCases": [
+        { "category": "Comunicación", "title": "Confirmaciones automáticas", "saved": "~4h/mes", "body": "Email + WhatsApp en segundos cuando entra una compra, reserva o consulta. Sin que nadie lo tenga que mandar." },
+        { "category": "Onboarding", "title": "Alta de nuevos clientes", "saved": "~6h/mes", "body": "Nuevo cliente = creación en CRM + carpeta en Drive + email de bienvenida. Todo en 2 minutos, sin intervención." },
+        { "category": "Reporting", "title": "Reportes automáticos", "saved": "~4h/mes", "body": "Datos de 3 planillas distintas consolidados y enviados por email al equipo cada lunes a las 8am." },
+        { "category": "Facturación", "title": "Seguimiento de cobros", "saved": "~5h/mes", "body": "Aviso automático de factura vencida. Escala a WhatsApp si no se paga en 48h. Sin que nadie tenga que recordarlo." },
+        { "category": "Operaciones", "title": "Integración entre sistemas", "saved": "Variable", "body": "CRM ↔ facturación ↔ email ↔ calendario. Sistemas que no «se hablan» — conectados con n8n." },
+        { "category": "Seguimiento", "title": "Recordatorio de citas", "saved": "~2h/mes", "body": "24h y 1h antes de cada reunión. Automático. Sin que el equipo tenga que acordarse de mandarlo." }
+      ],
+      "faq": [
+        { "q": "¿Cómo sé qué automatizar primero?", "a": "En el onboarding hacemos una auditoría de procesos. Vos nos contás cómo opera el negocio y nosotros identificamos los 3 puntos de mayor impacto — los que más tiempo consumen y más errores generan. Arrancamos por ahí." },
+        { "q": "¿Necesito saber algo técnico?", "a": "No. Vos describís el proceso en lenguaje llano: «cuando llega un nuevo cliente, mandamos este mail y creamos esta carpeta». Nosotros lo construimos. Nunca vas a tener que entender código, flujos o APIs." },
+        { "q": "¿Qué pasa con los flujos si cancelo el Retainer?", "a": "Son completamente tuyos. Te entregamos la exportación de cada flujo con documentación en lenguaje claro. Podés seguir usándolos en tu propio servidor de n8n sin pagar nada más a nadie." },
+        { "q": "¿Cuánto tiempo hasta los primeros resultados?", "a": "El primer flujo suele estar activo en la primera semana del retainer. El ahorro de tiempo se nota desde el mes 1. A los 3 meses, el equipo ya nota claramente la diferencia." },
+        { "q": "¿Puede conectar mi CRM con mi sistema de facturación?", "a": "Sí, siempre que ambos tengan API. En la llamada evaluamos la viabilidad técnica y te decimos qué es posible y qué no — sin comprometerte con algo que después no se puede hacer." },
+        { "q": "¿Cuál es la diferencia entre el Plan Base y el Pro?", "a": "Principalmente las horas disponibles y la complejidad de las integraciones. Base = 6h/mes, flujos simples y medios. Pro = 12h/mes, integraciones con APIs externas, webhooks avanzados y revisión estratégica mensual." }
+      ],
+      "heroBullets": [
+        "Las tareas que hacen a mano hoy — se hacen solas desde el mes 1",
+        "Cada mes el sistema hace más — nunca termina",
+        "Flujos documentados y 100% tuyos si cancelás"
+      ],
+      "plans": [
+        {
+          "name": "Plan Base",
+          "for": "Negocios que empiezan a automatizar",
+          "hours": "6h / mes",
+          "features": [
+            "1 a 2 flujos nuevos por mes (complejidad baja/media)",
+            "Mantenimiento de flujos existentes",
+            "Documentación completa de cada entrega",
+            "Comunicación por chat + actualizaciones semanales"
+          ],
+          "featured": false
+        },
+        {
+          "name": "Plan Pro",
+          "for": "Negocios con operación establecida que quieren acelerar",
+          "hours": "12h / mes",
+          "features": [
+            "Flujos complejos + integraciones con APIs externas",
+            "Webhooks avanzados y subworkflows",
+            "Revisión estratégica mensual — qué construir primero y por qué",
+            "Soporte prioritario con respuesta en menos de 4 horas",
+            "Mapa de automatización del negocio entregado en el mes 1"
+          ],
+          "featured": true
+        }
+      ],
+      "compound": [
+        { "month": "Mes 1", "title": "Onboarding + primeras 2 automatizaciones", "body": "Auditoría de procesos. Las 2 automatizaciones de mayor impacto ya activas." },
+        { "month": "Mes 2", "title": "2 flujos nuevos + optimización", "body": "Los del mes 1 ya están documentados. Sumamos la siguiente capa." },
+        { "month": "Mes 3", "title": "El equipo nota la diferencia", "body": "Menos tiempo en tareas operativas. Empezamos con integraciones entre sistemas." },
+        { "month": "Mes 4–5", "title": "Flujos encadenados", "body": "El sistema de nurturing y seguimiento está completo. Los flujos se conectan entre sí." },
+        { "month": "Mes 6", "title": "30-40% menos trabajo manual", "body": "El equipo tiene tiempo para tareas de mayor valor. El sistema trabaja solo." }
+      ],
+      "n8n": [
+        { "title": "$0 por automatización ejecutada", "body": "Zapier cobra por cada «tarea» ejecutada. n8n puede correr a costo fijo sin importar cuántas veces se ejecute el flujo. Si tu negocio escala, el costo no escala con él." },
+        { "title": "Sin límites de lógica", "body": "Zapier tiene lógica lineal. n8n permite condicionales complejos, loops, subworkflows y llamadas a APIs externas sin restricciones. Las automatizaciones más importantes no son lineales." },
+        { "title": "Los flujos te pertenecen", "body": "Si el día de mañana querés que otro equipo los gestione, los flujos exportan en JSON y se instalan en cualquier entorno. Sin vendor lock-in. Sin perder lo construido." }
+      ],
+      "forYou": [
+        "Ya tenés un negocio funcionando con procesos establecidos pero manuales",
+        "Tenés 2+ personas que gastan tiempo en tareas repetitivas todos los días",
+        "Querés escalar sin contratar más personas solo para tareas operativas",
+        "Tenés sistemas que no se hablan entre sí (CRM + facturación + email)",
+        "Ya usás Zapier y querés algo más robusto y más barato",
+        "Sabés que hay que automatizar pero nadie en el equipo sabe cómo"
+      ],
+      "meta": {
+        "title": "Automation Retainer — Automatizaciones Mensuales que Construyen tu Sistema Operativo | Vacaré",
+        "description": "Flujos n8n que eliminan el trabajo repetitivo de tu equipo. Sin contratar un desarrollador. Sin depender de Zapier. Plan mensual con hasta 12 horas de desarrollo y documentación completa.",
+        "ogTitle": "Automation Retainer — Vacaré Digital Solutions",
+        "ogDescription": "El tiempo de tu equipo es el recurso más caro que tenés. Cada tarea repetitiva que hacen a mano es tiempo que no se usa para crecer.",
+        "seoDescription": "Flujos n8n que eliminan el trabajo repetitivo de tu equipo. Sin contratar un desarrollador. Plan mensual con hasta 12 horas de desarrollo y documentación completa."
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "hero": {
+        "badge": "Paquete 05 · Sistema operativo mensual",
+        "h1Line1": "El tiempo de tu equipo es tu recurso más caro.",
+        "h1Gradient": "Cada tarea repetitiva que hacen a mano es tiempo que no crece.",
+        "description": "Automation Retainer construye las automatizaciones que eliminan ese trabajo — mes a mes. Sin contratar un desarrollador. Sin depender de Zapier. Sin que vos tengas que entender cómo funciona.",
+        "ctaPrimary": "Quiero automatizar mi negocio →",
+        "ctaSecondary": "Ver qué se construye ↓",
+        "disclaimer": "Auditoría de procesos incluida en la llamada · Sin compromiso",
+        "panel": {
+          "costLabel": "El Costo Oculto",
+          "costTitle": "Trabajo Manual",
+          "costAmount": "$460",
+          "costPeriod": "mes",
+          "costDesc": "Costo estimado en horas perdidas en tareas repetitivas como onboarding y reportes.",
+          "stats": [
+            { "num": "3h+", "label": "Ahorradas por día" },
+            { "num": "2-4", "label": "Flujos nuevos / mes" }
+          ]
+        }
+      },
+      "problemSection": {
+        "label": "El diagnóstico",
+        "h2Part1": "¿Cuánto le pagás a tu equipo",
+        "h2Gradient": "para hacer trabajo de máquina?",
+        "description": "La mayoría de los negocios no calculan el costo real del trabajo manual. Hasta que lo hacen, y el número les cambia la perspectiva completamente.",
+        "tableLabel": "Auditoría de tiempo · Ejemplo real",
+        "thTask": "Tarea",
+        "thHours": "Horas/mes",
+        "thCost": "Costo ($20/h)",
+        "tableRows": [
+          { "task": "Confirmaciones de pedido/reserva", "hours": "8h", "cost": "$160" },
+          { "task": "Onboarding de nuevos clientes", "hours": "6h", "cost": "$120" },
+          { "task": "Generación de reportes semanales", "hours": "4h", "cost": "$80" },
+          { "task": "Seguimiento de cobros pendientes", "hours": "5h", "cost": "$100" }
+        ],
+        "tableTotal": "Total mensual",
+        "tableTotalHours": "23h",
+        "tableTotalCost": "$460/mes",
+        "painPoints": [
+          { "title": "Horas del equipo en tareas sin valor", "body": "Cada hora que tu equipo pasa mandando confirmaciones a mano es una hora que no está mejorando el servicio, consiguiendo clientes o haciendo crecer el negocio." },
+          { "title": "Error humano constante — y evitable", "body": "Alguien se olvidó de mandar el mail. Alguien actualizó mal la planilla. Alguien no avisó al cliente. Con automatizaciones, los procesos se ejecutan igual siempre — sin excepciones." },
+          { "title": "El techo de crecimiento invisible", "body": "Para atender 20% más de clientes necesitás contratar una persona más. Ese es el techo. El Retainer lo rompe: el sistema atiende más sin que el equipo crezca proporcionalmente." }
+        ]
+      },
+      "useCasesSection": {
+        "label": "Qué se construye",
+        "h2Part1": "Ejemplos de lo que construimos",
+        "h2Gradient": "en los primeros meses.",
+        "description": "Cada flujo está diseñado para eliminar una tarea concreta. Arrancamos por los de mayor impacto.",
+        "savedLabel": "ahorrados"
+      },
+      "plansSection": {
+        "label": "Elegís el alcance",
+        "h2Part1": "Dos planes.",
+        "h2Gradient": "Cada uno correcto para una situación.",
+        "description": "La unidad de medida es el tiempo de desarrollo, no la cantidad de flujos. Un flujo simple = 2h. Una integración compleja = 6h. En el onboarding calibramos el alcance real.",
+        "mostPopular": "Más elegido",
+        "developmentLabel": "de desarrollo",
+        "ctaStart": "Empezar con {name} →"
+      },
+      "compoundSection": {
+        "label": "El efecto compuesto",
+        "h2Part1": "Cada mes construye",
+        "h2Gradient": "sobre el anterior."
+      },
+      "n8nSection": {
+        "label": "Por qué n8n",
+        "h2Part1": "Y no Zapier,",
+        "h2Gradient": "Make ni ningún otro.",
+        "note": "Si ya pagás Zapier Business ($599/mes), el Retainer Pro hace más por menos — con un profesional construyendo los flujos estratégicamente en vez de armar zaps a mano."
+      },
+      "forYouSection": {
+        "label": "Autodiagnóstico",
+        "h2Suffix": "es para vos si...",
+        "forYouLabel": "Para vos",
+        "notForYouLabel": "Otro paquete te sirve más si...",
+        "notForYou": [
+          { "text": "Todavía no tenés web ni leads — la base digital va primero", "pack": "Starter Presence", "href": "/servicios/starter-presence" },
+          { "text": "Tu problema es la captación de clientes nuevos, no las operaciones internas", "pack": "Growth Machine", "href": "/servicios/growth-machine" },
+          { "text": "Querés un canal orgánico con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/servicios/full-funnel-360" }
+        ],
+        "seeLabel": "Ver",
+        "auditNote": "¿No sabés cuál corresponde?",
+        "auditLinkLabel": "Pedí la auditoría gratuita →",
+        "auditHref": "/auditoria-web-gratuita"
+      },
+      "faqSection": {
+        "label": "Preguntas frecuentes",
+        "h2Part1": "Lo que todo el mundo pregunta",
+        "h2Gradient": "antes de dar el paso.",
+        "description": "Respondemos con honestidad.",
+        "trustBadges": [
+          "Flujos 100% tuyos al terminar",
+          "Documentación completa de cada entrega",
+          "Sin permanencia — cancelás cuando querés",
+          "Auditoría de procesos incluida en la llamada"
+        ]
+      },
+      "ctaFinal": {
+        "headlinePart1": "¿Cuántas horas regaló tu equipo esta semana",
+        "headlineGradient": "a tareas que una máquina puede hacer?",
+        "subheadline": "30 minutos de llamada. Hacemos la auditoría de tus procesos juntos y te decimos exactamente qué automatizaciones tienen más impacto y en qué orden las construiríamos.",
+        "ctaLabel": "Quiero automatizar mi negocio →",
+        "disclaimer": "Sin compromiso · Auditoría de procesos incluida · Respondemos en 2 horas",
+        "watermark": "AUTOMÁTICO",
+        "cards": [
+          { "tag": "No sé qué automatizar primero", "title": "Auditoría de procesos gratuita", "desc": "Mapeamos tus 3 tareas de mayor impacto y estimamos el tiempo que ahorrarías.", "href": "/auditoria-web-gratuita" },
+          { "tag": "Quiero entender cómo funciona", "title": "Mini-curso 5 días", "desc": "Qué se puede automatizar, con qué herramientas y cómo evaluar el ROI. Gratis.", "href": "/curso-web-gratis" },
+          { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Al final sabés qué plan corresponde y cuáles son los primeros flujos a construir.", "href": "#ctaf" }
+        ]
+      },
+      "footerColumns": {
+        "servicesTitle": "Servicios",
+        "freeTitle": "Gratuito",
+        "companyTitle": "Empresa",
+        "webAudit": "Auditoría web",
+        "emailCourse": "Mini-curso 5 días",
+        "allServices": "Todos los servicios",
+        "caseStudies": "Casos de éxito",
+        "privacy": "Privacidad"
+      }
+    },
+    "growthMachine": {
+      "includes": [
+        { "what": "Web estratégica — diseñada para convertir, no para decorar", "means": "No un folleto digital. Cada sección tiene un CTA, cada palabra está escrita sobre los puntos de dolor de tu buyer persona. El objetivo es uno: que el visitante deje sus datos o agende." },
+        { "what": "Lead magnet + 5 emails que llevan al prospecto de interesado a listo", "means": "Un recurso de valor (PDF, checklist, guía corta) que captura el email. Luego, 5 emails automatizados en 7 días — cada uno diseñado para responder una objeción distinta y acercar a la conversación." },
+        { "what": "Agendamiento automático — los prospectos eligen su horario sin vos", "means": "Integración de cal.com. El prospecto ve tu disponibilidad, elige el horario y confirma. Vos recibís la notificación con los datos. Sin «¿el martes a las 3?» por WhatsApp." },
+        { "what": "3 a 5 flujos en n8n — el sistema que trabaja cuando vos no estás", "means": "Automatizaciones que conectan tu web, tu email, tu WhatsApp y tu calendario. Cuando llega un lead: notificación inmediata, email de bienvenida, seguimiento programado. El sistema trabaja a las 2am." },
+        { "what": "Integración de pagos — cobrás sin fricción, el onboarding arranca solo", "means": "Si vendés servicios online, Stripe integrado en el flujo. El pago activa automáticamente el proceso de onboarding. Sin enviar links de pago manual ni confirmar transferencias." },
+        { "what": "Dashboard en tiempo real — sabés de dónde vienen y cuántos convierten", "means": "Un único lugar con cuántos leads entraron, desde qué fuente, cuántos agendaron y cuántos convirtieron. Sin abrir 5 herramientas distintas. Sin adivinar qué está funcionando." }
+      ],
+      "timeline": [
+        { "stage": "Visita la web", "without": "Sale sin dejar datos — no hay forma de volver a contactarlo", "with": "Descarga el lead magnet, deja su email, entra al sistema" },
+        { "stage": "Primer contacto", "without": "Manual, cuando tenés tiempo — a veces horas o días después", "with": "Email automático en 5 minutos, mientras la intención está en su pico" },
+        { "stage": "Nurturing", "without": "No existe — o un mensaje de WhatsApp que mandás si te acordás", "with": "Secuencia de 5 emails en 7 días, cada uno con un propósito específico" },
+        { "stage": "Agendamiento", "without": "«¿El martes a las 3?» — 4 mensajes para acordar un horario", "with": "Link de cal.com en el último email — el prospecto elige solo" },
+        { "stage": "Seguimiento", "without": "Hoja de cálculo o memoria — inevitablemente se pierde alguno", "with": "Dashboard con estado de cada lead en tiempo real" }
+      ],
+      "faq": [
+        { "q": "¿Qué pasa si no soy técnico y no entiendo n8n?", "a": "No necesitás entenderlo — ni aprender nada técnico. Nosotros construimos todos los flujos, los documentamos con capturas y los probamos antes de entregar. Si algo falla después del lanzamiento, lo arreglamos. Es nuestro sistema, no tuyo — hasta que esté funcionando perfecto." },
+        { "q": "¿Cuánto tarda en dar resultados?", "a": "El sistema captura leads desde el día del lanzamiento. Los primeros resultados de nurturing se ven en la primera semana — si alguien se suscribe al lead magnet el lunes, el viernes ya recibió 3 emails automatizados. El primer lead calificado suele aparecer en los primeros 7-14 días de operación." },
+        { "q": "¿Puedo empezar con Growth Machine si ya tengo una web?", "a": "Sí. Podemos construir el sistema de captación y automatización sobre tu web actual, sin tocar nada del diseño si no hace falta. Si la web tiene problemas técnicos que afectan la conversión, te lo decimos y lo discutimos — pero no es condición para empezar." },
+        { "q": "¿Qué herramientas usa el sistema?", "a": "n8n para automatizaciones, cal.com para agendamiento, Stripe para pagos (si aplica), GA4 + Looker Studio para métricas. Son herramientas open source o de bajo costo — sin licencias caras que vos tengas que pagar mes a mes. Todo documentado. Todo tuyo." },
+        { "q": "¿Voy a depender de ustedes para que funcione?", "a": "No. Al terminar el proyecto te entregamos todos los accesos, credenciales y documentación. Si el día de mañana querés que lo gestione otra persona o agencia, podés hacerlo sin perder nada. El sistema es de tu negocio, no nuestro." }
+      ],
+      "heroBullets": [
+        "Leads capturados y nutridos solos — mientras dormís",
+        "Reuniones agendadas automáticamente, sin coordinar por WhatsApp",
+        "Dashboard con estado de cada lead en tiempo real"
+      ],
+      "forYou": [
+        "Tenés un negocio funcionando con clientes reales",
+        "Tus leads llegan pero el proceso de convertirlos es manual y caótico",
+        "Querés que el sistema trabaje mientras vos entregás el servicio",
+        "El crecimiento está limitado por las horas del equipo, no por la demanda",
+        "Estás listo para escalar sin contratar más personas para captación",
+        "Sabés que perdés leads — simplemente no tenés tiempo de seguir a todos"
+      ],
+      "symptoms": [
+        { "title": "Tenés tráfico, pero pocas consultas", "body": "Visitantes que llegan y se van. Sin un lead magnet ni un incentivo para dejar datos, el 97% sale para siempre. Ese tráfico es dinero que ya gastaste en conseguirlo." },
+        { "title": "Las consultas se enfrían si no respondés rápido", "body": "Responder un lead en 5 minutos tiene 21 veces más probabilidad de conversión que en 30 minutos. Si tu respuesta depende de que vos estés mirando el teléfono, perdés." },
+        { "title": "No podés seguir a todos — el crecimiento tiene techo", "body": "Cuando el seguimiento es manual, el límite de clientes es el límite de horas. Growth Machine rompe ese techo: el sistema sigue a todos, al mismo tiempo, sin cansarse." }
+      ],
+      "flowSteps": [
+        { "step": "01", "label": "Visita la web", "sub": "Ve el lead magnet" },
+        { "step": "02", "label": "Descarga y deja email", "sub": "→ entra al sistema" },
+        { "step": "03", "label": "Secuencia de 5 emails", "sub": "En 7 días, automático" },
+        { "step": "04", "label": "Agenda la reunión", "sub": "Elige su horario solo" },
+        { "step": "05", "label": "Vos cerrás", "sub": "Prospecto calificado" }
+      ],
+      "stats": [
+        { "num": "7d", "label": "Leads nutridos" },
+        { "num": "5min", "label": "1er email auto" },
+        { "num": "0", "label": "Coord. manuales" }
+      ],
+      "meta": {
+        "title": "Growth Machine — Sistema Automatizado de Captación de Leads | Vacaré",
+        "description": "Automatizaciones n8n + web estratégica + nurturing por email + agendamiento automático. Tu negocio captura y califica leads mientras dormís. Llamada gratuita de 30 minutos.",
+        "ogTitle": "Growth Machine — Vacaré Digital Solutions",
+        "ogDescription": "Tus leads se enfrían antes de poder atenderlos. Growth Machine los captura, nutre y califica de forma autónoma.",
+        "seoDescription": "Automatizaciones n8n + web estratégica + nurturing por email + agendamiento automático. Tu negocio captura y califica leads mientras dormís."
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "hero": {
+        "badge": "Paquete 02 · Sistema de captación automatizado",
+        "h1Line1": "Tu negocio tiene leads.",
+        "h1Line2": "El problema es que",
+        "h1Gradient": "se enfrían antes de que llegués.",
+        "description": "Growth Machine construye el sistema que captura, nutre y califica leads de forma autónoma. Vos recibís el prospecto listo para cerrar — el sistema hace el resto.",
+        "ctaPrimary": "Quiero mi sistema de captación →",
+        "ctaSecondary": "Ver cómo funciona ↓",
+        "disclaimer": "Llamada gratuita · Sin compromiso · Sistema funcionando en menos de 30 días",
+        "panel": {
+          "flowTitle": "Flujo automatizado · Growth Machine",
+          "activityLabel": "Actividad a las 2:04 AM",
+          "newLead": "Nuevo lead calificado",
+          "meetingBooked": "Reunión agendada — mañana 10am"
+        }
+      },
+      "problemSection": {
+        "label": "El diagnóstico",
+        "h2Part1": "¿Cuánto vale un lead",
+        "h2Gradient": "que se enfría?",
+        "description": "La mayoría de los negocios trabajan duro para atraer visitantes — con publicidad, redes, boca a boca. Pero no tienen ningún sistema para convertir ese interés en una conversación real. Los visitantes llegan, no encuentran razón para quedarse, y desaparecen.",
+        "businessTodayLabel": "Tu negocio hoy",
+        "sources": ["Publicidad", "Referidos", "Redes"],
+        "visitsLabel": "Visitas & leads",
+        "noNurturingLabel": "sin sistema de nurturing",
+        "holes": [
+          { "label": "Sin seguimiento" },
+          { "label": "Sin nurturing" },
+          { "label": "Sin agenda" }
+        ],
+        "leaksCaption": "Los leads se escurren por los agujeros",
+        "insightTitle": "Growth Machine tapa el balde.",
+        "insightBody": "Captura el email antes de que se vaya, envía el primer email en 5 minutos, nutre al prospecto en 7 días, y agenda la reunión sin que vos hagas nada."
+      },
+      "systemSection": {
+        "label": "El sistema",
+        "h2Part1": "Lo que pasa desde que alguien",
+        "h2Gradient": "te descubre hasta que te contrata.",
+        "description": "Hoy cada etapa depende de que alguien la active manualmente. Growth Machine las automatiza todas.",
+        "thStage": "Etapa",
+        "thWithout": "Sin sistema",
+        "thWith": "Con Growth Machine",
+        "narrativeLabel": "Esto es lo que pasa mientras dormís",
+        "narrative": "Son las 2am. Alguien en España busca un hostel en Cusco. Encuentra tu web. Descarga la guía gratuita. A las 2:05am recibe un email automático de bienvenida. A las 2:10am tiene el link de cal.com en la bandeja. A las 9am vos abrís el mail y tenés una reunión agendada para mañana. Vos no hiciste nada."
+      },
+      "includesSection": {
+        "label": "Los 6 componentes",
+        "h2Part1": "No una lista de features.",
+        "h2Gradient": "Lo que cada uno hace por tu negocio.",
+        "description": "Cada componente existe para resolver una etapa del proceso de captación. Juntos forman el sistema completo."
+      },
+      "caseSection": {
+        "label": "Caso real",
+        "h2Part1": "Así se ve un negocio",
+        "h2Gradient": "cuando tiene el sistema.",
+        "tag": "Hostel · Cusco, Perú",
+        "titlePart1": "Supertramp pasó de depender 100% de OTAs a generar el ",
+        "titleGradient": "30% de su facturación directa",
+        "titlePart2": " en 6 meses.",
+        "description": "Velocidad crítica en mobile, sin CTAs de reserva directa, 0 posicionamiento en keywords de conversión. Construimos la web, el sistema de reserva directa y las automatizaciones de seguimiento. El resultado habló solo.",
+        "metrics": [
+          { "num": "30%", "label": "Facturación directa (antes: 0%)" },
+          { "num": "6m", "label": "Para ver resultados" },
+          { "num": "20%", "label": "Comisión OTA eliminada por reserva" }
+        ],
+        "linkText": "Ver el caso completo →",
+        "imgNum": "30%",
+        "imgSub": "facturación directa"
+      },
+      "roiSection": {
+        "label": "El argumento financiero",
+        "h2Part1": "No es un gasto.",
+        "h2Gradient": "Es una inversión con retorno calculable.",
+        "p1": "Si un cliente nuevo te genera en promedio $500 USD de margen, y el sistema recupera 3 leads por mes que antes se perdían... el sistema se paga solo en el primer mes.",
+        "p2": "Un asistente de ventas junior cuesta $600–1,200 USD/mes. El sistema hace el trabajo de seguimiento de leads 24/7, nunca se enferma, no se va de vacaciones y no comete errores de copy.",
+        "calculatorLabel": "Calculadora de retorno",
+        "calculatorRows": [
+          { "label": "Ticket promedio por cliente", "value": "$500 USD" },
+          { "label": "Leads recuperados por mes (estimado)", "value": "3 → 5" },
+          { "label": "Costo mensual de no tener sistema", "value": "$1,500 USD" },
+          { "label": "Meses para recuperar la inversión", "value": "~2 meses" }
+        ],
+        "calculatorNote": "* Estimación conservadora basada en proyectos reales. Tu número exacto lo calculamos en la llamada."
+      },
+      "forYouSection": {
+        "label": "Autodiagnóstico",
+        "h2Gradient": "Growth Machine",
+        "h2Suffix": "es para vos si...",
+        "forYouLabel": "Para vos",
+        "notForYouLabel": "Otro paquete te sirve más si...",
+        "notForYou": [
+          { "text": "No tenés web todavía — necesitás empezar desde cero", "pack": "Starter Presence", "href": "/servicios/starter-presence" },
+          { "text": "Querés posicionamiento orgánico con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/servicios/full-funnel-360" },
+          { "text": "Tenés producto y querés vender online directo, sin comisiones", "pack": "Ecommerce Pro", "href": "/servicios/ecommerce-pro" },
+          { "text": "Tu equipo gasta horas en tareas repetitivas internas — no en captación", "pack": "Automation Retainer", "href": "/servicios/automation-retainer" }
+        ],
+        "seeLabel": "Ver",
+        "auditNote": "¿No sabés cuál corresponde?",
+        "auditLinkLabel": "Pedí la auditoría gratuita →",
+        "auditHref": "/auditoria-web-gratuita"
+      },
+      "faqSection": {
+        "label": "Preguntas frecuentes",
+        "h2Part1": "Lo que todo el mundo pregunta",
+        "h2Gradient": "antes de dar el paso.",
+        "description": "Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.",
+        "trustBadges": [
+          "LLC registrada en Delaware",
+          "Todos los accesos son tuyos",
+          "Sistema documentado al detalle",
+          "Sin contratos de permanencia"
+        ]
+      },
+      "ctaFinal": {
+        "headlinePart1": "Tu negocio puede empezar",
+        "headlinePart2": "a trabajar solo",
+        "headlineGradient": "a partir de esta semana.",
+        "subheadline": "30 minutos de llamada. Sin presentaciones de agencia. Te decimos exactamente qué sistema construiríamos para tu negocio y cuándo estaría funcionando.",
+        "ctaLabel": "Agendá la llamada →",
+        "disclaimer": "Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas",
+        "watermark": "SISTEMA",
+        "cards": [
+          { "tag": "Ya tengo web pero no convierte", "title": "Auditoría gratuita primero", "desc": "Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.", "href": "/auditoria-web-gratuita" },
+          { "tag": "Quiero entender el sistema", "title": "Mini-curso gratuito · 5 emails", "desc": "Cómo funciona un sistema de captación automatizado, en 5 emails. Gratis.", "href": "/curso-web-gratis" },
+          { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Growth Machine para tu negocio específico.", "href": "#ctaf" }
+        ]
+      },
+      "footerColumns": {
+        "servicesTitle": "Servicios",
+        "freeTitle": "Gratuito",
+        "companyTitle": "Empresa",
+        "webAudit": "Auditoría web",
+        "emailCourse": "Mini-curso 5 días",
+        "allServices": "Todos los servicios",
+        "caseStudies": "Casos de éxito",
+        "privacy": "Privacidad"
+      }
+    },
+    "starterPresence": {
+      "includes": [
+        { "what": "Web ultrarrápida — sin costos mensuales de por vida", "means": "Carga antes de que el visitante termine de respirar. Sin hosting que pagar mes a mes. La mayoría de webs que construimos no tienen costo recurrente — el dinero que invertís no se va diluyendo en cuotas." },
+        { "what": "Aparecés cuando te buscan en Google — local y orgánico", "means": "Cuando alguien escribe tu servicio + tu ciudad, queremos que aparezcas en el mapa y en los resultados. SEO técnico completo + Google Business optimizado. En 30-60 días las primeras búsquedas locales ya te encuentran." },
+        { "what": "Cada consulta llega directo a tu WhatsApp en segundos", "means": "Ningún lead se pierde en un formulario que nadie revisa. Cuando alguien completa el contacto, vos recibís un mensaje en segundos con nombre, teléfono y lo que necesita. Respondés al toque, cuando la intención de compra está en el pico." },
+        { "what": "Sabés exactamente qué funciona y qué no", "means": "Panel completo con visitas, fuentes, comportamiento y búsquedas que usaron para encontrarte. Tomás decisiones con datos reales, no con intuición. Si algo no está funcionando, lo sabés antes de seguir invirtiendo." },
+        { "what": "Una tarea que hacés a mano hoy — se hace sola desde el día uno", "means": "Elegimos la tarea que más te consume (confirmación de cita, respuesta de bienvenida, alerta interna de consulta) y la automatizamos. El sistema trabaja aunque vos no estés mirando." }
+      ],
+      "faq": [
+        { "q": "¿Voy a depender de ustedes para mantener la web?", "a": "No, y ese es un principio que no negociamos. Al terminar el proyecto te entregamos todos los accesos — dominio, código, herramientas de analítica. Si el día de mañana querés trabajar con otro proveedor o hacer cambios vos mismo, podés hacerlo sin perder absolutamente nada." },
+        { "q": "¿Cómo aparezco en Google si la web es nueva?", "a": "Google indexa sitios nuevos en 15-30 días. El SEO técnico que implementamos desde el primer día acelera ese proceso. A eso sumamos Google Business Profile optimizado, que empieza a mostrar tu negocio en búsquedas locales mucho antes que el SEO orgánico tradicional. En la mayoría de proyectos, las primeras posiciones aparecen en 30-60 días." },
+        { "q": "¿Cuánto cuesta?", "a": "No publicamos un número fijo porque cada proyecto tiene alcances distintos. Lo que sí te garantizamos: en la llamada de diagnóstico te damos el precio exacto. Sin «desde», sin «podría ser». Un número concreto por un scope concreto. Si no encaja con tu presupuesto, también te lo decimos con honestidad." },
+        { "q": "¿Qué pasa si no me gusta lo que construyeron?", "a": "Trabajamos con aprobación por etapas. Diseño aprobado antes de desarrollar. Desarrollo aprobado antes de publicar. Nunca llegás a una entrega final con sorpresas — porque las cosas grandes las definiste vos en cada revisión." },
+        { "q": "¿Cuánto tiempo lleva de mi parte?", "a": "Menos de lo que pensás. Una llamada inicial de 30 minutos, una o dos revisiones por texto o videollamada breve, y la aprobación final. El trabajo pesado lo hacemos nosotros. Vos seguís operando tu negocio." },
+        { "q": "¿Funciona para cualquier tipo de negocio?", "a": "Starter Presence es ideal para negocios de servicios locales: clínicas, estudios profesionales, gastronomía, educación, hoteles chicos, consultores independientes. Si tenés producto y querés una tienda online, hay un paquete mejor — Ecommerce Pro." }
+      ],
+      "before": [
+        "Sin web — o con una que da vergüenza mostrar",
+        "Invisible en Google · los clientes no te encuentran",
+        "El 100% de leads por boca a boca — impredecible",
+        "No sabés cuánta gente llega ni desde dónde",
+        "Seguimiento de consultas a mano, sin organización",
+        "Pagando hosting mes a mes sin retorno visible"
+      ],
+      "after": [
+        "Web profesional que da confianza al primer vistazo",
+        "Aparecés en Google cuando te buscan",
+        "Leads que llegan solos — sin salir a buscarlos",
+        "Dashboard que muestra visitas, fuente y comportamiento",
+        "Cada consulta al WhatsApp, organizada, lista para responder",
+        "$0 de hosting mensual en la mayoría de proyectos"
+      ],
+      "process": [
+        { "num": "01", "time": "Día 0", "title": "Llamada de diagnóstico", "body": "30 minutos. Te escuchamos. Entendemos tu negocio y tus objetivos. Al final sabés exactamente qué vas a recibir, cuándo y cuánto. Si no somos la opción correcta, también te lo decimos sin rodeos." },
+        { "num": "02", "time": "Días 1–30", "title": "Construimos juntos", "body": "Arrancamos con propuesta aprobada. Ves el avance en tiempo real. Cada etapa tiene revisión antes de seguir. No desaparecemos — te mantenemos informado durante todo el proceso." },
+        { "num": "03", "time": "Día 30+", "title": "Publicamos y te entregamos todo", "body": "Lanzamos la web, entregamos todos los accesos (son tuyos, siempre), documentamos cada herramienta. A los 30 días del lanzamiento hacemos check-in para medir resultados y ajustar." }
+      ],
+      "forYou": [
+        "Tu negocio funciona pero no tenés web, o la que tenés no genera nada",
+        "Tus clientes llegan por recomendación — querés sumarle un canal digital propio",
+        "Buscás tu negocio en Google y no aparece nada confiable",
+        "Querés algo profesional sin depender de nadie para cambios básicos",
+        "No querés pagar hosting mensual eternamente",
+        "Querés saber qué gente entra, desde dónde y qué hacen"
+      ],
+      "heroBullets": [
+        "Web publicada en 30 días, sin hosting mensual de por vida",
+        "Posicionado en Google local en 30-60 días",
+        "Cada lead llega solo — notificación automática a tu WhatsApp"
+      ],
+      "problems": [
+        { "title": "Tu competidor aparece. Vos no.", "body": "El cliente busca, ve tres resultados con foto, reseñas y horario. Vos no estás. Llama al que aparece. No siente que eligió mal — simplemente no te encontró." },
+        { "title": "La recomendación que no llega.", "body": "Alguien te recomienda. La persona te googlea para confirmar que existís. No aparece nada, o aparece algo que no da confianza. La recomendación muere ahí." },
+        { "title": "La web que destruye credibilidad.", "body": "Una web lenta o desactualizada no es neutral — activamente trabaja en tu contra. Mandás el link a un prospecto y perdés credibilidad antes de abrir la boca." }
+      ],
+      "meta": {
+        "title": "Starter Presence — Web Profesional que Aparece en Google | Vacaré",
+        "description": "Web profesional en 30 días. Aparecés en Google, sin hosting mensual, con notificación automática de leads a tu WhatsApp. Llamada de diagnóstico gratuita.",
+        "ogTitle": "Starter Presence — Vacaré Digital Solutions",
+        "ogDescription": "Si buscás tu negocio en Google y no te encontrás, tus clientes tampoco.",
+        "seoDescription": "Web profesional en 30 días. Aparecés en Google, sin hosting mensual, con notificación automática de leads a tu WhatsApp."
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "services": "Servicios"
+      },
+      "hero": {
+        "badge": "Paquete 01 · Primera web estratégica",
+        "h1Line1": "Si buscás tu negocio",
+        "h1Line2": "en Google y no aparecés,",
+        "h1Gradient": "tus clientes van a otro.",
+        "description": "En 30 días tu negocio aparece cuando te buscan, tu web transmite lo que realmente hacés, y cada consulta llega directo a tu WhatsApp — sin que hagas nada extra.",
+        "ctaPrimary": "Agendá una llamada gratuita →",
+        "ctaSecondary": "Ver qué incluye ↓",
+        "disclaimer": "Llamada gratuita · Sin compromiso · Respondemos en menos de 2 horas",
+        "panel": {
+          "searchPlaceholder": "dentista en Córdoba",
+          "businessName": "Tu Negocio · Dentista en Córdoba",
+          "reviewCount": "47 reseñas",
+          "openNow": "Abierto ahora",
+          "businessCategory": "· Dentista · Córdoba",
+          "buttons": ["Reservar turno", "Llamar", "Sitio web"],
+          "caption": "Así es como tus clientes te encuentran. Hoy no están encontrando nada.",
+          "notifLabel": "Notificación automática — WhatsApp",
+          "notifTitle": "Nueva consulta desde la web",
+          "notifBody": "Martín — quiere saber precios para implantes",
+          "stats": [
+            { "num": "30d", "label": "Web publicada" },
+            { "num": "$0", "label": "Hosting mensual" },
+            { "num": "60d", "label": "Top Google local" }
+          ]
+        }
+      },
+      "invisibleSection": {
+        "label": "El problema real",
+        "h2Part1": "No es mala suerte.",
+        "h2Gradient": "Es que tus clientes eligen al que aparece.",
+        "description": "Google elige en 3 segundos. Si no estás ahí cuando alguien busca lo que ofrecés, ese cliente no existe para vos. Y lo que duele es que ni lo sabés.",
+        "insightTitle": "Starter Presence resuelve los tres.",
+        "insightBody": "En 30 días aparecés en Google, tu web transmite profesionalismo real, y cada consulta te llega sola — organizada, con datos, lista para que respondas."
+      },
+      "includesSection": {
+        "label": "Qué recibís",
+        "h2Part1": "No una lista de features.",
+        "h2Gradient": "Lo que cada cosa significa para tu negocio.",
+        "description": "Cada componente existe para resolver un problema concreto. Si no resolviera nada, no lo incluiríamos."
+      },
+      "beforeAfterSection": {
+        "label": "La transformación",
+        "h2Part1": "Lo que cambia en 30 días.",
+        "h2Gradient": "Concreto. Sin promesas vacías.",
+        "beforeLabel": "Hoy",
+        "afterLabel": "30 días después",
+        "bottomCta": "¿Querés este resultado en tu negocio?",
+        "bookCta": "Agendá la llamada →"
+      },
+      "forYouSection": {
+        "label": "Autodiagnóstico",
+        "h2Gradient": "Starter Presence",
+        "h2Suffix": "es para vos si...",
+        "forYouLabel": "Para vos",
+        "notForYouLabel": "Otro paquete te sirve más si...",
+        "notForYou": [
+          { "text": "Ya tenés web y leads, necesitás automatizar la captación", "pack": "Growth Machine", "href": "/servicios/growth-machine" },
+          { "text": "Querés un canal orgánico predecible con SEO y contenido a largo plazo", "pack": "Full Funnel 360", "href": "/servicios/full-funnel-360" },
+          { "text": "Tenés producto y querés vender online directo, sin comisiones", "pack": "Ecommerce Pro", "href": "/servicios/ecommerce-pro" },
+          { "text": "Tu equipo gasta horas en tareas repetitivas que podrían automatizarse", "pack": "Automation Retainer", "href": "/servicios/automation-retainer" }
+        ],
+        "seeLabel": "Ver",
+        "auditNote": "¿No sabés cuál corresponde?",
+        "auditLinkLabel": "Pedí la auditoría gratuita →",
+        "auditHref": "/auditoria-web-gratuita"
+      },
+      "processSection": {
+        "label": "Cómo funciona",
+        "h2Part1": "De la primera conversación",
+        "h2Gradient": "a la web publicada en 30 días.",
+        "description": "Sin procesos interminables. Sin reuniones que no van a ningún lado. Tres pasos y listo."
+      },
+      "faqSection": {
+        "label": "Preguntas frecuentes",
+        "h2Part1": "Lo que todo el mundo pregunta",
+        "h2Gradient": "antes de dar el paso.",
+        "description": "Respondemos con honestidad. Si hay algo que no está acá, lo respondemos en la llamada.",
+        "trustBadges": [
+          "LLC registrada en Delaware",
+          "Accesos 100% tuyos",
+          "Sin contratos de permanencia",
+          "Propuesta antes de cobrar"
+        ]
+      },
+      "ctaFinal": {
+        "headlinePart1": "30 días a partir de hoy,",
+        "headlineGradient": "tu negocio aparece en Google.",
+        "subheadline": "La llamada es gratuita y dura 30 minutos. Al final sabés exactamente qué recibís, cuánto cuesta y si tiene sentido avanzar. Sin compromiso de ningún tipo.",
+        "ctaLabel": "Agendá tu llamada gratuita →",
+        "disclaimer": "Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas",
+        "watermark": "EMPEZÁ",
+        "cards": [
+          { "tag": "Tengo web pero no funciona", "title": "Auditoría gratuita primero", "desc": "Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.", "href": "/auditoria-web-gratuita" },
+          { "tag": "Todavía no tengo web", "title": "Mini-curso gratuito · 5 emails", "desc": "Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.", "href": "/curso-web-gratis" },
+          { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.", "href": "#ctaf" }
+        ]
+      },
+      "footerColumns": {
+        "servicesTitle": "Servicios",
+        "freeTitle": "Gratuito",
+        "companyTitle": "Empresa",
+        "webAudit": "Auditoría web",
+        "emailCourse": "Mini-curso 5 días",
+        "allServices": "Todos los servicios",
+        "caseStudies": "Casos de éxito",
+        "privacy": "Privacidad"
+      }
+    },
+    "ecommercePro": {
+      "conversionKillers": [
+        { "title": "Lentitud en mobile", "body": "+3 segundos de carga = 50% de abandono. El 70% del tráfico ecommerce viene del celular — y la mayoría de tiendas fallan en este punto." },
+        { "title": "Checkout con fricción", "body": "Cada campo extra = 10% de abandono. Si pedís registro obligatorio antes del pago, perdés el 30% de los compradores antes de llegar a la pantalla de pago." },
+        { "title": "Sin señales de confianza", "body": "Sin reseñas visibles, sin política de devolución clara, sin logos de pago reconocidos — el usuario no compra. La confianza se construye o se destruye en 3 segundos." },
+        { "title": "Sin recuperación de abandono", "body": "El 65-75% de los carritos se abandonan. Sin sistema de recuperación, esa venta está muerta. Con uno bien configurado, recuperás el 10-15%." },
+        { "title": "Proceso post-compra manual", "body": "Si la confirmación tarda o el comprador no sabe qué pasa después de pagar, llama al soporte, hace un contracargo o simplemente no vuelve a comprarte." }
+      ],
+      "techOptions": [
+        { "name": "A — Máximo control", "for": "Marcas que quieren independencia total y performance máxima", "how": "Next.js + Stripe + base de datos propia", "why": "Carga en menos de 1 segundo. Sin dependencia de plataforma. Sin costos mensuales por «plan Premium». Si Shopify sube precios mañana, no importa — el código es tuyo.", "best": true },
+        { "name": "B — Ya tenés WordPress", "for": "Negocios con inversión existente en WooCommerce", "how": "Optimización WooCommerce + automatizaciones", "why": "No tiras lo que tenés. Aceleramos el sitio, bajamos el tiempo de carga y sumamos automatizaciones post-compra que no tenías.", "best": false },
+        { "name": "C — Headless Shopify", "for": "Marcas con alto volumen que quieren lo mejor de ambos mundos", "how": "Frontend en Next.js + Shopify como backend", "why": "El SEO y la velocidad de Next.js sobre la infraestructura de pagos e inventario de Shopify. Sin sacrificar ninguno de los dos.", "best": false }
+      ],
+      "postPurchase": [
+        { "time": "0 min", "event": "Venta confirmada", "desc": "Email automático al comprador con resumen completo del pedido" },
+        { "time": "1 min", "event": "Aviso al equipo", "desc": "WhatsApp o email interno con detalle de la venta para preparar el pedido" },
+        { "time": "5 min", "event": "Recibo generado", "desc": "PDF automático con los datos fiscales correspondientes, enviado sin que nadie lo genere" },
+        { "time": "3 días", "event": "Seguimiento post-entrega", "desc": "«¿Llegó todo bien?» — simple, automático, en el momento justo" },
+        { "time": "7 días", "event": "Solicitud de reseña", "desc": "Pedido automático en el momento de mayor satisfacción — cuando ya usó el producto y está feliz" },
+        { "time": "Continuo", "event": "Alerta de stock bajo", "desc": "Nunca te quedás sin saber que algo se está agotando — el sistema te avisa antes de que pase" }
+      ],
+      "faq": [
+        { "q": "¿Es mejor Shopify o Next.js para mi caso?", "a": "Depende de tu volumen, tu equipo técnico y tus necesidades. No recomendamos la opción más cara — recomendamos la correcta para cada negocio. En la llamada evaluamos tu caso y te decimos sin rodeos cuál tiene más sentido." },
+        { "q": "¿Puedo migrar mi tienda de WooCommerce sin perder datos?", "a": "Sí. La migración incluye productos, imágenes, historial de clientes y pedidos. Hacemos la migración en etapas para que en ningún momento tu tienda esté offline o pierdas ventas durante el proceso." },
+        { "q": "¿Cómo funciona Stripe en Argentina/LATAM?", "a": "Stripe funciona en Argentina, México, Colombia, Chile, España y más. La pasarela correcta depende de tu ubicación y moneda. En la llamada te explicamos la configuración exacta para tu caso — incluyendo opciones para recibir pagos en USD desde el exterior." },
+        { "q": "¿La tienda va a ser mía o voy a depender de ustedes?", "a": "Todo el código y los accesos te quedan a vos. Si el día de mañana querés que lo gestione otro desarrollador o hacés cambios internamente, podés hacerlo sin perder nada. El código es tuyo desde el primer día." },
+        { "q": "¿Puedo agregar productos después sin necesitar ayuda técnica?", "a": "Sí. El panel de administración te permite agregar, editar y gestionar productos sin ningún conocimiento técnico. Si es Next.js con CMS headless, operás todo desde una interfaz visual simple." }
+      ],
+      "heroBullets": [
+        "Tienda directa — $0 de comisión por cada venta",
+        "Carga en menos de 1 segundo en mobile",
+        "Post-compra automatizado: confirmación, seguimiento y reseña"
+      ],
+      "forYou": [
+        "Vendés productos o servicios online y le pagás comisión a una plataforma",
+        "Tenés tienda pero la tasa de conversión es baja o el post-venta es manual",
+        "Querés vender online sin depender de Shopify, MercadoLibre o cualquier marketplace",
+        "Querés que cada venta dispare el proceso completo de forma automática",
+        "Tu tienda es lenta en mobile y sabés que estás perdiendo ventas por eso"
+      ]
+    },
+    "fullFunnel360": {
+      "includes": [
+        { "what": "Web estratégica — cada URL posiciona una keyword", "means": "No es una web. Es una red de captura. Cada página existe para atraer un tipo de búsqueda específica y llevar al visitante al siguiente paso." },
+        { "what": "SEO técnico como arquitectura — la base de todo", "means": "Velocidad, Core Web Vitals, schema markup, estructura de URLs, enlazado interno. Sin esta base, el contenido no posiciona. Con ella, cada artículo tiene ventaja desde el día uno." },
+        { "what": "LLM Optimization — aparecer en ChatGPT y Perplexity", "means": "Estructura de contenido y autoridad para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés. Nadie más lo está haciendo en LATAM." },
+        { "what": "10 piezas de contenido estratégico — vendedores que no duermen", "means": "Artículos y guías que posicionan las keywords de mayor intención de tu industria. Cada uno es un vendedor digital que trabaja 24/7 durante años, sin que paguéis nada." },
+        { "what": "Lead magnet avanzado — captura a quien de verdad importa", "means": "PDF, calculadora o herramienta que da valor real y captura el email del prospecto calificado. No cualquier email — el de alguien que ya demostró interés en lo que hacés." },
+        { "what": "Funnel completo — del visitante desconocido al cliente", "means": "Tráfico → captación → nurturing → calificación → reunión agendada. Nada queda al azar. Cada etapa está diseñada para llevar al siguiente paso." },
+        { "what": "Secuencia de onboarding 7-14 días — construye la confianza sola", "means": "El prospecto nuevo recibe la secuencia que responde sus objeciones, muestra tu autoridad y lo lleva a la decisión. Sin que vos hagas nada más que el primer contacto." },
+        { "what": "CRM básico — sabés en qué etapa está cada prospecto", "means": "Notion o Airtable configurado para tu proceso. Nada se pierde. Sabés quién está listo para cerrar, quién necesita un empujón y quién llegó esta semana." },
+        { "what": "5+ flujos en n8n — todos los puntos conectados", "means": "Automatizaciones que conectan el funnel completo. Cuando llega un lead: entra al CRM, recibe el primer email, agenda si está listo. El sistema no tiene fisuras." },
+        { "what": "Dashboard Looker Studio — el canal entero en un lugar", "means": "Tráfico, leads, fuente, conversión, pipeline. En tiempo real. Sin abrir 5 herramientas. Sin adivinar si el canal está creciendo o estancado." }
+      ],
+      "faq": [
+        { "q": "¿Cuánto tarda en verse resultados?", "a": "Los primeros indicadores (indexación, posiciones en keywords de long-tail) se ven en 4-6 semanas. Los resultados de conversión maduran en 3-6 meses. El canal a plena velocidad, entre los 6 y 12 meses. Full Funnel es una inversión con retorno compuesto — no un sprint." },
+        { "q": "¿Qué pasa con el SEO si después no seguimos publicando?", "a": "El contenido existente sigue trabajando. A diferencia de una campaña de publicidad que cae a cero cuando pausás, un artículo posicionado sigue trayendo tráfico sin ninguna inversión adicional. Recomendamos seguir publicando, pero el activo no desaparece si parás." },
+        { "q": "¿Cómo aparezco en ChatGPT con mi negocio?", "a": "Los modelos de IA citan fuentes de autoridad. Construimos la arquitectura de contenido y la estructura de schema markup para que tu sitio sea reconocido como fuente confiable cuando alguien pregunta por tu categoría. No es instantáneo — madura en 3-6 meses como el SEO." },
+        { "q": "Contratamos SEO antes y no funcionó. ¿Por qué sería distinto ahora?", "a": "El SEO sin contenido estratégico es como construir paredes sin cimientos. Y el contenido sin SEO técnico es contenido que nadie encuentra. El problema más común es que se hicieron las dos cosas por separado, sin integración. Nosotros las integramos desde el día uno." },
+        { "q": "¿Puedo hacer solo una parte del Full Funnel?", "a": "Podemos arrancar con el scope que corresponde a tu situación. En la llamada evaluamos qué tiene más impacto primero — si tu web ya está funcionando bien, el primer foco puede ser el contenido y las automatizaciones. Si necesitás la base técnica, arrancamos por ahí." }
+      ],
+      "heroBullets": [
+        "Canal orgánico que trae clientes sin publicidad pagada",
+        "Aparecer en Google Y en respuestas de ChatGPT y Perplexity",
+        "Funnel completo: del visitante desconocido a la reunión agendada"
+      ],
+      "forYou": [
+        "Tenés un negocio con tracción y querés un canal que no dependa de ads ni referidos",
+        "Estás dispuesto a invertir en algo que tarda 3-6 meses en madurar pero que dura años",
+        "Querés aparecer en Google Y en ChatGPT cuando alguien busca lo que hacés",
+        "Vendés servicios con ciclo de venta largo donde la confianza importa",
+        "Querés construir algo que crezca con el tiempo, no una solución de corto plazo"
+      ],
+      "badge": "Paquete 03 · Canal orgánico completo",
+      "h1Line1": "El boca a boca es hermoso.",
+      "h1Line2": "Pero no escala,",
+      "h1Line3": "y no construye nada si para.",
+      "lead": "Full Funnel 360 construye el canal que atrae clientes nuevos de forma sostenida: SEO, contenido estratégico y funnel completo — sin pagar publicidad. En 90 días el canal trabaja. En 6 meses es predecible.",
+      "ctaPrimary": "Quiero mi canal orgánico →",
+      "ctaSecondary": "Ver cómo funciona ↓",
+      "disclaimer": "Llamada estratégica gratuita · Sin compromiso · Respondemos en 2 horas",
+      "heroPanelGrowthLabel": "Crecimiento Orgánico",
+      "heroPanelChannelLabel": "Canal Predecible",
+      "heroPanelMilestones": [
+        { "label": "Mes 1", "desc": "Canal y Funnel Activos" },
+        { "label": "Mes 3", "desc": "Primeros Leads Orgánicos" },
+        { "label": "Mes 6", "desc": "Crecimiento Sostenido" }
+      ],
+      "heroPanelNoAds": "En Publicidad",
+      "heroPanelAiOptimized": "Optimizado p/ IA",
+      "diagSection": "El diagnóstico",
+      "diagH2Line1": "Dos canales que funcionan.",
+      "diagH2Line2": "Ninguno construye activos.",
+      "diagLead": "El boca a boca es impredecible. Los ads funcionan mientras pagás y dejan cero cuando paran. Full Funnel 360 construye el tercer canal — el que crece sin que lo alimentes.",
+      "channel1Title": "Boca a boca",
+      "channel1Items": ["Funciona — pero no escala", "Impredecible por definición", "Para si el dueño para", "No podés proyectar el próximo mes"],
+      "channel2Title": "Publicidad pagada",
+      "channel2Items": ["Funciona mientras pagás", "Cae a cero cuando parás", "No construye ningún activo", "El costo por lead sube con la competencia"],
+      "channel3Items": ["Crece mientras vos hacés otra cosa", "Predecible después del mes 3", "Construye activos que duran años", "Costo marginal cerca de cero con el tiempo"],
+      "channel3Note": "Un artículo optimizado hoy sigue trayendo leads en 3 años. Sin que paguéis nada.",
+      "llmSection": "El futuro del search",
+      "llmH2Line1": "¿Tu negocio aparece cuando",
+      "llmH2Line2": "alguien le pregunta a ChatGPT?",
+      "llmP1": "Millones de personas ya no buscan en Google. Le preguntan a ChatGPT, Perplexity, Gemini. Si tu negocio no está siendo citado como referencia por esos modelos, sos invisible en el canal de búsqueda de mayor crecimiento de la historia.",
+      "llmP2": "Full Funnel 360 incluye LLM Optimization: construimos la presencia y la arquitectura de contenido para que los modelos de IA te citen como fuente confiable cuando alguien pregunta por lo que ofrecés.",
+      "llmNote": "Ninguna agencia en LATAM está ofreciendo LLM Optimization como parte de su propuesta. Esto es territorio virgen — y la ventana de oportunidad se cierra.",
+      "chatgptLabel": "ChatGPT · nueva conversación",
+      "chatgptQuestion": "¿Cuál es la mejor agencia digital para negocios locales en Argentina?",
+      "chatgptResponse1": "Para negocios locales en Argentina, algunas agencias destacadas incluyen...",
+      "chatgptResponse2": "es mencionada frecuentemente por su enfoque en automatizaciones y resultados medibles para pymes...",
+      "chatgptSources": "+2 fuentes",
+      "chatgptNote": "Así se ve cuando Full Funnel 360 lleva 6+ meses activo",
+      "funnelSection": "El canal en funcionamiento",
+      "funnelH2Line1": "Del visitante que no te conoce",
+      "funnelH2Line2": "al cliente que te contrata — sin publicidad.",
+      "funnelLead": "Cinco etapas. Cada una automatizada. El sistema las recorre por vos.",
+      "funnelStageLabel": "Etapa",
+      "funnelStages": [
+        { "step": "01", "label": "Búsqueda", "body": "Alguien busca en Google o le pregunta a ChatGPT. SEO + LLM optimization aseguran que aparezcas." },
+        { "step": "02", "label": "Descubrimiento", "body": "Llega a tu web. El contenido lo engancha porque responde exactamente lo que buscaba." },
+        { "step": "03", "label": "Interés", "body": "Descarga el lead magnet y deja su email. El sistema toma el control desde acá." },
+        { "step": "04", "label": "Calificación", "body": "La secuencia de nurturing filtra quién realmente tiene el problema que vos resolvés." },
+        { "step": "05", "label": "Conversión", "body": "Reunión agendada. Ya conoce tu trabajo, ya confía. Vos solo tenés que cerrar." }
+      ],
+      "includesSection": "Los 10 componentes",
+      "includesH2Line1": "10 vendedores digitales.",
+      "includesH2Line2": "Trabajando 24/7 durante años.",
+      "includesLead": "Cada componente construye sobre el anterior. Juntos forman el canal orgánico completo.",
+      "compoundSection": "El efecto compuesto",
+      "compoundH2Line1": "Lo que construís en mes 1",
+      "compoundH2Line2": "sigue trabajando en año 3.",
+      "compoundP1": "Una campaña de publicidad tiene vida útil de días. Un artículo optimizado tiene vida útil de años. A medida que los artículos maduran, acumulan autoridad, suben en los rankings y traen más tráfico.",
+      "compoundP2": "El canal orgánico no te cuesta más conforme crece — al contrario, el costo marginal baja mientras el retorno sube.",
+      "compoundChartTitle": "Retorno en el tiempo",
+      "compoundSeries": [
+        { "label": "Publicidad pagada", "note": "Cae a 0 cuando parás" },
+        { "label": "Full Funnel 360", "note": "Sigue creciendo" }
+      ],
+      "compoundChartLabels": ["Mes 1", "Mes 3", "Mes 6", "Año 1", "Año 2"],
+      "compoundDisclaimer": "* Representación ilustrativa basada en comportamiento típico de canales",
+      "timelineSection": "Qué pasa en cada etapa",
+      "timelineH2": "Los hitos reales del canal orgánico.",
+      "timelineMilestones": [
+        { "period": "Mes 1", "title": "El canal arranca", "items": ["Web publicada con SEO técnico", "Google indexando el sitio", "Lead magnet y funnel activos", "Primeras piezas de contenido publicadas"] },
+        { "period": "Mes 2–3", "title": "Primeras señales", "items": ["Keywords de long-tail posicionando", "Primeros leads orgánicos entrando", "Secuencia de nurturing activa", "Dashboard con primeras métricas"] },
+        { "period": "Mes 4–6", "title": "El canal madura", "items": ["Flujo estable de leads orgánicos", "LLM citations activos", "Contenido acumulando autoridad", "Canal predecible — sabés cuántos vienen"] },
+        { "period": "Año 1", "title": "El canal trabaja solo", "items": ["Crecimiento sin intervención constante", "Costo marginal cerca de cero", "Autoridad de dominio consolidada", "Pipeline predecible mes a mes"] },
+        { "period": "Año 2+", "title": "Ventaja competitiva", "items": ["Los competidores tardaron 2 años en arrancar", "El canal genera mientras el equipo duerme", "Activo digital que se revende con el negocio", "Independencia total de publicidad pagada"] }
+      ],
+      "forWhoSection": "Autodiagnóstico",
+      "forWhoH2": "Full Funnel 360 es para vos si...",
+      "forYouLabel": "Para vos",
+      "otherPack": "Otro paquete te sirve más si...",
+      "seeLabel": "Ver",
+      "notSureText": "¿No sabés cuál corresponde?",
+      "freeAuditLink": "Pedí la auditoría gratuita →",
+      "otherPackItems": [
+        { "text": "Necesitás leads esta semana — el canal orgánico tarda meses en madurar", "pack": "Growth Machine", "slug": "growth-machine" },
+        { "text": "Recién empezás y no tenés presencia digital todavía", "pack": "Starter Presence", "slug": "starter-presence" },
+        { "text": "Tu problema son las tareas repetitivas internas, no la captación", "pack": "Automation Retainer", "slug": "automation-retainer" }
+      ],
+      "faqSection": "Preguntas frecuentes",
+      "faqH2Line1": "Lo que todo el mundo pregunta",
+      "faqH2Line2": "antes de dar el paso.",
+      "faqLead": "Respondemos con honestidad.",
+      "trustItems": ["LLC registrada en Delaware", "Todos los activos son tuyos", "Sin contratos de permanencia", "Resultados medibles desde el mes 1"],
+      "ctaHeadlineLine1": "El canal que construís hoy",
+      "ctaHeadlineLine2": "trae clientes en 2027 sin que hagas nada.",
+      "ctaSubheadline": "30 minutos de llamada estratégica. Te decimos exactamente qué canal orgánico podemos construir para tu negocio, en qué tiempo y con qué hitos de resultado.",
+      "ctaMainLabel": "Agendá tu llamada estratégica →",
+      "ctaDisclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
+      "ctaWatermark": "ORGÁNICO",
+      "ctaCards": [
+        { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan." },
+        { "tag": "Quiero entender el proceso", "title": "Mini-curso 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox." },
+        { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico." }
+      ]
+    }
   }
 }

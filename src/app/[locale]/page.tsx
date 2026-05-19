@@ -22,6 +22,7 @@ import CtaFinal from '@/components/sections/CtaFinal';
 import BlogPreview from '@/components/sections/BlogPreview';
 import FaqSection from '@/components/sections/FaqSection';
 import VideoTestimonial from '@/components/sections/VideoTestimonial';
+import GoldSponsorBanner from '@/components/sections/GoldSponsorBanner';
 
 // SEO
 import JsonLd from '@/components/seo/JsonLd';
@@ -185,7 +186,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <WhyBento cards={t.raw('Why.cards')} />
 
               <MotionWrapper type="fadeUp" delay={0.2} className="mt-[44px]">
-                <a href="#ctaf" className="inline-block text-[14px] font-bold text-[var(--am)] no-underline border-b-[1.5px] border-[rgba(245,166,35,0.35)] pb-[2px] transition-colors hover:border-[var(--am)]">
+                <a href={locale === 'es' ? '/es/auditoria-web-gratuita' : '/en/free-web-audit'} className="inline-block text-[14px] font-bold text-[var(--am)] no-underline border-b-[1.5px] border-[rgba(245,166,35,0.35)] pb-[2px] transition-colors hover:border-[var(--am)]">
                   {t('Why.cta')}
                 </a>
               </MotionWrapper>
@@ -229,6 +230,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             variant="gradient"
             watermarkText={t('Stats.watermark')}
             stats={t.raw('Stats.stats')}
+          />
+
+          {/* GOLD SPONSOR BANNER */}
+          <GoldSponsorBanner
+            eyebrow={t('GoldSponsorBanner.eyebrow')}
+            title={t('GoldSponsorBanner.title')}
+            description={t('GoldSponsorBanner.description')}
+            stampMonth={t('GoldSponsorBanner.stampMonth')}
+            stampYear={t('GoldSponsorBanner.stampYear')}
           />
 
           {/* PACKS */}
@@ -283,7 +293,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] mb-[32px] max-w-[480px]">
                   {t('Auto.intro')}
                 </p>
-                <Button href="/case-studies/sobremi" variant="primary">{t('Auto.cta')}</Button>
+                <Button href="#packs" variant="primary">{t('Auto.cta')}</Button>
               </MotionWrapper>
 
               <MotionWrapper type="fadeRight" delay={0.15}>

@@ -3,14 +3,10 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { routing } from '@/navigation';
 import ScrollObserver from '@/components/layout/ScrollObserver';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
-import '../globals.css';
-
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+import HomeClient from '@/components/layout/HomeClient';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vacaredigitalsolutions.com'),
@@ -45,17 +41,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <HomeClient>
         <ScrollObserver />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-          <WhatsAppFloat />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        {children}
+        <WhatsAppFloat />
+      </HomeClient>
+    </NextIntlClientProvider>
   );
 }

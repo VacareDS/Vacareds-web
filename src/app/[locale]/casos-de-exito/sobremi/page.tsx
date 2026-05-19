@@ -12,9 +12,11 @@ import PageWrapper from '@/components/layout/PageWrapper';
 
 // Sections
 import SplitHero from '@/components/sections/SplitHero';
+import ArchTimeline from '@/components/sections/ArchTimeline';
 
 // UI
 import GradientText from '@/components/ui/GradientText';
+import OpenMeetingBtn from '@/components/ui/OpenMeetingBtn';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -70,14 +72,6 @@ export default function SobreMiCasePage() {
           subheadline={t('Hero.subtitle')}
           leftContent={
             <>
-              <div className="flex gap-[8px] flex-wrap mb-[20px]">
-                {t.raw('Hero.stack').map((tech: string, idx: number) => (
-                  <span key={idx} className={`inline-flex items-center gap-[6px] text-[12px] font-bold px-[13px] py-[6px] rounded-[20px] ${idx < 3 ? 'grad-bg text-white' : 'bg-[rgba(28,24,40,0.07)] text-[var(--dark)]'}`}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-0 border-[0.5px] border-[rgba(28,24,40,0.1)] rounded-[14px] overflow-hidden max-w-[440px]">
                 {t.raw('Hero.metrics').map((m: any, idx: number, arr: any[]) => (
                   <div key={idx} className={`p-[14px_20px] flex-1 ${idx < arr.length - 1 ? 'border-b-[0.5px] sm:border-b-0 sm:border-r-[0.5px] border-[rgba(28,24,40,0.07)]' : ''}`}>
@@ -103,7 +97,7 @@ export default function SobreMiCasePage() {
                 <div className="flex flex-col gap-[16px] lg:gap-[20px]">
                   <div className="flex items-start gap-[14px]">
                     <div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[10px] bg-[rgba(232,65,122,0.15)] flex items-center justify-center shrink-0 border-[0.5px] border-[rgba(232,65,122,0.3)]">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#E8417A]"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                     </div>
                     <div>
                       <div className="text-[14px] lg:text-[15px] font-bold text-white mb-[4px]">Ventas 100% automatizadas</div>
@@ -112,7 +106,7 @@ export default function SobreMiCasePage() {
                   </div>
                   <div className="flex items-start gap-[14px]">
                     <div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[10px] bg-[rgba(29,158,117,0.15)] flex items-center justify-center shrink-0 border-[0.5px] border-[rgba(29,158,117,0.3)]">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#1D9E75]"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     <div>
                       <div className="text-[14px] lg:text-[15px] font-bold text-white mb-[4px]">Gestión en tiempo real</div>
@@ -121,7 +115,7 @@ export default function SobreMiCasePage() {
                   </div>
                   <div className="flex items-start gap-[14px]">
                     <div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[10px] bg-[rgba(245,166,35,0.15)] flex items-center justify-center shrink-0 border-[0.5px] border-[rgba(245,166,35,0.3)]">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#F5A623]"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
                     </div>
                     <div>
                       <div className="text-[14px] lg:text-[15px] font-bold text-white mb-[4px]">Experiencia de usuario fluida</div>
@@ -201,8 +195,8 @@ export default function SobreMiCasePage() {
                 {t('Context.challengesLabel')}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
-                {t.raw('Context.challenges').map((c: string, idx: number) => (
-                  <div key={idx} className="flex gap-[16px] items-start">
+                {t.raw('Context.challenges').map((c: string, idx: number, arr: string[]) => (
+                  <div key={idx} className={`flex gap-[16px] items-start ${idx === arr.length - 1 && arr.length % 2 !== 0 ? 'md:col-span-2' : ''}`}>
                     <div className="w-[32px] h-[32px] rounded-[8px] bg-[rgba(232,65,122,0.1)] flex items-center justify-center text-[12px] font-extrabold text-[var(--mg)] shrink-0 mt-[2px]">
                       {idx + 1}
                     </div>
@@ -231,55 +225,7 @@ export default function SobreMiCasePage() {
               {t('Arch.intro')}
             </p>
 
-            <div className="flex flex-col gap-[16px]">
-              {/* Frontend Layer */}
-              <div className="flex gap-[12px] items-center flex-wrap">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.25)] w-[80px] shrink-0 text-right">Frontend</div>
-                <div className="flex gap-[10px] flex-wrap flex-1">
-                  <div className="grad-bg border-none rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-white mb-[3px]">Next.js 14</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">App Router · SSR · RSC</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">sobremi.online/crear</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Formulario de pedido</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">/regalos/:id</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Página pública del regalo</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">/productos</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Catálogo dinámico</div></div>
-                </div>
-              </div>
-              <div className="w-full h-[0.5px] bg-gradient-to-r from-[rgba(232,65,122,0.2)] to-[rgba(245,166,35,0.2)] my-[4px]" />
-              
-              {/* Backend Layer */}
-              <div className="flex gap-[12px] items-center flex-wrap">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.25)] w-[80px] shrink-0 text-right">Backend</div>
-                <div className="flex gap-[10px] flex-wrap flex-1">
-                  <div className="grad-bg border-none rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-white mb-[3px]">API Routes</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Next.js serverless</div></div>
-                  <div className="bg-[rgba(232,65,122,0.15)] border-[0.5px] border-[rgba(232,65,122,0.3)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Stripe SDK</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Checkout + webhooks</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Postgres</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">VPS propio · Supabase client</div></div>
-                  <div className="text-[18px] text-[rgba(247,246,242,0.2)] shrink-0 self-center">→</div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Tablas: pedidos</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">id · estado · método · timestamp</div></div>
-                </div>
-              </div>
-              <div className="w-full h-[0.5px] bg-gradient-to-r from-[rgba(232,65,122,0.2)] to-[rgba(245,166,35,0.2)] my-[4px]" />
-              
-              {/* Automation Layer */}
-              <div className="flex gap-[12px] items-center flex-wrap">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.25)] w-[80px] shrink-0 text-right">Automation</div>
-                <div className="flex gap-[10px] flex-wrap flex-1">
-                  <div className="grad-bg border-none rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-white mb-[3px]">n8n 2.0</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Dockerizado en VPS</div></div>
-                  <div className="bg-[rgba(29,158,117,0.15)] border-[0.5px] border-[rgba(29,158,117,0.3)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Webhook Stripe</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">payment_intent.succeeded</div></div>
-                  <div className="bg-[rgba(29,158,117,0.15)] border-[0.5px] border-[rgba(29,158,117,0.3)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Email SMTP</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Confirmación al comprador</div></div>
-                  <div className="bg-[rgba(29,158,117,0.15)] border-[0.5px] border-[rgba(29,158,117,0.3)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Gmail API</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">Aviso interno al equipo</div></div>
-                </div>
-              </div>
-              <div className="w-full h-[0.5px] bg-gradient-to-r from-[rgba(232,65,122,0.2)] to-[rgba(245,166,35,0.2)] my-[4px]" />
-              
-              {/* Deploy Layer */}
-              <div className="flex gap-[12px] items-center flex-wrap">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[rgba(247,246,242,0.25)] w-[80px] shrink-0 text-right">Deploy</div>
-                <div className="flex gap-[10px] flex-wrap flex-1">
-                  <div className="grad-bg border-none rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-white mb-[3px]">Cloudflare Pages</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">CDN global · sin costo hosting</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">VPS propio</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">n8n + Postgres + SMTP</div></div>
-                  <div className="bg-[rgba(247,246,242,0.06)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[12px] p-[14px_18px] shrink-0"><div className="text-[13px] font-bold text-[var(--cream)] mb-[3px]">Dominio</div><div className="text-[11px] text-[rgba(255,255,255,0.5)]">sobremi.online · DNS Cloudflare</div></div>
-                </div>
-              </div>
-
-            </div>
+            <ArchTimeline steps={t.raw('Arch.steps') as Array<{num: string; title: string; p: string}>} />
           </PageWrapper>
         </section>
 
@@ -302,7 +248,7 @@ export default function SobreMiCasePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px]">
               {t.raw('Flows.items').map((flow: any, idx: number) => (
-                <div key={idx} className={`bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] p-[28px] transition-transform hover:-translate-y-[3px] hover:shadow-[0_14px_36px_rgba(28,24,40,0.07)] flex flex-col ${idx === 0 ? 'md:col-span-2' : ''}`}>
+                <div key={idx} className={`bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] p-[28px] transition-transform hover:-translate-y-[3px] hover:shadow-[0_14px_36px_rgba(28,24,40,0.07)] flex flex-col ${idx === 0 || idx === 3 ? 'md:col-span-2' : ''}`}>
                   <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] flex items-center gap-[6px]">
                     <i className="w-[12px] h-[1px] bg-[var(--mg)] block" />
                     {flow.num}
@@ -350,80 +296,6 @@ export default function SobreMiCasePage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </PageWrapper>
-        </section>
-
-        {/* TECH DEEP DIVE */}
-        <section id="tech" className="bg-[var(--dark)] py-[70px] lg:py-[110px] relative overflow-hidden">
-          <div className="absolute text-[clamp(70px,13vw,160px)] font-extrabold text-[rgba(247,246,242,0.025)] italic leading-none pointer-events-none -bottom-[10px] -right-[10px] tracking-[-4px] select-none z-0">
-            {t('Tech.watermark')}
-          </div>
-          <PageWrapper className="relative z-10">
-            <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
-              <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
-              {t('Tech.eyebrow')}
-            </div>
-            <h2 className="text-[clamp(30px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
-              {t.rich('Tech.title', { br: () => <br />, grad: (chunks) => <GradientText>{chunks}</GradientText> })}
-            </h2>
-            <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[540px] mb-[52px]">
-              {t('Tech.intro')}
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-[12px]">
-              <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[26px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.3)] md:col-span-5">
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] block">Base de datos</span>
-                <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">Postgres en VPS propio</h3>
-                <p className="text-[13px] leading-[1.65] text-[var(--muted-l)]">Los pedidos se registran en una tabla con id único, nombre, producto, método de pago, monto, estado (pendiente / confirmado / entregado) y timestamps. Cada webhook de Stripe hace un UPDATE automático del estado.</p>
-                <div className="bg-[rgba(14,14,18,0.8)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[10px] p-[16px] mt-[14px] font-mono text-[12px] leading-[1.7] text-[rgba(247,246,242,0.6)] overflow-x-auto whitespace-pre">
-<span className="text-[rgba(247,246,242,0.25)]">-- tabla pedidos</span>
-{'\n'}<span className="text-[#E8417A]">CREATE TABLE</span> pedidos (
-{'\n'}  id <span className="text-[#F5A623]">UUID</span> <span className="text-[#E8417A]">DEFAULT</span> gen_random_uuid(),
-{'\n'}  nombre <span className="text-[#F5A623]">TEXT</span> <span className="text-[#E8417A]">NOT NULL</span>,
-{'\n'}  producto <span className="text-[#F5A623]">TEXT</span>,
-{'\n'}  monto <span className="text-[#F5A623]">INTEGER</span>,
-{'\n'}  metodo <span className="text-[#F5A623]">TEXT</span>,
-{'\n'}  estado <span className="text-[#F5A623]">TEXT</span> <span className="text-[#E8417A]">DEFAULT</span> <span className="text-[#b8f5d4]">'pendiente'</span>,
-{'\n'}  stripe_id <span className="text-[#F5A623]">TEXT</span>,
-{'\n'}  created_at <span className="text-[#F5A623]">TIMESTAMPTZ</span> <span className="text-[#E8417A]">DEFAULT</span> now()
-{'\n'});
-                </div>
-              </div>
-
-              <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[26px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.3)] md:col-span-7">
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] block">Stripe + Webhooks</span>
-                <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">Pago dinámico con confirmación automática</h3>
-                <p className="text-[13px] leading-[1.65] text-[var(--muted-l)]">El backend crea un PaymentIntent de Stripe con los datos del pedido. Una vez el pago se confirma, Stripe llama al endpoint /api/stripe/webhook con el evento payment_intent.succeeded. Ese endpoint actualiza Postgres y dispara el webhook de n8n para que arranquen los flujos de email.</p>
-                <div className="bg-[rgba(14,14,18,0.8)] border-[0.5px] border-[rgba(247,246,242,0.1)] rounded-[10px] p-[16px] mt-[14px] font-mono text-[12px] leading-[1.7] text-[rgba(247,246,242,0.6)] overflow-x-auto whitespace-pre">
-<span className="text-[rgba(247,246,242,0.25)]">// api/stripe/webhook.ts</span>
-{'\n'}<span className="text-[#E8417A]">const</span> event = stripe.<span className="text-[#F5A623]">webhooks.constructEvent</span>(
-{'\n'}  body, sig, <span className="text-[#b8f5d4]">process.env.STRIPE_WEBHOOK_SECRET</span>
-{'\n'});
-{'\n'}<span className="text-[#E8417A]">if</span> (event.type === <span className="text-[#b8f5d4]">'payment_intent.succeeded'</span>) {'{'}
-{'\n'}  <span className="text-[#E8417A]">await</span> <span className="text-[#F5A623]">updatePedido</span>(event.data.object.id);
-{'\n'}  <span className="text-[#E8417A]">await</span> <span className="text-[#F5A623]">triggerN8N</span>(pedidoData);
-{'\n'}{'}'}
-                </div>
-              </div>
-
-              <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[26px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.3)] md:col-span-4">
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] block">n8n</span>
-                <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">Orquestador central</h3>
-                <p className="text-[13px] leading-[1.65] text-[var(--muted-l)]">n8n 2.0 corre en Docker en el mismo VPS que Postgres. Recibe el webhook del backend, evalúa el método de pago con un nodo IF, y bifurca hacia el flujo de Stripe o el de transferencia. Cada rama genera el email y lo envía por SMTP.</p>
-              </div>
-
-              <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[26px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.3)] md:col-span-4">
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] block">Páginas dinámicas</span>
-                <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">/regalos/:id con SSR</h3>
-                <p className="text-[13px] leading-[1.65] text-[var(--muted-l)]">Cada regalo tiene su propia URL pública. Next.js hace una query a Postgres en el servidor y renderiza la página con los datos del pedido. El comprador puede compartir ese link con el destinatario del regalo.</p>
-              </div>
-
-              <div className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[16px] p-[26px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.3)] md:col-span-4">
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[12px] block">Frontend</span>
-                <h3 className="text-[15px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">Next.js App Router</h3>
-                <p className="text-[13px] leading-[1.65] text-[var(--muted-l)]">La plataforma usa React Server Components donde puede y Client Components donde necesita interactividad (formulario de pedido, selector de productos). Deploy en Cloudflare Pages — cero costo de hosting, Edge network global.</p>
-              </div>
             </div>
           </PageWrapper>
         </section>
@@ -479,6 +351,33 @@ export default function SobreMiCasePage() {
           </PageWrapper>
         </section>
 
+        {/* FOR WHO */}
+        <section id="forwho" className="bg-[var(--dark)] py-[70px] lg:py-[110px] relative overflow-hidden">
+          <div className="absolute text-[clamp(70px,13vw,160px)] font-extrabold text-[rgba(247,246,242,0.025)] italic leading-none pointer-events-none -bottom-[10px] -right-[10px] tracking-[-4px] select-none z-0">
+            {t('ForWho.eyebrow')}
+          </div>
+          <PageWrapper className="relative z-10">
+            <div className="inline-flex items-center gap-[8px] text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--am)] mb-[16px]">
+              <i className="w-[16px] h-[1.5px] bg-[var(--am)] block" />
+              {t('ForWho.eyebrow')}
+            </div>
+            <h2 className="text-[clamp(30px,3.8vw,46px)] font-extrabold tracking-[-1.5px] leading-[1.1] text-[var(--cream)] mb-[14px]">
+              {t.rich('ForWho.title', { br: () => <br />, grad: (chunks) => <GradientText>{chunks}</GradientText> })}
+            </h2>
+            <p className="text-[16px] leading-[1.75] text-[var(--muted-l)] max-w-[560px] mb-[52px]">
+              {t('ForWho.intro')}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px]">
+              {t.raw('ForWho.items').map((item: any, idx: number) => (
+                <div key={idx} className="bg-[rgba(247,246,242,0.04)] border-[0.5px] border-[rgba(247,246,242,0.08)] rounded-[18px] p-[28px] transition-colors hover:bg-[rgba(247,246,242,0.07)] hover:border-[rgba(232,65,122,0.2)]">
+                  <h3 className="text-[16px] font-extrabold text-[var(--cream)] mb-[8px] tracking-[-0.3px]">{item.title}</h3>
+                  <p className="text-[14px] leading-[1.65] text-[var(--muted-l)]">{item.p}</p>
+                </div>
+              ))}
+            </div>
+          </PageWrapper>
+        </section>
+
         {/* LEARNINGS */}
         <section id="learn" className="bg-[var(--dark)] py-[70px] lg:py-[110px] relative overflow-hidden">
           <div className="absolute text-[clamp(70px,13vw,160px)] font-extrabold text-[rgba(247,246,242,0.025)] italic leading-none pointer-events-none -bottom-[10px] -right-[10px] tracking-[-4px] select-none z-0">
@@ -513,19 +412,33 @@ export default function SobreMiCasePage() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] mb-[52px]">
-              {t.raw('Next.cases').map((nc: any, idx: number) => (
-                <Link key={idx} href={nc.href} className="bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] overflow-hidden no-underline transition-all hover:-translate-y-[3px] hover:shadow-[0_14px_36px_rgba(28,24,40,0.07)] block group">
-                  <div className={`aspect-[16/7] relative overflow-hidden flex items-center justify-center ${nc.type === 'alt' ? 'bg-gradient-to-br from-[#1a2a35] to-[#2a3d4a]' : 'bg-gradient-to-br from-[#2a1f35] to-[#3d2a4a]'}`}>
-                    <div className="absolute inset-0 grad-bg opacity-10" />
-                    <span className="text-[22px] font-extrabold text-[rgba(247,246,242,0.4)] relative z-[1]" dangerouslySetInnerHTML={{ __html: nc.name }} />
-                  </div>
-                  <div className="p-[20px_24px]">
-                    <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[5px]">{nc.tag}</div>
-                    <div className="text-[16px] font-extrabold text-[var(--dark)] mb-[4px]">{nc.title}</div>
-                    <div className="text-[13px] text-[var(--muted)]" dangerouslySetInnerHTML={{ __html: nc.result }} />
-                  </div>
-                </Link>
-              ))}
+              {t.raw('Next.cases').map((nc: any, idx: number) => {
+                const cardInner = (
+                  <>
+                    <div className={`aspect-[16/7] relative overflow-hidden flex items-center justify-center ${nc.type === 'alt' ? 'bg-gradient-to-br from-[#1a2a35] to-[#2a3d4a]' : 'bg-gradient-to-br from-[#2a1f35] to-[#3d2a4a]'}`}>
+                      <div className="absolute inset-0 grad-bg opacity-10" />
+                      <span className="text-[22px] font-extrabold text-[rgba(247,246,242,0.4)] relative z-[1]" dangerouslySetInnerHTML={{ __html: nc.name }} />
+                    </div>
+                    <div className="p-[20px_24px]">
+                      <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--mg)] mb-[5px]">{nc.tag}</div>
+                      <div className="text-[16px] font-extrabold text-[var(--dark)] mb-[4px]">{nc.title}</div>
+                      <div className="text-[13px] text-[var(--muted)]" dangerouslySetInnerHTML={{ __html: nc.result }} />
+                    </div>
+                  </>
+                );
+                if (nc.action === 'meeting') {
+                  return (
+                    <OpenMeetingBtn key={idx} className="bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] overflow-hidden transition-all hover:-translate-y-[3px] hover:shadow-[0_14px_36px_rgba(28,24,40,0.07)] block w-full text-left cursor-pointer">
+                      {cardInner}
+                    </OpenMeetingBtn>
+                  );
+                }
+                return (
+                  <Link key={idx} href={nc.href} className="bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] overflow-hidden no-underline transition-all hover:-translate-y-[3px] hover:shadow-[0_14px_36px_rgba(28,24,40,0.07)] block group">
+                    {cardInner}
+                  </Link>
+                );
+              })}
             </div>
 
           </PageWrapper>

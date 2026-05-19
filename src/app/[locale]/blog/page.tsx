@@ -104,7 +104,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
               {posts.map((post) => (
                 <Link
                   key={post.slug}
-                  href={`/blog/${post.slug}` as any}
+                  href={'/blog'}
                   className="bg-white border-[0.5px] border-[rgba(28,24,40,0.08)] rounded-[18px] overflow-hidden no-underline transition-all hover:-translate-y-[4px] hover:shadow-[0_16px_44px_rgba(28,24,40,0.09)] block group"
                 >
                   {/* Color accent bar */}

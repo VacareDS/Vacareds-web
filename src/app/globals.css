@@ -133,6 +133,12 @@ body {
   50% { transform: translateY(-10px); }
 }
 
+/* Gold sponsor banner float */
+@keyframes goldFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
 /* Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

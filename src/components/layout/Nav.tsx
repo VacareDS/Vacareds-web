@@ -107,16 +107,7 @@ export default function Nav({
         { label: t('Nav.casesDropdown.sobremi'), href: isEs ? '/casos-de-exito/sobremi' : '/case-studies/sobremi' },
       ],
     },
-    { label: t('Nav.auto'), href: '/#auto' },
-    { label: t('Nav.blog'), href: '/blog' },
-    {
-      label: t('Nav.resources'),
-      href: isEs ? '/auditoria-web-gratuita' : '/free-web-audit',
-      dropdown: [
-        { label: t('Nav.resourcesDropdown.audit'), href: isEs ? '/auditoria-web-gratuita' : '/free-web-audit' },
-        { label: t('Nav.resourcesDropdown.course'), href: isEs ? '/curso-web-gratis' : '/free-web-course' },
-      ],
-    },
+
   ];
 
   const navLinks = links !== undefined ? links : defaultLinks;
