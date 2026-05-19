@@ -2,20 +2,20 @@ import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import WaitlistClient from '@/components/waitlist/WaitlistClient';
 
-export default async function FreeAuditWaitlistPage({
+export default async function EmailCourseWaitlistPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (locale !== 'en') notFound();
+  if (locale !== 'es') notFound();
   setRequestLocale(locale);
 
   return (
     <WaitlistClient
-      type="audit"
-      locale="en"
-      list="auditoria"
+      type="course"
+      locale="es"
+      list="curso"
       apiEndpoint={process.env.NEXT_PUBLIC_N8N_WEBHOOK_WAITLIST ?? ''}
     />
   );

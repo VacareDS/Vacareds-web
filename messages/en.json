@@ -976,7 +976,7 @@
             "tag": "I have a site but it doesn't work",
             "title": "Free audit first",
             "desc": "We analyze your website in 2 hours and you receive the diagnosis with the 3 concrete actions of greatest impact.",
-            "link": "/en/free-audit"
+            "link": "/en/free-web-audit"
           },
           {
             "tag": "I still don't have a site",
@@ -2251,7 +2251,7 @@
         "seeLabel": "See",
         "auditNote": "Not sure which one fits?",
         "auditLinkLabel": "Request the free audit →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "faqSection": {
         "label": "Frequently asked questions",
@@ -2273,7 +2273,7 @@
         "disclaimer": "No commitment · Process audit included · We respond in 2 hours",
         "watermark": "AUTOMATIC",
         "cards": [
-          { "tag": "I don't know what to automate first", "title": "Free process audit", "desc": "We map your 3 highest-impact tasks and estimate the time you would save.", "href": "/free-audit" },
+          { "tag": "I don't know what to automate first", "title": "Free process audit", "desc": "We map your 3 highest-impact tasks and estimate the time you would save.", "href": "/free-web-audit" },
           { "tag": "I want to understand how it works", "title": "5-day mini-course", "desc": "What can be automated, with what tools and how to evaluate ROI. Free.", "href": "/email-course" },
           { "tag": "I know what I want", "title": "Diagnosis call", "desc": "30 minutes. At the end you know which plan fits and what the first flows to build are.", "href": "#ctaf" }
         ]
@@ -2452,7 +2452,7 @@
         "seeLabel": "See",
         "auditNote": "Not sure which one fits?",
         "auditLinkLabel": "Request the free audit →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "faqSection": {
         "label": "Frequently asked questions",
@@ -2475,7 +2475,7 @@
         "disclaimer": "No commitment · No aggressive sales · We respond in less than 2 hours",
         "watermark": "SYSTEM",
         "cards": [
-          { "tag": "I have a website but it doesn't convert", "title": "Free audit first", "desc": "We analyze your current funnel and tell you exactly where leads are being lost.", "href": "/free-audit" },
+          { "tag": "I have a website but it doesn't convert", "title": "Free audit first", "desc": "We analyze your current funnel and tell you exactly where leads are being lost.", "href": "/free-web-audit" },
           { "tag": "I want to understand the system", "title": "Free mini-course · 5 emails", "desc": "How an automated capture system works, in 5 emails. Free.", "href": "/email-course" },
           { "tag": "I know what I want", "title": "Diagnosis call", "desc": "30 minutes. No sales. At the end you know what Growth Machine includes for your specific business.", "href": "#ctaf" }
         ]
@@ -2622,7 +2622,7 @@
         "seeLabel": "See",
         "auditNote": "Not sure which one fits?",
         "auditLinkLabel": "Request the free audit →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "processSection": {
         "label": "How it works",
@@ -2650,7 +2650,7 @@
         "disclaimer": "No commitment · No hidden costs · We respond in less than 2 hours",
         "watermark": "START",
         "cards": [
-          { "tag": "I have a website but it doesn't work", "title": "Free audit first", "desc": "We analyze your website in 2 hours and you receive the diagnosis with the 3 highest-impact concrete actions.", "href": "/free-audit" },
+          { "tag": "I have a website but it doesn't work", "title": "Free audit first", "desc": "We analyze your website in 2 hours and you receive the diagnosis with the 3 highest-impact concrete actions.", "href": "/free-web-audit" },
           { "tag": "I don't have a website yet", "title": "Free mini-course · 5 emails", "desc": "What you need to know before investing in your digital presence. Free, in 5 days.", "href": "/email-course" },
           { "tag": "I know what I want", "title": "Diagnosis call", "desc": "30 minutes. No sales. At the end you know what Starter Presence includes for your specific business.", "href": "#ctaf" }
         ]
@@ -2814,7 +2814,7 @@
         "seeLabel": "See",
         "auditNote": "Not sure which one fits?",
         "auditLinkLabel": "Request the free audit →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "faqSection": {
         "label": "Frequently asked questions",
@@ -2836,7 +2836,7 @@
         "disclaimer": "No commitment · We recommend the right option, not the most expensive · We respond in 2 hours",
         "watermark": "DIRECT",
         "cards": [
-          { "tag": "I have a store but it converts poorly", "title": "Conversion audit", "desc": "We review your store and tell you exactly where sales are being lost.", "href": "/free-audit" },
+          { "tag": "I have a store but it converts poorly", "title": "Conversion audit", "desc": "We review your store and tell you exactly where sales are being lost.", "href": "/free-web-audit" },
           { "tag": "I want to understand my options", "title": "5-day mini-course", "desc": "What to consider before building or migrating your online store. Free.", "href": "/email-course" },
           { "tag": "I know what I want", "title": "Technical call", "desc": "30 minutes. We evaluate your situation and tell you the right option for your business.", "href": "#ctaf" }
         ]
@@ -3002,7 +3002,7 @@
         "seeLabel": "See",
         "auditNote": "Not sure which one fits?",
         "auditLinkLabel": "Request the free audit →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "faqSection": {
         "label": "Frequently asked questions",
@@ -3019,7 +3019,7 @@
         "disclaimer": "No commitment · No generic presentations · We respond in 2 hours",
         "watermark": "ORGANIC",
         "cards": [
-          { "tag": "I have a website but it doesn't bring clients", "title": "Free audit", "desc": "We analyze your current presence and tell you what funnel pieces are missing.", "href": "/free-audit" },
+          { "tag": "I have a website but it doesn't bring clients", "title": "Free audit", "desc": "We analyze your current presence and tell you what funnel pieces are missing.", "href": "/free-web-audit" },
           { "tag": "I want to understand the process", "title": "5-day mini-course", "desc": "How a well-built organic channel works. Free, in your inbox.", "href": "/email-course" },
           { "tag": "I know what I want", "title": "Strategic call", "desc": "30 minutes. At the end you know what channel we can build for your specific business.", "href": "#ctaf" }
         ]

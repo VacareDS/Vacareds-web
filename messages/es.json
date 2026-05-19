@@ -268,7 +268,7 @@
       "ctaDisclaimer": "Sin compromiso · Auditoría de procesos incluida · Respondemos en 2 horas",
       "ctaWatermark": "AUTOMÁTICO",
       "ctaCards": [
-        { "tag": "No sé qué automatizar primero", "title": "Auditoría de procesos gratuita", "desc": "Mapeamos tus 3 tareas de mayor impacto y estimamos el tiempo que ahorrarías.", "href": "/free-audit" },
+        { "tag": "No sé qué automatizar primero", "title": "Auditoría de procesos gratuita", "desc": "Mapeamos tus 3 tareas de mayor impacto y estimamos el tiempo que ahorrarías.", "href": "/free-web-audit" },
         { "tag": "Quiero entender cómo funciona", "title": "Mini-curso 5 días", "desc": "Qué se puede automatizar, con qué herramientas y cómo evaluar el ROI. Gratis.", "href": "/email-course" },
         { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Al final sabés qué plan corresponde y cuáles son los primeros flujos a construir.", "href": "#ctaf" }
       ]
@@ -389,7 +389,7 @@
       "ctaDisclaimer": "Sin compromiso · Sin costos ocultos · Respondemos en menos de 2 horas",
       "ctaWatermark": "EMPEZÁ",
       "ctaCards": [
-        { "tag": "Tengo web pero no funciona", "title": "Auditoría gratuita primero", "desc": "Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.", "href": "/free-audit" },
+        { "tag": "Tengo web pero no funciona", "title": "Auditoría gratuita primero", "desc": "Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.", "href": "/free-web-audit" },
         { "tag": "Todavía no tengo web", "title": "Mini-curso gratuito · 5 emails", "desc": "Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.", "href": "/email-course" },
         { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Starter Presence para tu negocio específico.", "href": "#ctaf" }
       ]
@@ -506,7 +506,7 @@
       "ctaDisclaimer": "Sin compromiso · Sin ventas agresivas · Respondemos en menos de 2 horas",
       "ctaWatermark": "SISTEMA",
       "ctaCards": [
-        { "tag": "Ya tengo web pero no convierte", "title": "Auditoría gratuita primero", "desc": "Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.", "href": "/free-audit" },
+        { "tag": "Ya tengo web pero no convierte", "title": "Auditoría gratuita primero", "desc": "Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.", "href": "/free-web-audit" },
         { "tag": "Quiero entender el sistema", "title": "Mini-curso gratuito · 5 emails", "desc": "Cómo funciona un sistema de captación automatizado, en 5 emails. Gratis.", "href": "/email-course" },
         { "tag": "Ya sé lo que quiero", "title": "Llamada de diagnóstico", "desc": "30 minutos. Sin ventas. Al final sabés qué incluye Growth Machine para tu negocio específico.", "href": "#ctaf" }
       ]
@@ -661,7 +661,7 @@
         "seeLabel": "Ver",
         "auditNote": "¿No estás seguro de cuál te sirve?",
         "auditLinkLabel": "Solicitá la auditoría gratuita →",
-        "auditHref": "/free-audit"
+        "auditHref": "/free-web-audit"
       },
       "faqSection": {
         "label": "Preguntas frecuentes",
@@ -678,7 +678,7 @@
         "disclaimer": "Sin compromiso · Sin presentaciones genéricas · Respondemos en 2 horas",
         "watermark": "ORGÁNICO",
         "cards": [
-          { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/free-audit" },
+          { "tag": "Tengo web pero no trae clientes", "title": "Auditoría gratuita", "desc": "Analizamos tu presencia actual y te decimos qué piezas del funnel faltan.", "href": "/free-web-audit" },
           { "tag": "Quiero entender el proceso", "title": "Mini-course 5 días", "desc": "Cómo funciona un canal orgánico bien construido. Gratis, en tu inbox.", "href": "/email-course" },
           { "tag": "Ya sé lo que quiero", "title": "Llamada estratégica", "desc": "30 minutos. Al final sabés qué canal podemos construir para tu negocio específico.", "href": "#ctaf" }
         ]
@@ -819,7 +819,7 @@
       "ctaDisclaimer": "Sin compromiso · Te recomendamos la opción correcta, no la más cara · Respondemos en 2 horas",
       "ctaWatermark": "DIRECTO",
       "ctaCards": [
-        { "tag": "Tengo tienda pero convierte poco", "title": "Auditoría de conversión", "desc": "Revisamos tu tienda y te decimos exactamente dónde se pierden las ventas.", "href": "/free-audit" },
+        { "tag": "Tengo tienda pero convierte poco", "title": "Auditoría de conversión", "desc": "Revisamos tu tienda y te decimos exactamente dónde se pierden las ventas.", "href": "/free-web-audit" },
         { "tag": "Quiero entender mis opciones", "title": "Mini-curso 5 días", "desc": "Qué tener en cuenta antes de construir o migrar tu tienda online. Gratis.", "href": "/email-course" },
         { "tag": "Ya sé lo que quiero", "title": "Llamada técnica", "desc": "30 minutos. Evaluamos tu situación y te decimos la opción correcta para tu negocio.", "href": "#ctaf" }
       ]
@@ -2208,7 +2208,7 @@
         },
         {
           "q": "¿Sirve si ya tengo una web?",
-          "a": "Sí, especialmente el Día 2 y el Día 4. Si ya tenés web pero no genera clientes, el curso te ayuda a entender por qué. Si querés un diagnóstico más profundo, te recomendamos la <a href='/es/free-audit' style='color:#E8417A;font-weight:700;text-decoration:none'>auditoría gratuita</a>."
+          "a": "Sí, especialmente el Día 2 y el Día 4. Si ya tenés web pero no genera clientes, el curso te ayuda a entender por qué. Si querés un diagnóstico más profundo, te recomendamos la <a href='/es/auditoria-web-gratuita' style='color:#E8417A;font-weight:700;text-decoration:none'>auditoría gratuita</a>."
         },
         {
           "q": "¿Qué pasa al final del Día 5?",

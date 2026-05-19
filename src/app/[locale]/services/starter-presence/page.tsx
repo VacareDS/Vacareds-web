@@ -619,7 +619,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                     <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(28,24,40,0.07)]">
                       <p className="text-[12px] text-[var(--muted)] leading-[1.6]">
                         {isEn ? "Not sure which one fits? " : '¿No sabés cuál corresponde? '}
-                        <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">
+                        <a href={isEn ? '/free-web-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">
                           {isEn ? 'Request the free audit →' : 'Pedí la auditoría gratuita →'}
                         </a>
                       </p>
@@ -746,7 +746,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                 desc: isEn
                   ? 'We analyze your website in 2 hours and you receive the diagnosis with the 3 highest-impact concrete actions.'
                   : 'Analizamos tu web en 2 horas y recibís el diagnóstico con las 3 acciones concretas de mayor impacto.',
-                href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
+                href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita',
               },
               {
                 tag: isEn ? "I don't have a website yet" : 'Todavía no tengo web',
@@ -754,7 +754,7 @@ export default async function StarterPresencePage({ params }: { params: Promise<
                 desc: isEn
                   ? 'What you need to know before investing in your digital presence. Free, in 5 days.'
                   : 'Lo que necesitás saber antes de invertir en tu presencia digital. Gratis, en 5 días.',
-                href: isEn ? '/email-course' : '/email-course',
+                href: isEn ? '/email-course' : '/curso-web-gratis',
               },
               {
                 tag: isEn ? "I know what I want" : 'Ya sé lo que quiero',
@@ -789,8 +789,8 @@ export default async function StarterPresencePage({ params }: { params: Promise<
             {
               title: isEn ? 'Free' : 'Gratuito',
               links: [
-                { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
-                { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/email-course' },
+                { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
+                { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/curso-web-gratis' },
               ],
             },
             {

@@ -518,7 +518,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
               tag: ctaCards[0].tag,
               title: ctaCards[0].title,
               desc: ctaCards[0].desc,
-              href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
+              href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita',
             },
             {
               tag: ctaCards[1].tag,
@@ -557,7 +557,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
           {
             title: tLayout('Footer.cols.free'),
             links: [
-              { label: tLayout('Footer.links.audit'), href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+              { label: tLayout('Footer.links.audit'), href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
               { label: tLayout('Footer.links.course'), href: isEn ? '/email-course' : '/curso-web-gratis' },
             ],
           },

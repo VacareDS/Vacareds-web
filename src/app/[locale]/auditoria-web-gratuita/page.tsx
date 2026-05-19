@@ -8,13 +8,13 @@ export default async function FreeAuditWaitlistPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (locale !== 'en') notFound();
+  if (locale !== 'es') notFound();
   setRequestLocale(locale);
 
   return (
     <WaitlistClient
       type="audit"
-      locale="en"
+      locale="es"
       list="auditoria"
       apiEndpoint={process.env.NEXT_PUBLIC_N8N_WEBHOOK_WAITLIST ?? ''}
     />

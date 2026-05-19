@@ -645,7 +645,7 @@ export default async function AutomationRetainerPage({ params }: { params: Promi
             },
             {
               title: t('footerColumns.freeTitle'), links: [
-                { label: t('footerColumns.webAudit'), href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+                { label: t('footerColumns.webAudit'), href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
                 { label: t('footerColumns.emailCourse'), href: isEn ? '/email-course' : '/curso-web-gratis' },
               ]
             },

@@ -702,7 +702,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
                     ))}
                   </ul>
                   <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(28,24,40,0.07)]">
-                    <p className="text-[12px] text-[var(--muted)]">{t('forYouSection.auditNote')}{' '}<a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">{t('forYouSection.auditLinkLabel')}</a></p>
+                    <p className="text-[12px] text-[var(--muted)]">{t('forYouSection.auditNote')}{' '}<a href={isEn ? '/free-web-audit' : '/auditoria-web-gratuita'} className="text-[var(--mg)] font-bold no-underline hover:opacity-80">{t('forYouSection.auditLinkLabel')}</a></p>
                   </div>
                 </div>
               </MotionWrapper>
@@ -755,7 +755,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
           watermarkText={t('ctaFinal.watermark')}
           cards={(t.raw('ctaFinal.cards') as Array<{ tag: string; title: string; desc: string; href: string }>).map(card => ({
             ...card,
-            href: isEn ? card.href : card.href.replace('/services/', '/servicios/').replace('/free-audit', '/auditoria-web-gratuita').replace('/email-course', '/curso-web-gratis')
+            href: isEn ? card.href : card.href.replace('/services/', '/servicios/').replace('/free-web-audit', '/auditoria-web-gratuita').replace('/email-course', '/curso-web-gratis')
           }))}
         />
       </main>
@@ -774,7 +774,7 @@ export default async function FullFunnel360Page({ params }: { params: Promise<{ 
             { label: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
           ]},
           { title: t('footerColumns.freeTitle'), links: [
-            { label: t('footerColumns.webAudit'), href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+            { label: t('footerColumns.webAudit'), href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
             { label: t('footerColumns.emailCourse'), href: isEn ? '/email-course' : '/curso-web-gratis' }
           ] },
           { title: t('footerColumns.companyTitle'), links: [

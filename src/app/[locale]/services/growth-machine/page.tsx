@@ -759,7 +759,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
                   <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(247,246,242,0.07)]">
                     <p className="text-[12px] text-[var(--muted-l)] leading-[1.6]">
                       {isEn ? "Not sure which one fits? " : '¿No sabés cuál corresponde? '}
-                      <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">
+                      <a href={isEn ? '/free-web-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">
                         {isEn ? 'Request the free audit →' : 'Pedí la auditoría gratuita →'}
                       </a>
                     </p>
@@ -848,7 +848,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
               desc: isEn
                 ? 'We analyze your current funnel and tell you exactly where leads are being lost.'
                 : 'Analizamos tu embudo actual y te decimos exactamente dónde se están perdiendo los leads.',
-              href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
+              href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita',
             },
             {
               tag: isEn ? 'I want to understand the system' : 'Quiero entender el sistema',
@@ -891,7 +891,7 @@ export default async function GrowthMachinePage({ params }: { params: Promise<{ 
           {
             title: isEn ? 'Free' : 'Gratuito',
             links: [
-              { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+              { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
               { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/curso-web-gratis' },
             ],
           },

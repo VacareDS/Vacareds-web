@@ -11,7 +11,7 @@ export const routing = defineRouting({
       es: '/servicios'
     },
     '/free-audit': {
-      en: '/free-audit',
+      en: '/free-web-audit',
       es: '/auditoria-web-gratuita'
     },
     '/email-course': {

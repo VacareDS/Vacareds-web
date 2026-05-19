@@ -576,7 +576,7 @@ export default async function EcommerceProPage({ params }: { params: Promise<{ l
                   <div className="mt-[20px] pt-[16px] border-t-[0.5px] border-[rgba(247,246,242,0.07)]">
                     <p className="text-[12px] text-[var(--muted-l)]">
                       {isEn ? "Not sure which one fits? " : '¿No sabés cuál corresponde? '}
-                      <a href={isEn ? '/free-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">
+                      <a href={isEn ? '/free-web-audit' : '/auditoria-web-gratuita'} className="text-[var(--am)] font-bold no-underline hover:opacity-80">
                         {isEn ? 'Request the free audit →' : 'Pedí la auditoría gratuita →'}
                       </a>
                     </p>
@@ -661,7 +661,7 @@ export default async function EcommerceProPage({ params }: { params: Promise<{ l
               desc: isEn
                 ? 'We review your store and tell you exactly where sales are being lost.'
                 : 'Revisamos tu tienda y te decimos exactamente dónde se pierden las ventas.',
-              href: isEn ? '/free-audit' : '/auditoria-web-gratuita',
+              href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita',
             },
             {
               tag: isEn ? 'I want to understand my options' : 'Quiero entender mis opciones',
@@ -698,7 +698,7 @@ export default async function EcommerceProPage({ params }: { params: Promise<{ l
             { label: 'Automation Retainer', href: `/${isEn ? 'services' : 'servicios'}/automation-retainer` },
           ]},
           { title: isEn ? 'Free' : 'Gratuito', links: [
-            { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-audit' : '/auditoria-web-gratuita' },
+            { label: isEn ? 'Web Audit' : 'Auditoría web', href: isEn ? '/free-web-audit' : '/auditoria-web-gratuita' },
             { label: isEn ? '5-day course' : 'Mini-curso 5 días', href: isEn ? '/email-course' : '/curso-web-gratis' },
           ]},
           { title: isEn ? 'Company' : 'Empresa', links: [

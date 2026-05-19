@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function WhatsAppFloat() {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '') ?? '';
+  const number = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+5493425258889').replace(/\D/g, '');
   const message = encodeURIComponent('Hola, me gustaría automatizar mi negocio');
   const href = `https://wa.me/${number}?text=${message}`;
   const [hovered, setHovered] = useState(false);

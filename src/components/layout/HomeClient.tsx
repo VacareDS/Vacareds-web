@@ -16,7 +16,7 @@ export function useMeeting() {
 // AJUSTE_LANZAMIENTO: popup deshabilitado temporalmente — todos los CTAs redirigen a WhatsApp
 // Para revertir: cambiar openMeeting a () => setOpen(true) y descomentar <MeetingPopup>
 // Ver docs/ajustes_de_lanzamiento/popup_whatsapp_temporal.md
-const WA_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '') ?? '';
+const WA_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+5493425258889').replace(/\D/g, '');
 const WA_MSG = encodeURIComponent('Hola, quiero agendar una llamada de 30 min.');
 
 export default function HomeClient({ children }: { children: ReactNode }) {
