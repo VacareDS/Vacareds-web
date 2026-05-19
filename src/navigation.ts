@@ -22,6 +22,10 @@ export const routing = defineRouting({
       en: '/case-studies',
       es: '/casos-de-exito'
     },
+    '/blog': {
+      en: '/blog',
+      es: '/blog'
+    },
     '/services/starter-presence': { en: '/services/starter-presence', es: '/servicios/starter-presence' },
     '/services/growth-machine': { en: '/services/growth-machine', es: '/servicios/growth-machine' },
     '/services/full-funnel-360': { en: '/services/full-funnel-360', es: '/servicios/full-funnel-360' },

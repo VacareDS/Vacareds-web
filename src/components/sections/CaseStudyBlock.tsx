@@ -150,7 +150,7 @@ export default function CaseStudyBlock({
         )}
 
         <Link 
-          href={linkHref} 
+          href={linkHref as any} 
           className="inline-block self-start text-[14px] font-bold text-[var(--am)] no-underline border-b-[1.5px] border-[rgba(245,166,35,0.35)] pb-[2px] transition-colors hover:border-[var(--am)]"
         >
           {linkText}

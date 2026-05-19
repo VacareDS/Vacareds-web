@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 import { routing } from '@/navigation';
 import { pageUrl } from '@/lib/seo';
 
+export const dynamic = 'force-static';
+
 type Locale = typeof routing.locales[number];
 
 const BASE_URL = 'https://vacaredigitalsolutions.com';

@@ -1,5 +1,4 @@
-import { getTranslations } from 'next-intl/server';
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import Link from 'next/link';
 import CaseStudyJsonLd from '@/components/seo/CaseStudyJsonLd';
@@ -28,10 +27,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function SupertrampCasePage() {
-  const locale = useLocale();
-  const t = useTranslations('CaseSupertramp');
-  const tLayout = useTranslations('Layout');
+export default async function SupertrampCasePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'CaseSupertramp' });
+  const tLayout = await getTranslations({ locale, namespace: 'Layout' });
 
   const BASE = 'https://vacaredigitalsolutions.com';
   const caseUrl = `${BASE}/${locale}/case-studies/supertramp`;

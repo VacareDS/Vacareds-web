@@ -1,5 +1,4 @@
-import { getTranslations } from 'next-intl/server';
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import Link from 'next/link';
 import CaseStudyJsonLd from '@/components/seo/CaseStudyJsonLd';
@@ -29,10 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function SobreMiCasePage() {
-  const locale = useLocale();
-  const t = useTranslations('CaseSobreMi');
-  const tLayout = useTranslations('Layout');
+export default async function SobreMiCasePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'CaseSobreMi' });
+  const tLayout = await getTranslations({ locale, namespace: 'Layout' });
 
   const BASE = 'https://vacaredigitalsolutions.com';
   const caseUrl = `${BASE}/${locale}/casos-de-exito/sobremi`;
